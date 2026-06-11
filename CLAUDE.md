@@ -9,7 +9,9 @@ Static site (index.html + data/predictions.json) deployed on Render, predicting 
 - `data-raw/ratings.json` — Elo + FIFA per team (baseline; predict.py applies result-based Elo deltas itself — do not manually edit after tournament start).
 - `data-raw/news.json` — per-team form, injuries, key players, headlines.
 - `data-raw/players.json` — per-team top attacking threats (3–4 each) used for scorer predictions: player, club, pos, club goals/apps, pens.
-- `data-raw/results.json` — final scores keyed by match id as STRING: `{"5": {"home_goals":2,"away_goals":0}}`.
+- `data-raw/results.json` — final scores keyed by match id as STRING: `{"5": {"home_goals":2,"away_goals":0}}`. Group matches are ids 1–72; **knockout matches are ids 73–104** (R32 73–88, R16 89–96, QF 97–100, SF 101–102, 3rd place 103, Final 104) — record those the same way once the knockouts begin and the projected bracket will use the real winners.
+- `data-raw/bracket.json` — knockout bracket structure (slots, dates, venues). Static; do not edit.
+- `predict.py` runs a 20k-sim Monte Carlo each time → `knockout` section in predictions.json (title odds + projected bracket). Set env `WC_SIMS` to change sim count.
 
 ## Daily update procedure (run every morning)
 1. Web-search final scores of all WC matches played yesterday (and any missed earlier); add them to `data-raw/results.json`.
