@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-11T02:52:41+00:00",
+ "updated": "2026-06-11T03:15:23+00:00",
  "record": {
   "correct": 0,
   "total": 0
@@ -92,6 +92,11 @@
      "note": "Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement"
     },
     {
+     "player": "Marcel Ruiz",
+     "status": "out",
+     "note": "Ruled out injured ahead of the opener"
+    },
+    {
      "player": "Edson Alvarez",
      "status": "doubtful",
      "note": "Captain's fitness being monitored"
@@ -152,6 +157,11 @@
    "form_note": "Topped their AFC qualifying group ahead of Jordan; in Group A with hosts Mexico, South Africa and Czechia.",
    "injuries": [
     {
+     "player": "Bae Jun-ho",
+     "status": "doubtful",
+     "note": "Ankle injury; in individual training, a doubt for the Czechia opener (2g/3a in qualifying)"
+    },
+    {
      "player": "Hwang In-beom",
      "status": "doubtful",
      "note": "Called up despite struggling with an ankle injury at Feyenoord"
@@ -209,8 +219,8 @@
     },
     {
      "player": "Alphonso Davies",
-     "status": "doubtful",
-     "note": "Returned to full training after hamstring injury; team expected to remain cautious with its captain"
+     "status": "out",
+     "note": "Back in training but will NOT feature in the Bosnia opener as Canada manages his hamstring; later group games uncertain"
     }
    ],
    "key_players": [
@@ -511,7 +521,13 @@
    "fifa_rank": 40,
    "form": null,
    "form_note": "Open the tournament against the hosts United States at SoFi Stadium on June 12; first World Cup since 2010.",
-   "injuries": [],
+   "injuries": [
+    {
+     "player": "Julio Enciso",
+     "status": "doubtful",
+     "note": "Thigh injury — avoided a serious problem but unlikely to be rushed back for the USA opener"
+    }
+   ],
    "key_players": [
     {
      "player": "Miguel Almiron",
@@ -522,7 +538,8 @@
     }
    ],
    "news": [
-    "Qualified comfortably from CONMEBOL on the back of a famously stingy defense."
+    "Qualified comfortably from CONMEBOL on the back of a famously stingy defense.",
+    "Star attacker Julio Enciso a fitness doubt for the opener with a thigh issue."
    ]
   },
   "Australia": {
@@ -1725,18 +1742,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.888,
-    "p_draw": 0.096,
+    "p_home": 0.886,
+    "p_draw": 0.098,
     "p_away": 0.016,
     "pick": "Mexico",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Mexico 1864 vs South Africa 1530 (+415 incl. venue)",
+     "Rating edge: Mexico 1856 vs South Africa 1530 (+407 incl. venue)",
      "Mexico effectively at home in Mexico City (+80 Elo)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
-     "Mexico: Edson Alvarez doubtful"
+     "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)"
     ]
    },
    "scorers": {
@@ -1748,10 +1765,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.367,
+      "anytime": 0.364,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Hirving Lozano",
@@ -1760,10 +1778,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.283,
+      "anytime": 0.281,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Raul Jimenez",
@@ -1772,10 +1791,11 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.273,
+      "anytime": 0.271,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -1789,7 +1809,8 @@
       "anytime": 0.026,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Oswin Appollis",
@@ -1801,7 +1822,8 @@
       "anytime": 0.026,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Relebohile Mofokeng",
@@ -1813,7 +1835,8 @@
       "anytime": 0.024,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -1831,15 +1854,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.406,
+    "p_home": 0.401,
     "p_draw": 0.26,
-    "p_away": 0.333,
+    "p_away": 0.339,
     "pick": "South Korea",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 2,
     "reasons": [
-     "Rating edge: South Korea 1757 vs Czech Republic 1731 (+26 incl. venue)",
+     "Rating edge: South Korea 1753 vs Czech Republic 1731 (+22 incl. venue)",
+     "South Korea: Bae Jun-ho doubtful",
      "South Korea: Hwang In-beom doubtful"
     ]
    },
@@ -1852,10 +1876,11 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.266,
+      "anytime": 0.264,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Oh Hyeon-gyu",
@@ -1864,10 +1889,11 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.167,
+      "anytime": 0.166,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Lee Kang-in",
@@ -1876,10 +1902,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.145,
+      "anytime": 0.144,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -1890,10 +1917,11 @@
       "goals": 16,
       "apps": 28,
       "pens": true,
-      "anytime": 0.227,
+      "anytime": 0.229,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Adam Hlozek",
@@ -1902,10 +1930,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.194,
+      "anytime": 0.195,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Pavel Sulc",
@@ -1914,10 +1943,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.118,
+      "anytime": 0.119,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -1935,18 +1965,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.738,
-    "p_draw": 0.179,
-    "p_away": 0.084,
+    "p_home": 0.728,
+    "p_draw": 0.183,
+    "p_away": 0.089,
     "pick": "Canada",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Canada 1765 vs Bosnia and Herzegovina 1589 (+257 incl. venue)",
+     "Rating edge: Canada 1758 vs Bosnia and Herzegovina 1589 (+250 incl. venue)",
      "Canada effectively at home in Toronto (+80 Elo)",
      "Canada: Marcelo Flores out (ACL tear in the CONCACAF Champions Cup final May 30; replaced by Jayden Nelson on June 9)",
-     "Canada: Alphonso Davies doubtful"
+     "Canada: Alphonso Davies out (Back in training but will NOT feature in the Bosnia opener as Canada manages his hamstring; later group games uncertain)"
     ]
    },
    "scorers": {
@@ -1958,10 +1988,11 @@
       "goals": 6,
       "apps": null,
       "pens": true,
-      "anytime": 0.31,
+      "anytime": 0.339,
       "shots": "High",
-      "confidence": 2,
-      "conf_label": "Medium"
+      "confidence": 3,
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Cyle Larin",
@@ -1970,10 +2001,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.276,
+      "anytime": 0.302,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Tani Oluwaseyi",
@@ -1982,10 +2014,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.276,
+      "anytime": 0.302,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -1996,10 +2029,11 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.099,
+      "anytime": 0.103,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ermedin Demirovic",
@@ -2008,10 +2042,11 @@
       "goals": 12,
       "apps": 25,
       "pens": false,
-      "anytime": 0.087,
+      "anytime": 0.09,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Esmir Bajraktarevic",
@@ -2020,10 +2055,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.073,
+      "anytime": 0.076,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2041,15 +2077,15 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.376,
+    "p_home": 0.382,
     "p_draw": 0.261,
-    "p_away": 0.363,
+    "p_away": 0.357,
     "pick": "United States",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1736 vs Paraguay 1811 (+5 incl. venue)",
+     "Rating edge: United States 1736 vs Paraguay 1807 (+9 incl. venue)",
      "United States effectively at home in Inglewood (+80 Elo)",
      "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
      "United States: Chris Richards doubtful"
@@ -2064,10 +2100,11 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.202,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ricardo Pepi",
@@ -2076,10 +2113,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.202,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Timothy Weah",
@@ -2088,10 +2126,11 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.152,
+      "anytime": 0.153,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2102,10 +2141,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.211,
+      "anytime": 0.219,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ramon Sosa",
@@ -2114,22 +2154,24 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.158,
+      "anytime": 0.164,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
-      "player": "Julio Enciso",
-      "club": "Strasbourg",
+      "player": "Miguel Almiron",
+      "club": "Atlanta United",
       "pos": "AM",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.129,
+      "anytime": 0.134,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2170,7 +2212,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Akram Afif",
@@ -2182,7 +2225,8 @@
       "anytime": 0.029,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Edmilson Junior",
@@ -2194,7 +2238,8 @@
       "anytime": 0.021,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2208,7 +2253,8 @@
       "anytime": 0.4,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Dan Ndoye",
@@ -2220,7 +2266,8 @@
       "anytime": 0.31,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ruben Vargas",
@@ -2232,7 +2279,8 @@
       "anytime": 0.31,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -2276,7 +2324,8 @@
       "anytime": 0.279,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Matheus Cunha",
@@ -2288,7 +2337,8 @@
       "anytime": 0.218,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Joao Pedro",
@@ -2300,7 +2350,8 @@
       "anytime": 0.218,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2314,7 +2365,8 @@
       "anytime": 0.17,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ayoub El Kaabi",
@@ -2326,7 +2378,8 @@
       "anytime": 0.17,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Brahim Diaz",
@@ -2338,7 +2391,8 @@
       "anytime": 0.102,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2380,7 +2434,8 @@
       "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Wilson Isidor",
@@ -2392,7 +2447,8 @@
       "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Duckens Nazon",
@@ -2404,7 +2460,8 @@
       "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2418,7 +2475,8 @@
       "anytime": 0.33,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ben Doak",
@@ -2430,7 +2488,8 @@
       "anytime": 0.253,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Scott McTominay",
@@ -2442,7 +2501,8 @@
       "anytime": 0.123,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2483,7 +2543,8 @@
       "anytime": 0.151,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kusini Yengi",
@@ -2495,7 +2556,8 @@
       "anytime": 0.151,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Craig Goodwin",
@@ -2507,7 +2569,8 @@
       "anytime": 0.112,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2521,7 +2584,8 @@
       "anytime": 0.237,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kenan Yildiz",
@@ -2533,7 +2597,8 @@
       "anytime": 0.186,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Hakan Calhanoglu",
@@ -2545,7 +2610,8 @@
       "anytime": 0.131,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2589,7 +2655,8 @@
       "anytime": 0.43,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Serhou Guirassy",
@@ -2601,7 +2668,8 @@
       "anytime": 0.386,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jamal Musiala",
@@ -2613,7 +2681,8 @@
       "anytime": 0.247,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2627,7 +2696,8 @@
       "anytime": 0.03,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kenji Gorre",
@@ -2639,7 +2709,8 @@
       "anytime": 0.024,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Juninho Bacuna",
@@ -2651,7 +2722,8 @@
       "anytime": 0.014,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2695,7 +2767,8 @@
       "anytime": 0.23,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Donyell Malen",
@@ -2707,7 +2780,8 @@
       "anytime": 0.23,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cody Gakpo",
@@ -2719,7 +2793,8 @@
       "anytime": 0.101,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2733,7 +2808,8 @@
       "anytime": 0.242,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Daizen Maeda",
@@ -2745,7 +2821,8 @@
       "anytime": 0.172,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Takefusa Kubo",
@@ -2757,7 +2834,8 @@
       "anytime": 0.128,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2798,7 +2876,8 @@
       "anytime": 0.084,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Simon Adingra",
@@ -2810,7 +2889,8 @@
       "anytime": 0.084,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Nicolas Pepe",
@@ -2822,7 +2902,8 @@
       "anytime": 0.084,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2836,7 +2917,8 @@
       "anytime": 0.385,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kendry Paez",
@@ -2848,7 +2930,8 @@
       "anytime": 0.218,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Moises Caicedo",
@@ -2860,7 +2943,8 @@
       "anytime": 0.129,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -2902,7 +2986,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Alexander Isak",
@@ -2914,7 +2999,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Anthony Elanga",
@@ -2926,7 +3012,8 @@
       "anytime": 0.188,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -2940,7 +3027,8 @@
       "anytime": 0.179,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Elias Achouri",
@@ -2952,7 +3040,8 @@
       "anytime": 0.133,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Youssef Msakni",
@@ -2964,7 +3053,8 @@
       "anytime": 0.133,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3005,10 +3095,11 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.393,
+      "anytime": 0.409,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Robert Lewandowski",
@@ -3017,10 +3108,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.352,
+      "anytime": 0.367,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ferran Torres",
@@ -3029,10 +3121,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.352,
+      "anytime": 0.367,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3046,7 +3139,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ryan Mendes",
@@ -3058,7 +3152,8 @@
       "anytime": 0.025,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Garry Rodrigues",
@@ -3070,7 +3165,8 @@
       "anytime": 0.025,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3112,7 +3208,8 @@
       "anytime": 0.264,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kevin De Bruyne",
@@ -3124,7 +3221,8 @@
       "anytime": 0.246,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jeremy Doku",
@@ -3136,7 +3234,8 @@
       "anytime": 0.187,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3150,7 +3249,8 @@
       "anytime": 0.127,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Trezeguet",
@@ -3162,7 +3262,8 @@
       "anytime": 0.122,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mohamed Salah",
@@ -3174,7 +3275,8 @@
       "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3215,7 +3317,8 @@
       "anytime": 0.077,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Salem Al-Dawsari",
@@ -3227,7 +3330,8 @@
       "anytime": 0.065,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Musab Al-Juwayr",
@@ -3239,7 +3343,8 @@
       "anytime": 0.026,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3253,7 +3358,8 @@
       "anytime": 0.342,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Maxi Araujo",
@@ -3265,7 +3371,8 @@
       "anytime": 0.262,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Facundo Pellistri",
@@ -3277,7 +3384,8 @@
       "anytime": 0.262,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -3318,7 +3426,8 @@
       "anytime": 0.301,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Alireza Jahanbakhsh",
@@ -3330,7 +3439,8 @@
       "anytime": 0.258,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Mohammad Mohebi",
@@ -3342,7 +3452,8 @@
       "anytime": 0.258,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3356,7 +3467,8 @@
       "anytime": 0.112,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Chris Wood",
@@ -3368,7 +3480,8 @@
       "anytime": 0.092,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kosta Barbarouses",
@@ -3380,7 +3493,8 @@
       "anytime": 0.083,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3423,7 +3537,8 @@
       "anytime": 0.446,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ousmane Dembele",
@@ -3435,7 +3550,8 @@
       "anytime": 0.226,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Bradley Barcola",
@@ -3447,7 +3563,8 @@
       "anytime": 0.17,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3461,7 +3578,8 @@
       "anytime": 0.123,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Iliman Ndiaye",
@@ -3473,7 +3591,8 @@
       "anytime": 0.123,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Sadio Mane",
@@ -3485,7 +3604,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3527,7 +3647,8 @@
       "anytime": 0.082,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Al-Hamadi",
@@ -3539,7 +3660,8 @@
       "anytime": 0.082,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Jasim",
@@ -3551,7 +3673,8 @@
       "anytime": 0.082,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3565,7 +3688,8 @@
       "anytime": 0.36,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Alexander Sorloth",
@@ -3577,7 +3701,8 @@
       "anytime": 0.322,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Antonio Nusa",
@@ -3589,7 +3714,8 @@
       "anytime": 0.246,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -3633,7 +3759,8 @@
       "anytime": 0.38,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Lautaro Martinez",
@@ -3645,7 +3772,8 @@
       "anytime": 0.34,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Julian Alvarez",
@@ -3657,7 +3785,8 @@
       "anytime": 0.266,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3671,7 +3800,8 @@
       "anytime": 0.062,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Amine Gouiri",
@@ -3683,7 +3813,8 @@
       "anytime": 0.062,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Said Benrahma",
@@ -3695,7 +3826,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3736,7 +3868,8 @@
       "anytime": 0.297,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Marko Arnautovic",
@@ -3748,7 +3881,8 @@
       "anytime": 0.259,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Marcel Sabitzer",
@@ -3760,7 +3894,8 @@
       "anytime": 0.109,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3774,7 +3909,8 @@
       "anytime": 0.155,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mousa Al-Tamari",
@@ -3786,7 +3922,8 @@
       "anytime": 0.116,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Azaizeh",
@@ -3798,7 +3935,8 @@
       "anytime": 0.094,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3839,7 +3977,8 @@
       "anytime": 0.542,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Rafael Leao",
@@ -3851,7 +3990,8 @@
       "anytime": 0.202,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Goncalo Ramos",
@@ -3863,7 +4003,8 @@
       "anytime": 0.135,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3877,7 +4018,8 @@
       "anytime": 0.048,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cedric Bakambu",
@@ -3889,7 +4031,8 @@
       "anytime": 0.048,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Fiston Mayele",
@@ -3901,7 +4044,8 @@
       "anytime": 0.048,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -3945,7 +4089,8 @@
       "anytime": 0.28,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Bukayo Saka",
@@ -3957,7 +4102,8 @@
       "anytime": 0.187,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cole Palmer",
@@ -3969,7 +4115,8 @@
       "anytime": 0.153,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -3983,7 +4130,8 @@
       "anytime": 0.174,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ante Budimir",
@@ -3995,7 +4143,8 @@
       "anytime": 0.15,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ivan Perisic",
@@ -4007,7 +4156,8 @@
       "anytime": 0.132,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4050,7 +4200,8 @@
       "anytime": 0.114,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Antoine Semenyo",
@@ -4062,7 +4213,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Inaki Williams",
@@ -4074,7 +4226,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4088,7 +4241,8 @@
       "anytime": 0.29,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jose Fajardo",
@@ -4100,7 +4254,8 @@
       "anytime": 0.29,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cecilio Waterman",
@@ -4112,7 +4267,8 @@
       "anytime": 0.29,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -4153,7 +4309,8 @@
       "anytime": 0.11,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Jaloliddin Masharipov",
@@ -4165,7 +4322,8 @@
       "anytime": 0.071,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Abbosbek Fayzullaev",
@@ -4177,7 +4335,8 @@
       "anytime": 0.058,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4191,7 +4350,8 @@
       "anytime": 0.298,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Luis Suarez",
@@ -4203,7 +4363,8 @@
       "anytime": 0.298,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Luis Diaz",
@@ -4215,7 +4376,8 @@
       "anytime": 0.227,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -4256,7 +4418,8 @@
       "anytime": 0.329,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Adam Hlozek",
@@ -4268,7 +4431,8 @@
       "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Pavel Sulc",
@@ -4280,7 +4444,8 @@
       "anytime": 0.177,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4294,7 +4459,8 @@
       "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Oswin Appollis",
@@ -4306,7 +4472,8 @@
       "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Relebohile Mofokeng",
@@ -4318,7 +4485,8 @@
       "anytime": 0.092,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4359,7 +4527,8 @@
       "anytime": 0.35,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Dan Ndoye",
@@ -4371,7 +4540,8 @@
       "anytime": 0.269,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ruben Vargas",
@@ -4383,7 +4553,8 @@
       "anytime": 0.269,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4397,7 +4568,8 @@
       "anytime": 0.079,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ermedin Demirovic",
@@ -4409,7 +4581,8 @@
       "anytime": 0.069,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Esmir Bajraktarevic",
@@ -4421,7 +4594,8 @@
       "anytime": 0.058,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4439,18 +4613,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.882,
-    "p_draw": 0.102,
-    "p_away": 0.016,
+    "p_home": 0.88,
+    "p_draw": 0.104,
+    "p_away": 0.017,
     "pick": "Canada",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Canada 1765 vs Qatar 1452 (+393 incl. venue)",
+     "Rating edge: Canada 1758 vs Qatar 1452 (+386 incl. venue)",
      "Canada effectively at home in Vancouver (+80 Elo)",
      "Canada: Marcelo Flores out (ACL tear in the CONCACAF Champions Cup final May 30; replaced by Jayden Nelson on June 9)",
-     "Canada: Alphonso Davies doubtful"
+     "Canada: Alphonso Davies out (Back in training but will NOT feature in the Bosnia opener as Canada manages his hamstring; later group games uncertain)"
     ]
    },
    "scorers": {
@@ -4462,10 +4636,11 @@
       "goals": 6,
       "apps": null,
       "pens": true,
-      "anytime": 0.359,
+      "anytime": 0.391,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Cyle Larin",
@@ -4474,10 +4649,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.32,
+      "anytime": 0.35,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Tani Oluwaseyi",
@@ -4486,10 +4662,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.32,
+      "anytime": 0.35,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4503,7 +4680,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Akram Afif",
@@ -4515,7 +4693,8 @@
       "anytime": 0.029,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Edmilson Junior",
@@ -4527,7 +4706,8 @@
       "anytime": 0.021,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4545,18 +4725,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.642,
-    "p_draw": 0.215,
-    "p_away": 0.143,
+    "p_home": 0.636,
+    "p_draw": 0.217,
+    "p_away": 0.147,
     "pick": "Mexico",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Mexico 1864 vs South Korea 1757 (+187 incl. venue)",
+     "Rating edge: Mexico 1856 vs South Korea 1753 (+183 incl. venue)",
      "Mexico effectively at home in Zapopan (+80 Elo)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
-     "Mexico: Edson Alvarez doubtful"
+     "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)"
     ]
    },
    "scorers": {
@@ -4568,10 +4748,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.285,
+      "anytime": 0.283,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Hirving Lozano",
@@ -4580,10 +4761,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.216,
+      "anytime": 0.215,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Raul Jimenez",
@@ -4592,10 +4774,11 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.208,
+      "anytime": 0.207,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4606,10 +4789,11 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.154,
+      "anytime": 0.156,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Oh Hyeon-gyu",
@@ -4618,10 +4802,11 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.094,
+      "anytime": 0.096,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Lee Kang-in",
@@ -4630,10 +4815,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.081,
+      "anytime": 0.082,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4677,7 +4863,8 @@
       "anytime": 0.217,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ricardo Pepi",
@@ -4689,7 +4876,8 @@
       "anytime": 0.217,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Timothy Weah",
@@ -4701,7 +4889,8 @@
       "anytime": 0.163,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4715,7 +4904,8 @@
       "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kusini Yengi",
@@ -4727,7 +4917,8 @@
       "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Craig Goodwin",
@@ -4739,7 +4930,8 @@
       "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4781,7 +4973,8 @@
       "anytime": 0.189,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ben Doak",
@@ -4793,7 +4986,8 @@
       "anytime": 0.142,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Scott McTominay",
@@ -4805,7 +4999,8 @@
       "anytime": 0.066,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4819,7 +5014,8 @@
       "anytime": 0.257,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ayoub El Kaabi",
@@ -4831,7 +5027,8 @@
       "anytime": 0.257,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Brahim Diaz",
@@ -4843,7 +5040,8 @@
       "anytime": 0.159,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4887,7 +5085,8 @@
       "anytime": 0.403,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Matheus Cunha",
@@ -4899,7 +5098,8 @@
       "anytime": 0.322,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Joao Pedro",
@@ -4911,7 +5111,8 @@
       "anytime": 0.322,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -4925,7 +5126,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Wilson Isidor",
@@ -4937,7 +5139,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Duckens Nazon",
@@ -4949,7 +5152,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -4967,15 +5171,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.488,
-    "p_draw": 0.252,
-    "p_away": 0.261,
+    "p_home": 0.494,
+    "p_draw": 0.251,
+    "p_away": 0.256,
     "pick": "Turkey",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: Turkey 1893 vs Paraguay 1811 (+82 incl. venue)"
+     "Rating edge: Turkey 1893 vs Paraguay 1807 (+86 incl. venue)",
+     "Paraguay: Julio Enciso doubtful"
     ]
    },
    "scorers": {
@@ -4987,10 +5192,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.224,
+      "anytime": 0.226,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kenan Yildiz",
@@ -4999,10 +5205,11 @@
       "goals": 10,
       "apps": 33,
       "pens": false,
-      "anytime": 0.175,
+      "anytime": 0.176,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Hakan Calhanoglu",
@@ -5011,10 +5218,11 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.123,
+      "anytime": 0.124,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5025,10 +5233,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.177,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ramon Sosa",
@@ -5037,22 +5246,24 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.132,
+      "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
-      "player": "Julio Enciso",
-      "club": "Strasbourg",
+      "player": "Miguel Almiron",
+      "club": "Atlanta United",
       "pos": "AM",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.107,
+      "anytime": 0.111,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5096,7 +5307,8 @@
       "anytime": 0.305,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Donyell Malen",
@@ -5108,7 +5320,8 @@
       "anytime": 0.305,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cody Gakpo",
@@ -5120,7 +5333,8 @@
       "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5134,7 +5348,8 @@
       "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Alexander Isak",
@@ -5146,7 +5361,8 @@
       "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Anthony Elanga",
@@ -5158,7 +5374,8 @@
       "anytime": 0.089,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5202,7 +5419,8 @@
       "anytime": 0.329,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Serhou Guirassy",
@@ -5214,7 +5432,8 @@
       "anytime": 0.293,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jamal Musiala",
@@ -5226,7 +5445,8 @@
       "anytime": 0.183,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5240,7 +5460,8 @@
       "anytime": 0.088,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Simon Adingra",
@@ -5252,7 +5473,8 @@
       "anytime": 0.088,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Nicolas Pepe",
@@ -5264,7 +5486,8 @@
       "anytime": 0.088,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5305,7 +5528,8 @@
       "anytime": 0.493,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Kendry Paez",
@@ -5317,7 +5541,8 @@
       "anytime": 0.291,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Moises Caicedo",
@@ -5329,7 +5554,8 @@
       "anytime": 0.176,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5343,7 +5569,8 @@
       "anytime": 0.03,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kenji Gorre",
@@ -5355,7 +5582,8 @@
       "anytime": 0.024,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Juninho Bacuna",
@@ -5367,7 +5595,8 @@
       "anytime": 0.014,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5410,7 +5639,8 @@
       "anytime": 0.095,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Elias Achouri",
@@ -5422,7 +5652,8 @@
       "anytime": 0.07,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Youssef Msakni",
@@ -5434,7 +5665,8 @@
       "anytime": 0.07,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5448,7 +5680,8 @@
       "anytime": 0.372,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Daizen Maeda",
@@ -5460,7 +5693,8 @@
       "anytime": 0.272,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Takefusa Kubo",
@@ -5472,7 +5706,8 @@
       "anytime": 0.206,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -5513,10 +5748,11 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.393,
+      "anytime": 0.409,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Robert Lewandowski",
@@ -5525,10 +5761,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.352,
+      "anytime": 0.367,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ferran Torres",
@@ -5537,10 +5774,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.352,
+      "anytime": 0.367,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5554,7 +5792,8 @@
       "anytime": 0.037,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Salem Al-Dawsari",
@@ -5566,7 +5805,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Musab Al-Juwayr",
@@ -5578,7 +5818,8 @@
       "anytime": 0.012,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5620,7 +5861,8 @@
       "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kevin De Bruyne",
@@ -5632,7 +5874,8 @@
       "anytime": 0.221,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jeremy Doku",
@@ -5644,7 +5887,8 @@
       "anytime": 0.168,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5658,7 +5902,8 @@
       "anytime": 0.155,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Alireza Jahanbakhsh",
@@ -5670,7 +5915,8 @@
       "anytime": 0.132,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mohammad Mohebi",
@@ -5682,7 +5928,8 @@
       "anytime": 0.132,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5723,7 +5970,8 @@
       "anytime": 0.344,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Maxi Araujo",
@@ -5735,7 +5983,8 @@
       "anytime": 0.264,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Facundo Pellistri",
@@ -5747,7 +5996,8 @@
       "anytime": 0.264,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5761,7 +6011,8 @@
       "anytime": 0.068,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ryan Mendes",
@@ -5773,7 +6024,8 @@
       "anytime": 0.05,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Garry Rodrigues",
@@ -5785,7 +6037,8 @@
       "anytime": 0.05,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -5826,7 +6079,8 @@
       "anytime": 0.149,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Chris Wood",
@@ -5838,7 +6092,8 @@
       "anytime": 0.123,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kosta Barbarouses",
@@ -5850,7 +6105,8 @@
       "anytime": 0.111,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5864,7 +6120,8 @@
       "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Trezeguet",
@@ -5876,7 +6133,8 @@
       "anytime": 0.273,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Mohamed Salah",
@@ -5888,7 +6146,8 @@
       "anytime": 0.244,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -5932,7 +6191,8 @@
       "anytime": 0.355,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Lautaro Martinez",
@@ -5944,7 +6204,8 @@
       "anytime": 0.317,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Julian Alvarez",
@@ -5956,7 +6217,8 @@
       "anytime": 0.246,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -5970,7 +6232,8 @@
       "anytime": 0.101,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Marko Arnautovic",
@@ -5982,7 +6245,8 @@
       "anytime": 0.086,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Marcel Sabitzer",
@@ -5994,7 +6258,8 @@
       "anytime": 0.034,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6037,7 +6302,8 @@
       "anytime": 0.565,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ousmane Dembele",
@@ -6049,7 +6315,8 @@
       "anytime": 0.303,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Bradley Barcola",
@@ -6061,7 +6328,8 @@
       "anytime": 0.231,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6075,7 +6343,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Al-Hamadi",
@@ -6087,7 +6356,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Jasim",
@@ -6099,7 +6369,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6141,7 +6412,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Alexander Sorloth",
@@ -6153,7 +6425,8 @@
       "anytime": 0.221,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Antonio Nusa",
@@ -6165,7 +6438,8 @@
       "anytime": 0.166,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6179,7 +6453,8 @@
       "anytime": 0.196,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Iliman Ndiaye",
@@ -6191,7 +6466,8 @@
       "anytime": 0.196,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Sadio Mane",
@@ -6203,7 +6479,8 @@
       "anytime": 0.161,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6244,7 +6521,8 @@
       "anytime": 0.188,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mousa Al-Tamari",
@@ -6256,7 +6534,8 @@
       "anytime": 0.141,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Azaizeh",
@@ -6268,7 +6547,8 @@
       "anytime": 0.114,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6282,7 +6562,8 @@
       "anytime": 0.255,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Amine Gouiri",
@@ -6294,7 +6575,8 @@
       "anytime": 0.255,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Said Benrahma",
@@ -6306,7 +6588,8 @@
       "anytime": 0.152,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6347,7 +6630,8 @@
       "anytime": 0.518,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Rafael Leao",
@@ -6359,7 +6643,8 @@
       "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Goncalo Ramos",
@@ -6371,7 +6656,8 @@
       "anytime": 0.127,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6385,7 +6671,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Jaloliddin Masharipov",
@@ -6397,7 +6684,8 @@
       "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Abbosbek Fayzullaev",
@@ -6409,7 +6697,8 @@
       "anytime": 0.052,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6453,7 +6742,8 @@
       "anytime": 0.436,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Bukayo Saka",
@@ -6465,7 +6755,8 @@
       "anytime": 0.304,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cole Palmer",
@@ -6477,7 +6768,8 @@
       "anytime": 0.251,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6491,7 +6783,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Antoine Semenyo",
@@ -6503,7 +6796,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Inaki Williams",
@@ -6515,7 +6809,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6556,7 +6851,8 @@
       "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Jose Fajardo",
@@ -6568,7 +6864,8 @@
       "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cecilio Waterman",
@@ -6580,7 +6877,8 @@
       "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6594,7 +6892,8 @@
       "anytime": 0.295,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ante Budimir",
@@ -6606,7 +6905,8 @@
       "anytime": 0.258,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ivan Perisic",
@@ -6618,7 +6918,8 @@
       "anytime": 0.228,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -6659,7 +6960,8 @@
       "anytime": 0.315,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Luis Suarez",
@@ -6671,7 +6973,8 @@
       "anytime": 0.315,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Luis Diaz",
@@ -6683,7 +6986,8 @@
       "anytime": 0.241,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6697,7 +7001,8 @@
       "anytime": 0.056,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cedric Bakambu",
@@ -6709,7 +7014,8 @@
       "anytime": 0.056,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Fiston Mayele",
@@ -6721,7 +7027,8 @@
       "anytime": 0.056,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6739,17 +7046,17 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.543,
-    "p_draw": 0.241,
-    "p_away": 0.215,
+    "p_home": 0.554,
+    "p_draw": 0.239,
+    "p_away": 0.207,
     "pick": "Switzerland",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Switzerland 1884 vs Canada 1765 (+119 incl. venue)",
+     "Rating edge: Switzerland 1884 vs Canada 1758 (+126 incl. venue)",
      "Canada: Marcelo Flores out (ACL tear in the CONCACAF Champions Cup final May 30; replaced by Jayden Nelson on June 9)",
-     "Canada: Alphonso Davies doubtful"
+     "Canada: Alphonso Davies out (Back in training but will NOT feature in the Bosnia opener as Canada manages his hamstring; later group games uncertain)"
     ]
    },
    "scorers": {
@@ -6761,10 +7068,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.279,
+      "anytime": 0.282,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Dan Ndoye",
@@ -6773,10 +7081,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.211,
+      "anytime": 0.214,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ruben Vargas",
@@ -6785,10 +7094,11 @@
       "goals": 3,
       "apps": null,
       "pens": false,
-      "anytime": 0.211,
+      "anytime": 0.214,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6799,10 +7109,11 @@
       "goals": 6,
       "apps": null,
       "pens": true,
-      "anytime": 0.156,
+      "anytime": 0.171,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cyle Larin",
@@ -6811,10 +7122,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.138,
+      "anytime": 0.15,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Tani Oluwaseyi",
@@ -6823,10 +7135,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.138,
+      "anytime": 0.15,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6867,7 +7180,8 @@
       "anytime": 0.282,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ermedin Demirovic",
@@ -6879,7 +7193,8 @@
       "anytime": 0.251,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Esmir Bajraktarevic",
@@ -6891,7 +7206,8 @@
       "anytime": 0.214,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -6905,7 +7221,8 @@
       "anytime": 0.165,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Akram Afif",
@@ -6917,7 +7234,8 @@
       "anytime": 0.14,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Edmilson Junior",
@@ -6929,7 +7247,8 @@
       "anytime": 0.1,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -6973,7 +7292,8 @@
       "anytime": 0.135,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ben Doak",
@@ -6985,7 +7305,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Scott McTominay",
@@ -6997,7 +7318,8 @@
       "anytime": 0.046,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7011,7 +7333,8 @@
       "anytime": 0.317,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Matheus Cunha",
@@ -7023,7 +7346,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Joao Pedro",
@@ -7035,7 +7359,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -7076,7 +7401,8 @@
       "anytime": 0.346,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ayoub El Kaabi",
@@ -7088,7 +7414,8 @@
       "anytime": 0.346,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Brahim Diaz",
@@ -7100,7 +7427,8 @@
       "anytime": 0.219,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7114,7 +7442,8 @@
       "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Wilson Isidor",
@@ -7126,7 +7455,8 @@
       "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Duckens Nazon",
@@ -7138,7 +7468,8 @@
       "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7156,16 +7487,17 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.199,
-    "p_draw": 0.237,
-    "p_away": 0.564,
+    "p_home": 0.208,
+    "p_draw": 0.24,
+    "p_away": 0.552,
     "pick": "Mexico",
     "pick_type": "away",
     "score": "0-1",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Czech Republic 1731 vs Mexico 1864 (-133 incl. venue)",
+     "Rating edge: Czech Republic 1731 vs Mexico 1856 (-125 incl. venue)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
+     "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)",
      "Mexico: Edson Alvarez doubtful"
     ]
    },
@@ -7178,10 +7510,11 @@
       "goals": 16,
       "apps": 28,
       "pens": true,
-      "anytime": 0.173,
+      "anytime": 0.177,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Adam Hlozek",
@@ -7190,10 +7523,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.147,
+      "anytime": 0.151,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Pavel Sulc",
@@ -7202,10 +7536,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.088,
+      "anytime": 0.091,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7216,10 +7551,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.264,
+      "anytime": 0.261,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Hirving Lozano",
@@ -7228,10 +7564,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.2,
+      "anytime": 0.197,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Raul Jimenez",
@@ -7240,10 +7577,11 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.192,
+      "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7261,15 +7599,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.107,
-    "p_draw": 0.195,
-    "p_away": 0.699,
+    "p_home": 0.11,
+    "p_draw": 0.197,
+    "p_away": 0.693,
     "pick": "South Korea",
     "pick_type": "away",
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: South Africa 1530 vs South Korea 1757 (-228 incl. venue)",
+     "Rating edge: South Africa 1530 vs South Korea 1753 (-224 incl. venue)",
+     "South Korea: Bae Jun-ho doubtful",
      "South Korea: Hwang In-beom doubtful"
     ]
    },
@@ -7282,10 +7621,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.089,
+      "anytime": 0.09,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Oswin Appollis",
@@ -7294,10 +7634,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.089,
+      "anytime": 0.09,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Relebohile Mofokeng",
@@ -7306,10 +7647,11 @@
       "goals": 10,
       "apps": 27,
       "pens": false,
-      "anytime": 0.082,
+      "anytime": 0.084,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7320,10 +7662,11 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.358,
+      "anytime": 0.357,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Oh Hyeon-gyu",
@@ -7332,10 +7675,11 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.231,
+      "anytime": 0.23,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Lee Kang-in",
@@ -7344,10 +7688,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.201,
+      "anytime": 0.2,
       "shots": "Medium",
-      "confidence": 2,
-      "conf_label": "Medium"
+      "confidence": 1,
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7388,7 +7733,8 @@
       "anytime": 0.086,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kenji Gorre",
@@ -7400,7 +7746,8 @@
       "anytime": 0.07,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Juninho Bacuna",
@@ -7412,7 +7759,8 @@
       "anytime": 0.04,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7426,7 +7774,8 @@
       "anytime": 0.243,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Simon Adingra",
@@ -7438,7 +7787,8 @@
       "anytime": 0.243,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Nicolas Pepe",
@@ -7450,7 +7800,8 @@
       "anytime": 0.243,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -7494,7 +7845,8 @@
       "anytime": 0.283,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kendry Paez",
@@ -7506,7 +7858,8 @@
       "anytime": 0.155,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Moises Caicedo",
@@ -7518,7 +7871,8 @@
       "anytime": 0.09,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7532,7 +7886,8 @@
       "anytime": 0.233,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Serhou Guirassy",
@@ -7544,7 +7899,8 @@
       "anytime": 0.206,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jamal Musiala",
@@ -7556,7 +7912,8 @@
       "anytime": 0.125,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7600,7 +7957,8 @@
       "anytime": 0.342,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Daizen Maeda",
@@ -7612,7 +7970,8 @@
       "anytime": 0.249,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Takefusa Kubo",
@@ -7624,7 +7983,8 @@
       "anytime": 0.188,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7638,7 +7998,8 @@
       "anytime": 0.135,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Alexander Isak",
@@ -7650,7 +8011,8 @@
       "anytime": 0.135,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Anthony Elanga",
@@ -7662,7 +8024,8 @@
       "anytime": 0.1,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7706,7 +8069,8 @@
       "anytime": 0.081,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Elias Achouri",
@@ -7718,7 +8082,8 @@
       "anytime": 0.06,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Youssef Msakni",
@@ -7730,7 +8095,8 @@
       "anytime": 0.06,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7744,7 +8110,8 @@
       "anytime": 0.331,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Donyell Malen",
@@ -7756,7 +8123,8 @@
       "anytime": 0.331,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cody Gakpo",
@@ -7768,7 +8136,8 @@
       "anytime": 0.151,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7811,7 +8180,8 @@
       "anytime": 0.252,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kenan Yildiz",
@@ -7823,7 +8193,8 @@
       "anytime": 0.198,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Hakan Calhanoglu",
@@ -7835,7 +8206,8 @@
       "anytime": 0.14,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7849,7 +8221,8 @@
       "anytime": 0.134,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ricardo Pepi",
@@ -7861,7 +8234,8 @@
       "anytime": 0.134,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Timothy Weah",
@@ -7873,7 +8247,8 @@
       "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -7891,15 +8266,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.42,
-    "p_draw": 0.259,
-    "p_away": 0.321,
+    "p_home": 0.414,
+    "p_draw": 0.26,
+    "p_away": 0.326,
     "pick": "Paraguay",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 2,
     "reasons": [
-     "Rating edge: Paraguay 1811 vs Australia 1776 (+35 incl. venue)"
+     "Rating edge: Paraguay 1807 vs Australia 1776 (+31 incl. venue)",
+     "Paraguay: Julio Enciso doubtful"
     ]
    },
    "scorers": {
@@ -7911,10 +8287,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.228,
+      "anytime": 0.236,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ramon Sosa",
@@ -7923,22 +8300,24 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.172,
+      "anytime": 0.178,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
-      "player": "Julio Enciso",
-      "club": "Strasbourg",
+      "player": "Miguel Almiron",
+      "club": "Atlanta United",
       "pos": "AM",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.14,
+      "anytime": 0.145,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -7949,10 +8328,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.185,
+      "anytime": 0.187,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kusini Yengi",
@@ -7961,10 +8341,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.185,
+      "anytime": 0.187,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Craig Goodwin",
@@ -7973,10 +8354,11 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.138,
+      "anytime": 0.14,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8020,7 +8402,8 @@
       "anytime": 0.156,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Alexander Sorloth",
@@ -8032,7 +8415,8 @@
       "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Antonio Nusa",
@@ -8044,7 +8428,8 @@
       "anytime": 0.102,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8058,7 +8443,8 @@
       "anytime": 0.434,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ousmane Dembele",
@@ -8070,7 +8456,8 @@
       "anytime": 0.219,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Bradley Barcola",
@@ -8082,7 +8469,8 @@
       "anytime": 0.164,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8123,7 +8511,8 @@
       "anytime": 0.305,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Iliman Ndiaye",
@@ -8135,7 +8524,8 @@
       "anytime": 0.305,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Sadio Mane",
@@ -8147,7 +8537,8 @@
       "anytime": 0.254,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8161,7 +8552,8 @@
       "anytime": 0.093,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Al-Hamadi",
@@ -8173,7 +8565,8 @@
       "anytime": 0.093,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Jasim",
@@ -8185,7 +8578,8 @@
       "anytime": 0.093,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8226,7 +8620,8 @@
       "anytime": 0.226,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ryan Mendes",
@@ -8238,7 +8633,8 @@
       "anytime": 0.17,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Garry Rodrigues",
@@ -8250,7 +8646,8 @@
       "anytime": 0.17,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8264,7 +8661,8 @@
       "anytime": 0.245,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Salem Al-Dawsari",
@@ -8276,7 +8674,8 @@
       "anytime": 0.209,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Musab Al-Juwayr",
@@ -8288,7 +8687,8 @@
       "anytime": 0.088,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8332,7 +8732,8 @@
       "anytime": 0.109,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Maxi Araujo",
@@ -8344,7 +8745,8 @@
       "anytime": 0.08,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Facundo Pellistri",
@@ -8356,7 +8758,8 @@
       "anytime": 0.08,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8367,10 +8770,11 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.301,
+      "anytime": 0.314,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Robert Lewandowski",
@@ -8379,10 +8783,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.267,
+      "anytime": 0.279,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Ferran Torres",
@@ -8391,10 +8796,11 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.267,
+      "anytime": 0.279,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -8435,7 +8841,8 @@
       "anytime": 0.184,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Trezeguet",
@@ -8447,7 +8854,8 @@
       "anytime": 0.176,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mohamed Salah",
@@ -8459,7 +8867,8 @@
       "anytime": 0.156,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8473,7 +8882,8 @@
       "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Alireza Jahanbakhsh",
@@ -8485,7 +8895,8 @@
       "anytime": 0.203,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Mohammad Mohebi",
@@ -8497,7 +8908,8 @@
       "anytime": 0.203,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -8539,7 +8951,8 @@
       "anytime": 0.047,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Chris Wood",
@@ -8551,7 +8964,8 @@
       "anytime": 0.039,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Kosta Barbarouses",
@@ -8563,7 +8977,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8577,7 +8992,8 @@
       "anytime": 0.32,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Kevin De Bruyne",
@@ -8589,7 +9005,8 @@
       "anytime": 0.299,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jeremy Doku",
@@ -8601,7 +9018,8 @@
       "anytime": 0.229,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -8645,7 +9063,8 @@
       "anytime": 0.076,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Jose Fajardo",
@@ -8657,7 +9076,8 @@
       "anytime": 0.076,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cecilio Waterman",
@@ -8669,7 +9089,8 @@
       "anytime": 0.076,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8683,7 +9104,8 @@
       "anytime": 0.357,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Bukayo Saka",
@@ -8695,7 +9117,8 @@
       "anytime": 0.244,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Cole Palmer",
@@ -8707,7 +9130,8 @@
       "anytime": 0.2,
       "shots": "Medium",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }
@@ -8750,7 +9174,8 @@
       "anytime": 0.382,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ante Budimir",
@@ -8762,7 +9187,8 @@
       "anytime": 0.337,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Ivan Perisic",
@@ -8774,7 +9200,8 @@
       "anytime": 0.301,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8788,7 +9215,8 @@
       "anytime": 0.035,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Antoine Semenyo",
@@ -8800,7 +9228,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Inaki Williams",
@@ -8812,7 +9241,8 @@
       "anytime": 0.031,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8853,7 +9283,8 @@
       "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Luis Suarez",
@@ -8865,7 +9296,8 @@
       "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Luis Diaz",
@@ -8877,7 +9309,8 @@
       "anytime": 0.142,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8891,7 +9324,8 @@
       "anytime": 0.369,
       "shots": "High",
       "confidence": 3,
-      "conf_label": "High"
+      "conf_label": "High",
+      "doubtful": false
      },
      {
       "player": "Rafael Leao",
@@ -8903,7 +9337,8 @@
       "anytime": 0.125,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Goncalo Ramos",
@@ -8915,7 +9350,8 @@
       "anytime": 0.082,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -8956,7 +9392,8 @@
       "anytime": 0.168,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Cedric Bakambu",
@@ -8968,7 +9405,8 @@
       "anytime": 0.168,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Fiston Mayele",
@@ -8980,7 +9418,8 @@
       "anytime": 0.168,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -8994,7 +9433,8 @@
       "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Jaloliddin Masharipov",
@@ -9006,7 +9446,8 @@
       "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Abbosbek Fayzullaev",
@@ -9018,7 +9459,8 @@
       "anytime": 0.155,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -9059,7 +9501,8 @@
       "anytime": 0.186,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Amine Gouiri",
@@ -9071,7 +9514,8 @@
       "anytime": 0.186,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Said Benrahma",
@@ -9083,7 +9527,8 @@
       "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -9097,7 +9542,8 @@
       "anytime": 0.256,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Marko Arnautovic",
@@ -9109,7 +9555,8 @@
       "anytime": 0.222,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Marcel Sabitzer",
@@ -9121,7 +9568,8 @@
       "anytime": 0.092,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ]
    }
@@ -9165,7 +9613,8 @@
       "anytime": 0.036,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Mousa Al-Tamari",
@@ -9177,7 +9626,8 @@
       "anytime": 0.026,
       "shots": "High",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      },
      {
       "player": "Ali Azaizeh",
@@ -9189,7 +9639,8 @@
       "anytime": 0.021,
       "shots": "Medium",
       "confidence": 1,
-      "conf_label": "Low"
+      "conf_label": "Low",
+      "doubtful": false
      }
     ],
     "away": [
@@ -9203,7 +9654,8 @@
       "anytime": 0.417,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Lautaro Martinez",
@@ -9215,7 +9667,8 @@
       "anytime": 0.375,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      },
      {
       "player": "Julian Alvarez",
@@ -9227,7 +9680,8 @@
       "anytime": 0.294,
       "shots": "High",
       "confidence": 2,
-      "conf_label": "Medium"
+      "conf_label": "Medium",
+      "doubtful": false
      }
     ]
    }

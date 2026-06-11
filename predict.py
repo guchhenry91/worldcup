@@ -188,14 +188,33 @@ def shots_tier(prob, pos):
     return "Low"
 
 
-def team_scorers(players, lam_team):
-    """Top 3 likely scorers for a team given its expected goals this match."""
+def team_scorers(players, lam_team, injuries=None):
+    """Top 3 likely scorers for a team given its expected goals this match.
+
+    Players ruled out/suspended (per news injuries) are dropped; doubtful
+    players are downweighted so a late fitness flag tempers their pick.
+    """
     if not players:
         return []
-    rated = [(p, player_rate(p)) for p in players]
-    total = sum(r for _, r in rated) + BENCH_RESERVE
+    status = {}
+    for inj in (injuries or []):
+        nm = (inj.get("player") or "").lower()
+        if nm:
+            status[nm] = inj.get("status")
+    rated = []
+    for p in players:
+        st = status.get((p.get("player") or "").lower())
+        if st in ("out", "suspended"):
+            continue
+        r = player_rate(p)
+        if st == "doubtful":
+            r *= 0.55
+        rated.append((p, r, st))
+    if not rated:
+        return []
+    total = sum(r for _, r, _ in rated) + BENCH_RESERVE
     out = []
-    for p, r in rated:
+    for p, r, st in rated:
         share = r / total
         lam_p = lam_team * share
         prob = min(ANYTIME_CAP, 1 - math.exp(-lam_p))
@@ -211,6 +230,7 @@ def team_scorers(players, lam_team):
             "shots": shots_tier(prob, p.get("pos", "")),
             "confidence": conf,
             "conf_label": label,
+            "doubtful": st == "doubtful",
         })
     out.sort(key=lambda x: -x["anytime"])
     return out[:3]
@@ -279,8 +299,8 @@ def main():
         ph, pd, pa, scores = outcome_probs(dr)
         lh, la = team_lambdas(dr)
         scorers = {
-            "home": team_scorers(players.get(h, []), lh),
-            "away": team_scorers(players.get(a, []), la),
+            "home": team_scorers(players.get(h, []), lh, news.get(h, {}).get("injuries", [])),
+            "away": team_scorers(players.get(a, []), la, news.get(a, {}).get("injuries", [])),
         }
         reasons.insert(0, f"Rating edge: {h} {eh:.0f} vs {a} {ea:.0f} ({dr:+.0f} incl. venue)")
         fh, fa = news.get(h, {}).get("form"), news.get(a, {}).get("form")

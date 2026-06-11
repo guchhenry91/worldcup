@@ -333,7 +333,7 @@ function scorerCol(team,list){
     <div class="sct">${fl(team,16)} ${team}</div>
     ${list.map(p=>`<div class="pcard">
       <div class="av">${initials(p.player)}</div>
-      <div class="pi"><div class="pn">${p.player}${p.pens?' <span class="pen" title="penalty taker">⚽</span>':''}</div>
+      <div class="pi"><div class="pn">${p.player}${p.pens?' <span class="pen" title="penalty taker">⚽</span>':''}${p.doubtful?' <span style="color:var(--loss);font-size:8.5px;font-weight:700;letter-spacing:.04em">DOUBT</span>':''}</div>
         <div class="pm">${p.club||p.pos||''}${p.goals!=null?` · ${p.goals}G club`:''} · 🎯 ${p.shots} shots</div></div>
       <div class="pr"><div class="pp">${Math.round(p.anytime*100)}<small>%</small></div>
         <span class="badge ${p.conf_label}">${p.conf_label}</span></div>

@@ -268,6 +268,7 @@
       "form_note": "Hosts open the entire tournament vs South Africa at the Estadio Azteca on June 11.",
       "injuries": [
         { "player": "Luis Angel Malagon", "status": "out", "note": "Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement" },
+        { "player": "Marcel Ruiz", "status": "out", "note": "Ruled out injured ahead of the opener" },
         { "player": "Edson Alvarez", "status": "doubtful", "note": "Captain's fitness being monitored" }
       ],
       "key_players": [
@@ -286,7 +287,7 @@
       "form_note": "Co-hosts in Group B with Switzerland, Qatar and Bosnia and Herzegovina; final squad named May 29.",
       "injuries": [
         { "player": "Marcelo Flores", "status": "out", "note": "ACL tear in the CONCACAF Champions Cup final May 30; replaced by Jayden Nelson on June 9" },
-        { "player": "Alphonso Davies", "status": "doubtful", "note": "Returned to full training after hamstring injury; team expected to remain cautious with its captain" }
+        { "player": "Alphonso Davies", "status": "out", "note": "Back in training but will NOT feature in the Bosnia opener as Canada manages his hamstring; later group games uncertain" }
       ],
       "key_players": [
         { "player": "Alphonso Davies", "club": "Bayern Munich", "goals": null, "assists": null, "note": "Captain and best player; managing his way back from a hamstring problem" },
@@ -362,6 +363,7 @@
       "form": null,
       "form_note": "Topped their AFC qualifying group ahead of Jordan; in Group A with hosts Mexico, South Africa and Czechia.",
       "injuries": [
+        { "player": "Bae Jun-ho", "status": "doubtful", "note": "Ankle injury; in individual training, a doubt for the Czechia opener (2g/3a in qualifying)" },
         { "player": "Hwang In-beom", "status": "doubtful", "note": "Called up despite struggling with an ankle injury at Feyenoord" }
       ],
       "key_players": [
@@ -441,11 +443,13 @@
     "Paraguay": {
       "form": null,
       "form_note": "Open the tournament against the hosts United States at SoFi Stadium on June 12; first World Cup since 2010.",
-      "injuries": [],
+      "injuries": [
+        { "player": "Julio Enciso", "status": "doubtful", "note": "Thigh injury — avoided a serious problem but unlikely to be rushed back for the USA opener" }
+      ],
       "key_players": [
         { "player": "Miguel Almiron", "club": "Atlanta United", "goals": null, "assists": null, "note": "Experienced attacking reference point" }
       ],
-      "news": ["Qualified comfortably from CONMEBOL on the back of a famously stingy defense."]
+      "news": ["Qualified comfortably from CONMEBOL on the back of a famously stingy defense.", "Star attacker Julio Enciso a fitness doubt for the opener with a thigh issue."]
     },
     "Australia": {
       "form": null,
