@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "teams": {
     "Mexico": [
       {"player":"Raul Jimenez","club":"Fulham","pos":"FW","goals":9,"apps":27,"pens":true,"intl_goals":44},
@@ -27,7 +27,6 @@
     ],
     "Canada": [
       {"player":"Jonathan David","club":"Juventus","pos":"FW","goals":6,"apps":null,"pens":true,"intl_goals":35},
-      {"player":"Alphonso Davies","club":"Bayern Munich","pos":"W","goals":null,"apps":null,"intl_goals":18},
       {"player":"Cyle Larin","club":"Mallorca","pos":"FW","goals":null,"apps":null,"intl_goals":34},
       {"player":"Tani Oluwaseyi","club":"Villarreal","pos":"FW","goals":null,"apps":null,"intl_goals":null}
     ],
