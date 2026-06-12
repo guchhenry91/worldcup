@@ -27,17 +27,17 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "4": {
-  "p_home": 0.387,
+  "p_home": 0.382,
   "p_draw": 0.261,
-  "p_away": 0.352,
+  "p_away": 0.357,
   "pick": "United States",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 1,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "8": {
   "p_home": 0.015,
@@ -47,37 +47,37 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "7": {
-  "p_home": 0.527,
-  "p_draw": 0.245,
-  "p_away": 0.228,
+  "p_home": 0.545,
+  "p_draw": 0.241,
+  "p_away": 0.214,
   "pick": "Brazil",
   "pick_type": "home",
   "score": "1-0",
-  "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "confidence": 4,
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "5": {
-  "p_home": 0.108,
-  "p_draw": 0.196,
-  "p_away": 0.696,
+  "p_home": 0.119,
+  "p_draw": 0.202,
+  "p_away": 0.68,
   "pick": "Scotland",
   "pick_type": "away",
-  "score": "0-2",
+  "score": "0-1",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "6": {
-  "p_home": 0.218,
-  "p_draw": 0.242,
-  "p_away": 0.54,
+  "p_home": 0.227,
+  "p_draw": 0.245,
+  "p_away": 0.528,
   "pick": "Turkey",
   "pick_type": "away",
   "score": "0-1",
-  "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "confidence": 3,
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "10": {
   "p_home": 0.903,
@@ -87,7 +87,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "11": {
   "p_home": 0.41,
@@ -97,7 +97,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "9": {
   "p_home": 0.116,
@@ -107,7 +107,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "12": {
   "p_home": 0.469,
@@ -117,7 +117,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "14": {
   "p_home": 0.909,
@@ -127,7 +127,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "16": {
   "p_home": 0.651,
@@ -137,7 +137,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "13": {
   "p_home": 0.048,
@@ -147,7 +147,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "15": {
   "p_home": 0.708,
@@ -157,7 +157,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "17": {
   "p_home": 0.644,
@@ -167,7 +167,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "18": {
   "p_home": 0.069,
@@ -177,7 +177,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "19": {
   "p_home": 0.818,
@@ -187,7 +187,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "20": {
   "p_home": 0.605,
@@ -197,7 +197,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "23": {
   "p_home": 0.832,
@@ -207,7 +207,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "22": {
   "p_home": 0.511,
@@ -217,7 +217,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "21": {
   "p_home": 0.1,
@@ -227,7 +227,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "24": {
   "p_home": 0.077,
@@ -237,17 +237,17 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "25": {
-  "p_home": 0.634,
-  "p_draw": 0.217,
-  "p_away": 0.149,
+  "p_home": 0.645,
+  "p_draw": 0.214,
+  "p_away": 0.141,
   "pick": "Czech Republic",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "26": {
   "p_home": 0.806,
@@ -257,7 +257,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "27": {
   "p_home": 0.877,
@@ -267,57 +267,57 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "28": {
-  "p_home": 0.625,
-  "p_draw": 0.22,
-  "p_away": 0.155,
+  "p_home": 0.613,
+  "p_draw": 0.224,
+  "p_away": 0.163,
   "pick": "Mexico",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "32": {
-  "p_home": 0.433,
-  "p_draw": 0.258,
-  "p_away": 0.309,
+  "p_home": 0.427,
+  "p_draw": 0.259,
+  "p_away": 0.314,
   "pick": "United States",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "30": {
-  "p_home": 0.251,
-  "p_draw": 0.25,
-  "p_away": 0.5,
+  "p_home": 0.261,
+  "p_draw": 0.252,
+  "p_away": 0.488,
   "pick": "Morocco",
   "pick_type": "away",
   "score": "0-1",
   "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "29": {
-  "p_home": 0.891,
-  "p_draw": 0.094,
+  "p_home": 0.888,
+  "p_draw": 0.096,
   "p_away": 0.015,
   "pick": "Brazil",
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "31": {
-  "p_home": 0.494,
-  "p_draw": 0.251,
-  "p_away": 0.256,
+  "p_home": 0.482,
+  "p_draw": 0.253,
+  "p_away": 0.266,
   "pick": "Turkey",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "35": {
   "p_home": 0.674,
@@ -327,7 +327,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "33": {
   "p_home": 0.67,
@@ -337,7 +337,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "34": {
   "p_home": 0.905,
@@ -347,7 +347,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "36": {
   "p_home": 0.089,
@@ -357,7 +357,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "38": {
   "p_home": 0.909,
@@ -367,7 +367,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "39": {
   "p_home": 0.544,
@@ -377,7 +377,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "37": {
   "p_home": 0.814,
@@ -387,7 +387,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "40": {
   "p_home": 0.169,
@@ -397,7 +397,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "43": {
   "p_home": 0.739,
@@ -407,7 +407,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "42": {
   "p_home": 0.896,
@@ -417,7 +417,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "41": {
   "p_home": 0.402,
@@ -427,7 +427,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "44": {
   "p_home": 0.241,
@@ -437,7 +437,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "47": {
   "p_home": 0.772,
@@ -447,7 +447,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "45": {
   "p_home": 0.909,
@@ -457,7 +457,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "46": {
   "p_home": 0.146,
@@ -467,7 +467,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "48": {
   "p_home": 0.811,
@@ -477,7 +477,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "51": {
   "p_home": 0.566,
@@ -487,7 +487,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "52": {
   "p_home": 0.545,
@@ -497,47 +497,47 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "49": {
-  "p_home": 0.133,
-  "p_draw": 0.21,
-  "p_away": 0.657,
+  "p_home": 0.129,
+  "p_draw": 0.208,
+  "p_away": 0.663,
   "pick": "Brazil",
   "pick_type": "away",
   "score": "0-1",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "50": {
-  "p_home": 0.81,
-  "p_draw": 0.144,
-  "p_away": 0.046,
+  "p_home": 0.786,
+  "p_draw": 0.156,
+  "p_away": 0.058,
   "pick": "Morocco",
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "53": {
-  "p_home": 0.167,
-  "p_draw": 0.225,
-  "p_away": 0.608,
+  "p_home": 0.171,
+  "p_draw": 0.227,
+  "p_away": 0.603,
   "pick": "Mexico",
   "pick_type": "away",
   "score": "0-1",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "54": {
-  "p_home": 0.089,
-  "p_draw": 0.182,
-  "p_away": 0.729,
+  "p_home": 0.08,
+  "p_draw": 0.176,
+  "p_away": 0.745,
   "pick": "South Korea",
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "55": {
   "p_home": 0.08,
@@ -547,7 +547,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "56": {
   "p_home": 0.384,
@@ -557,7 +557,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 1,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "57": {
   "p_home": 0.634,
@@ -567,7 +567,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "58": {
   "p_home": 0.069,
@@ -577,17 +577,17 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "59": {
-  "p_home": 0.593,
-  "p_draw": 0.229,
-  "p_away": 0.178,
+  "p_home": 0.587,
+  "p_draw": 0.231,
+  "p_away": 0.182,
   "pick": "Turkey",
   "pick_type": "home",
   "score": "1-0",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "60": {
   "p_home": 0.414,
@@ -597,7 +597,7 @@
   "pick_type": "home",
   "score": "1-0",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "61": {
   "p_home": 0.164,
@@ -607,7 +607,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 4,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "62": {
   "p_home": 0.736,
@@ -617,7 +617,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "65": {
   "p_home": 0.359,
@@ -627,7 +627,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 1,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "66": {
   "p_home": 0.104,
@@ -637,7 +637,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "63": {
   "p_home": 0.271,
@@ -647,7 +647,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 3,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "64": {
   "p_home": 0.027,
@@ -657,7 +657,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "67": {
   "p_home": 0.066,
@@ -667,7 +667,7 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "68": {
   "p_home": 0.89,
@@ -677,7 +677,7 @@
   "pick_type": "home",
   "score": "2-0",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "71": {
   "p_home": 0.345,
@@ -687,7 +687,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 1,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "72": {
   "p_home": 0.3,
@@ -697,7 +697,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "69": {
   "p_home": 0.282,
@@ -707,7 +707,7 @@
   "pick_type": "away",
   "score": "0-1",
   "confidence": 2,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  },
  "70": {
   "p_home": 0.015,
@@ -717,6 +717,6 @@
   "pick_type": "away",
   "score": "0-2",
   "confidence": 5,
-  "locked_at": "2026-06-12T09:01:24+00:00"
+  "locked_at": "2026-06-12T09:04:45+00:00"
  }
 }

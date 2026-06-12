@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-12T09:01:35+00:00",
+ "updated": "2026-06-12T09:04:54+00:00",
  "record": {
   "correct": 2,
   "wrong": 0,
@@ -95,8 +95,8 @@
    "flag": "🇲🇽",
    "elo": 1883,
    "fifa_rank": 15,
-   "form": null,
-   "form_note": "Hosts open the entire tournament vs South Africa at the Estadio Azteca on June 11.",
+   "form": "W",
+   "form_note": "Won opening match 2-0 vs South Africa (Quinones 9', Jimenez 67') at the Estadio Azteca. Won with 10 men after Montes red card in 90+2'. Next: vs South Korea June 18.",
    "injuries": [
     {
      "player": "Luis Angel Malagon",
@@ -111,7 +111,12 @@
     {
      "player": "Edson Alvarez",
      "status": "fit",
-     "note": "Recovered from ankle surgery (Feb); only ~80 mins of play in 2026 so match sharpness a concern, but named captain and expected to start vs South Africa"
+     "note": "Started vs South Africa; managed minutes"
+    },
+    {
+     "player": "Carlos Montes",
+     "status": "suspended",
+     "note": "Red card in 90+2' vs South Africa; suspended for the South Korea match (June 18)"
     }
    ],
    "key_players": [
@@ -153,35 +158,47 @@
    "flag": "🇿🇦",
    "elo": 1523,
    "fifa_rank": 60,
-   "form": null,
-   "form_note": "Face hosts Mexico in the tournament's opening match at the Estadio Azteca on June 11.",
-   "injuries": [],
+   "form": "L",
+   "form_note": "Lost 0-2 to hosts Mexico in the tournament opener at Estadio Azteca. Finished with 9 men (Sithole red card 49', T. Zwane red card 84' via VAR). Both suspended for next match vs Czech Republic (June 18).",
+   "injuries": [
+    {
+     "player": "Sithole",
+     "status": "suspended",
+     "note": "Red card vs Mexico (49'); suspended for the Czech Republic match (June 18)"
+    },
+    {
+     "player": "T. Zwane",
+     "status": "suspended",
+     "note": "Red card via VAR vs Mexico (84'); suspended for the Czech Republic match (June 18)"
+    }
+   ],
    "key_players": [],
    "news": [
-    "First World Cup appearance since hosting in 2010."
+    "First World Cup appearance since hosting in 2010.",
+    "Conceded 2 goals and had 2 players sent off vs Mexico in the opener."
    ]
   },
   "South Korea": {
    "flag": "🇰🇷",
    "elo": 1789,
    "fifa_rank": 25,
-   "form": null,
-   "form_note": "Topped their AFC qualifying group ahead of Jordan; in Group A with hosts Mexico, South Africa and Czechia.",
+   "form": "W",
+   "form_note": "Came from 1-0 down to beat Czech Republic 2-1 (Hwang In-beom 67', Oh Hyeon-Gyu 80'; Czech goal L. Krejci 59'). Hwang In-beom played and scored despite ankle concerns. Next: vs Mexico June 18.",
    "injuries": [
     {
      "player": "Bae Jun-ho",
      "status": "doubtful",
-     "note": "Ankle injury; in individual training, a doubt for the Czechia opener (2g/3a in qualifying)"
+     "note": "Ankle injury; in individual training, a doubt for the opener"
     },
     {
      "player": "Hwang In-beom",
-     "status": "doubtful",
-     "note": "Called up despite struggling with an ankle injury at Feyenoord"
+     "status": "fit",
+     "note": "Played and scored vs Czech Republic despite pre-tournament ankle concern"
     },
     {
      "player": "Cho Yu-min",
      "status": "out",
-     "note": "Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je (called up June 2026)"
+     "note": "Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je"
     }
    ],
    "key_players": [
@@ -276,12 +293,12 @@
     {
      "player": "Edin Dzeko",
      "status": "doubtful",
-     "note": "Missed final warm-up with a shoulder injury; expected to be fit to feature in the Canada opener"
+     "note": "Shoulder injury; missed training Tuesday and was only on the bench for the final friendly vs Panama — serious doubt to start vs Canada (June 12)"
     },
     {
      "player": "Haris Tabakovic",
      "status": "doubtful",
-     "note": "Ankle injury; fighting against time to be fit for June 12 opener"
+     "note": "Ankle injury; unlikely to feature vs Canada"
     },
     {
      "player": "Ivan Sunjic",
@@ -368,7 +385,12 @@
     {
      "player": "Neymar",
      "status": "doubtful",
-     "note": "Grade-two calf strain since May 17; team doctor says 2-3 weeks sidelined — doubtful for the opener vs Morocco June 13"
+     "note": "Grade-two calf strain since May 17; not expected to be ready for the opener vs Morocco June 13"
+    },
+    {
+     "player": "Wesley",
+     "status": "out",
+     "note": "Muscle injury rules him out of the entire World Cup; right-back slot now open (Danilo/Roger Ibanez options)"
     }
    ],
    "key_players": [
@@ -412,12 +434,27 @@
    "elo": 1848,
    "fifa_rank": 8,
    "form": null,
-   "form_note": "2022 semi-finalists retain their core; open the tournament against Brazil on June 13 in Group C.",
+   "form_note": "2022 semi-finalists hit by multiple pre-tournament injuries; open against Brazil on June 13 in Group C.",
    "injuries": [
     {
      "player": "Achraf Hakimi",
      "status": "fit",
      "note": "Recovered from a hamstring tear suffered in the Champions League"
+    },
+    {
+     "player": "Nayef Aguerd",
+     "status": "out",
+     "note": "Groin injury rules him out of the entire World Cup; replaced by Marwane Saadane (Al Fateh)"
+    },
+    {
+     "player": "Abde Ezzalzouli",
+     "status": "out",
+     "note": "Knee injury suffered in Norway friendly rules him out of the entire World Cup; replaced by Amine Sbai (Angers)"
+    },
+    {
+     "player": "Noussair Mazraoui",
+     "status": "doubtful",
+     "note": "Shoulder problem from Norway friendly; not thought to be serious but a late call on fitness for June 13"
     }
    ],
    "key_players": [
@@ -426,7 +463,7 @@
      "club": "PSG",
      "goals": null,
      "assists": null,
-     "note": "Captain; rated among the world's best right-backs; shares Morocco's record of 10 World Cup appearances"
+     "note": "Captain; rated among the world's best right-backs; fit after hamstring scare"
     },
     {
      "player": "Sofyan Amrabat",
@@ -443,16 +480,17 @@
      "note": "Midfield creator retained from the 2022 generation"
     },
     {
-     "player": "Nayef Aguerd",
-     "club": "Marseille",
+     "player": "Brahim Diaz",
+     "club": "AC Milan",
      "goals": null,
      "assists": null,
-     "note": "Centre-back mainstay of the qualifying campaign"
+     "note": "Creative attacker expected to start vs Brazil"
     }
    ],
    "news": [
-    "Manager upheaval: Walid Regragui left the post in March 2026 just months before the finals; Mohamed Ouahbi (U-20 World Cup-winning coach) now in charge.",
-    "Squad backbone retained from the historic 2022 semi-final team (Amrabat, Ounahi, Mazraoui, Aguerd)."
+    "Manager upheaval: Walid Regragui left the post in March 2026; Mohamed Ouahbi (U-20 World Cup-winning coach) now in charge.",
+    "Double injury blow: Aguerd (groin) and Ezzalzouli (knee) both ruled out for the tournament — significant defensive and wide-attacking losses.",
+    "Mazraoui also a late doubt (shoulder), putting further pressure on the backline vs Brazil."
    ]
   },
   "Haiti": {
@@ -472,12 +510,22 @@
    "elo": 1766,
    "fifa_rank": 43,
    "form": null,
-   "form_note": "In Group C with Brazil, Morocco and Haiti; first World Cup since 1998.",
+   "form_note": "In Group C with Brazil, Morocco and Haiti; first World Cup since 1998. Midfield options thinning ahead of June 13 opener vs Haiti.",
    "injuries": [
     {
      "player": "Billy Gilmour",
      "status": "out",
-     "note": "Knee injury suffered in the pre-tournament friendly vs Curacao at Hampden Park"
+     "note": "Knee injury in final friendly vs Curacao; flew to Boston to support teammates as a spectator"
+    },
+    {
+     "player": "Scott McTominay",
+     "status": "doubtful",
+     "note": "Missed Thursday training with an upset stomach; traveled separately from the squad with a doctor; status uncertain for Haiti opener (June 13)"
+    },
+    {
+     "player": "Scott McKenna",
+     "status": "doubtful",
+     "note": "Absent from Thursday training with a knock; fitness to be assessed"
     }
    ],
    "key_players": [
@@ -486,7 +534,7 @@
      "club": "Napoli",
      "goals": null,
      "assists": null,
-     "note": "Talismanic goal-scoring midfielder"
+     "note": "Talismanic goal-scoring midfielder; doubt for Haiti opener with stomach illness"
     },
     {
      "player": "Andy Robertson",
@@ -497,7 +545,8 @@
     }
    ],
    "news": [
-    "Losing Gilmour to a knee injury in the final friendly is a significant midfield blow."
+    "Gilmour ruled out with knee injury from final friendly — a significant midfield blow.",
+    "McTominay illness adds further midfield concern; coach Steve Clarke due to brief media on June 13 before the Haiti match."
    ]
   },
   "United States": {
@@ -514,8 +563,8 @@
     },
     {
      "player": "Chris Richards",
-     "status": "fit",
-     "note": "Ankle injury May 17; returned to full team training and expected to start vs Paraguay"
+     "status": "doubtful",
+     "note": "Ankle injury May 17; only just resumed training — late fitness test ahead of the Paraguay opener (June 12); Miles Robinson and Mark McKenzie in contention"
     }
    ],
    "key_players": [
@@ -603,12 +652,17 @@
    "elo": 1893,
    "fifa_rank": 22,
    "form": null,
-   "form_note": "In Group D with United States, Australia and Paraguay; first World Cup since 2002.",
+   "form_note": "In Group D with United States, Australia and Paraguay; first World Cup since 2002. Open vs Australia at BC Place on June 14.",
    "injuries": [
     {
      "player": "Arda Guler",
      "status": "fit",
-     "note": "Fully fit and the focal point of the team"
+     "note": "Fully fit and the focal point of the team; expected to start vs Australia"
+    },
+    {
+     "player": "Kenan Yildiz",
+     "status": "doubtful",
+     "note": "Calf injury; would be a surprise to see him feature vs Australia on June 14"
     }
    ],
    "key_players": [
@@ -617,18 +671,26 @@
      "club": "Real Madrid",
      "goals": null,
      "assists": null,
-     "note": "Creative centerpiece for Turkey's first finals in 24 years"
+     "note": "Creative centerpiece for Turkey's first finals in 24 years; confirmed fit"
     },
     {
      "player": "Kenan Yildiz",
      "club": "Juventus",
      "goals": null,
      "assists": null,
-     "note": "Second star of the young attacking core"
+     "note": "Second star of the young attacking core; doubt with calf injury"
+    },
+    {
+     "player": "Hakan Calhanoglu",
+     "club": "Inter Milan",
+     "goals": null,
+     "assists": null,
+     "note": "Captain; confirmed fit and expected to start"
     }
    ],
    "news": [
-    "Final squad announced June 2 after a 35-man preliminary list; genuine dark-horse buzz around the young attack."
+    "Final squad announced June 2 after a 35-man preliminary list; genuine dark-horse buzz around the young attack.",
+    "Yildiz calf injury clouds opener; Guler confirmed fit and will carry attacking responsibility."
    ]
   },
   "Germany": {
@@ -1797,7 +1859,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Mexico 1867 vs South Africa 1523 (+425 incl. venue)",
+     "Rating edge: Mexico 1863 vs South Africa 1515 (+429 incl. venue)",
      "Mexico effectively at home in Mexico City (+80 Elo)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
      "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)"
@@ -1813,7 +1875,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.371,
+      "anytime": 0.372,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -1826,7 +1888,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.286,
+      "anytime": 0.287,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -1839,7 +1901,7 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.276,
+      "anytime": 0.277,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -1913,10 +1975,10 @@
     "score": "1-0",
     "confidence": 1,
     "reasons": [
-     "Rating edge: South Korea 1773 vs Czech Republic 1704 (+69 incl. venue)",
+     "Rating edge: South Korea 1777 vs Czech Republic 1704 (+73 incl. venue)",
      "South Korea: Bae Jun-ho doubtful",
-     "South Korea: Hwang In-beom doubtful",
-     "South Korea: Cho Yu-min out (Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je (called up June 2026))"
+     "South Korea: Cho Yu-min out (Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je)",
+     "Form: South Korea W · Czech Republic —"
     ],
     "locked_at": "2026-06-12T08:53:45+00:00"
    },
@@ -1929,7 +1991,7 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.287,
+      "anytime": 0.288,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -1942,7 +2004,7 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.181,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -1955,7 +2017,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.157,
+      "anytime": 0.158,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -1970,7 +2032,7 @@
       "goals": 16,
       "apps": 28,
       "pens": true,
-      "anytime": 0.206,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -1983,7 +2045,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.175,
+      "anytime": 0.174,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -1996,7 +2058,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.106,
+      "anytime": 0.105,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -2131,18 +2193,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.387,
+    "p_home": 0.382,
     "p_draw": 0.261,
-    "p_away": 0.352,
+    "p_away": 0.357,
     "pick": "United States",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1740 vs Paraguay 1807 (+13 incl. venue)",
+     "Rating edge: United States 1736 vs Paraguay 1807 (+9 incl. venue)",
      "United States effectively at home in Inglewood (+80 Elo)",
      "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
-     "Paraguay: Julio Enciso doubtful"
+     "United States: Chris Richards doubtful"
     ],
     "locked_at": null
    },
@@ -2155,7 +2217,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.206,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2168,7 +2230,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.206,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2181,7 +2243,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.154,
+      "anytime": 0.153,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2196,7 +2258,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.217,
+      "anytime": 0.219,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2209,7 +2271,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.163,
+      "anytime": 0.164,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2222,7 +2284,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.133,
+      "anytime": 0.134,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -2354,15 +2416,15 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.527,
-    "p_draw": 0.245,
-    "p_away": 0.228,
+    "p_home": 0.545,
+    "p_draw": 0.241,
+    "p_away": 0.214,
     "pick": "Brazil",
     "pick_type": "home",
     "score": "1-0",
-    "confidence": 3,
+    "confidence": 4,
     "reasons": [
-     "Rating edge: Brazil 1956 vs Morocco 1848 (+108 incl. venue)",
+     "Rating edge: Brazil 1948 vs Morocco 1828 (+120 incl. venue)",
      "Brazil: Rodrygo out (ACL rupture and meniscus tear; 7-9 month recovery, likely out for rest of 2026)",
      "Brazil: Eder Militao out (Biceps femoris tendon rupture; 5-month recovery)",
      "Brazil: Estevao out (Grade-four hamstring injury in April; left off the squad)"
@@ -2378,7 +2440,7 @@
       "goals": 21,
       "apps": 33,
       "pens": true,
-      "anytime": 0.279,
+      "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2391,7 +2453,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.218,
+      "anytime": 0.222,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2404,7 +2466,7 @@
       "goals": 15,
       "apps": null,
       "pens": false,
-      "anytime": 0.218,
+      "anytime": 0.222,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2419,7 +2481,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.17,
+      "anytime": 0.164,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2432,7 +2494,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.17,
+      "anytime": 0.164,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2445,7 +2507,7 @@
       "goals": 1,
       "apps": null,
       "pens": false,
-      "anytime": 0.102,
+      "anytime": 0.099,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -2467,16 +2529,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.108,
-    "p_draw": 0.196,
-    "p_away": 0.696,
+    "p_home": 0.119,
+    "p_draw": 0.202,
+    "p_away": 0.68,
     "pick": "Scotland",
     "pick_type": "away",
-    "score": "0-2",
+    "score": "0-1",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Haiti 1533 vs Scotland 1758 (-226 incl. venue)",
-     "Scotland: Billy Gilmour out (Knee injury suffered in the pre-tournament friendly vs Curacao at Hampden Park)"
+     "Rating edge: Haiti 1533 vs Scotland 1746 (-214 incl. venue)",
+     "Scotland: Billy Gilmour out (Knee injury in final friendly vs Curacao; flew to Boston to support teammates as a spectator)",
+     "Scotland: Scott McTominay doubtful",
+     "Scotland: Scott McKenna doubtful"
     ],
     "locked_at": null
    },
@@ -2489,7 +2553,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.108,
+      "anytime": 0.113,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2502,7 +2566,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.108,
+      "anytime": 0.113,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2515,7 +2579,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.108,
+      "anytime": 0.113,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2530,7 +2594,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.33,
+      "anytime": 0.333,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2543,20 +2607,20 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.253,
+      "anytime": 0.255,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
       "doubtful": false
      },
      {
-      "player": "Scott McTominay",
-      "club": "Napoli",
+      "player": "John McGinn",
+      "club": "Aston Villa",
       "pos": "MF",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.123,
+      "anytime": 0.124,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -2578,15 +2642,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.218,
-    "p_draw": 0.242,
-    "p_away": 0.54,
+    "p_home": 0.227,
+    "p_draw": 0.245,
+    "p_away": 0.528,
     "pick": "Turkey",
     "pick_type": "away",
     "score": "0-1",
-    "confidence": 4,
+    "confidence": 3,
     "reasons": [
-     "Rating edge: Australia 1776 vs Turkey 1893 (-117 incl. venue)"
+     "Rating edge: Australia 1776 vs Turkey 1885 (-109 incl. venue)",
+     "Turkey: Kenan Yildiz doubtful"
     ],
     "locked_at": null
    },
@@ -2599,7 +2664,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.151,
+      "anytime": 0.154,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2612,7 +2677,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.151,
+      "anytime": 0.154,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2625,7 +2690,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.112,
+      "anytime": 0.115,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2640,23 +2705,10 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.237,
+      "anytime": 0.246,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
-      "doubtful": false
-     },
-     {
-      "player": "Kenan Yildiz",
-      "club": "Juventus",
-      "pos": "AM",
-      "goals": 10,
-      "apps": 33,
-      "pens": false,
-      "anytime": 0.186,
-      "shots": "Medium",
-      "confidence": 1,
-      "conf_label": "Low",
       "doubtful": false
      },
      {
@@ -2666,11 +2718,24 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.131,
+      "anytime": 0.136,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
       "doubtful": false
+     },
+     {
+      "player": "Kenan Yildiz",
+      "club": "Juventus",
+      "pos": "AM",
+      "goals": 10,
+      "apps": 33,
+      "pens": false,
+      "anytime": 0.111,
+      "shots": "Medium",
+      "confidence": 1,
+      "conf_label": "Low",
+      "doubtful": true
      }
     ]
    }
@@ -4470,15 +4535,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.634,
-    "p_draw": 0.217,
-    "p_away": 0.149,
+    "p_home": 0.645,
+    "p_draw": 0.214,
+    "p_away": 0.141,
     "pick": "Czech Republic",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Czech Republic 1704 vs South Africa 1523 (+181 incl. venue)"
+     "Rating edge: Czech Republic 1704 vs South Africa 1515 (+189 incl. venue)",
+     "South Africa: Sithole suspended",
+     "South Africa: T. Zwane suspended",
+     "Form: Czech Republic — · South Africa L"
     ],
     "locked_at": null
    },
@@ -4491,7 +4559,7 @@
       "goals": 16,
       "apps": 28,
       "pens": true,
-      "anytime": 0.321,
+      "anytime": 0.324,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4504,7 +4572,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.276,
+      "anytime": 0.279,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4517,7 +4585,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.172,
+      "anytime": 0.174,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -4532,7 +4600,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.107,
+      "anytime": 0.104,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4545,7 +4613,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.107,
+      "anytime": 0.104,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4558,7 +4626,7 @@
       "goals": 10,
       "apps": 27,
       "pens": false,
-      "anytime": 0.1,
+      "anytime": 0.097,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -4806,15 +4874,15 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.625,
-    "p_draw": 0.22,
-    "p_away": 0.155,
+    "p_home": 0.613,
+    "p_draw": 0.224,
+    "p_away": 0.163,
     "pick": "Mexico",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Mexico 1867 vs South Korea 1773 (+175 incl. venue)",
+     "Rating edge: Mexico 1863 vs South Korea 1777 (+167 incl. venue)",
      "Mexico effectively at home in Zapopan (+80 Elo)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
      "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)"
@@ -4830,7 +4898,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.28,
+      "anytime": 0.277,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4843,7 +4911,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.213,
+      "anytime": 0.21,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4856,7 +4924,7 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.205,
+      "anytime": 0.202,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4871,7 +4939,7 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.161,
+      "anytime": 0.165,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4884,7 +4952,7 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.099,
+      "anytime": 0.102,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4897,7 +4965,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.085,
+      "anytime": 0.087,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -4919,17 +4987,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.433,
-    "p_draw": 0.258,
-    "p_away": 0.309,
+    "p_home": 0.427,
+    "p_draw": 0.259,
+    "p_away": 0.314,
     "pick": "United States",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 2,
     "reasons": [
-     "Rating edge: United States 1740 vs Australia 1776 (+44 incl. venue)",
+     "Rating edge: United States 1736 vs Australia 1776 (+40 incl. venue)",
      "United States effectively at home in Seattle (+80 Elo)",
-     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
+     "United States: Chris Richards doubtful"
     ],
     "locked_at": null
    },
@@ -4942,7 +5011,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.218,
+      "anytime": 0.217,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4955,7 +5024,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.218,
+      "anytime": 0.217,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4968,7 +5037,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.164,
+      "anytime": 0.163,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4983,7 +5052,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.182,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4996,7 +5065,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.182,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5009,7 +5078,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.136,
+      "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5031,16 +5100,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.251,
-    "p_draw": 0.25,
-    "p_away": 0.5,
+    "p_home": 0.261,
+    "p_draw": 0.252,
+    "p_away": 0.488,
     "pick": "Morocco",
     "pick_type": "away",
     "score": "0-1",
     "confidence": 3,
     "reasons": [
-     "Rating edge: Scotland 1758 vs Morocco 1848 (-90 incl. venue)",
-     "Scotland: Billy Gilmour out (Knee injury suffered in the pre-tournament friendly vs Curacao at Hampden Park)"
+     "Rating edge: Scotland 1746 vs Morocco 1828 (-82 incl. venue)",
+     "Scotland: Billy Gilmour out (Knee injury in final friendly vs Curacao; flew to Boston to support teammates as a spectator)",
+     "Scotland: Scott McTominay doubtful",
+     "Scotland: Scott McKenna doubtful"
     ],
     "locked_at": null
    },
@@ -5053,7 +5124,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.189,
+      "anytime": 0.199,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5066,20 +5137,20 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.142,
+      "anytime": 0.149,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
       "doubtful": false
      },
      {
-      "player": "Scott McTominay",
-      "club": "Napoli",
+      "player": "John McGinn",
+      "club": "Aston Villa",
       "pos": "MF",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.066,
+      "anytime": 0.07,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -5094,7 +5165,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.257,
+      "anytime": 0.254,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5107,7 +5178,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.257,
+      "anytime": 0.254,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5120,7 +5191,7 @@
       "goals": 1,
       "apps": null,
       "pens": false,
-      "anytime": 0.159,
+      "anytime": 0.157,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -5142,15 +5213,15 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.891,
-    "p_draw": 0.094,
+    "p_home": 0.888,
+    "p_draw": 0.096,
     "p_away": 0.015,
     "pick": "Brazil",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Brazil 1956 vs Haiti 1533 (+423 incl. venue)",
+     "Rating edge: Brazil 1948 vs Haiti 1533 (+415 incl. venue)",
      "Brazil: Rodrygo out (ACL rupture and meniscus tear; 7-9 month recovery, likely out for rest of 2026)",
      "Brazil: Eder Militao out (Biceps femoris tendon rupture; 5-month recovery)",
      "Brazil: Estevao out (Grade-four hamstring injury in April; left off the squad)"
@@ -5166,7 +5237,7 @@
       "goals": 21,
       "apps": 33,
       "pens": true,
-      "anytime": 0.403,
+      "anytime": 0.4,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -5179,7 +5250,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.322,
+      "anytime": 0.319,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5192,7 +5263,7 @@
       "goals": 15,
       "apps": null,
       "pens": false,
-      "anytime": 0.322,
+      "anytime": 0.319,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5255,15 +5326,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.494,
-    "p_draw": 0.251,
-    "p_away": 0.256,
+    "p_home": 0.482,
+    "p_draw": 0.253,
+    "p_away": 0.266,
     "pick": "Turkey",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: Turkey 1893 vs Paraguay 1807 (+86 incl. venue)",
+     "Rating edge: Turkey 1885 vs Paraguay 1807 (+78 incl. venue)",
+     "Turkey: Kenan Yildiz doubtful",
      "Paraguay: Julio Enciso doubtful"
     ],
     "locked_at": null
@@ -5277,23 +5349,10 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.226,
+      "anytime": 0.234,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
-      "doubtful": false
-     },
-     {
-      "player": "Kenan Yildiz",
-      "club": "Juventus",
-      "pos": "AM",
-      "goals": 10,
-      "apps": 33,
-      "pens": false,
-      "anytime": 0.176,
-      "shots": "Medium",
-      "confidence": 1,
-      "conf_label": "Low",
       "doubtful": false
      },
      {
@@ -5303,11 +5362,24 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.124,
+      "anytime": 0.129,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
       "doubtful": false
+     },
+     {
+      "player": "Kenan Yildiz",
+      "club": "Juventus",
+      "pos": "AM",
+      "goals": 10,
+      "apps": 33,
+      "pens": false,
+      "anytime": 0.105,
+      "shots": "Medium",
+      "confidence": 1,
+      "conf_label": "Low",
+      "doubtful": true
      }
     ],
     "away": [
@@ -5318,7 +5390,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.183,
+      "anytime": 0.187,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5331,7 +5403,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.137,
+      "anytime": 0.14,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5344,7 +5416,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.111,
+      "anytime": 0.113,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -7373,18 +7445,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.133,
-    "p_draw": 0.21,
-    "p_away": 0.657,
+    "p_home": 0.129,
+    "p_draw": 0.208,
+    "p_away": 0.663,
     "pick": "Brazil",
     "pick_type": "away",
     "score": "0-1",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Scotland 1758 vs Brazil 1956 (-198 incl. venue)",
-     "Scotland: Billy Gilmour out (Knee injury suffered in the pre-tournament friendly vs Curacao at Hampden Park)",
-     "Brazil: Rodrygo out (ACL rupture and meniscus tear; 7-9 month recovery, likely out for rest of 2026)",
-     "Brazil: Eder Militao out (Biceps femoris tendon rupture; 5-month recovery)"
+     "Rating edge: Scotland 1746 vs Brazil 1948 (-202 incl. venue)",
+     "Scotland: Billy Gilmour out (Knee injury in final friendly vs Curacao; flew to Boston to support teammates as a spectator)",
+     "Scotland: Scott McTominay doubtful",
+     "Scotland: Scott McKenna doubtful"
     ],
     "locked_at": null
    },
@@ -7397,7 +7469,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.135,
+      "anytime": 0.136,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7410,20 +7482,20 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.1,
+      "anytime": 0.101,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
       "doubtful": false
      },
      {
-      "player": "Scott McTominay",
-      "club": "Napoli",
+      "player": "John McGinn",
+      "club": "Aston Villa",
       "pos": "MF",
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.046,
+      "anytime": 0.047,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -7438,7 +7510,7 @@
       "goals": 21,
       "apps": 33,
       "pens": true,
-      "anytime": 0.317,
+      "anytime": 0.318,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7451,7 +7523,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.249,
+      "anytime": 0.25,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7464,7 +7536,7 @@
       "goals": 15,
       "apps": null,
       "pens": false,
-      "anytime": 0.249,
+      "anytime": 0.25,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7486,15 +7558,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.81,
-    "p_draw": 0.144,
-    "p_away": 0.046,
+    "p_home": 0.786,
+    "p_draw": 0.156,
+    "p_away": 0.058,
     "pick": "Morocco",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Morocco 1848 vs Haiti 1533 (+315 incl. venue)"
+     "Rating edge: Morocco 1828 vs Haiti 1533 (+295 incl. venue)",
+     "Morocco: Nayef Aguerd out (Groin injury rules him out of the entire World Cup; replaced by Marwane Saadane (Al Fateh))",
+     "Morocco: Abde Ezzalzouli out (Knee injury suffered in Norway friendly rules him out of the entire World Cup; replaced by Amine Sbai (Angers))",
+     "Morocco: Noussair Mazraoui doubtful"
     ],
     "locked_at": null
    },
@@ -7507,7 +7582,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.346,
+      "anytime": 0.339,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7520,7 +7595,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.346,
+      "anytime": 0.339,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7533,7 +7608,7 @@
       "goals": 1,
       "apps": null,
       "pens": false,
-      "anytime": 0.219,
+      "anytime": 0.214,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7548,7 +7623,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.064,
+      "anytime": 0.074,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7561,7 +7636,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.064,
+      "anytime": 0.074,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7574,7 +7649,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.064,
+      "anytime": 0.074,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7596,17 +7671,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.167,
-    "p_draw": 0.225,
-    "p_away": 0.608,
+    "p_home": 0.171,
+    "p_draw": 0.227,
+    "p_away": 0.603,
     "pick": "Mexico",
     "pick_type": "away",
     "score": "0-1",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Czech Republic 1704 vs Mexico 1867 (-163 incl. venue)",
+     "Rating edge: Czech Republic 1704 vs Mexico 1863 (-159 incl. venue)",
      "Mexico: Luis Angel Malagon out (Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement)",
-     "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)"
+     "Mexico: Marcel Ruiz out (Ruled out injured ahead of the opener)",
+     "Mexico: Carlos Montes suspended"
     ],
     "locked_at": null
    },
@@ -7619,7 +7695,7 @@
       "goals": 16,
       "apps": 28,
       "pens": true,
-      "anytime": 0.157,
+      "anytime": 0.159,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7632,7 +7708,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.133,
+      "anytime": 0.135,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7645,7 +7721,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.08,
+      "anytime": 0.081,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -7660,7 +7736,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.276,
+      "anytime": 0.274,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7673,7 +7749,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.209,
+      "anytime": 0.208,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7686,7 +7762,7 @@
       "goals": 9,
       "apps": 27,
       "pens": true,
-      "anytime": 0.201,
+      "anytime": 0.2,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7708,18 +7784,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.089,
-    "p_draw": 0.182,
-    "p_away": 0.729,
+    "p_home": 0.08,
+    "p_draw": 0.176,
+    "p_away": 0.745,
     "pick": "South Korea",
     "pick_type": "away",
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: South Africa 1523 vs South Korea 1773 (-250 incl. venue)",
-     "South Korea: Bae Jun-ho doubtful",
-     "South Korea: Hwang In-beom doubtful",
-     "South Korea: Cho Yu-min out (Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je (called up June 2026))"
+     "Rating edge: South Africa 1515 vs South Korea 1777 (-262 incl. venue)",
+     "South Africa: Sithole suspended",
+     "South Africa: T. Zwane suspended",
+     "South Korea: Bae Jun-ho doubtful"
     ],
     "locked_at": null
    },
@@ -7732,7 +7808,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.08,
+      "anytime": 0.075,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7745,7 +7821,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.08,
+      "anytime": 0.075,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7758,7 +7834,7 @@
       "goals": 10,
       "apps": 27,
       "pens": false,
-      "anytime": 0.074,
+      "anytime": 0.069,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -7773,7 +7849,7 @@
       "goals": 12,
       "apps": null,
       "pens": true,
-      "anytime": 0.368,
+      "anytime": 0.373,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -7786,7 +7862,7 @@
       "goals": 18,
       "apps": 48,
       "pens": false,
-      "anytime": 0.238,
+      "anytime": 0.242,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7799,7 +7875,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.207,
+      "anytime": 0.21,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8270,16 +8346,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.593,
-    "p_draw": 0.229,
-    "p_away": 0.178,
+    "p_home": 0.587,
+    "p_draw": 0.231,
+    "p_away": 0.182,
     "pick": "Turkey",
     "pick_type": "home",
     "score": "1-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Turkey 1893 vs United States 1740 (+153 incl. venue)",
-     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
+     "Rating edge: Turkey 1885 vs United States 1736 (+149 incl. venue)",
+     "Turkey: Kenan Yildiz doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
+     "United States: Chris Richards doubtful"
     ],
     "locked_at": null
    },
@@ -8292,23 +8370,10 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.251,
+      "anytime": 0.262,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
-      "doubtful": false
-     },
-     {
-      "player": "Kenan Yildiz",
-      "club": "Juventus",
-      "pos": "AM",
-      "goals": 10,
-      "apps": 33,
-      "pens": false,
-      "anytime": 0.196,
-      "shots": "Medium",
-      "confidence": 1,
-      "conf_label": "Low",
       "doubtful": false
      },
      {
@@ -8318,11 +8383,24 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.139,
+      "anytime": 0.145,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
       "doubtful": false
+     },
+     {
+      "player": "Kenan Yildiz",
+      "club": "Juventus",
+      "pos": "AM",
+      "goals": 10,
+      "apps": 33,
+      "pens": false,
+      "anytime": 0.119,
+      "shots": "Medium",
+      "confidence": 1,
+      "conf_label": "Low",
+      "doubtful": true
      }
     ],
     "away": [
@@ -8333,7 +8411,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.135,
+      "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -8346,7 +8424,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.135,
+      "anytime": 0.137,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -8359,7 +8437,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.1,
+      "anytime": 0.102,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9829,7 +9907,7 @@
    },
    {
     "team": "Czech Republic",
-    "exp_pts": 2.8,
+    "exp_pts": 2.9,
     "elo": 1704
    },
    {
@@ -9868,7 +9946,7 @@
    },
    {
     "team": "Morocco",
-    "exp_pts": 5.3,
+    "exp_pts": 5.1,
     "elo": 1848
    },
    {
@@ -9878,19 +9956,19 @@
    },
    {
     "team": "Haiti",
-    "exp_pts": 0.9,
+    "exp_pts": 1.0,
     "elo": 1533
    }
   ],
   "D": [
    {
     "team": "Turkey",
-    "exp_pts": 5.6,
+    "exp_pts": 5.5,
     "elo": 1893
    },
    {
     "team": "Paraguay",
-    "exp_pts": 3.8,
+    "exp_pts": 3.9,
     "elo": 1811
    },
    {
@@ -9900,7 +9978,7 @@
    },
    {
     "team": "Australia",
-    "exp_pts": 3.3,
+    "exp_pts": 3.4,
     "elo": 1776
    }
   ],
@@ -10088,357 +10166,348 @@
    {
     "team": "Spain",
     "qualify": 0.999,
-    "r16": 0.811,
+    "r16": 0.808,
     "qf": 0.616,
-    "sf": 0.513,
+    "sf": 0.514,
     "final": 0.381,
-    "champion": 0.263
+    "champion": 0.264
    },
    {
     "team": "Argentina",
-    "qualify": 0.996,
-    "r16": 0.72,
-    "qf": 0.597,
-    "sf": 0.445,
-    "final": 0.311,
-    "champion": 0.185
+    "qualify": 0.995,
+    "r16": 0.714,
+    "qf": 0.594,
+    "sf": 0.448,
+    "final": 0.314,
+    "champion": 0.19
    },
    {
     "team": "France",
-    "qualify": 0.986,
+    "qualify": 0.985,
     "r16": 0.789,
-    "qf": 0.57,
-    "sf": 0.407,
-    "final": 0.231,
-    "champion": 0.135
+    "qf": 0.573,
+    "sf": 0.411,
+    "final": 0.233,
+    "champion": 0.134
    },
    {
     "team": "England",
-    "qualify": 0.991,
-    "r16": 0.727,
-    "qf": 0.445,
-    "sf": 0.283,
-    "final": 0.155,
+    "qualify": 0.993,
+    "r16": 0.729,
+    "qf": 0.449,
+    "sf": 0.282,
+    "final": 0.156,
     "champion": 0.079
    },
    {
     "team": "Portugal",
-    "qualify": 0.98,
-    "r16": 0.661,
-    "qf": 0.375,
-    "sf": 0.196,
-    "final": 0.105,
-    "champion": 0.048
+    "qualify": 0.979,
+    "r16": 0.654,
+    "qf": 0.37,
+    "sf": 0.188,
+    "final": 0.102,
+    "champion": 0.045
    },
    {
     "team": "Brazil",
     "qualify": 0.983,
-    "r16": 0.63,
-    "qf": 0.394,
-    "sf": 0.227,
-    "final": 0.104,
-    "champion": 0.047
+    "r16": 0.626,
+    "qf": 0.395,
+    "sf": 0.228,
+    "final": 0.101,
+    "champion": 0.045
    },
    {
     "team": "Colombia",
-    "qualify": 0.97,
-    "r16": 0.621,
-    "qf": 0.329,
-    "sf": 0.166,
-    "final": 0.081,
-    "champion": 0.034
+    "qualify": 0.969,
+    "r16": 0.623,
+    "qf": 0.335,
+    "sf": 0.167,
+    "final": 0.084,
+    "champion": 0.036
    },
    {
     "team": "Netherlands",
-    "qualify": 0.953,
-    "r16": 0.555,
-    "qf": 0.349,
-    "sf": 0.178,
-    "final": 0.072,
+    "qualify": 0.951,
+    "r16": 0.559,
+    "qf": 0.35,
+    "sf": 0.175,
+    "final": 0.071,
     "champion": 0.03
    },
    {
     "team": "Germany",
-    "qualify": 0.98,
-    "r16": 0.591,
-    "qf": 0.286,
-    "sf": 0.151,
-    "final": 0.06,
-    "champion": 0.023
+    "qualify": 0.979,
+    "r16": 0.588,
+    "qf": 0.284,
+    "sf": 0.148,
+    "final": 0.058,
+    "champion": 0.022
    },
    {
     "team": "Belgium",
-    "qualify": 0.976,
-    "r16": 0.653,
-    "qf": 0.341,
+    "qualify": 0.978,
+    "r16": 0.655,
+    "qf": 0.343,
     "sf": 0.113,
-    "final": 0.052,
-    "champion": 0.018
+    "final": 0.049,
+    "champion": 0.017
    },
    {
     "team": "Ecuador",
-    "qualify": 0.982,
-    "r16": 0.581,
-    "qf": 0.268,
-    "sf": 0.134,
-    "final": 0.05,
-    "champion": 0.018
+    "qualify": 0.981,
+    "r16": 0.579,
+    "qf": 0.263,
+    "sf": 0.132,
+    "final": 0.048,
+    "champion": 0.017
+   },
+   {
+    "team": "Mexico",
+    "qualify": 0.996,
+    "r16": 0.673,
+    "qf": 0.335,
+    "sf": 0.139,
+    "final": 0.048,
+    "champion": 0.015
    },
    {
     "team": "Croatia",
     "qualify": 0.967,
-    "r16": 0.515,
-    "qf": 0.218,
-    "sf": 0.104,
+    "r16": 0.518,
+    "qf": 0.224,
+    "sf": 0.107,
     "final": 0.043,
     "champion": 0.015
    },
    {
-    "team": "Mexico",
-    "qualify": 0.997,
-    "r16": 0.678,
-    "qf": 0.341,
-    "sf": 0.14,
-    "final": 0.048,
+    "team": "Turkey",
+    "qualify": 0.882,
+    "r16": 0.578,
+    "qf": 0.281,
+    "sf": 0.099,
+    "final": 0.041,
     "champion": 0.014
    },
    {
-    "team": "Turkey",
-    "qualify": 0.888,
-    "r16": 0.582,
-    "qf": 0.28,
-    "sf": 0.095,
+    "team": "Japan",
+    "qualify": 0.93,
+    "r16": 0.47,
+    "qf": 0.26,
+    "sf": 0.11,
     "final": 0.039,
     "champion": 0.013
    },
    {
     "team": "Switzerland",
     "qualify": 0.993,
-    "r16": 0.658,
-    "qf": 0.291,
-    "sf": 0.105,
-    "final": 0.039,
-    "champion": 0.012
-   },
-   {
-    "team": "Japan",
-    "qualify": 0.928,
-    "r16": 0.466,
-    "qf": 0.257,
-    "sf": 0.107,
-    "final": 0.035,
-    "champion": 0.012
+    "r16": 0.651,
+    "qf": 0.286,
+    "sf": 0.099,
+    "final": 0.037,
+    "champion": 0.013
    },
    {
     "team": "Uruguay",
-    "qualify": 0.964,
-    "r16": 0.324,
+    "qualify": 0.963,
+    "r16": 0.327,
     "qf": 0.175,
-    "sf": 0.084,
-    "final": 0.034,
+    "sf": 0.087,
+    "final": 0.036,
     "champion": 0.011
    },
    {
     "team": "Norway",
-    "qualify": 0.854,
-    "r16": 0.45,
-    "qf": 0.214,
-    "sf": 0.091,
-    "final": 0.032,
-    "champion": 0.011
-   },
-   {
-    "team": "Senegal",
-    "qualify": 0.812,
-    "r16": 0.4,
-    "qf": 0.179,
-    "sf": 0.069,
-    "final": 0.025,
-    "champion": 0.007
+    "qualify": 0.858,
+    "r16": 0.454,
+    "qf": 0.219,
+    "sf": 0.096,
+    "final": 0.034,
+    "champion": 0.01
    },
    {
     "team": "Morocco",
-    "qualify": 0.912,
-    "r16": 0.389,
+    "qualify": 0.904,
+    "r16": 0.387,
     "qf": 0.181,
     "sf": 0.069,
-    "final": 0.02,
+    "final": 0.022,
+    "champion": 0.006
+   },
+   {
+    "team": "Senegal",
+    "qualify": 0.815,
+    "r16": 0.402,
+    "qf": 0.178,
+    "sf": 0.068,
+    "final": 0.021,
     "champion": 0.006
    },
    {
     "team": "United States",
-    "qualify": 0.645,
-    "r16": 0.324,
-    "qf": 0.116,
-    "sf": 0.035,
-    "final": 0.012,
+    "qualify": 0.647,
+    "r16": 0.328,
+    "qf": 0.119,
+    "sf": 0.036,
+    "final": 0.013,
     "champion": 0.004
    },
    {
-    "team": "South Korea",
-    "qualify": 0.976,
-    "r16": 0.479,
-    "qf": 0.162,
-    "sf": 0.047,
-    "final": 0.012,
+    "team": "Canada",
+    "qualify": 0.969,
+    "r16": 0.506,
+    "qf": 0.182,
+    "sf": 0.044,
+    "final": 0.01,
     "champion": 0.003
    },
    {
     "team": "Austria",
     "qualify": 0.758,
-    "r16": 0.202,
-    "qf": 0.085,
-    "sf": 0.03,
-    "final": 0.011,
+    "r16": 0.204,
+    "qf": 0.084,
+    "sf": 0.028,
+    "final": 0.01,
     "champion": 0.003
    },
    {
-    "team": "Canada",
-    "qualify": 0.972,
-    "r16": 0.516,
-    "qf": 0.189,
+    "team": "South Korea",
+    "qualify": 0.98,
+    "r16": 0.493,
+    "qf": 0.164,
     "sf": 0.047,
     "final": 0.011,
     "champion": 0.002
    },
    {
     "team": "Paraguay",
-    "qualify": 0.668,
-    "r16": 0.329,
-    "qf": 0.113,
-    "sf": 0.031,
-    "final": 0.008,
+    "qualify": 0.667,
+    "r16": 0.326,
+    "qf": 0.112,
+    "sf": 0.03,
+    "final": 0.009,
     "champion": 0.002
    },
    {
     "team": "Iran",
     "qualify": 0.862,
     "r16": 0.381,
-    "qf": 0.113,
-    "sf": 0.026,
+    "qf": 0.109,
+    "sf": 0.027,
     "final": 0.007,
     "champion": 0.001
    },
    {
     "team": "Scotland",
-    "qualify": 0.75,
-    "r16": 0.238,
-    "qf": 0.083,
+    "qualify": 0.738,
+    "r16": 0.23,
+    "qf": 0.08,
     "sf": 0.023,
     "final": 0.005,
     "champion": 0.001
    },
    {
     "team": "Australia",
-    "qualify": 0.564,
-    "r16": 0.241,
-    "qf": 0.074,
-    "sf": 0.019,
+    "qualify": 0.573,
+    "r16": 0.248,
+    "qf": 0.075,
+    "sf": 0.02,
     "final": 0.005,
     "champion": 0.001
    },
    {
+    "team": "Algeria",
+    "qualify": 0.577,
+    "r16": 0.135,
+    "qf": 0.047,
+    "sf": 0.011,
+    "final": 0.003,
+    "champion": 0.001
+   },
+   {
     "team": "Czech Republic",
-    "qualify": 0.636,
-    "r16": 0.203,
+    "qualify": 0.65,
+    "r16": 0.205,
     "qf": 0.059,
     "sf": 0.01,
     "final": 0.002,
     "champion": 0.001
    },
    {
-    "team": "Algeria",
-    "qualify": 0.582,
-    "r16": 0.131,
-    "qf": 0.045,
-    "sf": 0.011,
-    "final": 0.003,
-    "champion": 0.0
-   },
-   {
-    "team": "Ivory Coast",
-    "qualify": 0.71,
-    "r16": 0.185,
-    "qf": 0.046,
-    "sf": 0.009,
-    "final": 0.002,
-    "champion": 0.0
-   },
-   {
     "team": "Panama",
-    "qualify": 0.671,
-    "r16": 0.156,
+    "qualify": 0.662,
+    "r16": 0.154,
     "qf": 0.043,
-    "sf": 0.009,
-    "final": 0.002,
-    "champion": 0.0
-   },
-   {
-    "team": "Sweden",
-    "qualify": 0.519,
-    "r16": 0.136,
-    "qf": 0.038,
-    "sf": 0.008,
+    "sf": 0.01,
     "final": 0.002,
     "champion": 0.0
    },
    {
     "team": "Egypt",
-    "qualify": 0.697,
-    "r16": 0.219,
+    "qualify": 0.698,
+    "r16": 0.222,
     "qf": 0.048,
-    "sf": 0.008,
+    "sf": 0.009,
     "final": 0.002,
     "champion": 0.0
    },
    {
-    "team": "Uzbekistan",
-    "qualify": 0.397,
-    "r16": 0.082,
-    "qf": 0.019,
-    "sf": 0.004,
+    "team": "Ivory Coast",
+    "qualify": 0.713,
+    "r16": 0.185,
+    "qf": 0.045,
+    "sf": 0.008,
     "final": 0.001,
     "champion": 0.0
    },
    {
-    "team": "Jordan",
-    "qualify": 0.273,
-    "r16": 0.045,
-    "qf": 0.01,
-    "sf": 0.002,
-    "final": 0.0,
+    "team": "Sweden",
+    "qualify": 0.515,
+    "r16": 0.136,
+    "qf": 0.037,
+    "sf": 0.007,
+    "final": 0.001,
+    "champion": 0.0
+   },
+   {
+    "team": "Uzbekistan",
+    "qualify": 0.399,
+    "r16": 0.082,
+    "qf": 0.018,
+    "sf": 0.003,
+    "final": 0.001,
     "champion": 0.0
    },
    {
     "team": "Bosnia and Herzegovina",
     "qualify": 0.472,
-    "r16": 0.09,
-    "qf": 0.015,
-    "sf": 0.001,
+    "r16": 0.095,
+    "qf": 0.018,
+    "sf": 0.002,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Tunisia",
-    "qualify": 0.288,
-    "r16": 0.051,
-    "qf": 0.009,
+    "qualify": 0.282,
+    "r16": 0.052,
+    "qf": 0.01,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Cape Verde",
-    "qualify": 0.234,
-    "r16": 0.028,
-    "qf": 0.004,
+    "qualify": 0.239,
+    "r16": 0.029,
+    "qf": 0.005,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Saudi Arabia",
-    "qualify": 0.26,
+    "qualify": 0.259,
     "r16": 0.033,
     "qf": 0.006,
     "sf": 0.001,
@@ -10446,27 +10515,36 @@
     "champion": 0.0
    },
    {
+    "team": "Jordan",
+    "qualify": 0.276,
+    "r16": 0.044,
+    "qf": 0.01,
+    "sf": 0.001,
+    "final": 0.0,
+    "champion": 0.0
+   },
+   {
     "team": "DR Congo",
-    "qualify": 0.236,
+    "qualify": 0.238,
     "r16": 0.038,
-    "qf": 0.007,
+    "qf": 0.008,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "South Africa",
-    "qualify": 0.128,
+    "qualify": 0.123,
     "r16": 0.019,
-    "qf": 0.002,
+    "qf": 0.003,
     "sf": 0.0,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Qatar",
-    "qualify": 0.128,
-    "r16": 0.013,
+    "qualify": 0.13,
+    "r16": 0.012,
     "qf": 0.001,
     "sf": 0.0,
     "final": 0.0,
@@ -10474,8 +10552,8 @@
    },
    {
     "team": "Haiti",
-    "qualify": 0.087,
-    "r16": 0.009,
+    "qualify": 0.103,
+    "r16": 0.011,
     "qf": 0.001,
     "sf": 0.0,
     "final": 0.0,
@@ -10483,7 +10561,7 @@
    },
    {
     "team": "Curaçao",
-    "qualify": 0.049,
+    "qualify": 0.047,
     "r16": 0.004,
     "qf": 0.0,
     "sf": 0.0,
@@ -10493,8 +10571,8 @@
    {
     "team": "New Zealand",
     "qualify": 0.177,
-    "r16": 0.025,
-    "qf": 0.004,
+    "r16": 0.023,
+    "qf": 0.002,
     "sf": 0.0,
     "final": 0.0,
     "champion": 0.0
@@ -10502,7 +10580,7 @@
    {
     "team": "Iraq",
     "qualify": 0.087,
-    "r16": 0.017,
+    "r16": 0.016,
     "qf": 0.003,
     "sf": 0.0,
     "final": 0.0,
@@ -10511,7 +10589,7 @@
    {
     "team": "Ghana",
     "qualify": 0.06,
-    "r16": 0.005,
+    "r16": 0.004,
     "qf": 0.001,
     "sf": 0.0,
     "final": 0.0,
@@ -10637,9 +10715,9 @@
     "date": "2026-07-01",
     "city": "Santa Clara",
     "home": "Turkey",
-    "away": "Sweden",
-    "p_home": 0.742,
-    "p_away": 0.258,
+    "away": "Algeria",
+    "p_home": 0.684,
+    "p_away": 0.316,
     "pick": "Turkey",
     "score": "2-1",
     "status": "projected",
@@ -10651,9 +10729,9 @@
     "date": "2026-07-01",
     "city": "Seattle",
     "home": "Belgium",
-    "away": "Algeria",
-    "p_home": 0.694,
-    "p_away": 0.306,
+    "away": "Czech Republic",
+    "p_home": 0.757,
+    "p_away": 0.243,
     "pick": "Belgium",
     "score": "2-1",
     "status": "projected",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11",
+  "updated": "2026-06-12",
   "teams": {
     "Argentina": {
       "form": null,
@@ -91,7 +91,8 @@
         { "player": "Rodrygo", "status": "out", "note": "ACL rupture and meniscus tear; 7-9 month recovery, likely out for rest of 2026" },
         { "player": "Eder Militao", "status": "out", "note": "Biceps femoris tendon rupture; 5-month recovery" },
         { "player": "Estevao", "status": "out", "note": "Grade-four hamstring injury in April; left off the squad" },
-        { "player": "Neymar", "status": "doubtful", "note": "Grade-two calf strain since May 17; team doctor says 2-3 weeks sidelined — doubtful for the opener vs Morocco June 13" }
+        { "player": "Neymar", "status": "doubtful", "note": "Grade-two calf strain since May 17; not expected to be ready for the opener vs Morocco June 13" },
+        { "player": "Wesley", "status": "out", "note": "Muscle injury rules him out of the entire World Cup; right-back slot now open (Danilo/Roger Ibanez options)" }
       ],
       "key_players": [
         { "player": "Raphinha", "club": "Barcelona", "goals": null, "assists": null, "note": "Arrives in strong form after 61 goal contributions in his sensational 2024-25 season; fit and confident" },
@@ -229,19 +230,23 @@
     },
     "Morocco": {
       "form": null,
-      "form_note": "2022 semi-finalists retain their core; open the tournament against Brazil on June 13 in Group C.",
+      "form_note": "2022 semi-finalists hit by multiple pre-tournament injuries; open against Brazil on June 13 in Group C.",
       "injuries": [
-        { "player": "Achraf Hakimi", "status": "fit", "note": "Recovered from a hamstring tear suffered in the Champions League" }
+        { "player": "Achraf Hakimi", "status": "fit", "note": "Recovered from a hamstring tear suffered in the Champions League" },
+        { "player": "Nayef Aguerd", "status": "out", "note": "Groin injury rules him out of the entire World Cup; replaced by Marwane Saadane (Al Fateh)" },
+        { "player": "Abde Ezzalzouli", "status": "out", "note": "Knee injury suffered in Norway friendly rules him out of the entire World Cup; replaced by Amine Sbai (Angers)" },
+        { "player": "Noussair Mazraoui", "status": "doubtful", "note": "Shoulder problem from Norway friendly; not thought to be serious but a late call on fitness for June 13" }
       ],
       "key_players": [
-        { "player": "Achraf Hakimi", "club": "PSG", "goals": null, "assists": null, "note": "Captain; rated among the world's best right-backs; shares Morocco's record of 10 World Cup appearances" },
+        { "player": "Achraf Hakimi", "club": "PSG", "goals": null, "assists": null, "note": "Captain; rated among the world's best right-backs; fit after hamstring scare" },
         { "player": "Sofyan Amrabat", "club": "Real Betis", "goals": null, "assists": null, "note": "Holding-midfield anchor from the 2022 semi-final run" },
         { "player": "Azzedine Ounahi", "club": "Girona", "goals": null, "assists": null, "note": "Midfield creator retained from the 2022 generation" },
-        { "player": "Nayef Aguerd", "club": "Marseille", "goals": null, "assists": null, "note": "Centre-back mainstay of the qualifying campaign" }
+        { "player": "Brahim Diaz", "club": "AC Milan", "goals": null, "assists": null, "note": "Creative attacker expected to start vs Brazil" }
       ],
       "news": [
-        "Manager upheaval: Walid Regragui left the post in March 2026 just months before the finals; Mohamed Ouahbi (U-20 World Cup-winning coach) now in charge.",
-        "Squad backbone retained from the historic 2022 semi-final team (Amrabat, Ounahi, Mazraoui, Aguerd)."
+        "Manager upheaval: Walid Regragui left the post in March 2026; Mohamed Ouahbi (U-20 World Cup-winning coach) now in charge.",
+        "Double injury blow: Aguerd (groin) and Ezzalzouli (knee) both ruled out for the tournament — significant defensive and wide-attacking losses.",
+        "Mazraoui also a late doubt (shoulder), putting further pressure on the backline vs Brazil."
       ]
     },
     "United States": {
@@ -249,7 +254,7 @@
       "form_note": "Hosts open vs Paraguay at SoFi Stadium June 12; fifth-youngest US World Cup roster (avg 26y 332d), 13 returnees from the 2022 round-of-16 squad.",
       "injuries": [
         { "player": "Patrick Agyemang", "status": "out", "note": "Achilles tendon rupture in April" },
-        { "player": "Chris Richards", "status": "fit", "note": "Ankle injury May 17; returned to full team training and expected to start vs Paraguay" }
+        { "player": "Chris Richards", "status": "doubtful", "note": "Ankle injury May 17; only just resumed training — late fitness test ahead of the Paraguay opener (June 12); Miles Robinson and Mark McKenzie in contention" }
       ],
       "key_players": [
         { "player": "Christian Pulisic", "club": "AC Milan", "goals": null, "assists": null, "note": "Most-capped player (84) and on-field leader; rested at 2025 Gold Cup to manage load, enters fit and expected to start every game" },
@@ -264,12 +269,13 @@
       ]
     },
     "Mexico": {
-      "form": null,
-      "form_note": "Hosts open the entire tournament vs South Africa at the Estadio Azteca on June 11.",
+      "form": "W",
+      "form_note": "Won opening match 2-0 vs South Africa (Quinones 9', Jimenez 67') at the Estadio Azteca. Won with 10 men after Montes red card in 90+2'. Next: vs South Korea June 18.",
       "injuries": [
         { "player": "Luis Angel Malagon", "status": "out", "note": "Achilles tendon rupture; 40-year-old Guillermo Ochoa recalled as replacement" },
         { "player": "Marcel Ruiz", "status": "out", "note": "Ruled out injured ahead of the opener" },
-        { "player": "Edson Alvarez", "status": "fit", "note": "Recovered from ankle surgery (Feb); only ~80 mins of play in 2026 so match sharpness a concern, but named captain and expected to start vs South Africa" }
+        { "player": "Edson Alvarez", "status": "fit", "note": "Started vs South Africa; managed minutes" },
+        { "player": "Carlos Montes", "status": "suspended", "note": "Red card in 90+2' vs South Africa; suspended for the South Korea match (June 18)" }
       ],
       "key_players": [
         { "player": "Raul Jimenez", "club": "Fulham", "goals": null, "assists": null, "note": "Carries the attack into a home World Cup after a strong Premier League season" },
@@ -361,12 +367,12 @@
       ]
     },
     "South Korea": {
-      "form": null,
-      "form_note": "Topped their AFC qualifying group ahead of Jordan; in Group A with hosts Mexico, South Africa and Czechia.",
+      "form": "W",
+      "form_note": "Came from 1-0 down to beat Czech Republic 2-1 (Hwang In-beom 67', Oh Hyeon-Gyu 80'; Czech goal L. Krejci 59'). Hwang In-beom played and scored despite ankle concerns. Next: vs Mexico June 18.",
       "injuries": [
-        { "player": "Bae Jun-ho", "status": "doubtful", "note": "Ankle injury; in individual training, a doubt for the Czechia opener (2g/3a in qualifying)" },
-        { "player": "Hwang In-beom", "status": "doubtful", "note": "Called up despite struggling with an ankle injury at Feyenoord" },
-        { "player": "Cho Yu-min", "status": "out", "note": "Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je (called up June 2026)" }
+        { "player": "Bae Jun-ho", "status": "doubtful", "note": "Ankle injury; in individual training, a doubt for the opener" },
+        { "player": "Hwang In-beom", "status": "fit", "note": "Played and scored vs Czech Republic despite pre-tournament ankle concern" },
+        { "player": "Cho Yu-min", "status": "out", "note": "Foot injury ruled him out; replaced in squad by uncapped Jo Wi-je" }
       ],
       "key_players": [
         { "player": "Son Heung-min", "club": "LAFC", "goals": null, "assists": null, "note": "Captain at his fourth World Cup, 33; in sparkling form for LAFC since leaving Tottenham; joint-top Korean World Cup scorer (3)" },
@@ -394,25 +400,28 @@
       ]
     },
     "Czechia": {
-      "form": null,
-      "form_note": "Fourth seed in Group A with Mexico, South Korea and South Africa; back at the World Cup for the first time as an independent Czech nation since 2006.",
+      "form": "L",
+      "form_note": "Led 1-0 at halftime (L. Krejci 59') but conceded twice to lose 1-2 to South Korea. Next: vs South Africa June 18.",
       "injuries": [],
       "key_players": [],
-      "news": ["Drawn into the tournament's opening group alongside host Mexico."]
+      "news": ["Drawn into the tournament's opening group alongside host Mexico.", "Lost opener to South Korea after leading 1-0 at halftime."]
     },
     "South Africa": {
-      "form": null,
-      "form_note": "Face hosts Mexico in the tournament's opening match at the Estadio Azteca on June 11.",
-      "injuries": [],
+      "form": "L",
+      "form_note": "Lost 0-2 to hosts Mexico in the tournament opener at Estadio Azteca. Finished with 9 men (Sithole red card 49', T. Zwane red card 84' via VAR). Both suspended for next match vs Czech Republic (June 18).",
+      "injuries": [
+        { "player": "Sithole", "status": "suspended", "note": "Red card vs Mexico (49'); suspended for the Czech Republic match (June 18)" },
+        { "player": "T. Zwane", "status": "suspended", "note": "Red card via VAR vs Mexico (84'); suspended for the Czech Republic match (June 18)" }
+      ],
       "key_players": [],
-      "news": ["First World Cup appearance since hosting in 2010."]
+      "news": ["First World Cup appearance since hosting in 2010.", "Conceded 2 goals and had 2 players sent off vs Mexico in the opener."]
     },
     "Bosnia and Herzegovina": {
       "form": null,
       "form_note": "In Group B with Canada, Switzerland and Qatar; first World Cup since 2014.",
       "injuries": [
-        { "player": "Edin Dzeko", "status": "doubtful", "note": "Missed final warm-up with a shoulder injury; expected to be fit to feature in the Canada opener" },
-        { "player": "Haris Tabakovic", "status": "doubtful", "note": "Ankle injury; fighting against time to be fit for June 12 opener" },
+        { "player": "Edin Dzeko", "status": "doubtful", "note": "Shoulder injury; missed training Tuesday and was only on the bench for the final friendly vs Panama — serious doubt to start vs Canada (June 12)" },
+        { "player": "Haris Tabakovic", "status": "doubtful", "note": "Ankle injury; unlikely to feature vs Canada" },
         { "player": "Ivan Sunjic", "status": "doubtful", "note": "Muscle problem; managed carefully, should be available" }
       ],
       "key_players": [
@@ -436,15 +445,20 @@
     },
     "Scotland": {
       "form": null,
-      "form_note": "In Group C with Brazil, Morocco and Haiti; first World Cup since 1998.",
+      "form_note": "In Group C with Brazil, Morocco and Haiti; first World Cup since 1998. Midfield options thinning ahead of June 13 opener vs Haiti.",
       "injuries": [
-        { "player": "Billy Gilmour", "status": "out", "note": "Knee injury suffered in the pre-tournament friendly vs Curacao at Hampden Park" }
+        { "player": "Billy Gilmour", "status": "out", "note": "Knee injury in final friendly vs Curacao; flew to Boston to support teammates as a spectator" },
+        { "player": "Scott McTominay", "status": "doubtful", "note": "Missed Thursday training with an upset stomach; traveled separately from the squad with a doctor; status uncertain for Haiti opener (June 13)" },
+        { "player": "Scott McKenna", "status": "doubtful", "note": "Absent from Thursday training with a knock; fitness to be assessed" }
       ],
       "key_players": [
-        { "player": "Scott McTominay", "club": "Napoli", "goals": null, "assists": null, "note": "Talismanic goal-scoring midfielder" },
+        { "player": "Scott McTominay", "club": "Napoli", "goals": null, "assists": null, "note": "Talismanic goal-scoring midfielder; doubt for Haiti opener with stomach illness" },
         { "player": "Andy Robertson", "club": "Liverpool", "goals": null, "assists": null, "note": "Captain and veteran leader" }
       ],
-      "news": ["Losing Gilmour to a knee injury in the final friendly is a significant midfield blow."]
+      "news": [
+        "Gilmour ruled out with knee injury from final friendly — a significant midfield blow.",
+        "McTominay illness adds further midfield concern; coach Steve Clarke due to brief media on June 13 before the Haiti match."
+      ]
     },
     "Paraguay": {
       "form": null,
@@ -467,15 +481,20 @@
     },
     "Turkey": {
       "form": null,
-      "form_note": "In Group D with United States, Australia and Paraguay; first World Cup since 2002.",
+      "form_note": "In Group D with United States, Australia and Paraguay; first World Cup since 2002. Open vs Australia at BC Place on June 14.",
       "injuries": [
-        { "player": "Arda Guler", "status": "fit", "note": "Fully fit and the focal point of the team" }
+        { "player": "Arda Guler", "status": "fit", "note": "Fully fit and the focal point of the team; expected to start vs Australia" },
+        { "player": "Kenan Yildiz", "status": "doubtful", "note": "Calf injury; would be a surprise to see him feature vs Australia on June 14" }
       ],
       "key_players": [
-        { "player": "Arda Guler", "club": "Real Madrid", "goals": null, "assists": null, "note": "Creative centerpiece for Turkey's first finals in 24 years" },
-        { "player": "Kenan Yildiz", "club": "Juventus", "goals": null, "assists": null, "note": "Second star of the young attacking core" }
+        { "player": "Arda Guler", "club": "Real Madrid", "goals": null, "assists": null, "note": "Creative centerpiece for Turkey's first finals in 24 years; confirmed fit" },
+        { "player": "Kenan Yildiz", "club": "Juventus", "goals": null, "assists": null, "note": "Second star of the young attacking core; doubt with calf injury" },
+        { "player": "Hakan Calhanoglu", "club": "Inter Milan", "goals": null, "assists": null, "note": "Captain; confirmed fit and expected to start" }
       ],
-      "news": ["Final squad announced June 2 after a 35-man preliminary list; genuine dark-horse buzz around the young attack."]
+      "news": [
+        "Final squad announced June 2 after a 35-man preliminary list; genuine dark-horse buzz around the young attack.",
+        "Yildiz calf injury clouds opener; Guler confirmed fit and will carry attacking responsibility."
+      ]
     },
     "Curacao": {
       "form": null,
