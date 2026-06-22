@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-19T15:38:31+00:00",
+ "updated": "2026-06-22T13:19:02+00:00",
  "record": {
   "correct": 15,
   "wrong": 13,
@@ -1593,6 +1593,11 @@
      "player": "Lionel Messi",
      "status": "fit",
      "note": "Overcame a relatively minor hamstring injury; expected to lead the team in the opener"
+    },
+    {
+     "player": "Gonzalo Montiel",
+     "status": "out",
+     "note": "Minor quadriceps strain; ruled out of the Austria match (June 22) — Nahuel Molina starts at right back; targeting return for Jordan game"
     }
    ],
    "key_players": [
@@ -1628,7 +1633,8 @@
    "news": [
     "Squad features 17 of the 26 players who won the 2022 title in Qatar; Argentina aim to become first back-to-back champions since Brazil in 1962.",
     "Considered to have drawn a kind group (Algeria, Austria, Jordan); analysts argue they are underpriced as only sixth favorite on odds boards.",
-    "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record."
+    "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record.",
+    "2026-06-22 pre-match: Montiel OUT with quad strain vs Austria; Molina starts at RB. Otherwise full-strength XI."
    ]
   },
   "Algeria": {
@@ -1674,7 +1680,12 @@
     {
      "player": "Christoph Baumgartner",
      "status": "out",
-     "note": "Thigh injury; ruled out of the Jordan opener (June 16/17)"
+     "note": "Right thigh injury in pre-tournament warm-up vs Tunisia; required surgery — ruled out of entire tournament, replaced in squad by Ljubicic"
+    },
+    {
+     "player": "Stefan Posch",
+     "status": "fit",
+     "note": "Broken jaw suffered vs Jordan opener (collision); initially feared tournament over, but fitted with protective brace — Rangnick confirmed June 21 'He is ready to play tomorrow just like any other player'; available for Argentina match"
     }
    ],
    "key_players": [
@@ -1701,7 +1712,8 @@
     }
    ],
    "news": [
-    "Ralf Rangnick's pressing side is a popular pick to join Argentina out of Group J."
+    "Ralf Rangnick's pressing side is a popular pick to join Argentina out of Group J.",
+    "2026-06-22 pre-match: Posch cleared to play despite broken jaw (protective brace fitted; went through full training). Baumgartner (surgery) out for tournament; Ljubicic called up as replacement."
    ]
   },
   "Jordan": {
@@ -4145,7 +4157,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Argentina 2093 vs Algeria 1747 (+346 incl. venue)",
+     "Rating edge: Argentina 2085 vs Algeria 1747 (+338 incl. venue)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)",
      "Argentina: Juan Foyth out (Required surgery, ruled out of the tournament)",
      "Argentina: Valentin Carboni out (Knee injury)"
@@ -4161,7 +4173,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.39,
+      "anytime": 0.387,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4174,7 +4186,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.349,
+      "anytime": 0.346,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4187,7 +4199,7 @@
       "goals": 20,
       "apps": 49,
       "pens": false,
-      "anytime": 0.273,
+      "anytime": 0.271,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4202,7 +4214,7 @@
       "goals": 8,
       "apps": null,
       "pens": false,
-      "anytime": 0.049,
+      "anytime": 0.053,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4215,7 +4227,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.049,
+      "anytime": 0.053,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4228,7 +4240,7 @@
       "goals": 8,
       "apps": 26,
       "pens": false,
-      "anytime": 0.028,
+      "anytime": 0.03,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4262,7 +4274,7 @@
     "confidence": 4,
     "reasons": [
      "Rating edge: Austria 1841 vs Jordan 1620 (+220 incl. venue)",
-     "Austria: Christoph Baumgartner out (Thigh injury; ruled out of the Jordan opener (June 16/17))",
+     "Austria: Christoph Baumgartner out (Right thigh injury in pre-tournament warm-up vs Tunisia; required surgery — ruled out of entire tournament, replaced in squad by Ljubicic)",
      "Jordan: Yazan Al-Naimat out (Injured since December; top scorer in qualifying with 8 goals — ruled out of the entire tournament)",
      "Jordan: Ibrahim Sabra out (Injury; ruled out of the tournament)"
     ],
@@ -6605,15 +6617,15 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.719,
-    "p_draw": 0.206,
-    "p_away": 0.075,
+    "p_home": 0.708,
+    "p_draw": 0.211,
+    "p_away": 0.081,
     "pick": "Argentina",
     "pick_type": "home",
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Argentina 2093 vs Austria 1841 (+252 incl. venue)",
+     "Rating edge: Argentina 2085 vs Austria 1841 (+244 incl. venue)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)",
      "Argentina: Juan Foyth out (Required surgery, ruled out of the tournament)",
      "Argentina: Valentin Carboni out (Knee injury)"
@@ -6629,7 +6641,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.352,
+      "anytime": 0.349,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -6642,7 +6654,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.315,
+      "anytime": 0.312,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -6655,7 +6667,7 @@
       "goals": 20,
       "apps": 49,
       "pens": false,
-      "anytime": 0.245,
+      "anytime": 0.242,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -6670,7 +6682,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.103,
+      "anytime": 0.108,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6683,7 +6695,7 @@
       "goals": 7,
       "apps": 15,
       "pens": false,
-      "anytime": 0.088,
+      "anytime": 0.092,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6696,7 +6708,7 @@
       "goals": 1,
       "apps": null,
       "pens": false,
-      "anytime": 0.035,
+      "anytime": 0.037,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -9938,7 +9950,7 @@
     "confidence": 3,
     "reasons": [
      "Rating edge: Algeria 1747 vs Austria 1841 (-94 incl. venue)",
-     "Austria: Christoph Baumgartner out (Thigh injury; ruled out of the Jordan opener (June 16/17))",
+     "Austria: Christoph Baumgartner out (Right thigh injury in pre-tournament warm-up vs Tunisia; required surgery — ruled out of entire tournament, replaced in squad by Ljubicic)",
      "Form: Algeria L · Austria W"
     ],
     "locked_at": null
@@ -10042,14 +10054,14 @@
    "graded": null,
    "prediction": {
     "p_home": 0.009,
-    "p_draw": 0.091,
-    "p_away": 0.9,
+    "p_draw": 0.093,
+    "p_away": 0.898,
     "pick": "Argentina",
     "pick_type": "away",
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Jordan 1620 vs Argentina 2093 (-473 incl. venue)",
+     "Rating edge: Jordan 1620 vs Argentina 2085 (-465 incl. venue)",
      "Jordan: Yazan Al-Naimat out (Injured since December; top scorer in qualifying with 8 goals — ruled out of the entire tournament)",
      "Jordan: Ibrahim Sabra out (Injury; ruled out of the tournament)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)"
@@ -10106,7 +10118,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.436,
+      "anytime": 0.434,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -10119,7 +10131,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.393,
+      "anytime": 0.39,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10132,7 +10144,7 @@
       "goals": 20,
       "apps": 49,
       "pens": false,
-      "anytime": 0.309,
+      "anytime": 0.307,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10344,7 +10356,7 @@
   "J": [
    {
     "team": "Argentina",
-    "exp_pts": 8.2,
+    "exp_pts": 8.1,
     "elo": 2125
    },
    {
@@ -10415,19 +10427,19 @@
    {
     "team": "Argentina",
     "qualify": 1.0,
-    "r16": 0.799,
-    "qf": 0.669,
-    "sf": 0.509,
-    "final": 0.354,
-    "champion": 0.225
+    "r16": 0.8,
+    "qf": 0.673,
+    "sf": 0.513,
+    "final": 0.356,
+    "champion": 0.227
    },
    {
     "team": "Spain",
     "qualify": 0.987,
-    "r16": 0.755,
+    "r16": 0.754,
     "qf": 0.577,
-    "sf": 0.467,
-    "final": 0.313,
+    "sf": 0.465,
+    "final": 0.314,
     "champion": 0.2
    },
    {
@@ -10435,113 +10447,113 @@
     "qualify": 1.0,
     "r16": 0.835,
     "qf": 0.631,
-    "sf": 0.455,
-    "final": 0.28,
+    "sf": 0.456,
+    "final": 0.278,
     "champion": 0.164
    },
    {
     "team": "England",
     "qualify": 1.0,
     "r16": 0.817,
-    "qf": 0.548,
-    "sf": 0.375,
+    "qf": 0.549,
+    "sf": 0.376,
     "final": 0.206,
-    "champion": 0.112
+    "champion": 0.113
    },
    {
     "team": "Colombia",
-    "qualify": 0.995,
+    "qualify": 0.994,
     "r16": 0.747,
-    "qf": 0.469,
+    "qf": 0.47,
     "sf": 0.226,
-    "final": 0.111,
-    "champion": 0.047
+    "final": 0.112,
+    "champion": 0.048
    },
    {
     "team": "Netherlands",
     "qualify": 0.999,
     "r16": 0.619,
-    "qf": 0.432,
-    "sf": 0.21,
-    "final": 0.099,
-    "champion": 0.041
+    "qf": 0.43,
+    "sf": 0.208,
+    "final": 0.098,
+    "champion": 0.042
    },
    {
     "team": "Brazil",
     "qualify": 0.977,
-    "r16": 0.601,
-    "qf": 0.374,
+    "r16": 0.597,
+    "qf": 0.371,
     "sf": 0.183,
-    "final": 0.083,
-    "champion": 0.036
+    "final": 0.082,
+    "champion": 0.035
    },
    {
     "team": "Portugal",
     "qualify": 0.9,
-    "r16": 0.591,
-    "qf": 0.3,
-    "sf": 0.157,
-    "final": 0.073,
-    "champion": 0.029
+    "r16": 0.588,
+    "qf": 0.298,
+    "sf": 0.155,
+    "final": 0.071,
+    "champion": 0.028
    },
    {
     "team": "Germany",
     "qualify": 0.999,
     "r16": 0.634,
-    "qf": 0.275,
-    "sf": 0.144,
-    "final": 0.063,
+    "qf": 0.277,
+    "sf": 0.145,
+    "final": 0.064,
     "champion": 0.025
    },
    {
     "team": "Mexico",
     "qualify": 1.0,
-    "r16": 0.709,
-    "qf": 0.309,
-    "sf": 0.147,
+    "r16": 0.708,
+    "qf": 0.307,
+    "sf": 0.146,
     "final": 0.051,
     "champion": 0.016
    },
    {
     "team": "Norway",
     "qualify": 0.978,
-    "r16": 0.597,
-    "qf": 0.314,
-    "sf": 0.129,
-    "final": 0.046,
+    "r16": 0.594,
+    "qf": 0.311,
+    "sf": 0.13,
+    "final": 0.048,
     "champion": 0.014
-   },
-   {
-    "team": "Belgium",
-    "qualify": 0.938,
-    "r16": 0.556,
-    "qf": 0.266,
-    "sf": 0.095,
-    "final": 0.036,
-    "champion": 0.012
    },
    {
     "team": "United States",
     "qualify": 0.975,
     "r16": 0.633,
-    "qf": 0.291,
-    "sf": 0.101,
+    "qf": 0.293,
+    "sf": 0.103,
+    "final": 0.037,
+    "champion": 0.011
+   },
+   {
+    "team": "Belgium",
+    "qualify": 0.938,
+    "r16": 0.558,
+    "qf": 0.264,
+    "sf": 0.093,
     "final": 0.036,
     "champion": 0.011
    },
    {
     "team": "Switzerland",
     "qualify": 1.0,
-    "r16": 0.643,
-    "qf": 0.271,
-    "sf": 0.087,
-    "final": 0.032,
+    "r16": 0.64,
+    "qf": 0.27,
+    "sf": 0.088,
+    "final": 0.031,
     "champion": 0.01
    },
    {
     "team": "Croatia",
-    "qualify": 0.931,
-    "r16": 0.427,
+    "qualify": 0.932,
+    "r16": 0.43,
     "qf": 0.136,
     "sf": 0.071,
     "final": 0.025,
@@ -10551,7 +10563,7 @@
     "team": "Japan",
     "qualify": 0.864,
     "r16": 0.395,
-    "qf": 0.175,
+    "qf": 0.176,
     "sf": 0.064,
     "final": 0.023,
     "champion": 0.007
@@ -10563,156 +10575,147 @@
     "qf": 0.224,
     "sf": 0.071,
     "final": 0.022,
-    "champion": 0.006
-   },
-   {
-    "team": "Ecuador",
-    "qualify": 0.882,
-    "r16": 0.385,
-    "qf": 0.175,
-    "sf": 0.06,
-    "final": 0.02,
-    "champion": 0.006
+    "champion": 0.005
    },
    {
     "team": "Morocco",
-    "qualify": 0.937,
-    "r16": 0.414,
-    "qf": 0.191,
+    "qualify": 0.939,
+    "r16": 0.418,
+    "qf": 0.193,
     "sf": 0.066,
     "final": 0.021,
     "champion": 0.005
    },
    {
-    "team": "Austria",
-    "qualify": 0.953,
-    "r16": 0.299,
-    "qf": 0.135,
-    "sf": 0.058,
-    "final": 0.019,
+    "team": "Ecuador",
+    "qualify": 0.882,
+    "r16": 0.385,
+    "qf": 0.174,
+    "sf": 0.061,
+    "final": 0.02,
     "champion": 0.005
    },
    {
     "team": "Uruguay",
-    "qualify": 0.76,
-    "r16": 0.249,
+    "qualify": 0.759,
+    "r16": 0.248,
     "qf": 0.125,
-    "sf": 0.051,
+    "sf": 0.052,
+    "final": 0.02,
+    "champion": 0.005
+   },
+   {
+    "team": "Austria",
+    "qualify": 0.955,
+    "r16": 0.3,
+    "qf": 0.135,
+    "sf": 0.057,
     "final": 0.019,
     "champion": 0.005
    },
    {
     "team": "Senegal",
-    "qualify": 0.716,
-    "r16": 0.338,
-    "qf": 0.149,
-    "sf": 0.045,
+    "qualify": 0.714,
+    "r16": 0.34,
+    "qf": 0.15,
+    "sf": 0.046,
     "final": 0.013,
     "champion": 0.004
    },
    {
-    "team": "Turkey",
-    "qualify": 0.573,
-    "r16": 0.247,
-    "qf": 0.083,
-    "sf": 0.028,
-    "final": 0.009,
-    "champion": 0.003
-   },
-   {
     "team": "Canada",
     "qualify": 1.0,
-    "r16": 0.566,
-    "qf": 0.194,
+    "r16": 0.564,
+    "qf": 0.193,
     "sf": 0.044,
     "final": 0.01,
     "champion": 0.002
    },
    {
+    "team": "Turkey",
+    "qualify": 0.568,
+    "r16": 0.247,
+    "qf": 0.082,
+    "sf": 0.028,
+    "final": 0.008,
+    "champion": 0.002
+   },
+   {
     "team": "South Korea",
-    "qualify": 0.959,
-    "r16": 0.414,
-    "qf": 0.124,
-    "sf": 0.031,
+    "qualify": 0.962,
+    "r16": 0.416,
+    "qf": 0.127,
+    "sf": 0.032,
     "final": 0.007,
     "champion": 0.001
    },
    {
     "team": "Scotland",
-    "qualify": 0.884,
-    "r16": 0.27,
+    "qualify": 0.882,
+    "r16": 0.273,
     "qf": 0.093,
     "sf": 0.024,
     "final": 0.006,
     "champion": 0.001
    },
    {
-    "team": "Sweden",
-    "qualify": 0.971,
-    "r16": 0.299,
-    "qf": 0.094,
-    "sf": 0.02,
+    "team": "Ivory Coast",
+    "qualify": 0.987,
+    "r16": 0.307,
+    "qf": 0.08,
+    "sf": 0.019,
     "final": 0.004,
     "champion": 0.001
    },
    {
-    "team": "Ivory Coast",
-    "qualify": 0.987,
-    "r16": 0.309,
-    "qf": 0.081,
+    "team": "Sweden",
+    "qualify": 0.971,
+    "r16": 0.3,
+    "qf": 0.094,
     "sf": 0.019,
     "final": 0.004,
     "champion": 0.001
    },
    {
     "team": "Iran",
-    "qualify": 0.634,
+    "qualify": 0.633,
     "r16": 0.245,
     "qf": 0.07,
-    "sf": 0.017,
+    "sf": 0.016,
     "final": 0.003,
     "champion": 0.001
    },
    {
     "team": "Egypt",
     "qualify": 0.795,
-    "r16": 0.264,
+    "r16": 0.263,
     "qf": 0.06,
-    "sf": 0.011,
+    "sf": 0.012,
     "final": 0.002,
     "champion": 0.0
    },
    {
     "team": "Algeria",
-    "qualify": 0.513,
-    "r16": 0.133,
-    "qf": 0.045,
-    "sf": 0.01,
+    "qualify": 0.512,
+    "r16": 0.134,
+    "qf": 0.046,
+    "sf": 0.009,
     "final": 0.002,
     "champion": 0.0
    },
    {
     "team": "Paraguay",
-    "qualify": 0.28,
+    "qualify": 0.283,
     "r16": 0.093,
-    "qf": 0.024,
+    "qf": 0.025,
     "sf": 0.007,
     "final": 0.002,
     "champion": 0.0
    },
    {
-    "team": "Uzbekistan",
-    "qualify": 0.286,
-    "r16": 0.045,
-    "qf": 0.009,
-    "sf": 0.002,
-    "final": 0.001,
-    "champion": 0.0
-   },
-   {
     "team": "DR Congo",
-    "qualify": 0.446,
-    "r16": 0.082,
+    "qualify": 0.447,
+    "r16": 0.081,
     "qf": 0.014,
     "sf": 0.003,
     "final": 0.0,
@@ -10729,7 +10732,7 @@
    },
    {
     "team": "Bosnia and Herzegovina",
-    "qualify": 0.514,
+    "qualify": 0.515,
     "r16": 0.089,
     "qf": 0.017,
     "sf": 0.002,
@@ -10737,19 +10740,28 @@
     "champion": 0.0
    },
    {
-    "team": "Cape Verde",
-    "qualify": 0.504,
-    "r16": 0.052,
-    "qf": 0.011,
-    "sf": 0.001,
+    "team": "Saudi Arabia",
+    "qualify": 0.39,
+    "r16": 0.046,
+    "qf": 0.009,
+    "sf": 0.002,
     "final": 0.0,
     "champion": 0.0
    },
    {
-    "team": "Saudi Arabia",
-    "qualify": 0.388,
-    "r16": 0.046,
-    "qf": 0.009,
+    "team": "Uzbekistan",
+    "qualify": 0.286,
+    "r16": 0.045,
+    "qf": 0.008,
+    "sf": 0.002,
+    "final": 0.0,
+    "champion": 0.0
+   },
+   {
+    "team": "Cape Verde",
+    "qualify": 0.503,
+    "r16": 0.052,
+    "qf": 0.011,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
@@ -10758,32 +10770,32 @@
     "team": "Jordan",
     "qualify": 0.111,
     "r16": 0.022,
-    "qf": 0.005,
+    "qf": 0.004,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Ghana",
-    "qualify": 0.486,
-    "r16": 0.049,
-    "qf": 0.006,
+    "qualify": 0.484,
+    "r16": 0.048,
+    "qf": 0.007,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Panama",
-    "qualify": 0.085,
-    "r16": 0.016,
-    "qf": 0.003,
+    "qualify": 0.086,
+    "r16": 0.017,
+    "qf": 0.004,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "South Africa",
-    "qualify": 0.103,
+    "qualify": 0.1,
     "r16": 0.018,
     "qf": 0.002,
     "sf": 0.0,
@@ -10792,7 +10804,7 @@
    },
    {
     "team": "Qatar",
-    "qualify": 0.233,
+    "qualify": 0.234,
     "r16": 0.021,
     "qf": 0.002,
     "sf": 0.0,
@@ -10819,7 +10831,7 @@
    },
    {
     "team": "Tunisia",
-    "qualify": 0.029,
+    "qualify": 0.028,
     "r16": 0.004,
     "qf": 0.0,
     "sf": 0.0,
@@ -10829,8 +10841,8 @@
    {
     "team": "New Zealand",
     "qualify": 0.234,
-    "r16": 0.035,
-    "qf": 0.003,
+    "r16": 0.036,
+    "qf": 0.004,
     "sf": 0.0,
     "final": 0.0,
     "champion": 0.0

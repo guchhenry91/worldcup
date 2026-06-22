@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19",
+  "updated": "2026-06-22",
   "teams": {
     "Argentina": {
       "form": "W",
@@ -39,6 +39,11 @@
           "player": "Lionel Messi",
           "status": "fit",
           "note": "Overcame a relatively minor hamstring injury; expected to lead the team in the opener"
+        },
+        {
+          "player": "Gonzalo Montiel",
+          "status": "out",
+          "note": "Minor quadriceps strain; ruled out of the Austria match (June 22) — Nahuel Molina starts at right back; targeting return for Jordan game"
         }
       ],
       "key_players": [
@@ -74,7 +79,8 @@
       "news": [
         "Squad features 17 of the 26 players who won the 2022 title in Qatar; Argentina aim to become first back-to-back champions since Brazil in 1962.",
         "Considered to have drawn a kind group (Algeria, Austria, Jordan); analysts argue they are underpriced as only sixth favorite on odds boards.",
-        "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record."
+        "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record.",
+        "2026-06-22 pre-match: Montiel OUT with quad strain vs Austria; Molina starts at RB. Otherwise full-strength XI."
       ]
     },
     "France": {
@@ -1666,7 +1672,12 @@
         {
           "player": "Christoph Baumgartner",
           "status": "out",
-          "note": "Thigh injury; ruled out of the Jordan opener (June 16/17)"
+          "note": "Right thigh injury in pre-tournament warm-up vs Tunisia; required surgery — ruled out of entire tournament, replaced in squad by Ljubicic"
+        },
+        {
+          "player": "Stefan Posch",
+          "status": "fit",
+          "note": "Broken jaw suffered vs Jordan opener (collision); initially feared tournament over, but fitted with protective brace — Rangnick confirmed June 21 'He is ready to play tomorrow just like any other player'; available for Argentina match"
         }
       ],
       "key_players": [
@@ -1693,7 +1704,8 @@
         }
       ],
       "news": [
-        "Ralf Rangnick's pressing side is a popular pick to join Argentina out of Group J."
+        "Ralf Rangnick's pressing side is a popular pick to join Argentina out of Group J.",
+        "2026-06-22 pre-match: Posch cleared to play despite broken jaw (protective brace fitted; went through full training). Baumgartner (surgery) out for tournament; Ljubicic called up as replacement."
       ]
     },
     "Jordan": {
