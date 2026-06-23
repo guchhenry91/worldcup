@@ -264,15 +264,6 @@
         "intl_goals": 8
       },
       {
-        "player": "Raphinha",
-        "club": "Barcelona",
-        "pos": "W",
-        "goals": 21,
-        "apps": 33,
-        "pens": true,
-        "intl_goals": 15
-      },
-      {
         "player": "Matheus Cunha",
         "club": "Manchester United",
         "pos": "FW",
@@ -1388,17 +1379,9 @@
         "intl_goals": null
       },
       {
-        "player": "Cole Palmer",
-        "club": "Chelsea",
-        "pos": "AM",
-        "goals": 11,
-        "apps": null,
-        "intl_goals": null
-      },
-      {
-        "player": "Phil Foden",
-        "club": "Manchester City",
-        "pos": "AM",
+        "player": "Marcus Rashford",
+        "club": "Barcelona",
+        "pos": "W",
         "goals": null,
         "apps": null,
         "intl_goals": null

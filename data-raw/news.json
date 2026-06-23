@@ -1,9 +1,9 @@
 {
-  "updated": "2026-06-22",
+  "updated": "2026-06-23",
   "teams": {
     "Argentina": {
-      "form": "W",
-      "form_note": "Won 3-0 vs Algeria in Group J opener at Arrowhead Stadium — Messi scored a World Cup hat-trick (first in his career), equalling the WC all-time goals record. Next vs Austria June 22.",
+      "form": "WW",
+      "form_note": "Won 3-0 vs Algeria (Messi hat-trick, equalled WC all-time goals record). Won 2-0 vs Austria (Messi 38', 90+5') — Messi now holds the WC all-time scoring record with 18 goals. Argentina top Group J and through to R32. Next vs Jordan June 27.",
       "injuries": [
         {
           "player": "Emiliano Martinez",
@@ -80,12 +80,12 @@
         "Squad features 17 of the 26 players who won the 2022 title in Qatar; Argentina aim to become first back-to-back champions since Brazil in 1962.",
         "Considered to have drawn a kind group (Algeria, Austria, Jordan); analysts argue they are underpriced as only sixth favorite on odds boards.",
         "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record.",
-        "2026-06-22 pre-match: Montiel OUT with quad strain vs Austria; Molina starts at RB. Otherwise full-strength XI."
+        "Messi scored twice vs Austria (2-0) to set new all-time WC scoring record (18 goals total). Montiel missed Austria match with quad strain; targeting return vs Jordan June 27."
       ]
     },
     "France": {
-      "form": "W",
-      "form_note": "Won 3-1 vs Senegal in Group I opener at MetLife Stadium (Mbappe 66', 90+6'; Barcola 82'; Mbaye 90+5' for Senegal). Next vs Iraq June 22.",
+      "form": "WW",
+      "form_note": "Won 3-1 vs Senegal (Mbappe 2, Barcola). Won 3-0 vs Iraq (Mbappe 2, Dembele) through the tournament's first rain delay — Mbappe now has 16 WC career goals, tied 2nd all-time. France top Group I and through to R32. Next vs Norway June 26.",
       "injuries": [
         {
           "player": "Hugo Ekitike",
@@ -150,8 +150,8 @@
       ]
     },
     "Spain": {
-      "form": null,
-      "form_note": "Most likely winners in simulation models (16.1%); recent warm-ups include a 1-1 draw with Egypt despite dominant possession; Yamal rested vs Peru in final friendly.",
+      "form": "DW",
+      "form_note": "Drew 0-0 vs Cape Verde (June 15). Won 4-0 vs Saudi Arabia (June 21). Top of Group H, through to R32. Next vs Uruguay June 26.",
       "injuries": [
         {
           "player": "Fermin Lopez",
@@ -226,8 +226,8 @@
       ]
     },
     "England": {
-      "form": "WWWWW",
-      "form_note": "Perfect qualifying campaign — won all eight games without conceding a goal. Opener vs Croatia at AT&T Stadium on June 17.",
+      "form": "W",
+      "form_note": "Won 4-2 vs Croatia in WC opener at AT&T Stadium (Kane 2, Bellingham, Rashford; Kramaric, Modric for Croatia). Top of Group L. Today vs Ghana June 23.",
       "injuries": [
         {
           "player": "Jarrad Branthwaite",
@@ -246,13 +246,18 @@
         },
         {
           "player": "Declan Rice",
-          "status": "fit",
-          "note": "Being monitored after end-of-season discomfort; cleared to face Croatia"
+          "status": "doubtful",
+          "note": "Started vs Croatia but substituted 2nd half with hamstring tightness; fitness assessed for Ghana match"
         },
         {
           "player": "Bukayo Saka",
           "status": "fit",
-          "note": "Did not end 2025-26 at 100%; given green light to face Croatia"
+          "note": "Achilles issue being managed; did not start vs Croatia; expected in squad vs Ghana but unlikely to start"
+        },
+        {
+          "player": "Marcus Rashford",
+          "status": "doubtful",
+          "note": "Hamstring discomfort; trained fully but could be rested vs Ghana as precaution"
         }
       ],
       "key_players": [
@@ -292,8 +297,8 @@
       ]
     },
     "Brazil": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Morocco in Group C opener (Vinicius Jr 32'); without Neymar. Next vs Haiti June 19.",
+      "form": "DW",
+      "form_note": "Drew 1-1 with Morocco. Won 3-0 vs Haiti (Raphinha limped off 38th min with thigh injury). Tomorrow vs Scotland June 24. Raphinha confirmed OUT; Neymar set to RETURN for Scotland match.",
       "injuries": [
         {
           "player": "Rodrygo",
@@ -312,8 +317,13 @@
         },
         {
           "player": "Neymar",
+          "status": "fit",
+          "note": "Calf injury ruled him out of Morocco and Haiti matches; confirmed set to RETURN for Scotland match (June 24)"
+        },
+        {
+          "player": "Raphinha",
           "status": "out",
-          "note": "Calf injury — ruled OUT vs Morocco (matchday 1); expected back in training next week, targeting the Haiti game"
+          "note": "Hamstring injury (right thigh muscle); limped off vs Haiti (38'); Brazil confirmed he will miss Scotland match; also likely misses R32 (circa June 29); targeting R16 return. Rayan is the expected replacement."
         },
         {
           "player": "Wesley",
@@ -352,20 +362,25 @@
         }
       ],
       "news": [
-        "Neymar ruled out of the opener with a calf strain; Igor Thiago expected to start up front, with Vinicius and Raphinha either side.",
+        "Raphinha OUT with hamstring (misses Scotland and likely R32); Neymar RETURNING for Scotland match after calf recovery — key development.",
         "Carlo Ancelotti's first tournament in charge after arriving June 2025 with only four competitive qualifiers under his belt.",
         "Big-name omissions: Joao Pedro, Richarlison, Savinho, Gabriel Jesus, Andrey Santos and 113-cap Thiago Silva all left out; 19-year-old Endrick included.",
         "Injury crisis in attack (Rodrygo, Estevao out; Neymar out for opener) clouds an otherwise all-out attacking project."
       ]
     },
     "Portugal": {
-      "form": null,
-      "form_note": "Reigning UEFA Nations League champions, ranked fifth in the world; rated the strongest side outside the top five favorites.",
+      "form": "D",
+      "form_note": "Drew 1-1 with DR Congo in Group K opener (Wissa stoppage-time goal for DRC; Portugal equalized). Today vs Uzbekistan June 23 — must win.",
       "injuries": [
         {
           "player": "Ruben Dias",
+          "status": "fit",
+          "note": "Recovered from minor injury that ruled him out of the DR Congo opener; available and expected to start vs Uzbekistan (June 23)"
+        },
+        {
+          "player": "Tomas Araujo",
           "status": "out",
-          "note": "Injury — manager Martinez confirmed 'He's not fully fit and we won't take any risks'; ruled out of the DR Congo opener (June 17)"
+          "note": "Not available for the Uzbekistan match (June 23)"
         }
       ],
       "key_players": [
@@ -412,8 +427,8 @@
       ]
     },
     "Netherlands": {
-      "form": "W",
-      "form_note": "Won 1-0 vs Japan in Group F opener (van Dijk 51'). Next vs Sweden June 20.",
+      "form": "WW",
+      "form_note": "Won 1-0 vs Japan (van Dijk). Won 5-1 vs Sweden (June 20). Top of Group F, through to R32. Next vs Tunisia June 25.",
       "injuries": [
         {
           "player": "Xavi Simons",
@@ -482,8 +497,8 @@
       ]
     },
     "Germany": {
-      "form": "W",
-      "form_note": "Crushed Curaçao 7-1 in Group E opener (Havertz x2, Nmecha, Schlotterbeck, Musiala, Brown, Undav). Next vs Ivory Coast June 20.",
+      "form": "WW",
+      "form_note": "Won 7-1 vs Curaçao. Won 2-1 vs Ivory Coast (June 20, Undav injury-time winner). Top of Group E, through to R32. Next vs Ecuador June 25.",
       "injuries": [
         {
           "player": "Serge Gnabry",
@@ -547,8 +562,8 @@
       ]
     },
     "Belgium": {
-      "form": null,
-      "form_note": "Group G favorites against Egypt, Iran and New Zealand; opener vs Egypt June 15. Played Croatia in a pre-tournament friendly.",
+      "form": "DD",
+      "form_note": "Drew 1-1 vs Egypt (June 15). Drew 0-0 vs Iran (June 21). 2 pts — must beat New Zealand June 26 to advance.",
       "injuries": [
         {
           "player": "Romelu Lukaku",
@@ -595,8 +610,8 @@
       ]
     },
     "Croatia": {
-      "form": null,
-      "form_note": "2022 third-place finishers arrive with an experienced core; opener vs England June 17. Based in Alexandria, Virginia for the group stage.",
+      "form": "L",
+      "form_note": "Lost 2-4 to England in WC opener at AT&T Stadium (Kramaric, Modric for Croatia; Kane 2, Bellingham, Rashford for England). Today vs Panama June 23 — must win to stay alive.",
       "injuries": [
         {
           "player": "Josko Gvardiol",
@@ -650,8 +665,8 @@
       ]
     },
     "Uruguay": {
-      "form": null,
-      "form_note": "Qualified 4th in CONMEBOL (28 pts: 7W-7D-4L, 22 scored, 12 conceded); drew England 1-1 at Wembley in March via a stoppage-time Valverde penalty. Opener vs Saudi Arabia June 15.",
+      "form": "DD",
+      "form_note": "Drew 1-1 vs Saudi Arabia (June 15). Drew 2-2 vs Cape Verde (June 21). 2 pts from 2 games — in danger of not advancing. Next vs Spain June 26.",
       "injuries": [
         {
           "player": "Ronald Araujo",
@@ -715,8 +730,8 @@
       ]
     },
     "Colombia": {
-      "form": null,
-      "form_note": "Qualified 3rd in CONMEBOL with 28 points from 18 games; squad announced May 26 by Nestor Lorenzo.",
+      "form": "W",
+      "form_note": "Won 3-1 vs Uzbekistan in WC opener (June 17). Today vs DR Congo June 23. 3 pts, top of Group K.",
       "injuries": [],
       "key_players": [
         {
@@ -747,8 +762,8 @@
       ]
     },
     "Morocco": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Brazil in Group C opener; held Vinicius Jr's side with Hakimi fit. Next vs Scotland June 19.",
+      "form": "DW",
+      "form_note": "Drew 1-1 with Brazil. Won 1-0 vs Scotland (June 19). Tomorrow vs Haiti June 24 — can clinch Group C top spot.",
       "injuries": [
         {
           "player": "Achraf Hakimi",
@@ -808,8 +823,8 @@
       ]
     },
     "United States": {
-      "form": "W",
-      "form_note": "Thrashed Paraguay 4-1 in World Cup opener (SoFi Stadium): Balogun x2, Bobadilla OG, Reyna. Record WC tally for the USMNT. Next: vs Australia June 19.",
+      "form": "WW",
+      "form_note": "Won 4-1 vs Paraguay (Balogun x2). Won 2-0 vs Australia (June 19). Through to R32, top of Group D. Next vs Turkey June 25.",
       "injuries": [
         {
           "player": "Patrick Agyemang",
@@ -859,8 +874,8 @@
       ]
     },
     "Mexico": {
-      "form": "W",
-      "form_note": "Won opening match 2-0 vs South Africa (Quinones 9', Jimenez 67') at the Estadio Azteca. Won with 10 men after Montes red card in 90+2'. Next: vs South Korea June 18.",
+      "form": "WW",
+      "form_note": "Won 2-0 vs South Africa (Quinones, Jimenez; with 10 men after Montes red card). Won 1-0 vs South Korea (June 18). Through to R32 top of Group A. Tomorrow vs Czech Republic June 24.",
       "injuries": [
         {
           "player": "Luis Angel Malagon",
@@ -925,8 +940,8 @@
       ]
     },
     "Canada": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Bosnia (Lukic 1st-half opener; Cyle Larin 78' equalizer); Canada's first-ever World Cup point. Alphonso Davies absent. Next: vs Qatar June 18.",
+      "form": "DW",
+      "form_note": "Drew 1-1 with Bosnia (Larin 78'). Won 6-0 vs Qatar (June 18) — first-ever World Cup win for Canada; Alphonso Davies returned. Tomorrow vs Switzerland June 24 — top of Group B alongside Switzerland.",
       "injuries": [
         {
           "player": "Marcelo Flores",
@@ -967,8 +982,8 @@
       ]
     },
     "Japan": {
-      "form": "L",
-      "form_note": "Lost 0-1 to Netherlands in Group F opener (van Dijk 51'). Mitoma absence felt in attack. Next vs Tunisia June 21.",
+      "form": "LW",
+      "form_note": "Lost 0-1 to Netherlands (van Dijk). Won 4-0 vs Tunisia (June 21). Alive in Group F. Next vs Sweden June 25.",
       "injuries": [
         {
           "player": "Kaoru Mitoma",
@@ -1022,8 +1037,8 @@
       ]
     },
     "Senegal": {
-      "form": "L",
-      "form_note": "Lost 1-3 to France in Group I opener (Mbaye 90+5'; Mbappe 66', 90+6', Barcola 82'). Next vs Norway June 22.",
+      "form": "LL",
+      "form_note": "Lost 1-3 to France. Lost 2-3 to Norway (Sarr scored twice but too late). Senegal eliminated. Must beat Iraq June 26 to potentially salvage third place on goal difference.",
       "injuries": [
         {
           "player": "Assane Diao",
@@ -1070,8 +1085,8 @@
       ]
     },
     "Switzerland": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Qatar (Embolo pen 17' then conceded 90+4' equalizer). Next vs Bosnia June 18.",
+      "form": "DW",
+      "form_note": "Drew 1-1 with Qatar. Won 4-1 vs Bosnia (all 5 goals in 2nd half). Tomorrow vs Canada June 24 — top of Group B, through to R32.",
       "injuries": [
         {
           "player": "Ruben Vargas",
@@ -1102,8 +1117,8 @@
       ]
     },
     "Norway": {
-      "form": "WWWWWW",
-      "form_note": "Won 4-1 vs Iraq in Group I opener at Gillette Stadium (Haaland 2 goals, Ostigard 76', Hussein OG; Iraq OG Hussein 39'). Haaland scored his first WC goals. Next vs Senegal June 22.",
+      "form": "WWWWWWW",
+      "form_note": "Won 4-1 vs Iraq (Haaland 2). Won 3-2 vs Senegal (Haaland among scorers) — Haaland chasing Messi and Mbappe in the Golden Boot race. Norway through to R32 and top Group I contenders. Next vs France June 26.",
       "injuries": [
         {
           "player": "Jorgen Strand Larsen",
@@ -1148,8 +1163,8 @@
       ]
     },
     "South Korea": {
-      "form": "W",
-      "form_note": "Came from 1-0 down to beat Czech Republic 2-1 (Hwang In-beom 67', Oh Hyeon-Gyu 80'; Czech goal L. Krejci 59'). Hwang In-beom played and scored despite ankle concerns. Next: vs Mexico June 18.",
+      "form": "WL",
+      "form_note": "Won 2-1 vs Czech Republic. Lost 0-1 to Mexico (June 18). Tomorrow vs South Africa June 24 — must win to have knockout hopes.",
       "injuries": [
         {
           "player": "Bae Jun-ho",
@@ -1196,8 +1211,8 @@
       ]
     },
     "Egypt": {
-      "form": null,
-      "form_note": "Warm-up results include a 1-1 draw with Spain and a 2-1 loss to Brazil; opener vs Belgium June 15 in Group G.",
+      "form": "DW",
+      "form_note": "Drew 1-1 vs Belgium (June 15). Won 3-1 vs New Zealand (June 21). 4 pts, top of Group G! Next vs Iran June 26.",
       "injuries": [
         {
           "player": "Mohamed Salah",
@@ -1227,8 +1242,8 @@
       ]
     },
     "Czechia": {
-      "form": "L",
-      "form_note": "Led 1-0 at halftime (L. Krejci 59') but conceded twice to lose 1-2 to South Korea. Next: vs South Africa June 18.",
+      "form": "LD",
+      "form_note": "Lost 1-2 to South Korea. Drew 1-1 vs South Africa (June 18). Tomorrow vs Mexico June 24 — need win to stay alive.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1237,8 +1252,8 @@
       ]
     },
     "South Africa": {
-      "form": "L",
-      "form_note": "Lost 0-2 to hosts Mexico in the tournament opener at Estadio Azteca. Finished with 9 men (Sithole red card 49', T. Zwane red card 84' via VAR). Both suspended for next match vs Czech Republic (June 18).",
+      "form": "LD",
+      "form_note": "Lost 0-2 to Mexico. Drew 1-1 vs Czech Republic (June 18). Tomorrow vs South Korea June 24 — need win to stay alive.",
       "injuries": [
         {
           "player": "Sithole",
@@ -1258,8 +1273,8 @@
       ]
     },
     "Bosnia and Herzegovina": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Canada (Lukic scored 1st half; Larin equalized 78'). Next: vs Switzerland June 18.",
+      "form": "DL",
+      "form_note": "Drew 1-1 with Canada. Lost 1-4 to Switzerland (all 5 goals in 2nd half). Tomorrow vs Qatar June 24 — must win to stay alive.",
       "injuries": [
         {
           "player": "Edin Dzeko",
@@ -1308,8 +1323,8 @@
       ]
     },
     "Qatar": {
-      "form": "D",
-      "form_note": "Drew 1-1 with Switzerland (Khoukhi header in stoppage time) — first-ever World Cup point. Next vs Canada June 18.",
+      "form": "DL",
+      "form_note": "Drew 1-1 with Switzerland. Lost 0-6 to Canada (June 18). Tomorrow vs Bosnia June 24 — need a win to stay alive.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1317,8 +1332,8 @@
       ]
     },
     "Haiti": {
-      "form": "L",
-      "form_note": "Lost 0-1 to Scotland in Group C opener (McGinn 28'); next vs Brazil June 19.",
+      "form": "LL",
+      "form_note": "Lost 0-1 to Scotland. Lost 0-3 to Brazil. Tomorrow vs Morocco June 24 — eliminated.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1326,8 +1341,8 @@
       ]
     },
     "Scotland": {
-      "form": "W",
-      "form_note": "Won 1-0 vs Haiti in Group C opener (McGinn 28'); first WC win since 1990. Next vs Morocco June 19.",
+      "form": "WL",
+      "form_note": "Won 1-0 vs Haiti (McGinn 28'). Lost 0-1 to Morocco (June 19). Tomorrow vs Brazil June 24 — need a result to have any knockout hopes.",
       "injuries": [
         {
           "player": "Billy Gilmour",
@@ -1367,8 +1382,8 @@
       ]
     },
     "Paraguay": {
-      "form": "L",
-      "form_note": "Lost 1-4 to hosts USA in the opener (Bobadilla OG contributed; USA dominant throughout). Next: vs Turkey June 19.",
+      "form": "LW",
+      "form_note": "Lost 1-4 to USA. Won 1-0 vs Turkey (June 19). Alive in Group D with 3 pts. Next vs Australia June 25.",
       "injuries": [
         {
           "player": "Julio Enciso",
@@ -1396,8 +1411,8 @@
       ]
     },
     "Australia": {
-      "form": "W",
-      "form_note": "Won 2-0 vs Turkey in Group D opener (Irankunda 27', Metcalfe 75'). Next vs USA June 19.",
+      "form": "WL",
+      "form_note": "Won 2-0 vs Turkey (Irankunda, Metcalfe). Lost 0-2 to USA (June 19). Next vs Paraguay June 25 — must win.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1405,8 +1420,8 @@
       ]
     },
     "Turkey": {
-      "form": "L",
-      "form_note": "Lost 0-2 to Australia in Group D opener (Irankunda 27', Metcalfe 75'). Next vs Paraguay June 19.",
+      "form": "LW",
+      "form_note": "Lost 0-2 to Australia. Won 1-0 vs Paraguay (June 19). Alive in Group D with 3 pts. Next vs USA June 25.",
       "injuries": [
         {
           "player": "Arda Guler",
@@ -1448,8 +1463,8 @@
       ]
     },
     "Curacao": {
-      "form": "L",
-      "form_note": "Lost 1-7 to Germany in Group E opener (Comenencia scored consolation). Next vs Ecuador June 25.",
+      "form": "LD",
+      "form_note": "Lost 1-7 to Germany. Drew 0-0 vs Ecuador (June 20). Next vs Ivory Coast June 25 — need win to have any hope.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1457,8 +1472,8 @@
       ]
     },
     "Ecuador": {
-      "form": "L",
-      "form_note": "Lost 0-1 to Ivory Coast in Group E opener (June 14); Valencia absent injured. Next vs Curaçao June 20.",
+      "form": "LD",
+      "form_note": "Lost 0-1 to Ivory Coast. Drew 0-0 vs Curaçao (June 20). Next vs Germany June 25 — need win to stay alive.",
       "injuries": [
         {
           "player": "Enner Valencia",
@@ -1487,8 +1502,8 @@
       ]
     },
     "Ivory Coast": {
-      "form": "W",
-      "form_note": "Won 1-0 vs Ecuador in Group E opener (June 14). Reigning AFCON champions. Next vs Germany June 20.",
+      "form": "WL",
+      "form_note": "Won 1-0 vs Ecuador. Lost 1-2 to Germany (Undav injury-time winner, June 20). Next vs Curaçao June 25 — need win to advance.",
       "injuries": [
         {
           "player": "Evan N'Dicka",
@@ -1515,8 +1530,8 @@
       ]
     },
     "Sweden": {
-      "form": "W",
-      "form_note": "Crushed Tunisia 5-1 in Group F opener (June 14). Isak-Gyokeres strike duo delivered. Next vs Netherlands June 20.",
+      "form": "WL",
+      "form_note": "Won 5-1 vs Tunisia (Isak, Gyokeres). Lost 1-5 to Netherlands (June 20). Next vs Japan June 25 — must win to advance.",
       "injuries": [
         {
           "player": "Dejan Kulusevski",
@@ -1545,8 +1560,8 @@
       ]
     },
     "Tunisia": {
-      "form": "L",
-      "form_note": "Lost 1-5 to Sweden in Group F opener (June 14). Next vs Japan June 21.",
+      "form": "LL",
+      "form_note": "Lost 1-5 to Sweden. Lost 0-4 to Japan (June 21). Eliminated from Group F. Next vs Netherlands June 25 (pride only).",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1554,8 +1569,8 @@
       ]
     },
     "Iran": {
-      "form": null,
-      "form_note": "In Group G with Belgium, Egypt and New Zealand; fourth consecutive World Cup appearance.",
+      "form": "DD",
+      "form_note": "Drew 2-2 vs New Zealand (June 15). Drew 0-0 vs Belgium (June 21). 2 pts, alive. Next vs Egypt June 26.",
       "injuries": [],
       "key_players": [
         {
@@ -1571,8 +1586,8 @@
       ]
     },
     "New Zealand": {
-      "form": null,
-      "form_note": "Oceania's representative in Group G with Belgium, Egypt and Iran; first World Cup since 2010. Opener vs Iran June 15.",
+      "form": "DL",
+      "form_note": "Drew 2-2 vs Iran (June 15). Lost 1-3 to Egypt (June 21). 1 pt — need win vs Belgium June 26 and help.",
       "injuries": [
         {
           "player": "Ryan Thomas",
@@ -1594,8 +1609,8 @@
       ]
     },
     "Cape Verde": {
-      "form": null,
-      "form_note": "World Cup debutants in Group H; open against Spain on June 15.",
+      "form": "DD",
+      "form_note": "Drew 0-0 vs Spain (June 15). Drew 2-2 vs Uruguay (June 21). 2 pts — alive! Next vs Saudi Arabia June 26.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1603,8 +1618,8 @@
       ]
     },
     "Saudi Arabia": {
-      "form": null,
-      "form_note": "In Group H with Spain, Uruguay and Cape Verde; seventh World Cup appearance.",
+      "form": "DL",
+      "form_note": "Drew 1-1 vs Uruguay (June 15). Lost 0-4 to Spain (June 21). Must beat Cape Verde June 26 to have any hope.",
       "injuries": [
         {
           "player": "Nawaf Al Aqidi",
@@ -1626,8 +1641,8 @@
       ]
     },
     "Iraq": {
-      "form": "L",
-      "form_note": "Lost 1-4 to Norway in Group I opener at Gillette Stadium (Hussein header 39'; Haaland x2, Ostigard 76', Hussein OG). Next vs France June 22.",
+      "form": "LL",
+      "form_note": "Lost 1-4 to Norway. Lost 0-3 to France (Mbappe 2, Dembele). Eliminated from Group I. Next vs Senegal June 26 (pride only).",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1636,8 +1651,8 @@
       ]
     },
     "Algeria": {
-      "form": "L",
-      "form_note": "Lost 0-3 to Argentina in Group J opener (Messi hat-trick). Next vs Jordan June 22.",
+      "form": "LW",
+      "form_note": "Lost 0-3 to Argentina. Won 2-1 vs Jordan (trailed 0-1; Benbouali 68', Gouiri 82' from Mahrez assist to complete comeback). Algeria alive in Group J, need result vs Argentina June 27.",
       "injuries": [
         {
           "player": "Luca Zidane",
@@ -1666,8 +1681,8 @@
       ]
     },
     "Austria": {
-      "form": "W",
-      "form_note": "Won 3-1 vs Jordan in Group J opener at Levi's Stadium (Schmid 20', Jordan OG 76', Arnautovic pen 90+12'; Ali Olwan 50'). First WC win in 36 years. Next vs Argentina June 22.",
+      "form": "WL",
+      "form_note": "Won 3-1 vs Jordan. Lost 0-2 to Argentina (both Messi goals set new WC scoring record). Austria still 2nd in Group J and through to R32. Next vs Jordan in final group game June 27.",
       "injuries": [
         {
           "player": "Christoph Baumgartner",
@@ -1709,8 +1724,8 @@
       ]
     },
     "Jordan": {
-      "form": "L",
-      "form_note": "Lost 1-3 to Austria in Group J opener (Ali Olwan 50'; Schmid 20', OG 76', Arnautovic pen 90+12'). Next vs Algeria June 22.",
+      "form": "LL",
+      "form_note": "Lost 1-3 to Austria. Lost 1-2 to Algeria (led 1-0 through Al-Rashdan, but Algeria equalized and won 82'). Jordan eliminated from Group J. Last game vs Argentina June 27.",
       "injuries": [
         {
           "player": "Yazan Al-Naimat",
@@ -1737,8 +1752,8 @@
       ]
     },
     "DR Congo": {
-      "form": null,
-      "form_note": "In Group K with Portugal, Colombia and Uzbekistan; first World Cup since 1974 (as Zaire). Qualified via the intercontinental playoff.",
+      "form": "D",
+      "form_note": "Drew 1-1 with Portugal (Wissa stoppage-time equalizer in first half; Portugal had gone ahead). Today vs Colombia June 23.",
       "injuries": [],
       "key_players": [],
       "news": [
@@ -1746,18 +1761,23 @@
       ]
     },
     "Uzbekistan": {
-      "form": null,
-      "form_note": "World Cup debutants in Group K; the first Central Asian nation ever at a World Cup. Unbeaten through the AFC second round, qualified with a game to spare.",
+      "form": "L",
+      "form_note": "Lost 1-3 to Colombia in WC opener (June 17). Today vs Portugal June 23.",
       "injuries": [
         {
           "player": "Jaloliddin Masharipov",
           "status": "out",
-          "note": "Back injury; missed recent warm-up friendlies and ruled out of the tournament opener vs Colombia"
+          "note": "Back injury; missed Colombia opener and tournament"
         },
         {
           "player": "Aziz Ganiev",
           "status": "doubtful",
-          "note": "Missed last warm-up friendly; fitness uncertain for Colombia opener"
+          "note": "Missed last warm-up friendly; fitness uncertain"
+        },
+        {
+          "player": "Rustam Ashurmatov",
+          "status": "doubtful",
+          "note": "Came off during the Colombia defeat; slight doubt for Portugal match (June 23)"
         }
       ],
       "key_players": [
@@ -1781,8 +1801,8 @@
       ]
     },
     "Ghana": {
-      "form": null,
-      "form_note": "In Group L with England, Croatia and Panama; fifth World Cup appearance.",
+      "form": "W",
+      "form_note": "Won 1-0 vs Panama (June 17). Today vs England June 23. Thomas Partey cleared to enter USA and available.",
       "injuries": [
         {
           "player": "Mohammed Kudus",
@@ -1796,8 +1816,13 @@
         },
         {
           "player": "Thomas Partey",
+          "status": "fit",
+          "note": "Previously listed out due to visa complications; cleared to enter the USA — available and expected to start vs England (June 23), demotes Elisha Owusu to bench"
+        },
+        {
+          "player": "Lawrence Ati Zigi",
           "status": "out",
-          "note": "Ruled out of tournament due to visa complications linked to an ongoing legal case in the UK"
+          "note": "GK taken off at halftime vs Panama with injury; expected out approximately 3 weeks; Benjamin Asare starts in goal vs England"
         }
       ],
       "key_players": [
@@ -1810,17 +1835,19 @@
         }
       ],
       "news": [
-        "Losing Kudus and Salisu severely dents hopes of escaping Group L."
+        "Losing Kudus and Salisu severely dents hopes of escaping Group L.",
+        "Thomas Partey cleared to play vs England — his visa complication resolved; significant midfield upgrade.",
+        "GK Lawrence Ati Zigi injured vs Panama, Benjamin Asare starts vs England."
       ]
     },
     "Panama": {
-      "form": null,
-      "form_note": "In Group L with England, Croatia and Ghana; second World Cup after 2018.",
+      "form": "L",
+      "form_note": "Lost 0-1 to Ghana (June 17). Today vs Croatia June 23 — must win to stay alive.",
       "injuries": [
         {
           "player": "Adalberto Carrasquilla",
-          "status": "doubtful",
-          "note": "Muscle injury; missed both warm-up matches; returned to training Sunday June 15 — could feature vs Ghana"
+          "status": "out",
+          "note": "Groin injury; MISSED the Ghana match; still doubtful for Croatia game — out for almost a month before partial return to training"
         }
       ],
       "key_players": [
