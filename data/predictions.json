@@ -1,5 +1,5 @@
 {
- "updated": "2026-06-24T13:33:01+00:00",
+ "updated": "2026-06-24T13:39:46+00:00",
  "record": {
   "correct": 29,
   "wrong": 19,
@@ -108,7 +108,7 @@
    "elo": 1899,
    "fifa_rank": 15,
    "form": "WW",
-   "form_note": "Won 2-0 vs South Africa (Quinones, Jimenez; with 10 men after Montes red card). Won 1-0 vs South Korea (June 18). Through to R32 top of Group A. Tomorrow vs Czech Republic June 24.",
+   "form_note": "Won 2-0 vs South Africa (Quinones, Jimenez; with 10 men after Montes red card). Won 1-0 vs South Korea (June 18). Through to R32 top of Group A. Today vs Czech Republic June 24 (Mexico City). Montes back from suspension.",
    "injuries": [
     {
      "player": "Luis Angel Malagon",
@@ -177,7 +177,7 @@
    "elo": 1537,
    "fifa_rank": 60,
    "form": "LD",
-   "form_note": "Lost 0-2 to Mexico. Drew 1-1 vs Czech Republic (June 18). Tomorrow vs South Korea June 24 — need win to stay alive.",
+   "form_note": "Lost 0-2 to Mexico. Drew 1-1 vs Czech Republic (June 18). Today vs South Korea June 24 (Guadalupe) — need win to stay alive. Sithole and T. Zwane suspensions served (both available).",
    "injuries": [
     {
      "player": "Sithole",
@@ -201,7 +201,7 @@
    "elo": 1773,
    "fifa_rank": 25,
    "form": "WL",
-   "form_note": "Won 2-1 vs Czech Republic. Lost 0-1 to Mexico (June 18). Tomorrow vs South Africa June 24 — must win to have knockout hopes.",
+   "form_note": "Won 2-1 vs Czech Republic. Lost 0-1 to Mexico (June 18). Today vs South Africa June 24 (Guadalupe) — must win to have any knockout hope.",
    "injuries": [
     {
      "player": "Bae Jun-ho",
@@ -262,7 +262,7 @@
    "elo": 1776,
    "fifa_rank": 30,
    "form": "DW",
-   "form_note": "Drew 1-1 with Bosnia (Larin 78'). Won 6-0 vs Qatar (June 18) — first-ever World Cup win for Canada; Alphonso Davies returned. Tomorrow vs Switzerland June 24 — top of Group B alongside Switzerland.",
+   "form_note": "Drew 1-1 with Bosnia (Larin 78'). Won 6-0 vs Qatar (June 18) — first-ever World Cup win for Canada. Today vs Switzerland June 24 (Vancouver) — top of Group B alongside Switzerland; Group B winner on the line. Davies available but being managed (hamstring strain; may not start).",
    "injuries": [
     {
      "player": "Marcelo Flores",
@@ -307,7 +307,7 @@
    "elo": 1588,
    "fifa_rank": 65,
    "form": "DL",
-   "form_note": "Drew 1-1 with Canada. Lost 1-4 to Switzerland (all 5 goals in 2nd half). Tomorrow vs Qatar June 24 — must win to stay alive.",
+   "form_note": "Drew 1-1 with Canada. Lost 1-4 to Switzerland. Today vs Qatar June 24 (Seattle) — must win to have any knockout hope.",
    "injuries": [
     {
      "player": "Edin Dzeko",
@@ -360,7 +360,7 @@
    "elo": 1464,
    "fifa_rank": 55,
    "form": "DL",
-   "form_note": "Drew 1-1 with Switzerland. Lost 0-6 to Canada (June 18). Tomorrow vs Bosnia June 24 — need a win to stay alive.",
+   "form_note": "Drew 1-1 with Switzerland. Lost 0-6 to Canada (June 18). Today vs Bosnia June 24 (Seattle) — need a win to stay alive.",
    "injuries": [],
    "key_players": [],
    "news": [
@@ -372,7 +372,7 @@
    "elo": 1879,
    "fifa_rank": 19,
    "form": "DW",
-   "form_note": "Drew 1-1 with Qatar. Won 4-1 vs Bosnia (all 5 goals in 2nd half). Tomorrow vs Canada June 24 — top of Group B, through to R32.",
+   "form_note": "Drew 1-1 with Qatar. Won 4-1 vs Bosnia (all 5 goals in 2nd half). Today vs Canada June 24 (Vancouver) — top of Group B, both through to R32; Group B winner on the line.",
    "injuries": [
     {
      "player": "Ruben Vargas",
@@ -482,7 +482,7 @@
    "elo": 1883,
    "fifa_rank": 8,
    "form": "DW",
-   "form_note": "Drew 1-1 with Brazil. Won 1-0 vs Scotland (June 19). Tomorrow vs Haiti June 24 — can clinch Group C top spot.",
+   "form_note": "Drew 1-1 with Brazil. Won 1-0 vs Scotland (June 19). Today vs Haiti June 24 (Atlanta) — can clinch Group C top spot. No injury concerns.",
    "injuries": [
     {
      "player": "Achraf Hakimi",
@@ -546,7 +546,7 @@
    "elo": 1513,
    "fifa_rank": 83,
    "form": "LL",
-   "form_note": "Lost 0-1 to Scotland. Lost 0-3 to Brazil. Tomorrow vs Morocco June 24 — eliminated.",
+   "form_note": "Lost 0-1 to Scotland. Lost 0-3 to Brazil. Today vs Morocco June 24 (Atlanta) — eliminated. Duckens Nazon remains a doubt with unspecified injury.",
    "injuries": [],
    "key_players": [],
    "news": [
@@ -558,7 +558,7 @@
    "elo": 1756,
    "fifa_rank": 43,
    "form": "WL",
-   "form_note": "Won 1-0 vs Haiti (McGinn 28'). Lost 0-1 to Morocco (June 19). Tomorrow vs Brazil June 24 — need a result to have any knockout hopes.",
+   "form_note": "Won 1-0 vs Haiti (McGinn 28'). Lost 0-1 to Morocco (June 19). Today vs Brazil June 24 (Miami) — need win or draw to have any knockout hope. McKenna, Hickey fit; Tierney returned to training after apparent injury vs Morocco.",
    "injuries": [
     {
      "player": "Billy Gilmour",
@@ -604,6 +604,11 @@
    "form": "WW",
    "form_note": "Won 4-1 vs Paraguay (Balogun x2). Won 2-0 vs Australia (June 19). Through to R32, top of Group D. Next vs Turkey June 25.",
    "injuries": [
+    {
+     "player": "Christian Pulisic",
+     "status": "doubtful",
+     "note": "Calf injury sustained in Paraguay match (June 12); missed Australia game; expected to be medically available vs Turkey but US already through to R32 — Pochettino may rest him for the knockouts"
+    },
     {
      "player": "Patrick Agyemang",
      "status": "out",
@@ -749,6 +754,11 @@
    "form_note": "Won 7-1 vs Curaçao. Won 2-1 vs Ivory Coast (June 20, Undav injury-time winner). Top of Group E, through to R32. Next vs Ecuador June 25.",
    "injuries": [
     {
+     "player": "Nico Schlotterbeck",
+     "status": "out",
+     "note": "Medial ligament damage in left ankle vs Ivory Coast (June 20); MRI confirmed torn ligament — ruled out for remainder of World Cup and several months; replaced in lineup by Antonio Rudiger"
+    },
+    {
      "player": "Serge Gnabry",
      "status": "out",
      "note": "Torn adductor in right thigh; misses tournament after a 23-goal-involvement season"
@@ -806,7 +816,8 @@
    ],
    "news": [
     "Goalkeeping resolved: ter Stegen out, but Neuer returned to full training and is expected to start vs Curaçao.",
-    "Late squad change: 18-year-old Lennart Karl withdrew injured June 5, replaced by Assan Ouedraogo."
+    "Late squad change: 18-year-old Lennart Karl withdrew injured June 5, replaced by Assan Ouedraogo.",
+    "2026-06-24: Schlotterbeck ruled out for remainder of tournament with ankle medial ligament tear (suffered vs Ivory Coast June 20); Rudiger steps in."
    ]
   },
   "Curaçao": {
@@ -827,9 +838,14 @@
    "form_note": "Won 1-0 vs Ecuador. Lost 1-2 to Germany (Undav injury-time winner, June 20). Next vs Curaçao June 25 — need win to advance.",
    "injuries": [
     {
+     "player": "Wilfried Singo",
+     "status": "doubtful",
+     "note": "Apparent hamstring injury vs Germany (June 20); medical checks suggest not serious but fitness to be assessed ahead of Curaçao match"
+    },
+    {
      "player": "Evan N'Dicka",
-     "status": "out",
-     "note": "Thigh injury; ruled out of the opener vs Ecuador (June 14)"
+     "status": "doubtful",
+     "note": "Thigh injury; missed first two group matches but has resumed team training — in contention for Curaçao"
     },
     {
      "player": "Ousmane Diomande",
@@ -855,12 +871,12 @@
    "elo": 1843,
    "fifa_rank": 23,
    "form": "LD",
-   "form_note": "Lost 0-1 to Ivory Coast. Drew 0-0 vs Curaçao (June 20). Next vs Germany June 25 — need win to stay alive.",
+   "form_note": "Lost 0-1 to Ivory Coast. Drew 0-0 vs Curaçao (June 20, Valencia played full 90'). Next vs Germany June 25 — need win to stay alive.",
    "injuries": [
     {
      "player": "Enner Valencia",
-     "status": "out",
-     "note": "Injury; confirmed unavailable for the Ivory Coast opener (June 14) — the only player in the squad with a double-figure international goal tally (49)"
+     "status": "fit",
+     "note": "Missed Ivory Coast opener with injury; recovered and started vs Curaçao (June 20), playing full 90 minutes"
     }
    ],
    "key_players": [
@@ -1818,8 +1834,8 @@
    "flag": "🇨🇩",
    "elo": 1666,
    "fifa_rank": 46,
-   "form": "D",
-   "form_note": "Drew 1-1 with Portugal (Wissa stoppage-time equalizer; first-ever WC point). Today vs Colombia June 23.",
+   "form": "DL",
+   "form_note": "Drew 1-1 with Portugal (Wissa stoppage-time equalizer). Lost 0-1 to Colombia (June 23, Muñoz 76'). DR Congo 1pt. Last game vs Uzbekistan June 27 (eliminated).",
    "injuries": [
     {
      "player": "Théo Bongonda",
@@ -1880,8 +1896,8 @@
    "flag": "🇨🇴",
    "elo": 1994,
    "fifa_rank": 13,
-   "form": "W",
-   "form_note": "Won 3-1 vs Uzbekistan in WC opener (June 17). Today vs DR Congo June 23. 3 pts, top of Group K.",
+   "form": "WW",
+   "form_note": "Won 3-1 vs Uzbekistan (June 17). Won 1-0 vs DR Congo (June 23, Guadalajara — Muñoz 76'; Diaz denied a brace late on). Colombia 6pts, through to R32, top of Group K. Next vs Portugal June 27.",
    "injuries": [
     {
      "player": "Jhon Córdoba",
@@ -1915,15 +1931,15 @@
    "news": [
     "Group K schedule: Uzbekistan in Mexico City, DR Congo in Guadalajara, Portugal in Miami.",
     "Diaz and James were integral throughout the qualifying campaign and headline the 26.",
-    "2026-06-23 pre-match: Jhon Córdoba fully fit after missing opener with thigh issue; available as a fresh offensive option vs DR Congo."
+    "2026-06-23: Won 1-0 vs DR Congo (Muñoz 76'); Diaz denied a brace late. Colombia top Group K with 6pts and through to R32. Next vs Portugal June 27 in Miami."
    ]
   },
   "England": {
    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
    "elo": 2031,
    "fifa_rank": 4,
-   "form": "W",
-   "form_note": "Won 4-2 vs Croatia in WC opener at AT&T Stadium (Kane 2, Bellingham, Rashford; Kramaric, Modric for Croatia). Top of Group L. Today vs Ghana June 23.",
+   "form": "WD",
+   "form_note": "Won 4-2 vs Croatia (Kane 2, Bellingham, Rashford). Drew 0-0 vs Ghana (June 23, Foxborough) — Kane went closest late on but Three Lions held. England 4pts, top of Group L. Next vs Panama June 27.",
    "injuries": [
     {
      "player": "Jarrad Branthwaite",
@@ -1996,8 +2012,8 @@
    "flag": "🇭🇷",
    "elo": 1897,
    "fifa_rank": 11,
-   "form": "L",
-   "form_note": "Lost 2-4 to England in WC opener at AT&T Stadium (Kramaric, Modric for Croatia; Kane 2, Bellingham, Rashford for England). Today vs Panama June 23 — must win to stay alive.",
+   "form": "LW",
+   "form_note": "Lost 2-4 to England. Won 1-0 vs Panama (June 23, Toronto — Ante Budimir winner; Luka Modric played his 200th international cap). Croatia 3pts, alive in Group L. Next vs Ghana June 27.",
    "injuries": [
     {
      "player": "Josko Gvardiol",
@@ -2054,8 +2070,8 @@
    "flag": "🇬🇭",
    "elo": 1583,
    "fifa_rank": 74,
-   "form": "W",
-   "form_note": "Won 1-0 vs Panama (June 17). Today vs England June 23. Thomas Partey cleared to enter USA and available.",
+   "form": "WD",
+   "form_note": "Won 1-0 vs Panama (June 17). Drew 0-0 vs England (June 23, Foxborough) — dogged display, England frustrated throughout. Ghana 4pts, top of Group L alongside England. Next vs Panama June 27 (must win to advance).",
    "injuries": [
     {
      "player": "Mohammed Kudus",
@@ -2097,8 +2113,8 @@
    "flag": "🇵🇦",
    "elo": 1668,
    "fifa_rank": 33,
-   "form": "L",
-   "form_note": "Lost 0-1 to Ghana (June 17). Today vs Croatia June 23 — must win to stay alive.",
+   "form": "LL",
+   "form_note": "Lost 0-1 to Ghana. Lost 0-1 to Croatia (June 23, Toronto — Budimir goal, Modric 200th cap). Panama eliminated from Group L. Last game vs England June 27.",
    "injuries": [
     {
      "player": "Adalberto Carrasquilla",
@@ -2493,10 +2509,10 @@
     "score": "1-0",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1826 vs Paraguay 1794 (+112 incl. venue)",
+     "Rating edge: United States 1818 vs Paraguay 1794 (+104 incl. venue)",
      "United States effectively at home in Inglewood (+80 Elo)",
-     "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
-     "United States: Chris Richards doubtful"
+     "United States: Christian Pulisic doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": "2026-06-12T17:41:10+00:00"
    },
@@ -2509,7 +2525,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.245,
+      "anytime": 0.251,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2522,7 +2538,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.245,
+      "anytime": 0.251,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2535,7 +2551,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.185,
+      "anytime": 0.19,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2550,7 +2566,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.171,
+      "anytime": 0.174,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2563,7 +2579,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.127,
+      "anytime": 0.13,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2576,7 +2592,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.103,
+      "anytime": 0.106,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -3070,10 +3086,10 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Germany 1931 vs Curaçao 1455 (+476 incl. venue)",
+     "Rating edge: Germany 1923 vs Curaçao 1455 (+468 incl. venue)",
+     "Germany: Nico Schlotterbeck out (Medial ligament damage in left ankle vs Ivory Coast (June 20); MRI confirmed torn ligament — ruled out for remainder of World Cup and several months; replaced in lineup by Antonio Rudiger)",
      "Germany: Serge Gnabry out (Torn adductor in right thigh; misses tournament after a 23-goal-involvement season)",
-     "Germany: Marc-Andre ter Stegen out (Not selected after back surgery and subsequent muscle injury)",
-     "Germany: Lennart Karl out (Thigh muscle tear June 5; replaced in squad by Assan Ouedraogo)"
+     "Germany: Marc-Andre ter Stegen out (Not selected after back surgery and subsequent muscle injury)"
     ],
     "locked_at": "2026-06-13T17:28:49+00:00"
    },
@@ -3086,7 +3102,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.432,
+      "anytime": 0.429,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -3099,7 +3115,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.389,
+      "anytime": 0.386,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -3112,7 +3128,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.249,
+      "anytime": 0.247,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -3302,10 +3318,10 @@
     "score": "0-1",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Ivory Coast 1714 vs Ecuador 1835 (-121 incl. venue)",
-     "Ivory Coast: Evan N'Dicka out (Thigh injury; ruled out of the opener vs Ecuador (June 14))",
-     "Ivory Coast: Ousmane Diomande out (Injury; confirmed unavailable for the Ecuador opener)",
-     "Ecuador: Enner Valencia out (Injury; confirmed unavailable for the Ivory Coast opener (June 14) — the only player in the squad with a double-figure international goal tally (49))"
+     "Rating edge: Ivory Coast 1714 vs Ecuador 1843 (-129 incl. venue)",
+     "Ivory Coast: Wilfried Singo doubtful",
+     "Ivory Coast: Evan N'Dicka doubtful",
+     "Ivory Coast: Ousmane Diomande out (Injury; confirmed unavailable for the Ecuador opener)"
     ],
     "locked_at": "2026-06-14T21:17:46+00:00"
    },
@@ -3318,7 +3334,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.118,
+      "anytime": 0.115,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -3331,7 +3347,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.118,
+      "anytime": 0.115,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -3344,7 +3360,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.118,
+      "anytime": 0.115,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -3359,7 +3375,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.242,
+      "anytime": 0.245,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -3372,7 +3388,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.145,
+      "anytime": 0.146,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -4436,7 +4452,7 @@
      "Rating edge: Portugal 1977 vs DR Congo 1658 (+319 incl. venue)",
      "Portugal: Tomas Araujo out (Not available for the Uzbekistan match (June 23))",
      "DR Congo: Théo Bongonda out (Injury; unavailable for Colombia match (June 23))",
-     "Form: Portugal DW · DR Congo D"
+     "Form: Portugal DW · DR Congo DL"
     ],
     "locked_at": "2026-06-17T07:08:59+00:00"
    },
@@ -5348,10 +5364,10 @@
     "score": "1-1",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1826 vs Australia 1796 (+110 incl. venue)",
+     "Rating edge: United States 1818 vs Australia 1796 (+102 incl. venue)",
      "United States effectively at home in Seattle (+80 Elo)",
-     "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
-     "United States: Chris Richards doubtful"
+     "United States: Christian Pulisic doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": "2026-06-22T13:18:57+00:00"
    },
@@ -5364,7 +5380,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.244,
+      "anytime": 0.25,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5377,7 +5393,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.244,
+      "anytime": 0.25,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5390,7 +5406,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.184,
+      "anytime": 0.189,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5405,7 +5421,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.154,
+      "anytime": 0.157,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5418,7 +5434,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.154,
+      "anytime": 0.157,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5431,7 +5447,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.114,
+      "anytime": 0.117,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5928,10 +5944,10 @@
     "score": "2-0",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Germany 1931 vs Ivory Coast 1714 (+216 incl. venue)",
+     "Rating edge: Germany 1923 vs Ivory Coast 1714 (+208 incl. venue)",
+     "Germany: Nico Schlotterbeck out (Medial ligament damage in left ankle vs Ivory Coast (June 20); MRI confirmed torn ligament — ruled out for remainder of World Cup and several months; replaced in lineup by Antonio Rudiger)",
      "Germany: Serge Gnabry out (Torn adductor in right thigh; misses tournament after a 23-goal-involvement season)",
-     "Germany: Marc-Andre ter Stegen out (Not selected after back surgery and subsequent muscle injury)",
-     "Germany: Lennart Karl out (Thigh muscle tear June 5; replaced in squad by Assan Ouedraogo)"
+     "Germany: Marc-Andre ter Stegen out (Not selected after back surgery and subsequent muscle injury)"
     ],
     "locked_at": "2026-06-22T13:18:57+00:00"
    },
@@ -5944,7 +5960,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.333,
+      "anytime": 0.33,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5957,7 +5973,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.297,
+      "anytime": 0.294,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5970,7 +5986,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.185,
+      "anytime": 0.183,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -5985,7 +6001,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.084,
+      "anytime": 0.087,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5998,7 +6014,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.084,
+      "anytime": 0.087,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6011,7 +6027,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.084,
+      "anytime": 0.087,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6044,8 +6060,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Ecuador 1835 vs Curaçao 1455 (+380 incl. venue)",
-     "Ecuador: Enner Valencia out (Injury; confirmed unavailable for the Ivory Coast opener (June 14) — the only player in the squad with a double-figure international goal tally (49))",
+     "Rating edge: Ecuador 1843 vs Curaçao 1455 (+388 incl. venue)",
      "Form: Ecuador LD · Curaçao —"
     ],
     "locked_at": "2026-06-22T13:18:57+00:00"
@@ -6059,7 +6074,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.334,
+      "anytime": 0.337,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -6072,7 +6087,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.204,
+      "anytime": 0.206,
       "shots": "Medium",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7397,7 +7412,7 @@
     "reasons": [
      "Rating edge: Panama 1653 vs Croatia 1897 (-244 incl. venue)",
      "Panama: Adalberto Carrasquilla out (Groin injury; MISSED the Ghana match; still doubtful for Croatia game — out for almost a month before partial return to training)",
-     "Form: Panama L · Croatia L"
+     "Form: Panama LL · Croatia LW"
     ],
     "locked_at": "2026-06-23T22:24:01+00:00"
    },
@@ -7512,7 +7527,7 @@
     "reasons": [
      "Rating edge: Colombia 1994 vs DR Congo 1658 (+335 incl. venue)",
      "DR Congo: Théo Bongonda out (Injury; unavailable for Colombia match (June 23))",
-     "Form: Colombia W · DR Congo D"
+     "Form: Colombia WW · DR Congo DL"
     ],
     "locked_at": "2026-06-23T22:24:01+00:00"
    },
@@ -8301,9 +8316,9 @@
     "confidence": 5,
     "reasons": [
      "Rating edge: Curaçao 1455 vs Ivory Coast 1714 (-259 incl. venue)",
-     "Ivory Coast: Evan N'Dicka out (Thigh injury; ruled out of the opener vs Ecuador (June 14))",
-     "Ivory Coast: Ousmane Diomande out (Injury; confirmed unavailable for the Ecuador opener)",
-     "Form: Curaçao — · Ivory Coast WL"
+     "Ivory Coast: Wilfried Singo doubtful",
+     "Ivory Coast: Evan N'Dicka doubtful",
+     "Ivory Coast: Ousmane Diomande out (Injury; confirmed unavailable for the Ecuador opener)"
     ],
     "locked_at": null
    },
@@ -8405,16 +8420,16 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.225,
-    "p_draw": 0.284,
-    "p_away": 0.491,
+    "p_home": 0.245,
+    "p_draw": 0.288,
+    "p_away": 0.467,
     "pick": "Germany",
     "pick_type": "away",
-    "score": "0-1",
-    "confidence": 3,
+    "score": "1-2",
+    "confidence": 2,
     "reasons": [
-     "Rating edge: Ecuador 1835 vs Germany 1931 (-96 incl. venue)",
-     "Ecuador: Enner Valencia out (Injury; confirmed unavailable for the Ivory Coast opener (June 14) — the only player in the squad with a double-figure international goal tally (49))",
+     "Rating edge: Ecuador 1843 vs Germany 1923 (-80 incl. venue)",
+     "Germany: Nico Schlotterbeck out (Medial ligament damage in left ankle vs Ivory Coast (June 20); MRI confirmed torn ligament — ruled out for remainder of World Cup and several months; replaced in lineup by Antonio Rudiger)",
      "Germany: Serge Gnabry out (Torn adductor in right thigh; misses tournament after a 23-goal-involvement season)",
      "Germany: Marc-Andre ter Stegen out (Not selected after back surgery and subsequent muscle injury)"
     ],
@@ -8429,7 +8444,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.156,
+      "anytime": 0.163,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8442,7 +8457,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.091,
+      "anytime": 0.095,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8457,7 +8472,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.281,
+      "anytime": 0.274,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8470,7 +8485,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.25,
+      "anytime": 0.243,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8483,7 +8498,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.154,
+      "anytime": 0.15,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8731,18 +8746,18 @@
    "result": null,
    "graded": null,
    "prediction": {
-    "p_home": 0.301,
-    "p_draw": 0.296,
-    "p_away": 0.403,
-    "pick": "United States",
-    "pick_type": "away",
-    "score": "1-2",
-    "confidence": 2,
+    "p_home": 0.312,
+    "p_draw": 0.297,
+    "p_away": 0.391,
+    "pick": "Draw",
+    "pick_type": "draw",
+    "score": "1-1",
+    "confidence": 1,
     "reasons": [
-     "Rating edge: Turkey 1789 vs United States 1826 (-36 incl. venue)",
+     "Rating edge: Turkey 1789 vs United States 1818 (-28 incl. venue)",
      "Turkey: Kenan Yildiz doubtful",
-     "United States: Patrick Agyemang out (Achilles tendon rupture in April)",
-     "United States: Chris Richards doubtful"
+     "United States: Christian Pulisic doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": null
    },
@@ -8755,7 +8770,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.187,
+      "anytime": 0.191,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -8768,7 +8783,7 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.102,
+      "anytime": 0.104,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8781,7 +8796,7 @@
       "goals": 10,
       "apps": 33,
       "pens": false,
-      "anytime": 0.083,
+      "anytime": 0.084,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8796,7 +8811,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.215,
+      "anytime": 0.22,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8809,7 +8824,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.215,
+      "anytime": 0.22,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8822,7 +8837,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.162,
+      "anytime": 0.166,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9854,7 +9869,7 @@
     "reasons": [
      "Rating edge: Colombia 1994 vs Portugal 1977 (+17 incl. venue)",
      "Portugal: Tomas Araujo out (Not available for the Uzbekistan match (June 23))",
-     "Form: Colombia W · Portugal DW"
+     "Form: Colombia WW · Portugal DW"
     ],
     "locked_at": null
    },
@@ -10361,7 +10376,7 @@
   "E": [
    {
     "team": "Germany",
-    "exp_pts": 7.8,
+    "exp_pts": 7.7,
     "elo": 1955
    },
    {
@@ -10543,115 +10558,115 @@
     "team": "Argentina",
     "qualify": 1.0,
     "r16": 0.93,
-    "qf": 0.799,
-    "sf": 0.614,
-    "final": 0.45,
-    "champion": 0.281
+    "qf": 0.802,
+    "sf": 0.615,
+    "final": 0.451,
+    "champion": 0.282
    },
    {
     "team": "Spain",
     "qualify": 1.0,
-    "r16": 0.833,
+    "r16": 0.837,
     "qf": 0.603,
-    "sf": 0.489,
-    "final": 0.33,
-    "champion": 0.2
+    "sf": 0.488,
+    "final": 0.327,
+    "champion": 0.196
    },
    {
     "team": "France",
     "qualify": 1.0,
-    "r16": 0.859,
+    "r16": 0.86,
     "qf": 0.62,
-    "sf": 0.439,
+    "sf": 0.437,
     "final": 0.255,
-    "champion": 0.144
+    "champion": 0.146
    },
    {
     "team": "England",
     "qualify": 1.0,
-    "r16": 0.802,
-    "qf": 0.499,
-    "sf": 0.317,
+    "r16": 0.803,
+    "qf": 0.494,
+    "sf": 0.316,
     "final": 0.145,
     "champion": 0.071
    },
    {
-    "team": "Colombia",
-    "qualify": 1.0,
-    "r16": 0.792,
-    "qf": 0.493,
-    "sf": 0.211,
-    "final": 0.114,
-    "champion": 0.05
-   },
-   {
     "team": "Netherlands",
     "qualify": 1.0,
-    "r16": 0.636,
-    "qf": 0.478,
-    "sf": 0.233,
-    "final": 0.11,
-    "champion": 0.047
+    "r16": 0.642,
+    "qf": 0.483,
+    "sf": 0.232,
+    "final": 0.112,
+    "champion": 0.048
+   },
+   {
+    "team": "Colombia",
+    "qualify": 1.0,
+    "r16": 0.79,
+    "qf": 0.491,
+    "sf": 0.211,
+    "final": 0.111,
+    "champion": 0.048
    },
    {
     "team": "Portugal",
     "qualify": 1.0,
-    "r16": 0.717,
-    "qf": 0.369,
-    "sf": 0.181,
-    "final": 0.09,
+    "r16": 0.716,
+    "qf": 0.371,
+    "sf": 0.184,
+    "final": 0.092,
     "champion": 0.04
    },
    {
     "team": "Brazil",
     "qualify": 1.0,
-    "r16": 0.597,
-    "qf": 0.355,
-    "sf": 0.187,
-    "final": 0.074,
-    "champion": 0.031
+    "r16": 0.593,
+    "qf": 0.351,
+    "sf": 0.186,
+    "final": 0.077,
+    "champion": 0.034
    },
    {
     "team": "Germany",
     "qualify": 1.0,
-    "r16": 0.762,
-    "qf": 0.31,
-    "sf": 0.162,
-    "final": 0.067,
+    "r16": 0.765,
+    "qf": 0.312,
+    "sf": 0.163,
+    "final": 0.069,
     "champion": 0.025
    },
    {
     "team": "Norway",
     "qualify": 1.0,
-    "r16": 0.753,
-    "qf": 0.387,
+    "r16": 0.751,
+    "qf": 0.386,
     "sf": 0.183,
-    "final": 0.062,
-    "champion": 0.023
+    "final": 0.061,
+    "champion": 0.022
    },
    {
     "team": "United States",
     "qualify": 1.0,
-    "r16": 0.774,
-    "qf": 0.514,
-    "sf": 0.171,
-    "final": 0.064,
-    "champion": 0.022
+    "r16": 0.771,
+    "qf": 0.511,
+    "sf": 0.168,
+    "final": 0.062,
+    "champion": 0.02
    },
    {
     "team": "Mexico",
     "qualify": 1.0,
-    "r16": 0.754,
-    "qf": 0.376,
+    "r16": 0.751,
+    "qf": 0.377,
     "sf": 0.169,
-    "final": 0.052,
+    "final": 0.051,
     "champion": 0.016
    },
    {
     "team": "Croatia",
-    "qualify": 0.995,
-    "r16": 0.417,
-    "qf": 0.152,
+    "qualify": 0.994,
+    "r16": 0.419,
+    "qf": 0.155,
     "sf": 0.071,
     "final": 0.026,
     "champion": 0.008
@@ -10659,196 +10674,187 @@
    {
     "team": "Japan",
     "qualify": 0.999,
-    "r16": 0.433,
-    "qf": 0.207,
-    "sf": 0.086,
-    "final": 0.024,
-    "champion": 0.008
-   },
-   {
-    "team": "Morocco",
-    "qualify": 1.0,
-    "r16": 0.417,
-    "qf": 0.223,
-    "sf": 0.081,
+    "r16": 0.429,
+    "qf": 0.208,
+    "sf": 0.087,
     "final": 0.025,
-    "champion": 0.007
+    "champion": 0.008
    },
    {
     "team": "Switzerland",
     "qualify": 1.0,
-    "r16": 0.653,
-    "qf": 0.249,
-    "sf": 0.069,
-    "final": 0.024,
+    "r16": 0.655,
+    "qf": 0.248,
+    "sf": 0.071,
+    "final": 0.026,
     "champion": 0.007
    },
    {
     "team": "Belgium",
-    "qualify": 0.961,
-    "r16": 0.585,
-    "qf": 0.179,
-    "sf": 0.062,
-    "final": 0.023,
+    "qualify": 0.963,
+    "r16": 0.583,
+    "qf": 0.177,
+    "sf": 0.061,
+    "final": 0.021,
     "champion": 0.007
+   },
+   {
+    "team": "Morocco",
+    "qualify": 1.0,
+    "r16": 0.416,
+    "qf": 0.221,
+    "sf": 0.081,
+    "final": 0.024,
+    "champion": 0.006
    },
    {
     "team": "Austria",
     "qualify": 0.963,
-    "r16": 0.251,
-    "qf": 0.091,
-    "sf": 0.031,
-    "final": 0.009,
+    "r16": 0.248,
+    "qf": 0.092,
+    "sf": 0.032,
+    "final": 0.01,
     "champion": 0.002
    },
    {
     "team": "Canada",
     "qualify": 1.0,
-    "r16": 0.568,
-    "qf": 0.172,
+    "r16": 0.569,
+    "qf": 0.173,
     "sf": 0.033,
     "final": 0.008,
-    "champion": 0.002
+    "champion": 0.001
    },
    {
     "team": "Senegal",
-    "qualify": 0.647,
-    "r16": 0.267,
-    "qf": 0.111,
-    "sf": 0.027,
+    "qualify": 0.648,
+    "r16": 0.265,
+    "qf": 0.108,
+    "sf": 0.026,
     "final": 0.007,
     "champion": 0.001
    },
    {
     "team": "South Korea",
-    "qualify": 0.971,
-    "r16": 0.429,
-    "qf": 0.112,
-    "sf": 0.024,
+    "qualify": 0.97,
+    "r16": 0.427,
+    "qf": 0.111,
+    "sf": 0.025,
     "final": 0.005,
     "champion": 0.001
    },
    {
     "team": "Australia",
-    "qualify": 0.907,
-    "r16": 0.34,
-    "qf": 0.062,
+    "qualify": 0.903,
+    "r16": 0.339,
+    "qf": 0.058,
     "sf": 0.02,
     "final": 0.005,
     "champion": 0.001
    },
    {
+    "team": "Paraguay",
+    "qualify": 0.791,
+    "r16": 0.251,
+    "qf": 0.053,
+    "sf": 0.018,
+    "final": 0.005,
+    "champion": 0.001
+   },
+   {
     "team": "Uruguay",
-    "qualify": 0.273,
-    "r16": 0.117,
+    "qualify": 0.272,
+    "r16": 0.115,
     "qf": 0.049,
     "sf": 0.016,
     "final": 0.005,
     "champion": 0.001
    },
    {
-    "team": "Paraguay",
-    "qualify": 0.793,
-    "r16": 0.254,
-    "qf": 0.054,
+    "team": "Egypt",
+    "qualify": 1.0,
+    "r16": 0.393,
+    "qf": 0.108,
     "sf": 0.018,
     "final": 0.004,
     "champion": 0.001
    },
    {
-    "team": "Egypt",
-    "qualify": 1.0,
-    "r16": 0.39,
-    "qf": 0.106,
-    "sf": 0.018,
-    "final": 0.004,
+    "team": "Iran",
+    "qualify": 0.694,
+    "r16": 0.294,
+    "qf": 0.076,
+    "sf": 0.014,
+    "final": 0.003,
     "champion": 0.001
    },
    {
     "team": "Ecuador",
-    "qualify": 0.249,
-    "r16": 0.089,
-    "qf": 0.036,
+    "qualify": 0.268,
+    "r16": 0.094,
+    "qf": 0.038,
     "sf": 0.012,
     "final": 0.003,
     "champion": 0.001
    },
    {
     "team": "Algeria",
-    "qualify": 0.833,
-    "r16": 0.235,
-    "qf": 0.078,
+    "qualify": 0.831,
+    "r16": 0.236,
+    "qf": 0.077,
     "sf": 0.016,
     "final": 0.003,
     "champion": 0.0
    },
    {
-    "team": "Iran",
-    "qualify": 0.698,
-    "r16": 0.295,
-    "qf": 0.075,
-    "sf": 0.015,
-    "final": 0.003,
-    "champion": 0.0
-   },
-   {
-    "team": "Ivory Coast",
-    "qualify": 0.97,
-    "r16": 0.217,
-    "qf": 0.058,
+    "team": "Scotland",
+    "qualify": 0.865,
+    "r16": 0.196,
+    "qf": 0.051,
     "sf": 0.013,
     "final": 0.002,
     "champion": 0.0
    },
    {
-    "team": "Scotland",
-    "qualify": 0.867,
-    "r16": 0.197,
-    "qf": 0.05,
+    "team": "Sweden",
+    "qualify": 0.939,
+    "r16": 0.23,
+    "qf": 0.062,
     "sf": 0.012,
     "final": 0.002,
     "champion": 0.0
    },
    {
-    "team": "Sweden",
-    "qualify": 0.94,
-    "r16": 0.227,
-    "qf": 0.058,
-    "sf": 0.012,
-    "final": 0.002,
+    "team": "Ivory Coast",
+    "qualify": 0.969,
+    "r16": 0.218,
+    "qf": 0.057,
+    "sf": 0.013,
+    "final": 0.001,
     "champion": 0.0
    },
    {
     "team": "Turkey",
-    "qualify": 0.155,
-    "r16": 0.025,
+    "qualify": 0.16,
+    "r16": 0.026,
     "qf": 0.008,
     "sf": 0.003,
     "final": 0.001,
     "champion": 0.0
    },
    {
-    "team": "Cape Verde",
-    "qualify": 0.693,
-    "r16": 0.048,
-    "qf": 0.01,
-    "sf": 0.002,
-    "final": 0.0,
-    "champion": 0.0
-   },
-   {
     "team": "DR Congo",
-    "qualify": 0.417,
-    "r16": 0.051,
-    "qf": 0.01,
+    "qualify": 0.411,
+    "r16": 0.05,
+    "qf": 0.009,
     "sf": 0.002,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Czech Republic",
-    "qualify": 0.159,
-    "r16": 0.044,
+    "qualify": 0.161,
+    "r16": 0.045,
     "qf": 0.009,
     "sf": 0.001,
     "final": 0.0,
@@ -10856,16 +10862,25 @@
    },
    {
     "team": "Bosnia and Herzegovina",
-    "qualify": 0.52,
-    "r16": 0.062,
+    "qualify": 0.521,
+    "r16": 0.063,
     "qf": 0.011,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
+    "team": "Cape Verde",
+    "qualify": 0.689,
+    "r16": 0.045,
+    "qf": 0.009,
+    "sf": 0.001,
+    "final": 0.0,
+    "champion": 0.0
+   },
+   {
     "team": "Uzbekistan",
-    "qualify": 0.141,
+    "qualify": 0.139,
     "r16": 0.017,
     "qf": 0.003,
     "sf": 0.001,
@@ -10876,23 +10891,23 @@
     "team": "Ghana",
     "qualify": 1.0,
     "r16": 0.093,
-    "qf": 0.016,
+    "qf": 0.017,
     "sf": 0.001,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "South Africa",
-    "qualify": 0.101,
-    "r16": 0.015,
-    "qf": 0.001,
+    "qualify": 0.105,
+    "r16": 0.016,
+    "qf": 0.002,
     "sf": 0.0,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Qatar",
-    "qualify": 0.236,
+    "qualify": 0.237,
     "r16": 0.016,
     "qf": 0.002,
     "sf": 0.0,
@@ -10901,7 +10916,7 @@
    },
    {
     "team": "Haiti",
-    "qualify": 0.003,
+    "qualify": 0.004,
     "r16": 0.0,
     "qf": 0.0,
     "sf": 0.0,
@@ -10910,8 +10925,8 @@
    },
    {
     "team": "Curaçao",
-    "qualify": 0.085,
-    "r16": 0.004,
+    "qualify": 0.084,
+    "r16": 0.005,
     "qf": 0.0,
     "sf": 0.0,
     "final": 0.0,
@@ -10928,17 +10943,17 @@
    },
    {
     "team": "New Zealand",
-    "qualify": 0.04,
+    "qualify": 0.039,
     "r16": 0.006,
-    "qf": 0.001,
+    "qf": 0.0,
     "sf": 0.0,
     "final": 0.0,
     "champion": 0.0
    },
    {
     "team": "Saudi Arabia",
-    "qualify": 0.319,
-    "r16": 0.015,
+    "qualify": 0.322,
+    "r16": 0.016,
     "qf": 0.003,
     "sf": 0.0,
     "final": 0.0,
@@ -10946,8 +10961,8 @@
    },
    {
     "team": "Iraq",
-    "qualify": 0.058,
-    "r16": 0.012,
+    "qualify": 0.056,
+    "r16": 0.013,
     "qf": 0.002,
     "sf": 0.0,
     "final": 0.0,
@@ -10955,7 +10970,7 @@
    },
    {
     "team": "Jordan",
-    "qualify": 0.005,
+    "qualify": 0.004,
     "r16": 0.001,
     "qf": 0.0,
     "sf": 0.0,
