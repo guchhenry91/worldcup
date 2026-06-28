@@ -238,5 +238,53 @@
   "60": {
     "home_goals": 0,
     "away_goals": 0
+  },
+  "61": {
+    "home_goals": 4,
+    "away_goals": 1
+  },
+  "62": {
+    "home_goals": 5,
+    "away_goals": 0
+  },
+  "63": {
+    "home_goals": 1,
+    "away_goals": 1
+  },
+  "64": {
+    "home_goals": 1,
+    "away_goals": 5
+  },
+  "65": {
+    "home_goals": 0,
+    "away_goals": 0
+  },
+  "66": {
+    "home_goals": 0,
+    "away_goals": 1
+  },
+  "67": {
+    "home_goals": 0,
+    "away_goals": 2
+  },
+  "68": {
+    "home_goals": 2,
+    "away_goals": 1
+  },
+  "69": {
+    "home_goals": 3,
+    "away_goals": 3
+  },
+  "70": {
+    "home_goals": 1,
+    "away_goals": 3
+  },
+  "71": {
+    "home_goals": 0,
+    "away_goals": 0
+  },
+  "72": {
+    "home_goals": 3,
+    "away_goals": 1
   }
 }
