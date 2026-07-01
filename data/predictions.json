@@ -1,9 +1,9 @@
 {
- "updated": "2026-06-29T18:06:35+00:00",
+ "updated": "2026-07-01T19:41:57+00:00",
  "record": {
-  "correct": 47,
-  "wrong": 25,
-  "total": 72,
+  "correct": 52,
+  "wrong": 27,
+  "total": 79,
   "pending": 0,
   "by_confidence": {
    "5": {
@@ -26,6 +26,10 @@
     "correct": 8,
     "total": 11
    }
+  },
+  "knockout": {
+   "correct": 5,
+   "total": 7
   }
  },
  "groups": {
@@ -344,8 +348,13 @@
     },
     {
      "player": "Tarik Muharemovic",
-     "status": "suspended",
-     "note": "Red card vs Switzerland; suspended for Qatar match (June 24)"
+     "status": "fit",
+     "note": "Suspension served; back and expected to start vs USA in the Round of 32"
+    },
+    {
+     "player": "Amar Dedic",
+     "status": "doubtful",
+     "note": "Thigh issue; a doubt ahead of the Round of 32 clash with the USA"
     }
    ],
    "key_players": [
@@ -361,7 +370,8 @@
     "Returning to the finals after a 12-year absence.",
     "Dzeko confirmed fit and starting vs Canada despite shoulder injury scare.",
     "Reserve GK Hadzikic withdrew injured; Mladen Jurkas added to squad.",
-    "2026-06-24 pre-match: Tarik Muharemovic suspended (red card vs Switzerland); forces defensive reshuffle vs Qatar."
+    "2026-06-24 pre-match: Tarik Muharemovic suspended (red card vs Switzerland); forces defensive reshuffle vs Qatar.",
+    "2026-07-01 pre-match vs USA: Tarik Muharemovic available again after suspension; Amar Dedic (thigh) a doubt. Predicted XI (4-4-2): Vasilj; Dedic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Basic, Sunjic, Alajbegovic; Demirovic, Dzeko."
    ]
   },
   "Qatar": {
@@ -637,8 +647,8 @@
    "injuries": [
     {
      "player": "Christian Pulisic",
-     "status": "doubtful",
-     "note": "Calf injury sustained in Paraguay match (June 12); missed Australia game; medically available vs Turkey but Pochettino may rest him for the knockouts"
+     "status": "fit",
+     "note": "Recovered from calf injury; expected to start vs Bosnia and Herzegovina in the Round of 32"
     },
     {
      "player": "Cristian Roldan",
@@ -689,7 +699,8 @@
    "news": [
     "Pochettino named the 26 on May 26 after parts of the roster leaked; Gio Reyna in, Diego Luna the notable omission.",
     "Forward line arrives in the best collective form of any US World Cup squad (Balogun, Wright, Pepi all 17+ goals).",
-    "2026-06-25: Yellow card concerns ahead of Turkey — Tyler Adams, Balogun, Antonee Robinson, and Chris Richards all on one booking; second yellow = R32 suspension. Pulisic and Roldan doubtful."
+    "2026-06-25: Yellow card concerns ahead of Turkey — Tyler Adams, Balogun, Antonee Robinson, and Chris Richards all on one booking; second yellow = R32 suspension. Pulisic and Roldan doubtful.",
+    "2026-07-01 pre-match vs Bosnia and Herzegovina: Pulisic fit and expected to start. Cristian Roldan (muscle), Mark McKenzie (foot) and Auston Trusty (ankle) undergoing late fitness checks."
    ]
   },
   "Paraguay": {
@@ -1205,7 +1216,8 @@
    "news": [
     "Striker situation is the big worry with Lukaku barely playing since March.",
     "De Bruyne's fitness management is central to Belgium's knockout hopes.",
-    "2026-06-26: Nathan Ngoy suspended (red card vs Iran); Jeremy Doku returns to squad after birth of son — Belgium must beat New Zealand to advance."
+    "2026-06-26: Nathan Ngoy suspended (red card vs Iran); Jeremy Doku returns to squad after birth of son — Belgium must beat New Zealand to advance.",
+    "2026-07-01 pre-match vs Senegal: no injury or suspension concerns for Belgium. Predicted XI: Courtois; Castagne, Mechele, Theate, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere."
    ]
   },
   "Egypt": {
@@ -1566,12 +1578,12 @@
    "elo": 1844,
    "fifa_rank": 14,
    "form": "LL",
-   "form_note": "Lost 1-3 to France. Lost 2-3 to Norway (Sarr scored twice but too late). Senegal eliminated. Must beat Iraq June 26 to potentially salvage third place on goal difference.",
+   "form_note": "Advanced from Group I as one of the best third-placed teams; faces Belgium in the Round of 32 on July 1.",
    "injuries": [
     {
      "player": "Edouard Mendy",
-     "status": "doubtful",
-     "note": "Ligament problem suffered vs Norway; major injury doubt — Mory Diaw (Le Havre) expected to start in goal vs Iraq"
+     "status": "out",
+     "note": "Confirmed knee sprain; ruled out of Round of 32 vs Belgium, Mory Diaw starts in goal"
     },
     {
      "player": "Assane Diao",
@@ -1614,7 +1626,8 @@
    ],
    "news": [
     "Pape Thiaw's golden generation faces France, Norway and Iraq in the toughest-looking group.",
-    "Third consecutive World Cup appearance; momentum high after the Wembley win over England."
+    "Third consecutive World Cup appearance; momentum high after the Wembley win over England.",
+    "2026-07-01 pre-match vs Belgium: Edouard Mendy (knee) confirmed out, Mory Diaw starts in goal. No other injury concerns."
    ]
   },
   "Iraq": {
@@ -1970,7 +1983,8 @@
    "key_players": [],
    "news": [
     "Won the African playoff path then the FIFA intercontinental playoff to reach a first finals in 52 years.",
-    "2026-06-23 pre-match: Théo Bongonda OUT injured; Wissa and Bakambu lead the attack. Predicted XI (5-3-2): Mpasi-Nzau; Mbemba, Tuanzebe, Kapuadi, Wan-Bissaka, Masuaku; Sadiki, Moutoussamy, Kayembe; Bakambu, Wissa."
+    "2026-06-23 pre-match: Théo Bongonda OUT injured; Wissa and Bakambu lead the attack. Predicted XI (5-3-2): Mpasi-Nzau; Mbemba, Tuanzebe, Kapuadi, Wan-Bissaka, Masuaku; Sadiki, Moutoussamy, Kayembe; Bakambu, Wissa.",
+    "2026-07-01 pre-match vs England: no fresh injury concerns. Predicted XI (5-3-2): Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Kapuadi, Masuaku; Mukau, Moutoussamy, Kayembe; Wissa, Bakambu."
    ]
   },
   "Uzbekistan": {
@@ -2082,13 +2096,13 @@
     },
     {
      "player": "Declan Rice",
-     "status": "doubtful",
-     "note": "Managing neural pain in hamstring; was fit for Ghana match but England assessing ahead of Panama (June 27)"
+     "status": "fit",
+     "note": "Back from rest; starts vs DR Congo, Bellingham shifts to No 10"
     },
     {
      "player": "Reece James",
-     "status": "doubtful",
-     "note": "Being assessed ahead of Panama match (June 27) — fitness in doubt"
+     "status": "out",
+     "note": "Hamstring injury; ruled out of Round of 32 clash vs DR Congo, Djed Spence starts at right-back"
     },
     {
      "player": "Bukayo Saka",
@@ -2099,6 +2113,11 @@
      "player": "Marcus Rashford",
      "status": "fit",
      "note": "Hamstring discomfort managed as precaution vs Ghana; expected to start vs Panama (June 27) per predicted XI"
+    },
+    {
+     "player": "Jarell Quansah",
+     "status": "out",
+     "note": "Twisted ankle in group-stage win over Panama; ruled out of Round of 32 vs DR Congo"
     }
    ],
    "key_players": [
@@ -2135,7 +2154,8 @@
     "Thomas Tuchel's ruthless squad cuts: Cole Palmer, Phil Foden, Trent Alexander-Arnold, Harry Maguire and Adam Wharton all left out — biggest selection story of the build-up.",
     "Ivan Toney and Ollie Watkins named as the back-up strikers to Kane.",
     "ESPN power-rankings panel gave England zero first-place votes amid uncertainty over Tuchel's selections despite the flawless qualifying record.",
-    "2026-06-27 pre-match: Declan Rice and Reece James both being assessed ahead of Panama; Carrasquilla (Panama, adductor) OUT — win seals Group L top spot for England."
+    "2026-06-27 pre-match: Declan Rice and Reece James both being assessed ahead of Panama; Carrasquilla (Panama, adductor) OUT — win seals Group L top spot for England.",
+    "2026-07-01 pre-match vs DR Congo: Reece James (hamstring) and Jarell Quansah (ankle) both out; Djed Spence starts at right-back. Tuchel picks Noni Madueke over Bukayo Saka and Marcus Rashford over Anthony Gordon in the front three behind Kane."
    ]
   },
   "Croatia": {
@@ -2639,10 +2659,10 @@
     "score": "1-0",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1780 vs Paraguay 1785 (+75 incl. venue)",
+     "Rating edge: United States 1788 vs Paraguay 1785 (+83 incl. venue)",
      "United States effectively at home in Inglewood (+80 Elo)",
-     "United States: Christian Pulisic doubtful",
-     "United States: Cristian Roldan doubtful"
+     "United States: Cristian Roldan doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": "2026-06-12T17:41:10+00:00"
    },
@@ -2655,7 +2675,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.239,
+      "anytime": 0.234,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2668,7 +2688,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.239,
+      "anytime": 0.234,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2681,7 +2701,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.18,
+      "anytime": 0.176,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2696,7 +2716,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.209,
+      "anytime": 0.205,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2709,7 +2729,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.157,
+      "anytime": 0.154,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -2722,7 +2742,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.072,
+      "anytime": 0.071,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -4119,10 +4139,10 @@
     "score": "1-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: France 2109 vs Senegal 1832 (+277 incl. venue)",
+     "Rating edge: France 2109 vs Senegal 1828 (+281 incl. venue)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)",
      "France: Boubacar Kamara out (Knee injury, ruled out for the season)",
-     "Senegal: Edouard Mendy doubtful"
+     "Senegal: Edouard Mendy out (Confirmed knee sprain; ruled out of Round of 32 vs Belgium, Mory Diaw starts in goal)"
     ],
     "locked_at": "2026-06-16T21:11:04+00:00"
    },
@@ -4135,7 +4155,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.491,
+      "anytime": 0.493,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -4148,7 +4168,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.254,
+      "anytime": 0.255,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4161,7 +4181,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.192,
+      "anytime": 0.193,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4176,7 +4196,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.081,
+      "anytime": 0.079,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4189,7 +4209,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.081,
+      "anytime": 0.079,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4202,7 +4222,7 @@
       "goals": 10,
       "apps": 26,
       "pens": true,
-      "anytime": 0.065,
+      "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4699,7 +4719,7 @@
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: England 2009 vs Croatia 1906 (+103 incl. venue)",
+     "Rating edge: England 2001 vs Croatia 1906 (+95 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -4715,7 +4735,7 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.302,
+      "anytime": 0.298,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4728,7 +4748,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.203,
+      "anytime": 0.201,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4741,7 +4761,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.203,
+      "anytime": 0.201,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4756,7 +4776,7 @@
       "goals": 14,
       "apps": 26,
       "pens": false,
-      "anytime": 0.171,
+      "anytime": 0.175,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4769,7 +4789,7 @@
       "goals": 17,
       "apps": 37,
       "pens": false,
-      "anytime": 0.148,
+      "anytime": 0.151,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4782,7 +4802,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.13,
+      "anytime": 0.133,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5497,10 +5517,10 @@
     "score": "1-1",
     "confidence": 1,
     "reasons": [
-     "Rating edge: United States 1780 vs Australia 1780 (+80 incl. venue)",
+     "Rating edge: United States 1788 vs Australia 1780 (+88 incl. venue)",
      "United States effectively at home in Seattle (+80 Elo)",
-     "United States: Christian Pulisic doubtful",
-     "United States: Cristian Roldan doubtful"
+     "United States: Cristian Roldan doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": "2026-06-22T13:18:57+00:00"
    },
@@ -5513,7 +5533,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.242,
+      "anytime": 0.236,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5526,7 +5546,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.242,
+      "anytime": 0.236,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5539,7 +5559,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.182,
+      "anytime": 0.178,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5554,7 +5574,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.166,
+      "anytime": 0.163,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5567,7 +5587,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.166,
+      "anytime": 0.163,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5580,7 +5600,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.124,
+      "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7093,10 +7113,10 @@
     "score": "2-1",
     "confidence": 2,
     "reasons": [
-     "Rating edge: Norway 1885 vs Senegal 1832 (+53 incl. venue)",
+     "Rating edge: Norway 1885 vs Senegal 1828 (+57 incl. venue)",
      "Norway: Jorgen Strand Larsen out (Injury; confirmed unavailable for the Iraq opener (June 16))",
      "Norway: Julian Ryerson out (Came off early with injury vs Senegal; Marcus Pedersen (Torino) expected to deputize at right-back vs France)",
-     "Senegal: Edouard Mendy doubtful"
+     "Senegal: Edouard Mendy out (Confirmed knee sprain; ruled out of Round of 32 vs Belgium, Mory Diaw starts in goal)"
     ],
     "locked_at": "2026-06-22T15:14:47+00:00"
    },
@@ -7109,7 +7129,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.263,
+      "anytime": 0.265,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7122,7 +7142,7 @@
       "goals": 13,
       "apps": null,
       "pens": false,
-      "anytime": 0.233,
+      "anytime": 0.235,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7135,7 +7155,7 @@
       "goals": 4,
       "apps": null,
       "pens": false,
-      "anytime": 0.176,
+      "anytime": 0.177,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7150,7 +7170,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.183,
+      "anytime": 0.181,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7163,7 +7183,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.183,
+      "anytime": 0.181,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7176,7 +7196,7 @@
       "goals": 10,
       "apps": 26,
       "pens": true,
-      "anytime": 0.15,
+      "anytime": 0.148,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7428,7 +7448,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: England 2009 vs Ghana 1555 (+454 incl. venue)",
+     "Rating edge: England 2001 vs Ghana 1555 (+446 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -7444,7 +7464,7 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.447,
+      "anytime": 0.444,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -7457,7 +7477,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.313,
+      "anytime": 0.31,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7470,7 +7490,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.313,
+      "anytime": 0.31,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8921,10 +8941,10 @@
     "score": "1-1",
     "confidence": 1,
     "reasons": [
-     "Rating edge: Turkey 1827 vs United States 1780 (+47 incl. venue)",
+     "Rating edge: Turkey 1827 vs United States 1788 (+39 incl. venue)",
      "Turkey: Yunus Akgun doubtful",
-     "United States: Christian Pulisic doubtful",
-     "United States: Cristian Roldan doubtful"
+     "United States: Cristian Roldan doubtful",
+     "United States: Patrick Agyemang out (Achilles tendon rupture in April)"
     ],
     "locked_at": "2026-06-26T03:09:41+00:00"
    },
@@ -8937,7 +8957,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.211,
+      "anytime": 0.208,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -8950,7 +8970,7 @@
       "goals": 10,
       "apps": 33,
       "pens": false,
-      "anytime": 0.164,
+      "anytime": 0.162,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8963,7 +8983,7 @@
       "goals": 9,
       "apps": null,
       "pens": true,
-      "anytime": 0.115,
+      "anytime": 0.113,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -8978,7 +8998,7 @@
       "goals": 19,
       "apps": null,
       "pens": false,
-      "anytime": 0.188,
+      "anytime": 0.185,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -8991,7 +9011,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.188,
+      "anytime": 0.185,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9004,7 +9024,7 @@
       "goals": 2,
       "apps": null,
       "pens": false,
-      "anytime": 0.141,
+      "anytime": 0.138,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9269,8 +9289,8 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Senegal 1832 vs Iraq 1557 (+275 incl. venue)",
-     "Senegal: Edouard Mendy doubtful",
+     "Rating edge: Senegal 1828 vs Iraq 1557 (+271 incl. venue)",
+     "Senegal: Edouard Mendy out (Confirmed knee sprain; ruled out of Round of 32 vs Belgium, Mory Diaw starts in goal)",
      "Senegal: Assane Diao doubtful",
      "Senegal: Cherif Ndiaye doubtful"
     ],
@@ -9285,7 +9305,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.312,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9298,7 +9318,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.312,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9311,7 +9331,7 @@
       "goals": 10,
       "apps": 26,
       "pens": true,
-      "anytime": 0.26,
+      "anytime": 0.259,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9326,7 +9346,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.091,
+      "anytime": 0.093,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9339,7 +9359,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.091,
+      "anytime": 0.093,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9352,7 +9372,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.051,
+      "anytime": 0.052,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9835,7 +9855,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Panama 1643 vs England 2009 (-366 incl. venue)",
+     "Rating edge: Panama 1643 vs England 2001 (-358 incl. venue)",
      "Panama: Adalberto Carrasquilla out (Groin injury; MISSED the Ghana match; still doubtful for Croatia game — out for almost a month before partial return to training)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)"
@@ -9851,7 +9871,7 @@
       "goals": 5,
       "apps": null,
       "pens": false,
-      "anytime": 0.038,
+      "anytime": 0.042,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9864,7 +9884,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.038,
+      "anytime": 0.042,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9877,7 +9897,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.038,
+      "anytime": 0.042,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9892,7 +9912,7 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.414,
+      "anytime": 0.411,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -9905,7 +9925,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.287,
+      "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9918,7 +9938,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.287,
+      "anytime": 0.284,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -11208,6 +11228,7 @@
     "p_home": 0.274,
     "p_away": 0.726,
     "pick": "Canada",
+    "winner": "Canada",
     "score": "2-1",
     "status": "final",
     "result": {
@@ -11221,13 +11242,20 @@
     "date": "2026-06-29",
     "city": "Foxborough",
     "home": "Germany",
-    "away": "Bosnia and Herzegovina",
-    "p_home": 0.847,
-    "p_away": 0.153,
+    "away": "Paraguay",
+    "p_home": 0.663,
+    "p_away": 0.337,
     "pick": "Germany",
-    "score": "2-0",
-    "status": "projected",
-    "result": null
+    "winner": "Paraguay",
+    "score": "2-1",
+    "status": "final",
+    "result": {
+     "home": "Germany",
+     "away": "Paraguay",
+     "home_goals": 1,
+     "away_goals": 1,
+     "winner": "Paraguay"
+    }
    },
    {
     "id": 75,
@@ -11239,9 +11267,14 @@
     "p_home": 0.627,
     "p_away": 0.373,
     "pick": "Netherlands",
+    "winner": "Morocco",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home_goals": 1,
+     "away_goals": 1,
+     "winner": "Morocco"
+    }
    },
    {
     "id": 76,
@@ -11253,9 +11286,14 @@
     "p_home": 0.643,
     "p_away": 0.357,
     "pick": "Brazil",
+    "winner": "Brazil",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home_goals": 2,
+     "away_goals": 1,
+     "winner": "Brazil"
+    }
    },
    {
     "id": 77,
@@ -11263,13 +11301,20 @@
     "date": "2026-06-30",
     "city": "East Rutherford",
     "home": "France",
-    "away": "Australia",
-    "p_home": 0.869,
-    "p_away": 0.131,
+    "away": "Sweden",
+    "p_home": 0.901,
+    "p_away": 0.099,
     "pick": "France",
+    "winner": "France",
     "score": "2-0",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home": "France",
+     "away": "Sweden",
+     "home_goals": 3,
+     "away_goals": 0,
+     "winner": "France"
+    }
    },
    {
     "id": 78,
@@ -11281,9 +11326,14 @@
     "p_home": 0.29,
     "p_away": 0.71,
     "pick": "Norway",
+    "winner": "Norway",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home_goals": 1,
+     "away_goals": 2,
+     "winner": "Norway"
+    }
    },
    {
     "id": 79,
@@ -11295,9 +11345,14 @@
     "p_home": 0.668,
     "p_away": 0.332,
     "pick": "Mexico",
+    "winner": "Mexico",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home_goals": 2,
+     "away_goals": 0,
+     "winner": "Mexico"
+    }
    },
    {
     "id": 80,
@@ -11309,6 +11364,7 @@
     "p_home": 0.87,
     "p_away": 0.13,
     "pick": "England",
+    "winner": null,
     "score": "2-0",
     "status": "projected",
     "result": null
@@ -11323,6 +11379,7 @@
     "p_home": 0.695,
     "p_away": 0.305,
     "pick": "United States",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11337,6 +11394,7 @@
     "p_home": 0.721,
     "p_away": 0.279,
     "pick": "Belgium",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11351,6 +11409,7 @@
     "p_home": 0.613,
     "p_away": 0.387,
     "pick": "Portugal",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11365,6 +11424,7 @@
     "p_home": 0.89,
     "p_away": 0.11,
     "pick": "Spain",
+    "winner": null,
     "score": "2-0",
     "status": "projected",
     "result": null
@@ -11379,6 +11439,7 @@
     "p_home": 0.603,
     "p_away": 0.397,
     "pick": "Switzerland",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11393,6 +11454,7 @@
     "p_home": 0.954,
     "p_away": 0.046,
     "pick": "Argentina",
+    "winner": null,
     "score": "3-0",
     "status": "projected",
     "result": null
@@ -11407,6 +11469,7 @@
     "p_home": 0.917,
     "p_away": 0.083,
     "pick": "Colombia",
+    "winner": null,
     "score": "3-0",
     "status": "projected",
     "result": null
@@ -11421,6 +11484,7 @@
     "p_home": 0.571,
     "p_away": 0.429,
     "pick": "Paraguay",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11430,12 +11494,13 @@
     "round": "Round of 16",
     "date": "2026-07-04",
     "city": "Philadelphia",
-    "home": "Germany",
+    "home": "Paraguay",
     "away": "France",
-    "p_home": 0.23,
-    "p_away": 0.77,
+    "p_home": 0.132,
+    "p_away": 0.868,
     "pick": "France",
-    "score": "2-1",
+    "winner": null,
+    "score": "2-0",
     "status": "projected",
     "result": null
    },
@@ -11445,10 +11510,11 @@
     "date": "2026-07-04",
     "city": "Houston",
     "home": "Canada",
-    "away": "Netherlands",
-    "p_home": 0.212,
-    "p_away": 0.788,
-    "pick": "Netherlands",
+    "away": "Morocco",
+    "p_home": 0.311,
+    "p_away": 0.689,
+    "pick": "Morocco",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11463,6 +11529,7 @@
     "p_home": 0.647,
     "p_away": 0.353,
     "pick": "Brazil",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11477,6 +11544,7 @@
     "p_home": 0.446,
     "p_away": 0.554,
     "pick": "England",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11491,6 +11559,7 @@
     "p_home": 0.296,
     "p_away": 0.704,
     "pick": "Spain",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11505,6 +11574,7 @@
     "p_home": 0.493,
     "p_away": 0.507,
     "pick": "Belgium",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11519,6 +11589,7 @@
     "p_home": 0.88,
     "p_away": 0.12,
     "pick": "Argentina",
+    "winner": null,
     "score": "2-0",
     "status": "projected",
     "result": null
@@ -11533,6 +11604,7 @@
     "p_home": 0.37,
     "p_away": 0.63,
     "pick": "Colombia",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11543,10 +11615,11 @@
     "date": "2026-07-09",
     "city": "Foxborough",
     "home": "France",
-    "away": "Netherlands",
-    "p_home": 0.694,
-    "p_away": 0.306,
+    "away": "Morocco",
+    "p_home": 0.792,
+    "p_away": 0.208,
     "pick": "France",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11561,6 +11634,7 @@
     "p_home": 0.805,
     "p_away": 0.195,
     "pick": "Spain",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11575,6 +11649,7 @@
     "p_home": 0.45,
     "p_away": 0.55,
     "pick": "England",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11589,6 +11664,7 @@
     "p_home": 0.705,
     "p_away": 0.295,
     "pick": "Argentina",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11603,6 +11679,7 @@
     "p_home": 0.484,
     "p_away": 0.516,
     "pick": "Spain",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11617,6 +11694,7 @@
     "p_home": 0.356,
     "p_away": 0.644,
     "pick": "Argentina",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11631,6 +11709,7 @@
     "p_home": 0.488,
     "p_away": 0.512,
     "pick": "Argentina",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null
@@ -11645,6 +11724,7 @@
     "p_home": 0.618,
     "p_away": 0.382,
     "pick": "France",
+    "winner": null,
     "score": "2-1",
     "status": "projected",
     "result": null

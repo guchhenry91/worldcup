@@ -440,6 +440,17 @@ def main():
         knockout_out = knockout.run(
             live, schedule["groups"], gmatches, standings, bracket_json, results,
             match_country, HOME_ADV, ELO_PER_GOAL, TOTAL_GOALS, MAX_SUP, sims=sims)
+        # fold settled knockout ties into the overall record (pick vs advancer)
+        ko_c = ko_t = 0
+        for b in knockout_out["bracket"]:
+            if b.get("status") == "final" and b.get("winner"):
+                ko_t += 1
+                if b["pick"] == b["winner"]:
+                    ko_c += 1
+        record["correct"] += ko_c
+        record["wrong"] += ko_t - ko_c
+        record["total"] += ko_t
+        record["knockout"] = {"correct": ko_c, "total": ko_t}
 
     out = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),

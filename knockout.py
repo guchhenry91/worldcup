@@ -232,26 +232,34 @@ def _project(elo, groups, standings, br, r32, results, match_country, home_adv,
     win_of, lose_of = {}, {}
 
     def play(m, home, away, rd):
+        res = results.get(str(m["id"]))
+        # a recorded knockout result may carry the ACTUAL teams (the projected
+        # third-place slotting won't always match FIFA's real draw) — trust it.
+        if res and res.get("home") and res.get("away"):
+            home, away = res["home"], res["away"]
         city = m["city"]
         eh = elo.get(home, 1500) + (home_adv if match_country(city) == home else 0)
         ea = elo.get(away, 1500) + (home_adv if match_country(city) == away else 0)
         dr = eh - ea
         ph = round(_ko_winprob(dr), 3)
-        res = results.get(str(m["id"]))
-        status, result, pickteam = "projected", None, None
+        model_pick = home if dr >= 0 else away          # the model's prediction
+        status, result, winner = "projected", None, None
         if res:
-            status = "final"; result = res
-            pickteam = home if res["home_goals"] >= res["away_goals"] else away
-        else:
-            pickteam = home if dr >= 0 else away
-        win_of[m["id"]] = pickteam
-        lose_of[m["id"]] = away if pickteam == home else home
-        score = _best_score(dr if pickteam == home else -dr, elo_per_goal, total_goals, max_sup)
+            status, result = "final", res
+            if res.get("winner"):                        # explicit (handles pens)
+                winner = res["winner"]
+            elif res["home_goals"] != res["away_goals"]:
+                winner = home if res["home_goals"] > res["away_goals"] else away
+        advancer = winner or model_pick                  # who moves on in the bracket
+        win_of[m["id"]] = advancer
+        lose_of[m["id"]] = away if advancer == home else home
+        score = _best_score(dr if model_pick == home else -dr, elo_per_goal, total_goals, max_sup)
         out.append({
             "id": m["id"], "round": rd, "date": m.get("date"), "city": city,
             "home": home, "away": away,
             "p_home": ph, "p_away": round(1 - ph, 3),
-            "pick": pickteam, "score": score, "status": status, "result": result,
+            "pick": model_pick, "winner": winner, "score": score,
+            "status": status, "result": result,
         })
 
     for m in r32:

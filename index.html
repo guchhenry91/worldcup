@@ -432,9 +432,10 @@ function matchCard(m,i){
   const p=m.prediction,[a1]=acc(m.home),[,b2]=acc(m.away);
   const homePicked=p.pick_type==='home',awayPicked=p.pick_type==='away',fin=m.status==='final';
   const fh=DATA.teams[m.home]&&DATA.teams[m.home].form,fa=DATA.teams[m.away]&&DATA.teams[m.away].form;
+  const pens=m.ko&&fin&&m.result&&m.result.home_goals===m.result.away_goals;
   const mid=fin
-    ?`<div class="score">${m.result.home_goals}–${m.result.away_goals}</div><div class="final">FINAL</div>`
-    :`<div class="score">${p.score.replace('-','–')}</div><div class="t">${m.time_et||'TBD'} ET</div>`;
+    ?`<div class="score">${m.result.home_goals}–${m.result.away_goals}</div><div class="final">${pens?'PENS':'FINAL'}</div>`
+    :`<div class="score">${p.score.replace('-','–')}</div><div class="t">${m.ko?'Knockout':(m.time_et||'TBD')+' ET'}</div>`;
   return `<div class="match glass" style="--ac1:${a1};--ac2:${b2};animation-delay:${Math.min(i*0.04,0.35)}s" onclick="this.classList.toggle('open')">
     <div class="edge"></div>
     <div class="meta"><span class="chip">${m.ko?m.round:'Group '+m.group}</span><span>${m.venue?m.venue+' · ':''}${m.city||''}</span></div>
@@ -461,10 +462,10 @@ function matchCard(m,i){
 
 function koConf(p){return p>=0.65?5:p>=0.58?4:p>=0.52?3:p>=0.45?2:1;}
 function koGraded(m){
-  if(m.status!=='final'||!m.result)return null;
-  const h=m.result.home_goals,a=m.result.away_goals;
-  if(h===a)return null;            // decided on penalties — winner not in the score
-  return ((h>a?m.home:m.away)===m.pick)?'correct':'wrong';
+  if(m.status!=='final')return null;
+  const w=m.winner||(m.result&&m.result.winner);
+  if(!w)return null;               // undetermined (e.g. pens with no winner recorded)
+  return m.pick===w?'correct':'wrong';
 }
 function koAsMatch(m){
   return {
@@ -554,11 +555,14 @@ function renderBracket(v){
     html+=`<div class="kround"><div class="krh">${rd}${ms[0].date?`<span>from ${new Date(ms[0].date+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric'})}</span>`:''}</div>`;
     ms.forEach((m,i)=>{
       const[a1]=acc(m.home),[,b2]=acc(m.away),fin=m.status==='final';
-      const hw=m.pick===m.home,aw=m.pick===m.away;
+      const adv=fin&&m.winner?m.winner:m.pick;   // highlight who actually advanced once final
+      const hw=adv===m.home,aw=adv===m.away;
+      const pens=fin&&m.result&&m.result.home_goals===m.result.away_goals;
       const sc=fin&&m.result?`${m.result.home_goals}–${m.result.away_goals}`:m.score.replace('-','–');
+      const grade=fin&&m.winner?(m.pick===m.winner?' ✓':' ✗'):'';
       html+=`<div class="ktie glass" style="--ac1:${a1};--ac2:${b2};animation-delay:${Math.min(i*0.03,0.3)}s"><div class="edge"></div>
         <div class="kside ${hw?'win':''}">${fl(m.home,26)}<span class="knm">${m.home||'—'}</span></div>
-        <div class="ksc"><div class="kk">${sc}</div>${fin?'<div class="kfin">FINAL</div>':`<div class="kpb">${pct(Math.max(m.p_home,m.p_away))} win</div>`}</div>
+        <div class="ksc"><div class="kk">${sc}</div>${fin?`<div class="kfin">${pens?'PENS':'FINAL'}${grade}</div>`:`<div class="kpb">${pct(Math.max(m.p_home,m.p_away))} win</div>`}</div>
         <div class="kside away ${aw?'win':''}">${fl(m.away,26)}<span class="knm">${m.away||'—'}</span></div>
       </div>`;
     });

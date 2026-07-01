@@ -288,7 +288,52 @@
     "away_goals": 1
   },
   "73": {
+    "home": "South Africa",
+    "away": "Canada",
     "home_goals": 0,
-    "away_goals": 1
+    "away_goals": 1,
+    "winner": "Canada"
+  },
+  "74": {
+    "home": "Germany",
+    "away": "Paraguay",
+    "home_goals": 1,
+    "away_goals": 1,
+    "winner": "Paraguay"
+  },
+  "75": {
+    "home": "Netherlands",
+    "away": "Morocco",
+    "home_goals": 1,
+    "away_goals": 1,
+    "winner": "Morocco"
+  },
+  "76": {
+    "home": "Brazil",
+    "away": "Japan",
+    "home_goals": 2,
+    "away_goals": 1,
+    "winner": "Brazil"
+  },
+  "77": {
+    "home": "Norway",
+    "away": "Ivory Coast",
+    "home_goals": 2,
+    "away_goals": 1,
+    "winner": "Norway"
+  },
+  "78": {
+    "home": "France",
+    "away": "Sweden",
+    "home_goals": 3,
+    "away_goals": 0,
+    "winner": "France"
+  },
+  "79": {
+    "home": "Mexico",
+    "away": "Ecuador",
+    "home_goals": 2,
+    "away_goals": 0,
+    "winner": "Mexico"
   }
 }

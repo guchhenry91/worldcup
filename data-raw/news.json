@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29",
+  "updated": "2026-07-01",
   "teams": {
     "Argentina": {
       "form": "WW",
@@ -247,13 +247,13 @@
         },
         {
           "player": "Declan Rice",
-          "status": "doubtful",
-          "note": "Managing neural pain in hamstring; was fit for Ghana match but England assessing ahead of Panama (June 27)"
+          "status": "fit",
+          "note": "Back from rest; starts vs DR Congo, Bellingham shifts to No 10"
         },
         {
           "player": "Reece James",
-          "status": "doubtful",
-          "note": "Being assessed ahead of Panama match (June 27) — fitness in doubt"
+          "status": "out",
+          "note": "Hamstring injury; ruled out of Round of 32 clash vs DR Congo, Djed Spence starts at right-back"
         },
         {
           "player": "Bukayo Saka",
@@ -264,6 +264,11 @@
           "player": "Marcus Rashford",
           "status": "fit",
           "note": "Hamstring discomfort managed as precaution vs Ghana; expected to start vs Panama (June 27) per predicted XI"
+        },
+        {
+          "player": "Jarell Quansah",
+          "status": "out",
+          "note": "Twisted ankle in group-stage win over Panama; ruled out of Round of 32 vs DR Congo"
         }
       ],
       "key_players": [
@@ -300,7 +305,8 @@
         "Thomas Tuchel's ruthless squad cuts: Cole Palmer, Phil Foden, Trent Alexander-Arnold, Harry Maguire and Adam Wharton all left out — biggest selection story of the build-up.",
         "Ivan Toney and Ollie Watkins named as the back-up strikers to Kane.",
         "ESPN power-rankings panel gave England zero first-place votes amid uncertainty over Tuchel's selections despite the flawless qualifying record.",
-        "2026-06-27 pre-match: Declan Rice and Reece James both being assessed ahead of Panama; Carrasquilla (Panama, adductor) OUT — win seals Group L top spot for England."
+        "2026-06-27 pre-match: Declan Rice and Reece James both being assessed ahead of Panama; Carrasquilla (Panama, adductor) OUT — win seals Group L top spot for England.",
+        "2026-07-01 pre-match vs DR Congo: Reece James (hamstring) and Jarell Quansah (ankle) both out; Djed Spence starts at right-back. Tuchel picks Noni Madueke over Bukayo Saka and Marcus Rashford over Anthony Gordon in the front three behind Kane."
       ]
     },
     "Brazil": {
@@ -632,7 +638,8 @@
       "news": [
         "Striker situation is the big worry with Lukaku barely playing since March.",
         "De Bruyne's fitness management is central to Belgium's knockout hopes.",
-        "2026-06-26: Nathan Ngoy suspended (red card vs Iran); Jeremy Doku returns to squad after birth of son — Belgium must beat New Zealand to advance."
+        "2026-06-26: Nathan Ngoy suspended (red card vs Iran); Jeremy Doku returns to squad after birth of son — Belgium must beat New Zealand to advance.",
+        "2026-07-01 pre-match vs Senegal: no injury or suspension concerns for Belgium. Predicted XI: Courtois; Castagne, Mechele, Theate, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere."
       ]
     },
     "Croatia": {
@@ -862,8 +869,8 @@
       "injuries": [
         {
           "player": "Christian Pulisic",
-          "status": "doubtful",
-          "note": "Calf injury sustained in Paraguay match (June 12); missed Australia game; medically available vs Turkey but Pochettino may rest him for the knockouts"
+          "status": "fit",
+          "note": "Recovered from calf injury; expected to start vs Bosnia and Herzegovina in the Round of 32"
         },
         {
           "player": "Cristian Roldan",
@@ -914,7 +921,8 @@
       "news": [
         "Pochettino named the 26 on May 26 after parts of the roster leaked; Gio Reyna in, Diego Luna the notable omission.",
         "Forward line arrives in the best collective form of any US World Cup squad (Balogun, Wright, Pepi all 17+ goals).",
-        "2026-06-25: Yellow card concerns ahead of Turkey — Tyler Adams, Balogun, Antonee Robinson, and Chris Richards all on one booking; second yellow = R32 suspension. Pulisic and Roldan doubtful."
+        "2026-06-25: Yellow card concerns ahead of Turkey — Tyler Adams, Balogun, Antonee Robinson, and Chris Richards all on one booking; second yellow = R32 suspension. Pulisic and Roldan doubtful.",
+        "2026-07-01 pre-match vs Bosnia and Herzegovina: Pulisic fit and expected to start. Cristian Roldan (muscle), Mark McKenzie (foot) and Auston Trusty (ankle) undergoing late fitness checks."
       ]
     },
     "Mexico": {
@@ -1101,12 +1109,12 @@
     },
     "Senegal": {
       "form": "LL",
-      "form_note": "Lost 1-3 to France. Lost 2-3 to Norway (Sarr scored twice but too late). Senegal eliminated. Must beat Iraq June 26 to potentially salvage third place on goal difference.",
+      "form_note": "Advanced from Group I as one of the best third-placed teams; faces Belgium in the Round of 32 on July 1.",
       "injuries": [
         {
           "player": "Edouard Mendy",
-          "status": "doubtful",
-          "note": "Ligament problem suffered vs Norway; major injury doubt — Mory Diaw (Le Havre) expected to start in goal vs Iraq"
+          "status": "out",
+          "note": "Confirmed knee sprain; ruled out of Round of 32 vs Belgium, Mory Diaw starts in goal"
         },
         {
           "player": "Assane Diao",
@@ -1149,7 +1157,8 @@
       ],
       "news": [
         "Pape Thiaw's golden generation faces France, Norway and Iraq in the toughest-looking group.",
-        "Third consecutive World Cup appearance; momentum high after the Wembley win over England."
+        "Third consecutive World Cup appearance; momentum high after the Wembley win over England.",
+        "2026-07-01 pre-match vs Belgium: Edouard Mendy (knee) confirmed out, Mory Diaw starts in goal. No other injury concerns."
       ]
     },
     "Switzerland": {
@@ -1395,8 +1404,13 @@
         },
         {
           "player": "Tarik Muharemovic",
-          "status": "suspended",
-          "note": "Red card vs Switzerland; suspended for Qatar match (June 24)"
+          "status": "fit",
+          "note": "Suspension served; back and expected to start vs USA in the Round of 32"
+        },
+        {
+          "player": "Amar Dedic",
+          "status": "doubtful",
+          "note": "Thigh issue; a doubt ahead of the Round of 32 clash with the USA"
         }
       ],
       "key_players": [
@@ -1412,7 +1426,8 @@
         "Returning to the finals after a 12-year absence.",
         "Dzeko confirmed fit and starting vs Canada despite shoulder injury scare.",
         "Reserve GK Hadzikic withdrew injured; Mladen Jurkas added to squad.",
-        "2026-06-24 pre-match: Tarik Muharemovic suspended (red card vs Switzerland); forces defensive reshuffle vs Qatar."
+        "2026-06-24 pre-match: Tarik Muharemovic suspended (red card vs Switzerland); forces defensive reshuffle vs Qatar.",
+        "2026-07-01 pre-match vs USA: Tarik Muharemovic available again after suspension; Amar Dedic (thigh) a doubt. Predicted XI (4-4-2): Vasilj; Dedic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Basic, Sunjic, Alajbegovic; Demirovic, Dzeko."
       ]
     },
     "Qatar": {
@@ -1931,7 +1946,8 @@
       "key_players": [],
       "news": [
         "Won the African playoff path then the FIFA intercontinental playoff to reach a first finals in 52 years.",
-        "2026-06-23 pre-match: Théo Bongonda OUT injured; Wissa and Bakambu lead the attack. Predicted XI (5-3-2): Mpasi-Nzau; Mbemba, Tuanzebe, Kapuadi, Wan-Bissaka, Masuaku; Sadiki, Moutoussamy, Kayembe; Bakambu, Wissa."
+        "2026-06-23 pre-match: Théo Bongonda OUT injured; Wissa and Bakambu lead the attack. Predicted XI (5-3-2): Mpasi-Nzau; Mbemba, Tuanzebe, Kapuadi, Wan-Bissaka, Masuaku; Sadiki, Moutoussamy, Kayembe; Bakambu, Wissa.",
+        "2026-07-01 pre-match vs England: no fresh injury concerns. Predicted XI (5-3-2): Mpasi; Wan-Bissaka, Mbemba, Tuanzebe, Kapuadi, Masuaku; Mukau, Moutoussamy, Kayembe; Wissa, Bakambu."
       ]
     },
     "Uzbekistan": {
