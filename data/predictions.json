@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-02T09:01:40+00:00",
+ "updated": "2026-07-02T09:14:00+00:00",
  "record": {
   "correct": 55,
   "wrong": 27,
@@ -417,6 +417,11 @@
      "player": "Ruben Vargas",
      "status": "fit",
      "note": "Played through the group stage and scored the winner vs Canada (June 24); no fitness concerns for R32 vs Algeria"
+    },
+    {
+     "player": "Silvan Widmer",
+     "status": "doubtful",
+     "note": "Missed training with hip/thigh discomfort ahead of R32 vs Algeria; not yet ruled out. Luca Jaquez in contention to start at right-back if he sits out."
     }
    ],
    "key_players": [
@@ -439,7 +444,8 @@
     "Murat Yakin announced the final squad via a social-media campaign, confirmed May 20.",
     "Seen as favorites alongside Canada to advance from a winnable Group B.",
     "2026-06-13: Ruben Vargas doubtful with a knock ahead of Qatar opener; fitness to be assessed on match day.",
-    "2026-07-02: No fresh injury concerns for Switzerland ahead of R32 vs Algeria (July 2, Vancouver); Vargas fit after scoring the Canada winner."
+    "2026-07-02: No fresh injury concerns for Switzerland ahead of R32 vs Algeria (July 2, Vancouver); Vargas fit after scoring the Canada winner.",
+    "2026-07-02: Silvan Widmer a doubt at right-back (hip/thigh, missed training) for R32 vs Algeria (Vancouver); Luca Jaquez the likely deputy. No other injury concerns."
    ]
   },
   "Brazil": {
@@ -1376,6 +1382,11 @@
      "player": "Yeremy Pino",
      "status": "out",
      "note": "Acromioclavicular sprain (not a fracture) from Uruguay match; ruled out of R32 vs Austria, could return later in knockout stage"
+    },
+    {
+     "player": "Victor Munoz",
+     "status": "doubtful",
+     "note": "Hamstring discomfort; returned to partial training and has a better chance of being involved for R32 vs Austria (July 2, SoFi Stadium)"
     }
    ],
    "key_players": [
@@ -1412,7 +1423,8 @@
     "Squad contains no Real Madrid players for the first time in World Cup history.",
     "Euro 2024 champions and narrow tournament favorites over France in most odds markets.",
     "Concern raised over chance creation after generating just four chances in the 1-1 warm-up draw with Egypt.",
-    "2026-07-02: Nico Williams (adductor) and Yeremy Pino (AC joint sprain) both ruled out for R32 vs Austria; Alex Baena and Lamine Yamal expected to carry the width."
+    "2026-07-02: Nico Williams (adductor) and Yeremy Pino (AC joint sprain) both ruled out for R32 vs Austria; Alex Baena and Lamine Yamal expected to carry the width.",
+    "2026-07-02: Victor Munoz (hamstring) a doubt but improved after partial training; Alex Baena, Oyarzabal and fit-again Lamine Yamal expected to start the front three vs Austria."
    ]
   },
   "Cape Verde": {
@@ -2808,10 +2820,10 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Qatar 1426 vs Switzerland 1900 (-474 incl. venue)",
+     "Rating edge: Qatar 1426 vs Switzerland 1896 (-470 incl. venue)",
      "Qatar: Homam Elamin suspended",
      "Qatar: Madibo suspended",
-     "Form: Qatar DLL · Switzerland DWW"
+     "Switzerland: Silvan Widmer doubtful"
     ],
     "locked_at": "2026-06-13T17:28:49+00:00"
    },
@@ -2865,7 +2877,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.414,
+      "anytime": 0.413,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2878,7 +2890,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.322,
+      "anytime": 0.321,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -2891,7 +2903,7 @@
       "goals": 3,
       "apps": null,
       "pens": false,
-      "anytime": 0.322,
+      "anytime": 0.321,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -3721,7 +3733,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Spain 2088 vs Cape Verde 1608 (+480 incl. venue)",
+     "Rating edge: Spain 2084 vs Cape Verde 1608 (+476 incl. venue)",
      "Spain: Fermin Lopez out (Fifth metatarsal fracture requiring surgery)",
      "Spain: Samu Aghehowa out (ACL tear suffered in February)",
      "Spain: Nico Williams out (Right adductor muscle injury suffered vs Uruguay (June 26); ruled out of R32 vs Austria, could return later in knockout stage)"
@@ -3737,7 +3749,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.44,
+      "anytime": 0.439,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -3750,7 +3762,7 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.396,
+      "anytime": 0.395,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -3763,7 +3775,7 @@
       "goals": 24,
       "apps": null,
       "pens": false,
-      "anytime": 0.307,
+      "anytime": 0.306,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5202,10 +5214,10 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Switzerland 1900 vs Bosnia and Herzegovina 1590 (+311 incl. venue)",
+     "Rating edge: Switzerland 1896 vs Bosnia and Herzegovina 1590 (+307 incl. venue)",
+     "Switzerland: Silvan Widmer doubtful",
      "Bosnia and Herzegovina: Haris Tabakovic doubtful",
-     "Bosnia and Herzegovina: Ivan Sunjic doubtful",
-     "Bosnia and Herzegovina: Osman Hadzikic out (Reserve GK withdrew with injury before the tournament; replaced in squad by Mladen Jurkas)"
+     "Bosnia and Herzegovina: Ivan Sunjic doubtful"
     ],
     "locked_at": "2026-06-18T19:11:10+00:00"
    },
@@ -5218,7 +5230,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.355,
+      "anytime": 0.354,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5231,7 +5243,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.273,
+      "anytime": 0.272,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5244,7 +5256,7 @@
       "goals": 3,
       "apps": null,
       "pens": false,
-      "anytime": 0.273,
+      "anytime": 0.272,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -5259,7 +5271,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.071,
+      "anytime": 0.073,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5272,7 +5284,7 @@
       "goals": 12,
       "apps": 25,
       "pens": false,
-      "anytime": 0.062,
+      "anytime": 0.064,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -5285,7 +5297,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.052,
+      "anytime": 0.053,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6463,7 +6475,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Spain 2088 vs Saudi Arabia 1589 (+500 incl. venue)",
+     "Rating edge: Spain 2084 vs Saudi Arabia 1589 (+496 incl. venue)",
      "Spain: Fermin Lopez out (Fifth metatarsal fracture requiring surgery)",
      "Spain: Samu Aghehowa out (ACL tear suffered in February)",
      "Spain: Nico Williams out (Right adductor muscle injury suffered vs Uruguay (June 26); ruled out of R32 vs Austria, could return later in knockout stage)"
@@ -7827,10 +7839,10 @@
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: Switzerland 1900 vs Canada 1738 (+162 incl. venue)",
+     "Rating edge: Switzerland 1896 vs Canada 1738 (+158 incl. venue)",
+     "Switzerland: Silvan Widmer doubtful",
      "Canada: Marcelo Flores out (ACL tear in the CONCACAF Champions Cup final May 30; replaced by Jayden Nelson on June 9)",
-     "Canada: Ismael Kone out (Tibia fracture from a harsh tackle; underwent emergency surgery — ruled out for the rest of the tournament; Marsch must reassemble midfield)",
-     "Form: Switzerland DWW · Canada DWL"
+     "Canada: Ismael Kone out (Tibia fracture from a harsh tackle; underwent emergency surgery — ruled out for the rest of the tournament; Marsch must reassemble midfield)"
     ],
     "locked_at": "2026-06-24T15:11:12+00:00"
    },
@@ -7843,7 +7855,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.297,
+      "anytime": 0.295,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7856,7 +7868,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.226,
+      "anytime": 0.224,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7869,7 +7881,7 @@
       "goals": 3,
       "apps": null,
       "pens": false,
-      "anytime": 0.226,
+      "anytime": 0.224,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7884,7 +7896,7 @@
       "goals": 6,
       "apps": null,
       "pens": true,
-      "anytime": 0.153,
+      "anytime": 0.155,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7897,7 +7909,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.134,
+      "anytime": 0.136,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7910,7 +7922,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.134,
+      "anytime": 0.136,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9554,7 +9566,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Uruguay 1792 vs Spain 2088 (-296 incl. venue)",
+     "Rating edge: Uruguay 1792 vs Spain 2084 (-292 incl. venue)",
      "Uruguay: Ronald Araujo out (Minor muscle injury; highly unlikely to play vs Saudi Arabia — targeting return for matchday 2 vs Cape Verde (June 22))",
      "Uruguay: Jose Maria Gimenez out (Severe ankle sprain (Atletico Madrid, May); expected to miss opener vs Saudi Arabia)",
      "Uruguay: Giorgian de Arrascaeta out (Right calf injury; confirmed out for entire group stage — targeting knockout rounds)"
@@ -9570,7 +9582,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.076,
+      "anytime": 0.078,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9583,7 +9595,7 @@
       "goals": 5,
       "apps": null,
       "pens": false,
-      "anytime": 0.056,
+      "anytime": 0.057,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9596,7 +9608,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.056,
+      "anytime": 0.057,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9611,7 +9623,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.371,
+      "anytime": 0.369,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9624,7 +9636,7 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.332,
+      "anytime": 0.33,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -9637,7 +9649,7 @@
       "goals": 24,
       "apps": null,
       "pens": false,
-      "anytime": 0.254,
+      "anytime": 0.253,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
