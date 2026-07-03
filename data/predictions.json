@@ -1,5 +1,5 @@
 {
- "updated": "2026-07-03T10:40:25+00:00",
+ "updated": "2026-07-03T10:46:39+00:00",
  "record": {
   "correct": 49,
   "wrong": 22,
@@ -113,7 +113,7 @@
    "elo": 1953,
    "fifa_rank": 15,
    "form": "WWW",
-   "form_note": "Won 2-0 vs South Africa. Won 1-0 vs South Korea. Won 3-0 vs Czech Republic (June 24, Mora, Quinones, Fidalgo) — perfect group record, WIN Group A, through to R32.",
+   "form_note": "Won 2-0 vs South Africa. Won 1-0 vs South Korea. Won 3-0 vs Czech Republic — perfect group record, WIN Group A. Won 2-0 vs Ecuador in R32 (June 30, Mexico City), through to R16 vs England (July 5, Mexico City).",
    "injuries": [
     {
      "player": "Luis Angel Malagon",
@@ -174,7 +174,8 @@
    "news": [
     "Javier Aguirre trimmed a 55-man preliminary list to the final 26 in late May.",
     "Goalkeeper crisis turned storyline: Malagon's Achilles rupture brings Ochoa's record sixth World Cup.",
-    "2026-06-18 pre-match: Quinones doubt vs South Korea after limping off vs South Africa — Aguirre said he 'asked to be substituted'; expected to start but Alexis Vega on standby. Montes suspended; Edson Alvarez shifts to CB."
+    "2026-06-18 pre-match: Quinones doubt vs South Korea after limping off vs South Africa — Aguirre said he 'asked to be substituted'; expected to start but Alexis Vega on standby. Montes suspended; Edson Alvarez shifts to CB.",
+    "2026-07-03 pre-match vs England (R16, July 5): no fresh injury concerns emerging from the Ecuador win — Aguirre's squad looks settled and confident."
    ]
   },
   "South Africa": {
@@ -273,7 +274,7 @@
    "elo": 1771,
    "fifa_rank": 30,
    "form": "DWL",
-   "form_note": "Drew 1-1 with Bosnia. Won 6-0 vs Qatar (first-ever WC win). Lost 1-2 to Switzerland (June 24, Vancouver) — Canada finish 2nd in Group B, through to R32 but Kone still out with tibia fracture.",
+   "form_note": "Drew 1-1 with Bosnia. Won 6-0 vs Qatar (first-ever WC win). Lost 1-2 to Switzerland — Canada finish 2nd in Group B. Won 1-0 vs South Africa in R32 (June 28), through to R16 vs Morocco (July 4, Houston). Kone still out with tibia fracture.",
    "injuries": [
     {
      "player": "Marcelo Flores",
@@ -317,7 +318,8 @@
     "Canada hosts group-stage games in Toronto and Vancouver.",
     "2026-06-18 pre-match: Davies confirmed available vs Qatar — coach Marsch says 'he'll be available tomorrow and we'll see how the match goes'; expected off bench with Laryea starting at left-back. Bombito also cleared to play.",
     "2026-06-24 pre-match: Ismael Kone OUT for tournament with tibia fracture (emergency surgery); midfield reshuffle required. Davies available but yet to play any minutes — Marsch hinted he could feature vs Switzerland.",
-    "2026-06-28: R32 vs South Africa TODAY (SoFi Stadium, Inglewood). Jonathan David hat-trick vs Qatar is tournament standout. Davies may finally get minutes. Kone still OUT."
+    "2026-06-28: R32 vs South Africa TODAY (SoFi Stadium, Inglewood). Jonathan David hat-trick vs Qatar is tournament standout. Davies may finally get minutes. Kone still OUT.",
+    "2026-07-03 pre-match vs Morocco (R16, July 4, Houston): no fresh fitness concerns beyond long-term absentee Kone. Davies is a doubt for a starting role — Marsch may again prefer the in-form Richie Laryea at left-back."
    ]
   },
   "Bosnia and Herzegovina": {
@@ -464,7 +466,7 @@
    "elo": 2028,
    "fifa_rank": 6,
    "form": "DWW",
-   "form_note": "Drew 1-1 with Morocco. Won 3-0 vs Haiti. Won 3-0 vs Scotland (Vinicius x2, Cunha) — Brazil WIN Group C, through to R32. Raphinha OUT (hamstring, targeting R16). Neymar returned from bench vs Scotland (emotional cameo).",
+   "form_note": "Drew 1-1 with Morocco. Won 3-0 vs Haiti. Won 3-0 vs Scotland (Vinicius x2, Cunha) — Brazil WIN Group C. Won 2-1 vs Japan in R32 (June 29), through to R16 vs Norway (July 5). Raphinha doubtful, Paqueta OUT (both hamstring/thigh).",
    "injuries": [
     {
      "player": "Rodrygo",
@@ -488,8 +490,13 @@
     },
     {
      "player": "Raphinha",
+     "status": "doubtful",
+     "note": "Hamstring injury; missed Scotland and R32 vs Japan; returned to training this week ahead of R16 vs Norway (July 5) but Ancelotti expected to make a late call on his involvement"
+    },
+    {
+     "player": "Lucas Paqueta",
      "status": "out",
-     "note": "Hamstring injury (right thigh muscle); limped off vs Haiti (38'); Brazil confirmed he will miss Scotland match; also likely misses R32 (circa June 29); targeting R16 return. Rayan is the expected replacement."
+     "note": "Grade-two thigh strain picked up after the R32 win over Japan; ruled out of R16 vs Norway (July 5), recovery timeline uncertain"
     },
     {
      "player": "Wesley",
@@ -532,7 +539,8 @@
     "Carlo Ancelotti's first tournament in charge after arriving June 2025 with only four competitive qualifiers under his belt.",
     "Big-name omissions: Joao Pedro, Richarlison, Savinho, Gabriel Jesus, Andrey Santos and 113-cap Thiago Silva all left out; 19-year-old Endrick included.",
     "2026-06-28: R32 vs Japan, June 29 (NRG Stadium, Houston). Neymar expected on bench; Vinicius and Cunha lead attack. Raphinha OUT.",
-    "2026-06-29: R32 TODAY vs Japan. Raphinha confirmed OUT (hamstring, targeting R16). 19-year-old Rayan starts on the wing. Expected XI: Alisson; Danilo, Marquinhos, Gabriel, Santos; Guimaraes, Casemiro; Rayan, Paqueta, Vinicius; Cunha."
+    "2026-06-29: R32 TODAY vs Japan. Raphinha confirmed OUT (hamstring, targeting R16). 19-year-old Rayan starts on the wing. Expected XI: Alisson; Danilo, Marquinhos, Gabriel, Santos; Guimaraes, Casemiro; Rayan, Paqueta, Vinicius; Cunha.",
+    "2026-07-03 pre-match vs Norway (R16, July 5): Lucas Paqueta ruled OUT with a grade-two thigh strain suffered in the Japan win. Raphinha has returned to training and is a doubt but not yet confirmed to start."
    ]
   },
   "Morocco": {
@@ -540,7 +548,7 @@
    "elo": 1900,
    "fifa_rank": 8,
    "form": "DWW",
-   "form_note": "Drew 1-1 with Brazil. Won 1-0 vs Scotland (June 19). Won 4-2 vs Haiti (June 24, Atlanta) — Morocco finish 2nd in Group C, through to R32.",
+   "form_note": "Drew 1-1 with Brazil. Won 1-0 vs Scotland (June 19). Won 4-2 vs Haiti — Morocco finish 2nd in Group C. Won 1-1 (pens) vs Netherlands in R32 (June 29), through to R16 vs Canada (July 4, Houston).",
    "injuries": [
     {
      "player": "Achraf Hakimi",
@@ -561,6 +569,11 @@
      "player": "Noussair Mazraoui",
      "status": "fit",
      "note": "Shoulder problem from Norway friendly resolved; confirmed expected to return to starting XI for R32 vs Netherlands (June 29)"
+    },
+    {
+     "player": "Chadi Riad",
+     "status": "fit",
+     "note": "Substituted with a knock in the R32 win over Netherlands but returned to full training and is on course to be available for R16 vs Canada (July 4, Houston)"
     }
    ],
    "key_players": [
@@ -597,7 +610,8 @@
     "Manager upheaval: Walid Regragui left the post in March 2026; Mohamed Ouahbi (U-20 World Cup-winning coach) now in charge.",
     "Double injury blow: Aguerd (groin) and Ezzalzouli (knee) both ruled out for the tournament — significant defensive and wide-attacking losses.",
     "2026-06-28: R32 vs Netherlands, June 29 (Estadio BBVA, Monterrey, 21:00 ET). Mazraoui, Ounahi and Issa Diop expected to return to starting XI. Ismael Saibari scored 3 goals in group stage — key attacking threat.",
-    "2026-06-29: R32 TODAY vs Netherlands. Mazraoui fit and back in XI. Mazraoui, Diop, Bouaddi, Ounahi all expected to return to starting lineup. No new injuries reported."
+    "2026-06-29: R32 TODAY vs Netherlands. Mazraoui fit and back in XI. Mazraoui, Diop, Bouaddi, Ounahi all expected to return to starting lineup. No new injuries reported.",
+    "2026-07-03 pre-match vs Canada (R16, July 4, Houston): Chadi Riad (knock vs Netherlands) back in full training and expected to be available. Only other CB depth options are Redouane Halhal and the now-unemployed Marwane Saadane."
    ]
   },
   "Haiti": {
@@ -780,7 +794,8 @@
    "key_players": [],
    "news": [
     "Tony Popovic's side qualified directly through AFC qualifying.",
-    "2026-06-25: Mathew Leckie (hamstring) and Jacob Italiano (adductor) both OUT for Paraguay match — Australia weakened in attack."
+    "2026-06-25: Mathew Leckie (hamstring) and Jacob Italiano (adductor) both OUT for Paraguay match — Australia weakened in attack.",
+    "2026-07-03 pre-match vs Egypt (R32, today, Arlington): Leckie and Italiano remain the only injury absentees; no fresh concerns reported."
    ]
   },
   "Turkey": {
@@ -1570,7 +1585,7 @@
    "elo": 2135,
    "fifa_rank": 1,
    "form": "WW",
-   "form_note": "Won 3-1 vs Senegal (Mbappe 2, Barcola). Won 3-0 vs Iraq (Mbappe 2, Dembele) — Mbappe now 16 WC career goals, tied 2nd all-time. France top Group I and through to R32. Today vs Norway June 26 — Deschamps absent (mother's funeral); assistant steps in.",
+   "form_note": "Won 3-1 vs Senegal (Mbappe 2, Barcola). Won 3-0 vs Iraq (Mbappe 2, Dembele) — Mbappe now 16 WC career goals, tied 2nd all-time. France top Group I. Won 3-0 vs Sweden in R32 (June 30), through to R16 vs Paraguay (July 4, Philadelphia).",
    "injuries": [
     {
      "player": "Hugo Ekitike",
@@ -1590,7 +1605,7 @@
     {
      "player": "William Saliba",
      "status": "fit",
-     "note": "Aggravated a back injury in the Champions League final but has completed 45 min in the Northern Ireland friendly and trained fully — expected to start vs Senegal"
+     "note": "Managing an ongoing back problem but has continued to start throughout the tournament — no fresh concern ahead of R16 vs Paraguay (July 4)"
     },
     {
      "player": "Jules Kounde",
@@ -1632,7 +1647,8 @@
     "This tournament is Didier Deschamps' swansong as manager after two consecutive finals; squad motivated to send him off with a third star.",
     "Arguably the deepest roster in the 48-team field, especially in attack.",
     "Group I with Senegal, Norway and Iraq — the standout 'group of death' candidate among top seeds.",
-    "2026-06-26: Deschamps will miss Norway match to attend his mother's funeral — assistant coach takes charge on the touchline."
+    "2026-06-26: Deschamps will miss Norway match to attend his mother's funeral — assistant coach takes charge on the touchline.",
+    "2026-07-03 pre-match vs Paraguay (R16, July 4, Philadelphia): no fresh injury concerns; Saliba continues to manage his back issue but is fit to start."
    ]
   },
   "Senegal": {
@@ -1800,7 +1816,7 @@
     {
      "player": "Cristian Romero",
      "status": "fit",
-     "note": "Fully recovered from MCL sprain"
+     "note": "Taken off with a knock during the group stage but back in full training — expected available for R32 vs Cape Verde (July 3, Miami)"
     },
     {
      "player": "Lionel Messi",
@@ -1847,7 +1863,8 @@
     "Squad features 17 of the 26 players who won the 2022 title in Qatar; Argentina aim to become first back-to-back champions since Brazil in 1962.",
     "Considered to have drawn a kind group (Algeria, Austria, Jordan); analysts argue they are underpriced as only sixth favorite on odds boards.",
     "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record.",
-    "Messi scored twice vs Austria (2-0) to set new all-time WC scoring record (18 goals total). Montiel missed Austria match with quad strain; targeting return vs Jordan June 27."
+    "Messi scored twice vs Austria (2-0) to set new all-time WC scoring record (18 goals total). Montiel missed Austria match with quad strain; targeting return vs Jordan June 27.",
+    "2026-07-02 pre-match vs Cape Verde (R32, July 3, Miami): Romero back in full training after a knee knock, expected to start. No other fresh concerns."
    ]
   },
   "Algeria": {
@@ -2142,7 +2159,7 @@
    "elo": 2049,
    "fifa_rank": 4,
    "form": "WD",
-   "form_note": "Won 4-2 vs Croatia (Kane 2, Bellingham, Rashford). Drew 0-0 vs Ghana (June 23, Foxborough) — Kane went closest late on but Three Lions held. England 4pts, top of Group L. Next vs Panama June 27.",
+   "form_note": "Won 4-2 vs Croatia (Kane 2, Bellingham, Rashford). Drew 0-0 vs Ghana. England topped Group L. Won 2-1 vs DR Congo in R32 (July 1, Atlanta), through to R16 vs Mexico (July 5, Mexico City). Declan Rice managing pain from a knock late in the DR Congo win but expected fit.",
    "injuries": [
     {
      "player": "Jarrad Branthwaite",
@@ -2162,7 +2179,7 @@
     {
      "player": "Declan Rice",
      "status": "fit",
-     "note": "Back from rest; starts vs DR Congo, Bellingham shifts to No 10"
+     "note": "Substituted late vs DR Congo in visible pain, but Tuchel confirmed he insisted 'I can do it for the team' and is expected to start vs Mexico (July 5)"
     },
     {
      "player": "Reece James",
@@ -2220,7 +2237,8 @@
     "Ivan Toney and Ollie Watkins named as the back-up strikers to Kane.",
     "ESPN power-rankings panel gave England zero first-place votes amid uncertainty over Tuchel's selections despite the flawless qualifying record.",
     "2026-06-27 pre-match: Declan Rice and Reece James both being assessed ahead of Panama; Carrasquilla (Panama, adductor) OUT — win seals Group L top spot for England.",
-    "2026-07-01 pre-match vs DR Congo: Reece James (hamstring) and Jarell Quansah (ankle) both out; Djed Spence starts at right-back. Tuchel picks Noni Madueke over Bukayo Saka and Marcus Rashford over Anthony Gordon in the front three behind Kane."
+    "2026-07-01 pre-match vs DR Congo: Reece James (hamstring) and Jarell Quansah (ankle) both out; Djed Spence starts at right-back. Tuchel picks Noni Madueke over Bukayo Saka and Marcus Rashford over Anthony Gordon in the front three behind Kane.",
+    "2026-07-03 pre-match vs Mexico (R16, July 5): Declan Rice played through 'terrible pain' late in the DR Congo win but has told Tuchel he can continue; Harry Kane came through unscathed and leads the line again."
    ]
   },
   "Croatia": {
