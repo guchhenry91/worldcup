@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03",
+  "updated": "2026-07-04",
   "teams": {
     "Argentina": {
       "form": "WW",
@@ -86,7 +86,7 @@
     },
     "France": {
       "form": "WW",
-      "form_note": "Won 3-1 vs Senegal (Mbappe 2, Barcola). Won 3-0 vs Iraq (Mbappe 2, Dembele) — Mbappe now 16 WC career goals, tied 2nd all-time. France top Group I. Won 3-0 vs Sweden in R32 (June 30), through to R16 vs Paraguay (July 4, Philadelphia).",
+      "form_note": "Won 3-1 vs Senegal (Mbappe 2, Barcola). Won 3-0 vs Iraq (Mbappe 2, Dembele) — Mbappe now 16 WC career goals, tied 2nd all-time. France top Group I. Won 3-0 vs Sweden in R32 (June 30), through to R16 vs Paraguay (July 4, Philadelphia). Thuram (calf) and Tchouameni (thigh) ruled out for R16.",
       "injuries": [
         {
           "player": "Hugo Ekitike",
@@ -112,6 +112,16 @@
           "player": "Jules Kounde",
           "status": "fit",
           "note": "Overcame a muscular scare; ready at right-back for the Senegal opener"
+        },
+        {
+          "player": "Marcus Thuram",
+          "status": "out",
+          "note": "Calf injury rules him out of R16 vs Paraguay (July 4)"
+        },
+        {
+          "player": "Aurelien Tchouameni",
+          "status": "out",
+          "note": "Thigh injury rules him out of R16 vs Paraguay (July 4)"
         }
       ],
       "key_players": [
@@ -1032,7 +1042,7 @@
         {
           "player": "Alphonso Davies",
           "status": "fit",
-          "note": "Confirmed available; has not played any minutes yet — Marsch managing him carefully; could finally feature vs Switzerland"
+          "note": "Played first minutes of the tournament as a 75th-minute substitute in the R32 win; could start vs Morocco (July 4)"
         },
         {
           "player": "Moise Bombito",
@@ -1548,7 +1558,7 @@
     },
     "Paraguay": {
       "form": "LWD",
-      "form_note": "Lost 1-4 to USA. Won 1-0 vs Turkey. Drew 0-0 vs Australia (June 25) — Paraguay finish Group D, through to R32 as 3rd-place team with 4pts.",
+      "form_note": "Lost 1-4 to USA. Won 1-0 vs Turkey. Drew 0-0 vs Australia (June 25) — Paraguay finish Group D, through to R32 as 3rd-place team with 4pts. Beat Germany 1-1 (pens) in R32 (June 29), through to R16 vs France (July 4, Philadelphia). Alderete (knee) doubtful.",
       "injuries": [
         {
           "player": "Miguel Almiron",
@@ -1564,6 +1574,11 @@
           "player": "Damian Bobadilla",
           "status": "fit",
           "note": "Had a knee issue but returned to full team training; expected to start in midfield"
+        },
+        {
+          "player": "Omar Alderete",
+          "status": "doubtful",
+          "note": "Yet to fully recover from a knee injury sustained in Paraguay final group game; expected to miss R16 vs France (July 4)"
         }
       ],
       "key_players": [

@@ -377,5 +377,26 @@
     "home_goals": 2,
     "away_goals": 0,
     "winner": "Switzerland"
+  },
+  "86": {
+    "home": "Argentina",
+    "away": "Cape Verde",
+    "home_goals": 3,
+    "away_goals": 2,
+    "winner": "Argentina"
+  },
+  "87": {
+    "home": "Colombia",
+    "away": "Ghana",
+    "home_goals": 1,
+    "away_goals": 0,
+    "winner": "Colombia"
+  },
+  "88": {
+    "home": "Australia",
+    "away": "Egypt",
+    "home_goals": 1,
+    "away_goals": 1,
+    "winner": "Egypt"
   }
 }
