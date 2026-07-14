@@ -69,7 +69,7 @@ ALIASES = {
         "Huesca": {"SD Huesca"},
     },
     "BUNDESLIGA": {
-        "Bayern Munich": {"FC Bayern München", "Bayern München", "Bayern Munchen"},
+        "Bayern Munich": {"FC Bayern München", "Bayern München", "Bayern Munchen", "Bayern"},
         "Dortmund": {"Borussia Dortmund", "BVB"},
         "Leverkusen": {"Bayer 04 Leverkusen", "Bayer Leverkusen"},
         "M'gladbach": {"Borussia Mönchengladbach", "Borussia Monchengladbach", "Borussia M.Gladbach", "Gladbach"},
