@@ -85,6 +85,26 @@ def elo_priors(elo: dict[str, float], model: "LeagueModel") -> dict[str, tuple[f
     return out
 
 
+def promoted_priors(model: "LeagueModel", teams, n_weakest: int = 3) -> dict:
+    """Fallback prior for clubs with no top-flight history, when ClubElo is down.
+
+    A promoted side is NOT an average top-flight team -- that is the assumption
+    that quietly keeps them out of the relegation places. Empirically they play
+    like the division's weakest clubs, so seed them at the mean strength of the
+    n weakest teams we HAVE fitted. Strictly worse than a real ClubElo prior
+    (which knows how strong they were in the division below), so this is only a
+    fallback -- but it is honest about the direction of the uncertainty.
+    """
+    if not model.attack:
+        return {}
+    # weakest = lowest attack + worst (least negative) defence
+    net = {t: model.attack[t] - model.defence.get(t, 0.0) for t in model.attack}
+    weakest = sorted(net, key=net.get)[:n_weakest]
+    a = float(np.mean([model.attack[t] for t in weakest]))
+    d = float(np.mean([model.defence[t] for t in weakest]))
+    return {t: (a, d) for t in teams}
+
+
 @dataclass
 class LeagueModel:
     xi: float = XI_PER_DAY

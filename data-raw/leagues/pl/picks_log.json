@@ -1,0 +1,72 @@
+{
+  "1": {
+    "confidence": 4,
+    "kickoff": "2026-08-21T19:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Arsenal",
+    "tainted": false
+  },
+  "10": {
+    "confidence": 1,
+    "kickoff": "2026-08-24T19:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Chelsea",
+    "tainted": false
+  },
+  "2": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T11:30:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Manchester United",
+    "tainted": false
+  },
+  "3": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Everton",
+    "tainted": false
+  },
+  "4": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Sunderland",
+    "tainted": false
+  },
+  "5": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Nottingham Forest",
+    "tainted": false
+  },
+  "6": {
+    "confidence": 2,
+    "kickoff": "2026-08-22T16:30:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Brentford",
+    "tainted": false
+  },
+  "7": {
+    "confidence": 2,
+    "kickoff": "2026-08-23T13:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Brighton",
+    "tainted": false
+  },
+  "8": {
+    "confidence": 3,
+    "kickoff": "2026-08-23T13:00:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Manchester City",
+    "tainted": false
+  },
+  "9": {
+    "confidence": 1,
+    "kickoff": "2026-08-23T15:30:00+00:00",
+    "locked_at": "2026-07-14T18:02:05.592631+00:00",
+    "pick": "Liverpool",
+    "tainted": false
+  }
+}

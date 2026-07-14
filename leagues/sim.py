@@ -71,33 +71,66 @@ def _sampler(model, rng):
 
 def simulate_season(model, played: pd.DataFrame, remaining: pd.DataFrame,
                     league: str = "PL", n: int = N_SIMS, seed: int = 7) -> pd.DataFrame:
-    """Run n seasons; return the projected table with title/top-4/relegation %."""
+    """Run n seasons; return the projected table with title/top-4/relegation %.
+
+    Vectorized: every fixture is sampled for all n seasons at once and the tables
+    are tallied in numpy. The obvious implementation -- call final_table() n times
+    -- is ~40,000x slower here (10k seasons x 380 fixtures of pandas row access),
+    which turned a publish into an hour-long job.
+    """
     lg = config.get(league)
     rng = np.random.default_rng(seed)
-    sample = _sampler(model, rng)
 
-    finishes = defaultdict(lambda: defaultdict(int))
-    points_sum = defaultdict(float)
+    teams = sorted(set(played["home"]) | set(played["away"])
+                   | set(remaining["home"]) | set(remaining["away"]))
+    idx = {t: i for i, t in enumerate(teams)}
+    T = len(teams)
 
-    for _ in range(n):
-        table = final_table(played, remaining, sample)
-        order = rank_teams(table)
-        pts = dict(zip(table["team"], table["points"]))
-        for pos, team in enumerate(order, start=1):
-            finishes[team][pos] += 1
-            points_sum[team] += pts[team]
+    pts = np.zeros((n, T), dtype=np.int32)
+    gf = np.zeros((n, T), dtype=np.int32)
+    ga = np.zeros((n, T), dtype=np.int32)
 
-    rows = []
-    for team, counts in finishes.items():
-        total = sum(counts.values())
-        top4 = sum(c for p, c in counts.items() if p <= lg.europe_spots)
-        rel = sum(c for p, c in counts.items()
-                  if p > lg.n_teams - lg.relegation_spots)
-        rows.append({
-            "team": team,
-            "proj_points": round(points_sum[team] / total, 1),
-            "title_pct": round(100 * counts.get(1, 0) / total, 1),
-            "top4_pct": round(100 * top4 / total, 1),
-            "relegation_pct": round(100 * rel / total, 1),
+    # results already in the books are constant across every simulated season
+    for _, m in played.iterrows():
+        h, a = idx[m["home"]], idx[m["away"]]
+        hg, ag = int(m["home_goals"]), int(m["away_goals"])
+        gf[:, h] += hg; ga[:, h] += ag
+        gf[:, a] += ag; ga[:, a] += hg
+        pts[:, h] += 3 if hg > ag else (1 if hg == ag else 0)
+        pts[:, a] += 3 if ag > hg else (1 if hg == ag else 0)
+
+    for _, m in remaining.iterrows():
+        h, a = idx[m["home"]], idx[m["away"]]
+        lh, la = model.lambdas(m["home"], m["away"])
+        grid = scoreline_grid(lh, la, model.rho)
+        flat = grid.ravel()
+        draws = rng.choice(flat.size, size=n, p=flat)
+        hg, ag = np.unravel_index(draws, grid.shape)
+        hg = hg.astype(np.int32); ag = ag.astype(np.int32)
+
+        gf[:, h] += hg; ga[:, h] += ag
+        gf[:, a] += ag; ga[:, a] += hg
+        pts[:, h] += np.where(hg > ag, 3, np.where(hg == ag, 1, 0))
+        pts[:, a] += np.where(ag > hg, 3, np.where(hg == ag, 1, 0))
+
+    gd = gf - ga
+    # PL tie-breakers: points, then goal difference, then goals for. Packed into
+    # one sortable key (gd is offset to stay non-negative; gf < 1000).
+    key = pts.astype(np.int64) * 10**7 + (gd.astype(np.int64) + 500) * 10**3 + gf
+    order = np.argsort(-key, axis=1, kind="stable")        # team indices, best first
+    position = np.empty_like(order)
+    rows = np.arange(n)[:, None]
+    position[rows, order] = np.arange(T)[None, :]          # 0-based finishing place
+
+    out = []
+    for t, i in idx.items():
+        place = position[:, i]
+        out.append({
+            "team": t,
+            "proj_points": round(float(pts[:, i].mean()), 1),
+            "title_pct": round(100 * float((place == 0).mean()), 1),
+            "top4_pct": round(100 * float((place < lg.europe_spots).mean()), 1),
+            "relegation_pct": round(
+                100 * float((place >= T - lg.relegation_spots).mean()), 1),
         })
-    return pd.DataFrame(rows).sort_values("proj_points", ascending=False)
+    return pd.DataFrame(out).sort_values("proj_points", ascending=False)

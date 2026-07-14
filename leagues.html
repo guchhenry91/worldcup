@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Premier League · Predictor</title>
+<meta name="theme-color" content="#05060d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>⚽</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="leagues.css">
+</head>
+<body>
+<div class="sky"></div>
+<div class="wrap">
+  <nav class="switcher">
+    <a href="index.html">World Cup 2026</a>
+    <a href="leagues.html" class="active">Premier League</a>
+  </nav>
+  <main id="app"><p class="sub">Loading…</p></main>
+</div>
+
+<script>
+const pct = (n, d = 0) => `${Number(n).toFixed(d)}%`;
+const num = (n, d = 1) => Number(n).toFixed(d);
+
+function el(tag, cls, html) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (html !== undefined) e.innerHTML = html;
+  return e;
+}
+
+function propList(props, colour) {
+  return props.map(p => `
+    <li class="${p.penalty_taker ? 'pen' : ''}">
+      <span class="who">${p.player}</span>
+      <span class="pct">${num(p.anytime_pct)}%</span>
+      <span class="shots">${num(p.exp_shots)} shots · ${Math.round(p.p_shots_2plus)}% 2+ · ${Math.round(p.p_sot_1plus)}% on target</span>
+    </li>`).join('');
+}
+
+async function load() {
+  const app = document.getElementById('app');
+  let data, clubs;
+  try {
+    [data, clubs] = await Promise.all([
+      fetch('data/leagues/pl.json').then(r => r.json()),
+      fetch('data/leagues/clubs.json').then(r => r.json()),
+    ]);
+  } catch (err) {
+    app.innerHTML = '<p class="sub">Could not load predictions.</p>';
+    return;
+  }
+  const colour = t => (clubs[t] || {}).primary || '#8891a8';
+  app.innerHTML = '';
+
+  // ---- header + record ----
+  app.append(el('h1', 'dsp', 'Premier League <span>2026-27</span>'));
+  const rec = data.record || {};
+  const chip = el('div', 'record-chip');
+  chip.innerHTML = rec.total
+    ? `<b>${rec.correct}–${rec.wrong}</b> · ${pct(100 * rec.correct / rec.total)} of ${rec.total} graded picks`
+    : 'No graded picks yet — the season starts in August';
+  app.append(chip);
+
+  // ---- fixtures ----
+  if (data.matches.length) {
+    app.append(el('h2', 'dsp', `Matchweek ${data.matches[0].matchweek}`));
+    const grid = el('section', 'fixtures');
+    for (const m of data.matches) {
+      const card = el('article', 'card glass');
+      card.style.setProperty('--home', colour(m.home));
+      card.style.setProperty('--away', colour(m.away));
+      const p = m.prediction;
+      const homeProps = m.props.filter(x => x.team === m.home);
+      const awayProps = m.props.filter(x => x.team === m.away);
+      const when = new Date(m.date).toLocaleDateString('en-GB',
+        { weekday: 'short', day: 'numeric', month: 'short' });
+      card.innerHTML = `
+        <div class="mw">${when} · ${m.venue || ''}</div>
+        <header>
+          <span class="team">${m.home}</span>
+          <span class="score">${p.score}</span>
+          <span class="team away">${m.away}</span>
+        </header>
+        <div class="pick">Pick: <strong>${p.pick}</strong>
+          <span class="conf">${'★'.repeat(p.confidence)}</span></div>
+        <div class="probs">
+          <span><b>${pct(100 * p.p_home)}</b></span>
+          <span>draw <b>${pct(100 * p.p_draw)}</b></span>
+          <span><b>${pct(100 * p.p_away)}</b></span>
+        </div>
+        ${homeProps.length ? `<div class="side-label">${m.home} — likely scorers</div>
+          <ul class="props">${propList(homeProps)}</ul>` : ''}
+        ${awayProps.length ? `<div class="side-label">${m.away} — likely scorers</div>
+          <ul class="props">${propList(awayProps)}</ul>` : ''}`;
+      grid.append(card);
+    }
+    app.append(grid);
+  }
+
+  // ---- projected table ----
+  app.append(el('h2', 'dsp', 'Projected final table'));
+  const wrap = el('div', 'table-wrap glass');
+  const rows = data.table.map((t, i) => {
+    const rel = i >= data.table.length - 3 ? 'rel' : '';
+    const ucl = i < 4 ? 'ucl' : '';
+    return `<tr class="${rel} ${ucl}">
+      <td class="num">${i + 1}</td>
+      <td><span class="dot" style="background:${colour(t.team)}"></span>${t.team}</td>
+      <td class="num">${num(t.proj_points)}</td>
+      <td class="barcell"><span class="bar" style="--pct:${Math.min(t.title_pct, 100)}%"></span>
+          <span>${num(t.title_pct)}%</span></td>
+      <td class="num">${num(t.top4_pct)}%</td>
+      <td class="num">${num(t.relegation_pct)}%</td>
+    </tr>`;
+  }).join('');
+  wrap.innerHTML = `<table class="league-table">
+    <thead><tr><th>#</th><th>Team</th><th>Proj pts</th><th>Title</th><th>Top 4</th><th>Relegation</th></tr></thead>
+    <tbody>${rows}</tbody></table>`;
+  app.append(wrap);
+
+  // ---- honest model performance ----
+  const b = data.backtest || {}, pb = data.props_backtest || {};
+  if (b.rps) {
+    app.append(el('h2', 'dsp', 'Does this model actually work?'));
+    const perf = el('section', 'performance glass');
+    perf.innerHTML = `
+      <p>Walk-forward tested on <b>${b.n}</b> past matches, always training only on
+      games played before the one being predicted. It called
+      <b>${pct(100 * b.accuracy, 1)}</b> of them correctly, with a ranked probability
+      score of <b>${num(b.rps, 4)}</b> (lower is better).</p>
+      <p>The betting market's closing odds, stripped of the bookmaker's margin, score
+      <b>${pct(100 * b.market_accuracy, 1)}</b> and <b>${num(b.market_rps, 4)}</b> —
+      still slightly better than us. That is the honest expected result: beating the
+      closing line would more likely mean a bug than a breakthrough.</p>
+      <div class="metrics">
+        <div class="metric"><b>${pct(100 * b.accuracy, 1)}</b>model accuracy</div>
+        <div class="metric"><b>${num(b.rps, 4)}</b>model RPS</div>
+        <div class="metric"><b>${num(b.market_rps, 4)}</b>market RPS</div>
+        ${pb.goals_lift ? `<div class="metric"><b>+${num(pb.goals_lift)}%</b>scorer picks vs baseline</div>` : ''}
+        ${pb.shots_lift ? `<div class="metric"><b>+${num(pb.shots_lift)}%</b>shot picks vs baseline</div>` : ''}
+      </div>
+      ${pb.n_players ? `<p class="note">Player props were held out on the ${pb.n_players}
+        players with real minutes last season: predicting each one's goals from earlier
+        seasons only beat a position-average baseline by ${num(pb.goals_lift)}%, and
+        shots by ${num(pb.shots_lift)}%. The model still over-rates elite scorers —
+        they regress toward the mean more than it expects.</p>` : ''}`;
+    app.append(perf);
+  }
+}
+load();
+</script>
+</body>
+</html>

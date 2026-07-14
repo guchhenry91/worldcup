@@ -86,3 +86,28 @@ def test_penalty_taker_is_derived_from_na_situation_shots():
     df = build_player_logs(_season_stats(), _shots(), "PL")
     assert df[df["player"] == "Mover"]["pens_att"].sum() == 1
     assert penalty_takers(df)["Manchester City"] == "Mover"
+
+
+def test_expected_minutes_are_per_match_not_per_season():
+    from leagues.players import expected_minutes
+    df = build_player_logs(_season_stats(), _shots(), "PL")
+    em = expected_minutes(df)
+    # Keeper: 3420 minutes over a 38-match season -> a full 90 every week
+    assert em["Keeper"] == 90.0
+    # Mover: 2300 minutes in his latest season -> ~60 per match, NOT 90
+    assert 55 < em["Mover"] < 65
+
+
+def test_current_squad_excludes_players_who_did_not_appear_last_season():
+    """Five seasons of departed players would otherwise share out the team's
+    expected goals and crush the real strikers to a few percent."""
+    from leagues.players import current_squad
+    stats = _season_stats()
+    stats = pd.concat([stats, pd.DataFrame([
+        {"season": "2223", "team": "Man City", "player": "LongGone", "position": "F S",
+         "matches": 20, "minutes": 1500, "np_goals": 8, "np_xg": 7.0, "shots": 40},
+    ])], ignore_index=True)
+    df = build_player_logs(stats, _shots(), "PL")
+    squad = current_squad(df)
+    assert "Mover" in squad and "Keeper" in squad
+    assert "LongGone" not in squad

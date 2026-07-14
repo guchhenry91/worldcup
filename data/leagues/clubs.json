@@ -1,0 +1,22 @@
+{
+  "Arsenal": {"primary": "#EF0107", "secondary": "#FFFFFF", "short": "ARS"},
+  "Aston Villa": {"primary": "#95BFE5", "secondary": "#670E36", "short": "AVL"},
+  "Bournemouth": {"primary": "#DA291C", "secondary": "#000000", "short": "BOU"},
+  "Brentford": {"primary": "#E30613", "secondary": "#FFFFFF", "short": "BRE"},
+  "Brighton": {"primary": "#0057B8", "secondary": "#FFCD00", "short": "BHA"},
+  "Chelsea": {"primary": "#034694", "secondary": "#FFFFFF", "short": "CHE"},
+  "Coventry": {"primary": "#78D0F3", "secondary": "#000000", "short": "COV"},
+  "Crystal Palace": {"primary": "#1B458F", "secondary": "#C4122E", "short": "CRY"},
+  "Everton": {"primary": "#003399", "secondary": "#FFFFFF", "short": "EVE"},
+  "Fulham": {"primary": "#000000", "secondary": "#CC0000", "short": "FUL"},
+  "Hull": {"primary": "#F5A12D", "secondary": "#000000", "short": "HUL"},
+  "Ipswich": {"primary": "#3A64A3", "secondary": "#FFFFFF", "short": "IPS"},
+  "Leeds": {"primary": "#FFCD00", "secondary": "#1D428A", "short": "LEE"},
+  "Liverpool": {"primary": "#C8102E", "secondary": "#00B2A9", "short": "LIV"},
+  "Manchester City": {"primary": "#6CABDD", "secondary": "#1C2C5B", "short": "MCI"},
+  "Manchester United": {"primary": "#DA291C", "secondary": "#FBE122", "short": "MUN"},
+  "Newcastle United": {"primary": "#241F20", "secondary": "#FFFFFF", "short": "NEW"},
+  "Nottingham Forest": {"primary": "#DD0000", "secondary": "#FFFFFF", "short": "NFO"},
+  "Sunderland": {"primary": "#EB172B", "secondary": "#FFFFFF", "short": "SUN"},
+  "Tottenham": {"primary": "#132257", "secondary": "#FFFFFF", "short": "TOT"}
+}

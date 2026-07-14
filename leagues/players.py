@@ -127,3 +127,66 @@ def penalty_takers(logs: pd.DataFrame) -> dict:
         if r["w_pens"] > 0 and r["team"] not in out:
             out[r["team"]] = r["player"]
     return out
+
+
+def team_shot_context(league: str, recent_seasons: int = 2) -> dict:
+    """How many shots each club takes and CONCEDES per match, vs league average.
+
+    Feeds props.match_props's opp_shot_factor: a player faces more shooting
+    opportunity against a club that concedes a lot of shots. Uses only the most
+    recent seasons -- shot volume is a tactical property and goes stale fast.
+
+    Returns {"concede_factor": {team: x}, "pens_per_team_match": float}.
+    """
+    lg = config.get(league)
+    seasons = list(lg.history_seasons)[-recent_seasons:]
+    us = sd.Understat(leagues=lg.understat, seasons=seasons)
+    ev = us.read_shot_events().reset_index()
+    ev["team"] = [canonical(t, league) for t in ev["team"]]
+
+    # shots conceded = shots taken by the OTHER team in the same game
+    per_game = ev.groupby(["game", "team"], as_index=False).size()
+    conceded = []
+    for game, g in per_game.groupby("game"):
+        if len(g) != 2:
+            continue                       # a game where one side had no shots at all
+        for i, row in g.iterrows():
+            other = g[g["team"] != row["team"]]["size"].sum()
+            conceded.append({"team": row["team"], "conceded": other})
+    c = pd.DataFrame(conceded)
+    if c.empty:
+        return {"concede_factor": {}, "pens_per_team_match": 0.12}
+
+    rate = c.groupby("team")["conceded"].mean()
+    league_avg = float(rate.mean()) or 1.0
+    factor = (rate / league_avg).to_dict()
+
+    n_team_matches = len(c)
+    pens = int(ev["situation"].isna().sum())
+    return {"concede_factor": {k: float(v) for k, v in factor.items()},
+            "pens_per_team_match": pens / n_team_matches if n_team_matches else 0.12}
+
+
+def expected_minutes(logs: pd.DataFrame, matches_per_season: int = 38) -> dict:
+    """player -> expected minutes in the next match, from his LATEST season.
+
+    Without this every player who has appeared for the club in five seasons is
+    assumed to play 90 minutes, so a squad of ~50 (including players long gone)
+    shares out the team's expected goals and the real strikers are crushed down
+    to a few percent. Minutes-per-team-match is what actually distributes goals.
+    """
+    if logs.empty:
+        return {}
+    latest = logs.sort_values("season").groupby("player").last()
+    mins = (latest["minutes"] / matches_per_season).clip(upper=90.0)
+    return {p: float(m) for p, m in mins.items()}
+
+
+def current_squad(logs: pd.DataFrame) -> set:
+    """Players who appeared in the most recent season -- i.e. are plausibly still
+    at the club. Everyone else is a five-seasons-ago ghost who would otherwise
+    soak up a share of the team's expected goals."""
+    if logs.empty:
+        return set()
+    newest = logs["season"].max()
+    return set(logs[(logs["season"] == newest) & (logs["minutes"] > 0)]["player"])

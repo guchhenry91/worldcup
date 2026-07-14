@@ -3,3 +3,4 @@
 *.jpeg
 __pycache__/
 .deploy.lock
+data-raw/leagues/cache/
