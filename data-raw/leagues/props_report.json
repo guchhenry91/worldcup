@@ -1,0 +1,45 @@
+{
+  "league": "PL",
+  "n_players": 312,
+  "goals_mae": 1.313,
+  "goals_mae_baseline": 1.731,
+  "shots_mae": 5.207,
+  "shots_mae_baseline": 8.491,
+  "goals_corr": 0.825,
+  "shots_corr": 0.942,
+  "goals_lift": 24.1,
+  "shots_lift": 38.7,
+  "passes": true,
+  "calibration": [
+    {
+      "bucket": "0-1",
+      "n": 108,
+      "predicted": 0.45,
+      "actual": 0.4
+    },
+    {
+      "bucket": "1-3",
+      "n": 115,
+      "predicted": 1.86,
+      "actual": 1.71
+    },
+    {
+      "bucket": "3-6",
+      "n": 49,
+      "predicted": 4.29,
+      "actual": 2.96
+    },
+    {
+      "bucket": "6-10",
+      "n": 28,
+      "predicted": 7.89,
+      "actual": 7.0
+    },
+    {
+      "bucket": "10+",
+      "n": 12,
+      "predicted": 13.58,
+      "actual": 10.5
+    }
+  ]
+}
