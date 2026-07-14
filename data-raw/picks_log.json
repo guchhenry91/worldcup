@@ -955,12 +955,12 @@
  },
  "101": {
   "pick": "Spain",
-  "p_home": 0.497,
-  "p_away": 0.503,
+  "p_home": 0.491,
+  "p_away": 0.509,
   "home": "France",
   "away": "Spain",
   "score": "2-1",
-  "locked_at": "2026-07-13T21:29:23+00:00"
+  "locked_at": "2026-07-14T09:13:01+00:00"
  },
  "102": {
   "pick": "Argentina",
@@ -969,16 +969,16 @@
   "home": "England",
   "away": "Argentina",
   "score": "2-1",
-  "locked_at": "2026-07-13T21:29:23+00:00"
+  "locked_at": "2026-07-14T09:13:01+00:00"
  },
  "104": {
-  "pick": "Argentina",
-  "p_home": 0.499,
-  "p_away": 0.501,
+  "pick": "Spain",
+  "p_home": 0.504,
+  "p_away": 0.496,
   "home": "Spain",
   "away": "Argentina",
   "score": "2-1",
-  "locked_at": "2026-07-13T21:29:23+00:00"
+  "locked_at": "2026-07-14T09:13:01+00:00"
  },
  "103": {
   "pick": "France",
@@ -987,6 +987,6 @@
   "home": "France",
   "away": "England",
   "score": "2-1",
-  "locked_at": "2026-07-13T21:29:23+00:00"
+  "locked_at": "2026-07-14T09:13:01+00:00"
  }
 }

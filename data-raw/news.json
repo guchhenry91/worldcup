@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05",
+  "updated": "2026-07-14",
   "teams": {
     "Argentina": {
       "form": "WW",
@@ -101,12 +101,22 @@
         {
           "player": "Kylian Mbappe",
           "status": "fit",
-          "note": "Recovered from thigh/muscle injury that caused him to miss Real Madrid's La Liga run-in; will captain the side"
+          "note": "Took a heavy knock to his right ankle in the QF win over Morocco (subbed off 77'); said he was \"completely fine\" afterward and is confirmed starting the SF vs Spain (July 14, Dallas)"
         },
         {
           "player": "William Saliba",
           "status": "fit",
-          "note": "Managing an ongoing back problem but has continued to start throughout the tournament — no fresh concern ahead of R16 vs Paraguay (July 4)"
+          "note": "Continuing to manage an ongoing back problem (missed Saturday training) but passed fit and confirmed starting the SF vs Spain (July 14)"
+        },
+        {
+          "player": "Dayot Upamecano",
+          "status": "fit",
+          "note": "Sudden foot issue kept him out of Saturday's training session but passed fit and confirmed starting the SF vs Spain (July 14)"
+        },
+        {
+          "player": "Manu Kone",
+          "status": "fit",
+          "note": "Went off with a minor knee knock in the QF win over Morocco (precautionary); confirmed starting the SF vs Spain (July 14)"
         },
         {
           "player": "Jules Kounde",
@@ -121,7 +131,7 @@
         {
           "player": "Aurelien Tchouameni",
           "status": "out",
-          "note": "Thigh injury rules him out of R16 vs Paraguay (July 4)"
+          "note": "Thigh injury; back in team training but not in the confirmed starting XI for the SF vs Spain (July 14) — Kone/Rabiot pairing in midfield"
         }
       ],
       "key_players": [
@@ -159,7 +169,8 @@
         "Arguably the deepest roster in the 48-team field, especially in attack.",
         "Group I with Senegal, Norway and Iraq — the standout 'group of death' candidate among top seeds.",
         "2026-06-26: Deschamps will miss Norway match to attend his mother's funeral — assistant coach takes charge on the touchline.",
-        "2026-07-03 pre-match vs Paraguay (R16, July 4, Philadelphia): no fresh injury concerns; Saliba continues to manage his back issue but is fit to start."
+        "2026-07-03 pre-match vs Paraguay (R16, July 4, Philadelphia): no fresh injury concerns; Saliba continues to manage his back issue but is fit to start.",
+        "2026-07-14 pre-match vs Spain (SF, Dallas): confirmed XI unchanged from the QF despite fitness scares — Mbappe (ankle), Saliba (back) and Upamecano (foot) all passed fit; Tchouameni (thigh) not in the starting XI, Kone/Rabiot start in midfield."
       ]
     },
     "Spain": {
@@ -183,8 +194,8 @@
         },
         {
           "player": "Nico Williams",
-          "status": "out",
-          "note": "Right adductor muscle injury suffered vs Uruguay (June 26); ruled out of R32 vs Austria, could return later in knockout stage"
+          "status": "fit",
+          "note": "Fully recovered from the adductor injury; featured as a late sub in the QF win over Belgium and is available for the SF vs France (July 14) — Alex Baena keeps the confirmed starting berth"
         },
         {
           "player": "Dani Olmo",
@@ -204,12 +215,12 @@
         {
           "player": "Yeremy Pino",
           "status": "out",
-          "note": "Acromioclavicular sprain (not a fracture) from Uruguay match; ruled out of R32 vs Austria, could return later in knockout stage"
+          "note": "Acromioclavicular joint sprain (scans confirmed no fracture) from the Uruguay match; still training individually away from the squad, ruled out of the SF vs France (July 14)"
         },
         {
           "player": "Victor Munoz",
-          "status": "doubtful",
-          "note": "Hamstring discomfort; returned to partial training and has a better chance of being involved for R32 vs Austria (July 2, SoFi Stadium)"
+          "status": "out",
+          "note": "Suffered a significant calf muscle setback on his return path from the earlier hamstring issue; unavailable for the SF vs France (July 14)"
         }
       ],
       "key_players": [
@@ -247,7 +258,8 @@
         "Euro 2024 champions and narrow tournament favorites over France in most odds markets.",
         "Concern raised over chance creation after generating just four chances in the 1-1 warm-up draw with Egypt.",
         "2026-07-02: Nico Williams (adductor) and Yeremy Pino (AC joint sprain) both ruled out for R32 vs Austria; Alex Baena and Lamine Yamal expected to carry the width.",
-        "2026-07-02: Victor Munoz (hamstring) a doubt but improved after partial training; Alex Baena, Oyarzabal and fit-again Lamine Yamal expected to start the front three vs Austria."
+        "2026-07-02: Victor Munoz (hamstring) a doubt but improved after partial training; Alex Baena, Oyarzabal and fit-again Lamine Yamal expected to start the front three vs Austria.",
+        "2026-07-14 pre-match vs France (SF, Dallas): confirmed XI is Simon; Porro, Cubarsi, Laporte, Cucurella; Pedri, Rodri; Yamal, Olmo, Baena; Oyarzabal. Nico Williams fully fit but starts on the bench; Pino (shoulder) and Munoz (calf) both unavailable."
       ]
     },
     "England": {
