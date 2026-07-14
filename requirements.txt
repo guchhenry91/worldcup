@@ -1,0 +1,7 @@
+penaltyblog==1.11.0
+soccerdata==1.9.0
+pandas>=3.0
+scipy>=1.18
+numpy>=2.0
+scikit-learn>=1.9
+pytest>=8.0
