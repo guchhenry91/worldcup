@@ -178,18 +178,41 @@ def build(league: str = "PL") -> dict:
     }
 
 
-def main():
-    payload = build("PL")
-    OUT.mkdir(parents=True, exist_ok=True)
-    path = OUT / "pl.json"
+FILE_FOR = {"PL": "pl.json", "LALIGA": "laliga.json",
+            "BUNDESLIGA": "bundesliga.json", "LIGUE1": "ligue1.json"}
+
+
+def _publish_one(league: str, fname: str) -> bool:
+    """Build and atomically write one league. Returns True on success."""
+    try:
+        payload = build(league)
+    except Exception as exc:              # one league's outage must not sink the rest
+        print(f"ABORT {league}: {exc}; leaving its file untouched")
+        return False
+    path = OUT / fname
     tmp = path.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
     tmp.replace(path)                     # atomic: never publish a half-written file
     print(f"wrote {path} - {len(payload['matches'])} fixtures, "
           f"{len(payload['table'])} teams")
     if payload["missing_squads"]:
-        print(f"WARNING: no player data for {payload['missing_squads']} "
+        print(f"  WARNING {league}: no player data for {payload['missing_squads']} "
               f"(promoted clubs have no top-flight history) - they get no props")
+    return True
+
+
+def main(argv=None):
+    """Publish all four leagues, or just the ones named on the command line
+    (e.g. `python -m leagues.publish PL` for quick iteration)."""
+    import sys
+    argv = sys.argv[1:] if argv is None else argv
+    leagues = [a.upper() for a in argv] or list(FILE_FOR)
+    OUT.mkdir(parents=True, exist_ok=True)
+    for league in leagues:
+        if league not in FILE_FOR:
+            print(f"skip {league!r}: unknown league; known {list(FILE_FOR)}")
+            continue
+        _publish_one(league, FILE_FOR[league])
 
 
 if __name__ == "__main__":
