@@ -22,6 +22,7 @@ Phase 2a proved the contract on one league. Phase 2b is mostly a loop plus a UI 
 - Confirm each league's match gate and props gate; **honestly flag any that underperform** rather than shipping them silently.
 - A single `index.html` with a top-level competition switcher: **World Cup · Premier League · La Liga · Bundesliga · Ligue 1**, each loading its own data file, reusing one shared set of card/table/performance components.
 - Backfill the "Model Performance" panel onto the World Cup view (spec build-phase 8).
+- **Live model-vs-market edge display** on upcoming league fixtures: each card shows the bookmaker's current de-vigged 1X2 next to the model's probabilities and the disagreement. Source: football-data.co.uk `fixtures.csv` — the SAME source as the historical backtest, so `devig()` and the `names.py` mapping are reused unchanged. Off-season caveat: `fixtures.csv` only lists ~1 week ahead, so real top-flight odds do not appear until ~mid-August; the loader is unit-testable now against the stable CSV format but not live-verifiable until then.
 - Extend the ops jobs to refresh all four leagues.
 
 **Out (later phases / explicitly deferred):**

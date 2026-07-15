@@ -398,6 +398,148 @@ git commit -m "chore(leagues): ops jobs refresh all four leagues"
 
 ---
 
+## Build-phase 7b: Live model-vs-market edge on upcoming fixtures
+
+**Files:**
+- Create: `leagues/odds.py`, `tests/leagues/test_odds.py`
+- Modify: `leagues/publish.py` (attach a `market` block per upcoming match), `app.html` (render it)
+
+Source: `https://www.football-data.co.uk/fixtures.csv` — HTTP 200, columns match the
+historical CSVs (`Div, Date, HomeTeam, AwayTeam, B365H/D/A, PSH/D/A, AvgH/D/A`). Div
+codes: PL=E0, La Liga=SP1, Bundesliga=D1, Ligue 1=F1. Reuse `backtest.devig()` and
+`names.canonical()` unchanged.
+
+**Off-season note:** until ~1 week before 2026-08-21, `fixtures.csv` has no top-flight
+rows, so live output is empty by design. The loader is unit-tested against the CSV
+format now; it lights up when the season's odds publish. It must NEVER crash or block
+a publish when no odds are present.
+
+- [ ] **Step 1: Write the failing test** (pure parser + de-vig; fixed CSV text, no network)
+
+```python
+# tests/leagues/test_odds.py
+import io
+import pandas as pd
+
+from leagues.odds import parse_fixture_odds
+
+CSV = (
+    "Div,Date,Time,HomeTeam,AwayTeam,AvgH,AvgD,AvgA\n"
+    "E0,22/08/2026,15:00,Arsenal,Man City,2.10,3.40,3.30\n"
+    "SP1,22/08/2026,20:00,Barcelona,Sevilla,1.50,4.20,6.00\n"   # wrong league for a PL call
+)
+
+
+def test_devigged_market_probs_sum_to_one_and_map_names():
+    df = parse_fixture_odds(io.StringIO(CSV), "PL")
+    assert len(df) == 1                       # only the E0 row
+    row = df.iloc[0]
+    assert row["home"] == "Arsenal" and row["away"] == "Manchester City"
+    s = row["m_home"] + row["m_draw"] + row["m_away"]
+    assert abs(s - 1.0) < 1e-9                # de-vigged, overround removed
+    assert row["m_home"] > row["m_away"]      # 2.10 shorter than 3.30
+
+
+def test_no_rows_for_a_league_is_empty_not_an_error():
+    df = parse_fixture_odds(io.StringIO(CSV), "BUNDESLIGA")   # no D1 rows
+    assert df.empty and list(df.columns)      # columns present, zero rows
+```
+
+- [ ] **Step 2: Run to verify it fails**
+
+Run: `python -m pytest tests/leagues/test_odds.py -v`
+Expected: FAIL — no `leagues.odds`.
+
+- [ ] **Step 3: Implement `odds.py`**
+
+```python
+"""Live 1X2 market odds for UPCOMING fixtures, from football-data.co.uk's
+fixtures.csv -- the SAME source as the historical backtest, so the de-vig and
+team-name handling are identical.
+
+Off-season the feed has no top-flight rows; parse_fixture_odds then returns an
+empty (but well-formed) frame. Never raise on 'no odds yet'.
+"""
+import pandas as pd
+
+from leagues import config
+from leagues.backtest import devig
+from leagues.names import canonical, UnknownTeam
+
+FEED = "https://www.football-data.co.uk/fixtures.csv"
+DIV = {"PL": "E0", "LALIGA": "SP1", "BUNDESLIGA": "D1", "LIGUE1": "F1"}
+COLS = ["date", "home", "away", "m_home", "m_draw", "m_away"]
+
+
+def parse_fixture_odds(buf, league: str) -> pd.DataFrame:
+    """Pure parser. `buf` is a file-like CSV. Returns de-vigged 1X2 per fixture."""
+    raw = pd.read_csv(buf)
+    div = DIV[league]
+    raw = raw[raw["Div"] == div]
+    rows = []
+    for _, r in raw.iterrows():
+        h, d, a = r.get("AvgH"), r.get("AvgD"), r.get("AvgA")
+        if pd.isna(h) or pd.isna(d) or pd.isna(a):
+            continue                          # no odds posted yet for this fixture
+        try:
+            home, away = canonical(r["HomeTeam"], league), canonical(r["AwayTeam"], league)
+        except UnknownTeam:
+            continue                          # unmapped -> skip, don't crash a publish
+        ph, pd_, pa = devig(float(h), float(d), float(a))
+        rows.append({"date": r.get("Date"), "home": home, "away": away,
+                     "m_home": ph, "m_draw": pd_, "m_away": pa})
+    return pd.DataFrame(rows, columns=COLS)
+
+
+def fetch_fixture_odds(league: str) -> pd.DataFrame:
+    """Download the upcoming-fixtures odds feed for one league (empty off-season)."""
+    import urllib.request
+    req = urllib.request.Request(FEED, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=25) as resp:
+            import io
+            return parse_fixture_odds(io.StringIO(resp.read().decode("utf-8", "replace")), league)
+    except Exception as exc:
+        print(f"odds feed unavailable for {league} ({exc}); no market lines this run")
+        return pd.DataFrame(columns=COLS)
+```
+
+Confirm `backtest.devig()` returns `(p_home, p_draw, p_away)`; if its signature differs, adapt the unpack.
+
+- [ ] **Step 4: Run to green**
+
+Run: `python -m pytest tests/leagues/test_odds.py -v`
+Expected: 2 passed.
+
+- [ ] **Step 5: Attach the market block in `publish.build()`**
+
+For each upcoming match, look up its odds row (by canonical home+away) and attach:
+```python
+"market": {
+    "p_home": round(o["m_home"], 3), "p_draw": round(o["m_draw"], 3),
+    "p_away": round(o["m_away"], 3),
+    "edge": round(pred[f"p_{pick_type}"] - o[f"m_{pick_type}"], 3),  # model minus market on the pick
+} if odds_row_found else None
+```
+When no odds row is found (off-season, or a fixture not yet priced), set `"market": None`. The card must render fine either way.
+
+- [ ] **Step 6: Render it on the card in `app.html`**
+
+Below the model probabilities, when `m.market` is present: show the market's implied 1X2 and the edge, e.g. `Market: 48% / 27% / 25% · model +6% on Arsenal`. Colour a positive edge as agreement-with-value, but state plainly it is a comparison, not a claim of profit.
+
+- [ ] **Step 7: Verify (format now; live in August)**
+
+Run `python -m leagues.publish` today: every match's `market` is `None` (off-season) and the page renders unchanged. Re-verify with real odds after the season's fixtures publish (~mid-August): the market block appears and the edges are sane (rarely beyond +/-15%).
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add leagues/odds.py tests/leagues/test_odds.py leagues/publish.py app.html
+git commit -m "feat(leagues): live model-vs-market edge on upcoming fixtures (football-data.co.uk)"
+```
+
+---
+
 ## Build-phase 8: Full check and handoff
 
 - [ ] **Step 1: Full test suite** — `python -m pytest tests/ -q` — expect all green.
