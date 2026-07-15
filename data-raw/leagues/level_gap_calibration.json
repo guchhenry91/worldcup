@@ -1,0 +1,576 @@
+{
+  "method": "pooled linear fit: top-flight deviation ~ second-tier deviation",
+  "n_promoted_club_seasons": 43,
+  "attack": {
+    "slope": 0.404,
+    "intercept": -0.394,
+    "r": 0.29
+  },
+  "defence": {
+    "slope": -0.036,
+    "intercept": 0.179,
+    "r": -0.04,
+    "note": "near-zero r -> slope zeroed in second_tier.DEFENCE_MAP; use the intercept (mean) as a constant prior"
+  },
+  "detail": [
+    {
+      "league": "PL",
+      "season": "2223",
+      "club": "Nottingham Forest",
+      "st": [
+        0.235,
+        -0.367
+      ],
+      "tf": [
+        -0.355,
+        0.227
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2223",
+      "club": "Bournemouth",
+      "st": [
+        0.249,
+        -0.392
+      ],
+      "tf": [
+        -0.382,
+        0.27
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2223",
+      "club": "Fulham",
+      "st": [
+        0.608,
+        -0.294
+      ],
+      "tf": [
+        0.015,
+        -0.022
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2324",
+      "club": "Burnley",
+      "st": [
+        0.442,
+        -0.469
+      ],
+      "tf": [
+        -0.418,
+        0.225
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2324",
+      "club": "Sheffield United",
+      "st": [
+        0.267,
+        -0.36
+      ],
+      "tf": [
+        -0.577,
+        0.512
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2324",
+      "club": "Luton",
+      "st": [
+        0.019,
+        -0.36
+      ],
+      "tf": [
+        -0.181,
+        0.311
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2425",
+      "club": "Ipswich",
+      "st": [
+        0.4,
+        -0.079
+      ],
+      "tf": [
+        -0.437,
+        0.386
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2425",
+      "club": "Southampton",
+      "st": [
+        0.344,
+        0.021
+      ],
+      "tf": [
+        -0.763,
+        0.433
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2425",
+      "club": "Leicester",
+      "st": [
+        0.367,
+        -0.408
+      ],
+      "tf": [
+        -0.524,
+        0.361
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2526",
+      "club": "Burnley",
+      "st": [
+        0.202,
+        -1.259
+      ],
+      "tf": [
+        -0.318,
+        0.361
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2526",
+      "club": "Sunderland",
+      "st": [
+        0.028,
+        -0.248
+      ],
+      "tf": [
+        -0.218,
+        -0.085
+      ]
+    },
+    {
+      "league": "PL",
+      "season": "2526",
+      "club": "Leeds",
+      "st": [
+        0.522,
+        -0.631
+      ],
+      "tf": [
+        -0.064,
+        0.069
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2223",
+      "club": "Valladolid",
+      "st": [
+        0.331,
+        -0.171
+      ],
+      "tf": [
+        -0.369,
+        0.277
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2223",
+      "club": "Girona",
+      "st": [
+        0.111,
+        -0.194
+      ],
+      "tf": [
+        0.194,
+        0.141
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2223",
+      "club": "Almeria",
+      "st": [
+        0.288,
+        -0.376
+      ],
+      "tf": [
+        0.026,
+        0.308
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2324",
+      "club": "Las Palmas",
+      "st": [
+        0.146,
+        -0.379
+      ],
+      "tf": [
+        -0.421,
+        -0.067
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2324",
+      "club": "Granada",
+      "st": [
+        0.261,
+        -0.345
+      ],
+      "tf": [
+        -0.279,
+        0.452
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2324",
+      "club": "Alaves",
+      "st": [
+        0.104,
+        -0.25
+      ],
+      "tf": [
+        -0.333,
+        -0.088
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2425",
+      "club": "Leganes",
+      "st": [
+        0.17,
+        -0.559
+      ],
+      "tf": [
+        -0.243,
+        0.118
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2425",
+      "club": "Valladolid",
+      "st": [
+        0.077,
+        -0.271
+      ],
+      "tf": [
+        -0.649,
+        0.593
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2425",
+      "club": "Espanol",
+      "st": [
+        0.223,
+        -0.166
+      ],
+      "tf": [
+        -0.218,
+        0.025
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2526",
+      "club": "Oviedo",
+      "st": [
+        0.052,
+        -0.235
+      ],
+      "tf": [
+        -0.678,
+        0.159
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2526",
+      "club": "Levante",
+      "st": [
+        0.261,
+        -0.235
+      ],
+      "tf": [
+        -0.086,
+        0.175
+      ]
+    },
+    {
+      "league": "LALIGA",
+      "season": "2526",
+      "club": "Elche",
+      "st": [
+        0.105,
+        -0.447
+      ],
+      "tf": [
+        -0.044,
+        0.107
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2223",
+      "club": "Werder Bremen",
+      "st": [
+        0.271,
+        -0.142
+      ],
+      "tf": [
+        -0.056,
+        0.171
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2223",
+      "club": "Schalke 04",
+      "st": [
+        0.374,
+        -0.119
+      ],
+      "tf": [
+        -0.433,
+        0.275
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2324",
+      "club": "Heidenheim",
+      "st": [
+        0.292,
+        -0.33
+      ],
+      "tf": [
+        -0.09,
+        0.005
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2324",
+      "club": "Darmstadt",
+      "st": [
+        -0.001,
+        -0.417
+      ],
+      "tf": [
+        -0.601,
+        0.452
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2425",
+      "club": "Holstein Kiel",
+      "st": [
+        0.211,
+        -0.299
+      ],
+      "tf": [
+        -0.084,
+        0.407
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2425",
+      "club": "St Pauli",
+      "st": [
+        0.164,
+        -0.379
+      ],
+      "tf": [
+        -0.643,
+        -0.262
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2526",
+      "club": "FC Koln",
+      "st": [
+        0.031,
+        -0.302
+      ],
+      "tf": [
+        -0.116,
+        0.136
+      ]
+    },
+    {
+      "league": "BUNDESLIGA",
+      "season": "2526",
+      "club": "Hamburg",
+      "st": [
+        0.417,
+        -0.155
+      ],
+      "tf": [
+        -0.318,
+        -0.018
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2223",
+      "club": "Ajaccio",
+      "st": [
+        -0.107,
+        -0.826
+      ],
+      "tf": [
+        -0.841,
+        0.327
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2223",
+      "club": "Auxerre",
+      "st": [
+        0.34,
+        -0.107
+      ],
+      "tf": [
+        -0.422,
+        0.166
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2223",
+      "club": "Toulouse",
+      "st": [
+        0.636,
+        -0.274
+      ],
+      "tf": [
+        -0.045,
+        0.066
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2324",
+      "club": "Metz",
+      "st": [
+        0.287,
+        -0.328
+      ],
+      "tf": [
+        -0.271,
+        0.234
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2324",
+      "club": "Le Havre",
+      "st": [
+        0.004,
+        -0.88
+      ],
+      "tf": [
+        -0.3,
+        -0.02
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2425",
+      "club": "St Etienne",
+      "st": [
+        0.027,
+        -0.41
+      ],
+      "tf": [
+        -0.261,
+        0.42
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2425",
+      "club": "Auxerre",
+      "st": [
+        0.432,
+        -0.261
+      ],
+      "tf": [
+        -0.053,
+        0.008
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2425",
+      "club": "Angers",
+      "st": [
+        0.181,
+        -0.107
+      ],
+      "tf": [
+        -0.458,
+        0.046
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2526",
+      "club": "Paris FC",
+      "st": [
+        0.227,
+        -0.284
+      ],
+      "tf": [
+        -0.02,
+        0.042
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2526",
+      "club": "Lorient",
+      "st": [
+        0.439,
+        -0.346
+      ],
+      "tf": [
+        0.001,
+        0.062
+      ]
+    },
+    {
+      "league": "LIGUE1",
+      "season": "2526",
+      "club": "Metz",
+      "st": [
+        0.378,
+        -0.254
+      ],
+      "tf": [
+        -0.404,
+        0.461
+      ]
+    }
+  ]
+}

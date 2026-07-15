@@ -10,8 +10,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from leagues import config, dataset, elo, fixtures, odds, picks, players, props, sim
-from leagues.model import LeagueModel, elo_priors, promoted_priors
+from leagues import config, dataset, fixtures, odds, picks, players, props, second_tier, sim
+from leagues.model import LeagueModel, promoted_priors
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "leagues"
@@ -61,30 +61,33 @@ def build(league: str = "PL") -> dict:
     squad_teams = sorted(set(fx["home"]) | set(fx["away"]))
 
     # Fit once to learn the strength scale, then refit with priors mapped onto it
-    # -- promoted clubs have no top-flight history to fit on.
+    # -- promoted clubs have no top-flight history to fit on. Their prior comes from
+    # their actual second-tier season (calibrated), NOT from ClubElo: ClubElo is a
+    # single third-party point of failure, and the second-tier feed is the same
+    # source as everything else here.
     base = LeagueModel().fit(matches, ref=ref)
     warnings = []
-    try:
-        ratings = elo.elo_for_league(league, squad_teams)
-        priors = elo_priors(ratings, base)
-    except elo.ClubEloUnavailable as exc:
-        # Do NOT let this pass silently: without a prior, a promoted club would be
-        # fitted at league average and quietly kept out of the relegation places.
-        no_history = [t for t in squad_teams if t not in base.attack]
-        priors = promoted_priors(base, no_history)
-        if len(no_history) > 1:
-            names = ", ".join(no_history[:-1]) + f" and {no_history[-1]}"
-        elif no_history:
-            names = no_history[0]
-        else:
-            names = "the promoted clubs"
-        warnings.append(
-            f"The club-rating service was unreachable when this was built, so "
-            f"{names} are rated as if they were the weakest side in the league "
-            f"rather than by their actual form in the division below. Their "
-            f"projected finish is a rough placeholder until it recovers.")
-        print(f"WARNING: ClubElo unavailable ({exc}); {names} seeded from the "
-              f"weakest fitted sides")
+    no_history = [t for t in squad_teams if t not in base.attack]
+    priors = {}
+    if no_history:
+        try:
+            priors = second_tier.second_tier_priors(base, league, no_history)
+        except Exception as exc:
+            print(f"WARNING: second-tier feed unavailable for {league} ({exc})")
+        still_missing = [t for t in no_history if t not in priors]
+        if still_missing:
+            # A promoted club we could not resolve in the second-tier feed (e.g.
+            # promoted from a lower level, or an unmapped spelling) -> the honest
+            # weakest-side fallback, and say so.
+            priors.update(promoted_priors(base, still_missing))
+            names = (", ".join(still_missing[:-1]) + f" and {still_missing[-1]}"
+                     if len(still_missing) > 1 else still_missing[0])
+            warnings.append(
+                f"No second-tier record found for {names}, so they are seeded at "
+                f"the strength of the league's weakest sides rather than by their "
+                f"own form. Their projected finish is a rough placeholder.")
+            print(f"WARNING: {league}: no second-tier prior for {still_missing}; "
+                  f"weakest-side fallback")
     model = LeagueModel().fit(matches, ref=ref, priors=priors)
 
     # Only players who actually appeared last season, with realistic minutes.
