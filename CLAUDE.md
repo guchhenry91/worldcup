@@ -53,15 +53,25 @@ engine stays pure-stdlib, the league engine needs pandas/scipy/penaltyblog.
 - **Penalties are unlabelled**: soccerdata maps Understat's "Penalty" situation
   to NA. Match on NA, not on the string, or every club silently gets no penalty
   taker (see the regression test in `tests/leagues/test_players.py`).
-- ClubElo (promoted-club priors) is disk-cached under `data-raw/leagues/cache/`
-  and **fails loudly**: if it is unreachable, publish seeds promoted clubs at the
-  weakest fitted sides and records it in the payload's `data_warnings`, rather
-  than rating every club at the league median.
+- **Promoted-club priors come from second-tier form**, NOT ClubElo (which was a
+  single third-party point of failure — down for days). Each promoted club's prior
+  is derived from its actual second-division season (football-data.co.uk E1/SP2/D2/F2)
+  via a calibrated linear map: attack carries a mild signal, defence none (promoted
+  clubs concede ~+0.19 above average regardless). See `leagues/second_tier.py` and
+  `scripts/calibrate_level_gap.py`. A club that can't be resolved in the second-tier
+  feed falls back to the weakest-side seed with a `data_warnings` note.
+- **soccerdata shot-events bug**: `read_shot_events` crashes on GER-Bundesliga (a
+  match roster returns as a list, not a dict). Both `fetch_player_logs` and
+  `team_shot_context` guard it and degrade (SOT via league-average ratio, neutral
+  opponent factors) rather than sink the league.
 
 ## Scheduled jobs — NOT YET REGISTERED
 `ops/leagues_weekly.py` and `ops/leagues_matchday.py` are written and working but
-deliberately unregistered: the 2026-27 season starts **2026-08-21** (MW1: Arsenal
-v Coventry), and before then they would republish an unchanged file every week.
+deliberately unregistered: the 2026-27 seasons start **2026-08-21** (PL MW1: Arsenal
+v Coventry; the other three the same weekend), and before then they would republish
+unchanged files every week. Both call `publish.main()`, which loops **all four
+leagues** (PL, La Liga, Bundesliga, Ligue 1), aborting per-league on failure, then
+`deploy.py`.
 
 **Register them in mid-August:**
 - `leagues-weekly` — cron `0 6 * * 2` (Tue 06:00, after Monday-night football).
