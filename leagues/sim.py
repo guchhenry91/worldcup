@@ -69,58 +69,64 @@ def _sampler(model, rng):
     return sample
 
 
-def order_teams(pts, gd, gf, h2h_pts, h2h_gd, tiebreak: str):
+def order_teams(pts, gd, gf, h2h_pts, h2h_gd, h2h_gf, tiebreak: str):
     """Finishing order (best first) for every simulated season, as team indices.
 
     `tiebreak` selects the league's real rule for clubs level on points:
       "gd"  -> goal difference, then goals for   (PL, Bundesliga, Ligue 1)
-      "h2h" -> head-to-head points, then head-to-head goal difference, then
-               overall goal difference           (La Liga)
+      "h2h" -> among clubs level on points, a MINI-LEAGUE of only their meetings:
+               head-to-head points, then h2h goal difference, then h2h goals for,
+               then overall goal difference, then overall goals for   (La Liga)
 
-    The h2h pass is a bubble over ADJACENT tied pairs, repeated until settled.
-    That is exact for the two-club ties that dominate; a 3+-club tie is resolved
-    pairwise rather than by a full mini-league table, which can differ in rare
-    cyclic cases (A beat B beat C beat A).
+    The h2h branch resolves each maximal run of clubs tied on points by their true
+    mini-table (points each took off the OTHERS IN THE GROUP), which is exact for
+    groups of any size -- unlike an adjacent-pairwise comparison, which mis-ranks
+    even non-cyclic 3-club ties (A beat B, B beat C, A drew C: A tops the mini-table
+    but a pairwise pass cannot lift A above C).
     """
     n, T = pts.shape
     # base order: points, then GD, then GF (packed into one sortable key)
     key = pts.astype(np.int64) * 10**7 + (gd.astype(np.int64) + 500) * 10**3 + gf
     order = np.argsort(-key, axis=1, kind="stable")
-    if tiebreak != "h2h" or T < 2:
+    if tiebreak != "h2h":
         return order
 
-    rows = np.arange(n)
-    for _ in range(T):                     # enough passes to settle any tied run
-        swapped = False
-        for p in range(T - 1):
-            i, j = order[:, p], order[:, p + 1]
-            level = pts[rows, i] == pts[rows, j]        # only clubs tied on points
-            if not level.any():
-                continue
-            hp_i, hp_j = h2h_pts[i, j, rows], h2h_pts[j, i, rows]
-            hg_i = h2h_gd[i, j, rows]
-            # j outranks i if it won the h2h points, or level there and better h2h GD
-            better = (hp_j > hp_i) | ((hp_j == hp_i) & (hg_i < 0))
-            swap = level & better
-            if swap.any():
-                order[swap, p], order[swap, p + 1] = order[swap, p + 1], order[swap, p]
-                swapped = True
-        if not swapped:
-            break
+    # Re-rank each run of clubs level on points by their mini-league. Only the
+    # (rare) tied runs do any work; most positions are already settled by points.
+    for s in range(n):
+        o = order[s]
+        p0 = 0
+        while p0 < T:
+            p1 = p0 + 1
+            while p1 < T and pts[s, o[p1]] == pts[s, o[p0]]:
+                p1 += 1
+            if p1 - p0 >= 2:               # a genuine tie on points
+                group = list(o[p0:p1])
+                def mini_key(t, grp=group, s=s):
+                    hp = sum(int(h2h_pts[t, u, s]) for u in grp if u != t)
+                    hgd = sum(int(h2h_gd[t, u, s]) for u in grp if u != t)
+                    hgf = sum(int(h2h_gf[t, u, s]) for u in grp if u != t)
+                    return (hp, hgd, hgf, int(gd[s, t]), int(gf[s, t]))
+                order[s, p0:p1] = sorted(group, key=mini_key, reverse=True)
+            p0 = p1
     return order
 
 
 def _h2h_tables(fixtures_idx, samples, T: int, n: int):
-    """h2h_pts/h2h_gd [T,T,n]: points and goal difference team i took off team j."""
+    """h2h_* [T,T,n]: points, goal difference, and goals FOR that team i took off
+    team j (summed over their meetings), per simulated season."""
     h2h_pts = np.zeros((T, T, n), dtype=np.int16)
     h2h_gd = np.zeros((T, T, n), dtype=np.int16)
+    h2h_gf = np.zeros((T, T, n), dtype=np.int16)
     for (h, a), (hg, ag) in zip(fixtures_idx, samples):
         h2h_pts[h, a] += np.where(hg > ag, 3, np.where(hg == ag, 1, 0)).astype(np.int16)
         h2h_pts[a, h] += np.where(ag > hg, 3, np.where(hg == ag, 1, 0)).astype(np.int16)
         diff = (hg - ag).astype(np.int16)
         h2h_gd[h, a] += diff
         h2h_gd[a, h] -= diff
-    return h2h_pts, h2h_gd
+        h2h_gf[h, a] += hg.astype(np.int16)
+        h2h_gf[a, h] += ag.astype(np.int16)
+    return h2h_pts, h2h_gd, h2h_gf
 
 
 def simulate_season(model, played: pd.DataFrame, remaining: pd.DataFrame,
@@ -180,12 +186,13 @@ def simulate_season(model, played: pd.DataFrame, remaining: pd.DataFrame,
             hg = np.full(n, int(m["home_goals"]), dtype=np.int32)
             ag = np.full(n, int(m["away_goals"]), dtype=np.int32)
             fixtures_idx.append((h, a)); samples.append((hg, ag))
-        h2h_pts, h2h_gd = _h2h_tables(fixtures_idx, samples, T, n)
+        h2h_pts, h2h_gd, h2h_gf = _h2h_tables(fixtures_idx, samples, T, n)
     else:
-        h2h_pts = h2h_gd = None
+        h2h_pts = h2h_gd = h2h_gf = None
 
     gd = gf - ga
-    order = order_teams(pts, gd, gf, h2h_pts, h2h_gd, getattr(lg, "tiebreak", "gd"))
+    order = order_teams(pts, gd, gf, h2h_pts, h2h_gd, h2h_gf,
+                        getattr(lg, "tiebreak", "gd"))
     position = np.empty_like(order)
     rows = np.arange(n)[:, None]
     position[rows, order] = np.arange(T)[None, :]          # 0-based finishing place

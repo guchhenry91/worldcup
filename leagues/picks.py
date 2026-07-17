@@ -39,7 +39,7 @@ def lock_pick(log: dict, match_id, pick: str, confidence: int,
     if match_id in log:
         return log[match_id]
 
-    now = _utc(now if now is not None else pd.Timestamp.utcnow())
+    now = _utc(now if now is not None else pd.Timestamp.now("UTC"))
     kickoff = _utc(kickoff)
     late_by = (now - kickoff).total_seconds() / 3600.0
 

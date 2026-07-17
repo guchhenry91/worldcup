@@ -20,6 +20,76 @@
     "pick": "Manchester United",
     "tainted": false
   },
+  "2026:1": {
+    "confidence": 5,
+    "kickoff": "2026-08-21T19:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Arsenal",
+    "tainted": false
+  },
+  "2026:10": {
+    "confidence": 1,
+    "kickoff": "2026-08-24T19:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Chelsea",
+    "tainted": false
+  },
+  "2026:2": {
+    "confidence": 3,
+    "kickoff": "2026-08-22T11:30:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Manchester United",
+    "tainted": false
+  },
+  "2026:3": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Everton",
+    "tainted": false
+  },
+  "2026:4": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Sunderland",
+    "tainted": false
+  },
+  "2026:5": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T14:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Nottingham Forest",
+    "tainted": false
+  },
+  "2026:6": {
+    "confidence": 2,
+    "kickoff": "2026-08-22T16:30:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Brentford",
+    "tainted": false
+  },
+  "2026:7": {
+    "confidence": 2,
+    "kickoff": "2026-08-23T13:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Brighton",
+    "tainted": false
+  },
+  "2026:8": {
+    "confidence": 3,
+    "kickoff": "2026-08-23T13:00:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Manchester City",
+    "tainted": false
+  },
+  "2026:9": {
+    "confidence": 1,
+    "kickoff": "2026-08-23T15:30:00+00:00",
+    "locked_at": "2026-07-17T17:07:36.743769+00:00",
+    "pick": "Liverpool",
+    "tainted": false
+  },
   "3": {
     "confidence": 1,
     "kickoff": "2026-08-22T14:00:00+00:00",

@@ -193,7 +193,14 @@ class LeagueModel:
             pd.DataFrame({"team": d["away"].values, "xgf": d["away_xg"].values,
                           "xga": d["home_xg"].values, "w": wd}),
         ])
+        # No usable xG history (every match after ref, or a degenerate all-zero
+        # window): skip the xG channel rather than divide by a zero weight-sum or
+        # a zero league average (which would make log(f/avg) blow up to inf).
+        if rows["w"].sum() <= 0:
+            return {}, {}
         avg = np.average(rows["xgf"], weights=rows["w"])
+        if avg <= 0:
+            return {}, {}
         att, dfn = {}, {}
         for team, g in rows.groupby("team"):
             f = np.average(g["xgf"], weights=g["w"])

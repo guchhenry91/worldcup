@@ -111,13 +111,19 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
 
         # Penalties are a TEAM property: take them out of the open-play budget
         # and hand them to exactly one player, rather than smearing them across
-        # every attacker.
+        # every attacker. Only reserve the penalty mass if the named taker is
+        # actually in this squad -- otherwise it would be subtracted from open
+        # play and handed to nobody, so the team's players would sum below
+        # lam_team and every scorer would be understated.
         taker = pen_taker.get(team)
-        lam_pen = float(exp_pens.get(team, 0.0)) * PEN_CONVERSION
+        has_taker = bool((squad["player"] == taker).any()) if taker else False
+        lam_pen = float(exp_pens.get(team, 0.0)) * PEN_CONVERSION if has_taker else 0.0
         lam_pen = min(lam_pen, max(lam_team - 1e-6, 0.0))
         lam_open = max(lam_team - lam_pen, 0.0)
 
         total_raw = float(squad["raw"].sum())
+        # total_raw > 0 whenever any player has minutes (rate90 is shrunk toward a
+        # strictly positive prior), but guard the division regardless.
         scale = (lam_open / total_raw) if total_raw > 0 else 0.0
         factor = float(opp_shot_factor.get(team, 1.0))
 

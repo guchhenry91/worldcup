@@ -13,6 +13,69 @@
     "pick": "Monaco",
     "tainted": false
   },
+  "2026:1": {
+    "confidence": 3,
+    "kickoff": "2026-08-23T13:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Lille",
+    "tainted": false
+  },
+  "2026:2": {
+    "confidence": 2,
+    "kickoff": "2026-08-23T15:15:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Monaco",
+    "tainted": false
+  },
+  "2026:3": {
+    "confidence": 2,
+    "kickoff": "2026-08-22T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Brest",
+    "tainted": false
+  },
+  "2026:4": {
+    "confidence": 4,
+    "kickoff": "2026-08-22T15:15:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Lens",
+    "tainted": false
+  },
+  "2026:5": {
+    "confidence": 3,
+    "kickoff": "2026-08-21T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Marseille",
+    "tainted": false
+  },
+  "2026:6": {
+    "confidence": 2,
+    "kickoff": "2026-08-22T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Nice",
+    "tainted": false
+  },
+  "2026:7": {
+    "confidence": 4,
+    "kickoff": "2026-08-23T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Paris SG",
+    "tainted": false
+  },
+  "2026:8": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Toulouse",
+    "tainted": false
+  },
+  "2026:9": {
+    "confidence": 1,
+    "kickoff": "2026-08-22T18:45:00+00:00",
+    "locked_at": "2026-07-17T17:08:58.997705+00:00",
+    "pick": "Troyes",
+    "tainted": false
+  },
   "3": {
     "confidence": 2,
     "kickoff": "2026-08-22T18:45:00+00:00",

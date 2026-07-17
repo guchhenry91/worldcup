@@ -12,12 +12,17 @@ HALF_LIFE_DAYS = np.log(2) / XI_PER_DAY   # ~231 days
 
 
 def decay_weights(dates: pd.Series, ref: pd.Timestamp, xi: float = XI_PER_DAY) -> pd.Series:
-    """weight = exp(-xi * days_before_ref), clipped at 0 for future matches."""
+    """weight = exp(-xi * days_before_ref); a match AFTER ref gets weight 0.
+
+    Future matches must be excluded, not down-weighted: clipping the age to 0 (the
+    old behaviour) gave them exp(0)=1, the MAXIMUM weight, which would let a fit
+    with an explicit past `ref` train on future results at full strength -- a
+    lookahead leak."""
     dates = pd.to_datetime(dates)
     if getattr(dates.dt, "tz", None) is not None:
         dates = dates.dt.tz_localize(None)
     if getattr(ref, "tzinfo", None) is not None:
         ref = ref.tz_localize(None)
     age_days = (ref - dates).dt.total_seconds() / 86400.0
-    age_days = age_days.clip(lower=0)
-    return np.exp(-xi * age_days)
+    w = np.exp(-xi * age_days.clip(lower=0))
+    return w.where(age_days >= 0, 0.0)          # zero out anything after ref

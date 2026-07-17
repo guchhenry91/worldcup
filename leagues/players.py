@@ -186,7 +186,11 @@ def team_shot_context(league: str, recent_seasons: int = 2) -> dict:
         # typical penalty rate. No shot-volume tilt, but the league still builds.
         print(f"WARNING: shot context unavailable for {league} "
               f"({type(exc).__name__}); using neutral opponent factors")
-        return {"concede_factor": {}, "pens_per_team_match": 0.12}
+        # pens_per_team_match MUST be 0 here: without shot events fetch_player_logs
+        # also degrades and identifies no penalty taker, so any penalty budget we
+        # subtract from open play would be assigned to nobody, leaving each team's
+        # player goal lambdas summing below the team lambda (deflated scorers).
+        return {"concede_factor": {}, "pens_per_team_match": 0.0}
     ev["team"] = [canonical(t, league) for t in ev["team"]]
 
     # shots conceded = shots taken by the OTHER team in the same game

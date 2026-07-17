@@ -31,6 +31,10 @@ const COMPETITIONS = [
 
 const pct = (n, d = 0) => `${Number(n).toFixed(d)}%`;
 const num = (n, d = 1) => Number(n).toFixed(d);
+// Escape any string interpolated into innerHTML. The data is trusted, but a club
+// or player name containing & < > ' " would otherwise corrupt the markup.
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g,
+  c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 function el(tag, cls, html) {
   const e = document.createElement(tag);
   if (cls) e.className = cls;
@@ -49,7 +53,7 @@ function recordChip(rec) {
 function propList(props) {
   return props.map(p => `
     <li class="${p.penalty_taker ? 'pen' : ''}">
-      <span class="who">${p.player}</span>
+      <span class="who">${esc(p.player)}</span>
       <span class="pct">${num(p.anytime_pct)}%</span>
       <span class="shots">${num(p.exp_shots)} shots · ${Math.round(p.p_shots_2plus)}% 2+ · ${Math.round(p.p_sot_1plus)}% on target</span>
     </li>`).join('');
@@ -82,9 +86,9 @@ function renderLeague(app, data, clubs, label) {
         ? `<div class="side-label">${team} — likely scorers</div><ul class="props">${propList(props)}</ul>`
         : `<div class="side-label">${team} — likely scorers</div><p class="missing">No player data: newly promoted, so they have no top-flight record yet.</p>`;
       card.innerHTML = `
-        <div class="mw">${when} · ${m.venue || ''}</div>
-        <header><span class="team">${m.home}</span><span class="score">${p.score}</span><span class="team away">${m.away}</span></header>
-        <div class="pick">Pick: <strong>${p.pick}</strong> <span class="conf">${'★'.repeat(p.confidence)}</span></div>
+        <div class="mw">${when} · ${esc(m.venue || '')}</div>
+        <header><span class="team">${esc(m.home)}</span><span class="score">${esc(p.score)}</span><span class="team away">${esc(m.away)}</span></header>
+        <div class="pick">Pick: <strong>${esc(p.pick)}</strong> <span class="conf">${'★'.repeat(p.confidence)}</span></div>
         <div class="probs"><span><b>${pct(100 * p.p_home)}</b></span><span>draw <b>${pct(100 * p.p_draw)}</b></span><span><b>${pct(100 * p.p_away)}</b></span></div>
         ${mkt}
         ${side(m.home, homeProps)}
@@ -103,7 +107,7 @@ function renderLeague(app, data, clubs, label) {
     const rel = i >= data.table.length - 3 ? 'rel' : '', ucl = i < 4 ? 'ucl' : '';
     return `<tr class="${rel} ${ucl}">
       <td class="num">${i + 1}</td>
-      <td><span class="dot" style="background:${colour(t.team)}"></span>${t.team}</td>
+      <td><span class="dot" style="background:${colour(t.team)}"></span>${esc(t.team)}</td>
       <td class="num">${num(t.proj_points)}</td>
       <td class="barcell"><span class="bar" style="--pct:${Math.min(t.title_pct, 100)}%"></span><span>${num(t.title_pct)}%</span></td>
       <td class="num">${num(t.top4_pct)}%</td>
@@ -143,10 +147,10 @@ function renderSeason(app, data) {
       }
       return `<tr>
         <td class="fx-d">${when}</td>
-        <td class="fx-t">${m.home}</td>
+        <td class="fx-t">${esc(m.home)}</td>
         <td class="fx-s">${score}</td>
-        <td class="fx-t away">${m.away}</td>
-        <td class="fx-p">${m.pick ? `<span class="pk">${m.pick}</span>` : ''}${mark}</td>
+        <td class="fx-t away">${esc(m.away)}</td>
+        <td class="fx-p">${m.pick ? `<span class="pk">${esc(m.pick)}</span>` : ''}${mark}</td>
       </tr>`;
     }).join('');
     return `<details ${w === current ? 'open' : ''}>
@@ -238,12 +242,12 @@ function renderWC(app, data) {
       if (m.status === 'final' && m.result) {
         const correct = m.result.winner === m.pick;
         res = `<div class="res ${correct ? 'correct' : 'wrong'}"><span class="tick">${correct ? '✓' : '✗'}</span>
-          ${m.result.home} ${m.result.home_goals}–${m.result.away_goals} ${m.result.away} · through: <b>${m.result.winner}</b></div>`;
+          ${esc(m.result.home)} ${m.result.home_goals}–${m.result.away_goals} ${esc(m.result.away)} · through: <b>${esc(m.result.winner)}</b></div>`;
       }
       card.innerHTML = `
-        <div class="ko-when">${m.round} · ${when} · ${m.city || ''}</div>
-        <header><span class="team">${m.home}</span><span class="score">${m.score || ''}</span><span class="team away">${m.away}</span></header>
-        <div class="pick">Pick: <strong>${m.pick}</strong></div>
+        <div class="ko-when">${esc(m.round)} · ${when} · ${esc(m.city || '')}</div>
+        <header><span class="team">${esc(m.home)}</span><span class="score">${esc(m.score || '')}</span><span class="team away">${esc(m.away)}</span></header>
+        <div class="pick">Pick: <strong>${esc(m.pick)}</strong></div>
         ${res}`;
       grid.append(card);
     }
@@ -257,7 +261,7 @@ function renderWC(app, data) {
     const wrap = el('div', 'odds-wrap glass');
     wrap.innerHTML = `<table class="odds-table">
       <thead><tr><th>Team</th><th>Reach final</th><th>Champion</th></tr></thead>
-      <tbody>${top.map(o => `<tr><td>${o.team}</td><td>${pct(100 * o.final)}</td><td><b>${pct(100 * o.champion)}</b></td></tr>`).join('')}</tbody></table>`;
+      <tbody>${top.map(o => `<tr><td>${esc(o.team)}</td><td>${pct(100 * o.final)}</td><td><b>${pct(100 * o.champion)}</b></td></tr>`).join('')}</tbody></table>`;
     app.append(wrap);
   }
 
@@ -270,8 +274,8 @@ function renderWC(app, data) {
     for (const [g, teams] of Object.entries(data.standings)) {
       const box = el('div', 'group glass');
       const rows = teams.map((t, i) => `<tr class="${i < 2 ? 'adv' : ''}">
-        <td>${t.team}</td><td class="n">${num(t.exp_pts, 0)}</td><td class="n">${t.gd > 0 ? '+' : ''}${t.gd}</td></tr>`).join('');
-      box.innerHTML = `<h3>Group ${g}</h3><table><tbody>${rows}</tbody></table>`;
+        <td>${esc(t.team)}</td><td class="n">${num(t.exp_pts, 0)}</td><td class="n">${t.gd > 0 ? '+' : ''}${t.gd}</td></tr>`).join('');
+      box.innerHTML = `<h3>Group ${esc(g)}</h3><table><tbody>${rows}</tbody></table>`;
       groups.append(box);
     }
     app.append(groups);
@@ -300,15 +304,22 @@ async function route() {
   const comp = COMPETITIONS.find(c => c.key === activeKey());
   const app = document.getElementById('app');
   app.innerHTML = '<p class="sub">Loading…</p>';
+  let data, clubs;
   try {
-    const data = await fetch(comp.data).then(r => r.json());
-    const clubs = comp.clubs ? await fetch(comp.clubs).then(r => r.json()) : {};
-    app.innerHTML = '';
-    if (comp.kind === 'cup') renderWC(app, data);
-    else renderLeague(app, data, clubs, comp.label);
+    data = await fetch(comp.data).then(r => r.json());
+    clubs = comp.clubs ? await fetch(comp.clubs).then(r => r.json()) : {};
   } catch (err) {
-    app.innerHTML = `<p class="sub">Could not load ${comp.label}.</p>`;
+    if (activeKey() === comp.key) app.innerHTML = `<p class="sub">Could not load ${comp.label}.</p>`;
+    return;
   }
+  // The user may have switched competitions while this fetch was in flight; if so,
+  // a newer route() already owns the page — don't clobber it with stale content.
+  if (activeKey() !== comp.key) return;
+  app.innerHTML = '';
+  // Render errors are NOT caught here: a code bug should surface in the console,
+  // not be silently disguised as a "Could not load" network message.
+  if (comp.kind === 'cup') renderWC(app, data);
+  else renderLeague(app, data, clubs, comp.label);
 }
 
 window.addEventListener('hashchange', route);

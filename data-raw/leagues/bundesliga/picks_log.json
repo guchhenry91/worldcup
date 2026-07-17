@@ -13,6 +13,69 @@
     "pick": "Leverkusen",
     "tainted": false
   },
+  "2026:1": {
+    "confidence": 4,
+    "kickoff": "2026-08-28T18:30:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Bayern Munich",
+    "tainted": false
+  },
+  "2026:2": {
+    "confidence": 4,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Leverkusen",
+    "tainted": false
+  },
+  "2026:3": {
+    "confidence": 1,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "FC Koln",
+    "tainted": false
+  },
+  "2026:4": {
+    "confidence": 1,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Union Berlin",
+    "tainted": false
+  },
+  "2026:5": {
+    "confidence": 4,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Mainz",
+    "tainted": false
+  },
+  "2026:6": {
+    "confidence": 2,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Augsburg",
+    "tainted": false
+  },
+  "2026:7": {
+    "confidence": 2,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Freiburg",
+    "tainted": false
+  },
+  "2026:8": {
+    "confidence": 3,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "RB Leipzig",
+    "tainted": false
+  },
+  "2026:9": {
+    "confidence": 4,
+    "kickoff": "2026-08-28T00:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:31.551644+00:00",
+    "pick": "Dortmund",
+    "tainted": false
+  },
   "3": {
     "confidence": 1,
     "kickoff": "2026-08-28T00:00:00+00:00",

@@ -41,6 +41,10 @@ def build_matches(league: str) -> pd.DataFrame:
         if missing_home.any():
             shifted = home_x.copy()
             shifted["day"] = shifted["day"] + pd.Timedelta(days=shift)
+            # drop duplicate (day, home) keys first: a left-merge against a frame
+            # with dup keys returns MORE rows than the left side, and the
+            # positional index assignment below would then raise a length mismatch.
+            shifted = shifted.drop_duplicates(["day", "home"])
             candidate = out.loc[missing_home, ["day", "home"]].merge(
                 shifted, on=["day", "home"], how="left"
             )
@@ -53,6 +57,7 @@ def build_matches(league: str) -> pd.DataFrame:
         if missing_away.any():
             shifted = away_x.copy()
             shifted["day"] = shifted["day"] + pd.Timedelta(days=shift)
+            shifted = shifted.drop_duplicates(["day", "away"])
             candidate = out.loc[missing_away, ["day", "away"]].merge(
                 shifted, on=["day", "away"], how="left"
             )

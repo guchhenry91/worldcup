@@ -56,7 +56,7 @@ def build(league: str = "PL") -> dict:
         add["date"] = pd.to_datetime(add["date"]).dt.tz_localize(None)
         matches = pd.concat([matches, add], ignore_index=True)
 
-    now = pd.Timestamp.utcnow()
+    now = pd.Timestamp.now("UTC")           # utcnow() is deprecated in pandas 3+
     ref = now.tz_localize(None) if now.tzinfo else now
     squad_teams = sorted(set(fx["home"]) | set(fx["away"]))
 
@@ -105,6 +105,11 @@ def build(league: str = "PL") -> dict:
 
     log_path = PICKS_DIR / lg.key.lower() / "picks_log.json"
     log = picks.load_log(log_path)
+    # fixturedownload MatchNumbers reset to 1..N every season, but picks_log
+    # persists across seasons, so namespace each entry by the season to stop next
+    # season's fixture #1 inheriting (and being graded against) this season's pick.
+    season_tag = lg.fixture_slug.rsplit("-", 1)[-1]
+    log_key = lambda mid: f"{season_tag}:{mid}"
 
     # Live bookmaker lines for upcoming fixtures (empty off-season -> every
     # match gets market: None; the card renders fine either way).
@@ -113,7 +118,10 @@ def build(league: str = "PL") -> dict:
     if remaining.empty:
         upcoming = remaining
     else:
-        next_round = int(remaining["round"].min())
+        # The current matchweek is the round of the SOONEST unplayed fixture, not
+        # the lowest round number: a single postponed early-round game would
+        # otherwise make min() return that stale round and hide the imminent week.
+        next_round = int(remaining.sort_values("date").iloc[0]["round"])
         upcoming = remaining[remaining["round"] < next_round + MATCHWEEKS_AHEAD]
 
     missing_squads = sorted({t for t in squad_teams
@@ -125,11 +133,17 @@ def build(league: str = "PL") -> dict:
         pred = model.predict(home, away)
         probs = {home: pred["p_home"], "Draw": pred["p_draw"], away: pred["p_away"]}
         pick = max(probs, key=probs.get)
-        pick_type = "home" if pick == home else "away" if pick == away else "draw"
 
-        entry = picks.lock_pick(log, m["match_id"], pick=pick,
+        entry = picks.lock_pick(log, log_key(m["match_id"]), pick=pick,
                                 confidence=_confidence(probs[pick]),
                                 kickoff=m["date"], now=now)
+        # Everything the card shows must describe the FROZEN pick, not the fresh
+        # argmax: on a re-run after the model flips, entry["pick"] is still the
+        # locked side, so pick_type and the market edge below must be derived from
+        # it -- otherwise the card shows one team but grades/edges another.
+        frozen = entry["pick"]
+        pick_type = ("home" if frozen == home
+                     else "away" if frozen == away else "draw")
 
         # a player's shooting opportunity scales with how many shots his OPPONENT
         # concedes relative to the league average
@@ -172,14 +186,15 @@ def build(league: str = "PL") -> dict:
     # Grade every played fixture we had locked a pick for, against the FROZEN pick.
     graded = []
     for _, m in played.iterrows():
-        entry = log.get(str(m["match_id"]))
+        k = log_key(m["match_id"])
+        entry = log.get(k)
         if not entry:
             continue
         g = picks.grade(entry, {"home": m["home"], "away": m["away"],
                                 "home_goals": m["home_goals"],
                                 "away_goals": m["away_goals"]})
-        log[str(m["match_id"])].update({"graded": g["graded"], "void": g["void"]})
-        graded.append(log[str(m["match_id"])])
+        log[k].update({"graded": g["graded"], "void": g["void"]})
+        graded.append(log[k])
 
     picks.save_log(log, log_path)
 
@@ -188,7 +203,7 @@ def build(league: str = "PL") -> dict:
     # bloat the payload; the props live on the current matchweek's cards only.
     season = []
     for _, m in fx.sort_values(["round", "date"]).iterrows():
-        entry = log.get(str(m["match_id"])) or {}
+        entry = log.get(log_key(m["match_id"])) or {}
         played_row = bool(m["played"])
         season.append({
             "id": int(m["match_id"]),
@@ -207,6 +222,12 @@ def build(league: str = "PL") -> dict:
         p = PICKS_DIR / path
         return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
+    # Props gate is stored per league (PL in props_report.json, others suffixed);
+    # reading the bare PL file for every league published PL's props numbers on
+    # La Liga / Bundesliga / Ligue 1 pages.
+    props_file = ("props_report.json" if league == "PL"
+                  else f"props_report_{league.lower()}.json")
+
     return {
         "league": lg.name,
         "updated": datetime.now(timezone.utc).isoformat(),
@@ -215,7 +236,7 @@ def build(league: str = "PL") -> dict:
         "season": season,
         "table": table.to_dict(orient="records"),
         "backtest": _read("backtest_report.json").get(league, {}),
-        "props_backtest": _read("props_report.json"),
+        "props_backtest": _read(props_file),
         "missing_squads": missing_squads,
         "data_warnings": warnings,
     }
@@ -251,11 +272,17 @@ def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     leagues = [a.upper() for a in argv] or list(FILE_FOR)
     OUT.mkdir(parents=True, exist_ok=True)
+    attempted = ok = 0
     for league in leagues:
         if league not in FILE_FOR:
             print(f"skip {league!r}: unknown league; known {list(FILE_FOR)}")
             continue
-        _publish_one(league, FILE_FOR[league])
+        attempted += 1
+        ok += _publish_one(league, FILE_FOR[league])
+    # If EVERY league failed, raise so the ops jobs abort the deploy rather than
+    # shipping stale files (their try/except catches this).
+    if attempted and ok == 0:
+        raise RuntimeError(f"all {attempted} league publish(es) failed; nothing written")
 
 
 if __name__ == "__main__":

@@ -20,6 +20,76 @@
     "pick": "Ath Madrid",
     "tainted": false
   },
+  "2026:1": {
+    "confidence": 2,
+    "kickoff": "2026-08-15T07:30:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Alaves",
+    "tainted": false
+  },
+  "2026:10": {
+    "confidence": 2,
+    "kickoff": "2026-08-25T09:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Valencia",
+    "tainted": false
+  },
+  "2026:2": {
+    "confidence": 5,
+    "kickoff": "2026-08-19T09:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Ath Madrid",
+    "tainted": false
+  },
+  "2026:3": {
+    "confidence": 2,
+    "kickoff": "2026-08-16T09:30:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Celta",
+    "tainted": false
+  },
+  "2026:4": {
+    "confidence": 1,
+    "kickoff": "2026-08-17T09:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Elche",
+    "tainted": false
+  },
+  "2026:5": {
+    "confidence": 2,
+    "kickoff": "2026-08-16T07:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Espanol",
+    "tainted": false
+  },
+  "2026:6": {
+    "confidence": 4,
+    "kickoff": "2026-08-27T09:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Barcelona",
+    "tainted": false
+  },
+  "2026:7": {
+    "confidence": 2,
+    "kickoff": "2026-08-16T05:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Villarreal",
+    "tainted": false
+  },
+  "2026:8": {
+    "confidence": 4,
+    "kickoff": "2026-08-26T09:00:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Real Madrid",
+    "tainted": false
+  },
+  "2026:9": {
+    "confidence": 1,
+    "kickoff": "2026-08-15T09:30:00+00:00",
+    "locked_at": "2026-07-17T17:08:08.713424+00:00",
+    "pick": "Sevilla",
+    "tainted": false
+  },
   "3": {
     "confidence": 2,
     "kickoff": "2026-08-16T09:30:00+00:00",
