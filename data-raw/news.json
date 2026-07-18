@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17",
+  "updated": "2026-07-18",
   "teams": {
     "Argentina": {
       "form": "WW",
@@ -87,7 +87,8 @@
         "Messi hat-trick vs Algeria (3-0) in the Group J opener; his first WC hat-trick and ties the all-time WC goals record.",
         "Messi scored twice vs Austria (2-0) to set new all-time WC scoring record (18 goals total). Montiel missed Austria match with quad strain; targeting return vs Jordan June 27.",
         "2026-07-02 pre-match vs Cape Verde (R32, July 3, Miami): Romero back in full training after a knee knock, expected to start. No other fresh concerns.",
-        "2026-07-15 pre-match vs England (semi-final, Atlanta): Messi, Romero and Paredes all passed fit; no suspensions for Argentina."
+        "2026-07-15 pre-match vs England (semi-final, Atlanta): Messi, Romero and Paredes all passed fit; no suspensions for Argentina.",
+        "2026-07-18 pre-match vs Spain (Final, July 19, East Rutherford): no new injury concerns from the semi-final win over England; squad reported fully fit."
       ]
     },
     "France": {
@@ -178,7 +179,8 @@
         "2026-07-03 pre-match vs Paraguay (R16, July 4, Philadelphia): no fresh injury concerns; Saliba continues to manage his back issue but is fit to start.",
         "2026-07-14 pre-match vs Spain (SF, Dallas): confirmed XI unchanged from the QF despite fitness scares — Mbappe (ankle), Saliba (back) and Upamecano (foot) all passed fit; Tchouameni (thigh) not in the starting XI, Kone/Rabiot start in midfield.",
         "2026-07-14 OFFICIAL LINEUPS (SF vs Spain, Dallas): France go Maignan; Kounde, Upamecano, Saliba, Digne; Tchouameni, Rabiot; Dembele, Olise, Barcola; Mbappe. Tchouameni starts ahead of Kone (benched); Barcola preferred to Doue. Spain unchanged from QF: Simon; Porro, Cubarsi, Laporte, Cucurella; Pedri, Rodri; Yamal, Olmo, Baena; Oyarzabal (Merino among subs).",
-        "2026-07-17 pre-match vs England (third-place playoff, July 18, Miami): Saliba (back) ruled OUT after going down in the SF, Konate/Lacroix the likely centre-back pair; backup keeper Brice Samba (calf) also unavailable. Deschamps expected to rotate heavily — Cherki, Kante tipped to come in."
+        "2026-07-17 pre-match vs England (third-place playoff, July 18, Miami): Saliba (back) ruled OUT after going down in the SF, Konate/Lacroix the likely centre-back pair; backup keeper Brice Samba (calf) also unavailable. Deschamps expected to rotate heavily — Cherki, Kante tipped to come in.",
+        "2026-07-18 matchday (third-place playoff vs England, Miami): Saliba confirmed out, Konate and Lacroix start at centre-back; predicted XI has Mbappe leading the line with Cherki, Dembele and Barcola in support, Kante alongside Kone in midfield."
       ]
     },
     "Spain": {
@@ -198,7 +200,7 @@
         {
           "player": "Lamine Yamal",
           "status": "fit",
-          "note": "Cleared fit and available (returned to full training); Yamal set to feature off the bench vs Cape Verde"
+          "note": "Left thigh knock from the SF win over France sparked concern after missing training July 16 (wore a bandage), but expected to be fine and start the Final vs Argentina (July 19)"
         },
         {
           "player": "Nico Williams",
@@ -229,6 +231,11 @@
           "player": "Victor Munoz",
           "status": "out",
           "note": "Suffered a significant calf muscle setback on his return path from the earlier hamstring issue; unavailable for the SF vs France (July 14)"
+        },
+        {
+          "player": "Pedro Porro",
+          "status": "fit",
+          "note": "Dealing with muscle tightness ahead of the Final vs Argentina (July 19); De la Fuente says it does not leave him in doubt"
         }
       ],
       "key_players": [
@@ -267,7 +274,8 @@
         "Concern raised over chance creation after generating just four chances in the 1-1 warm-up draw with Egypt.",
         "2026-07-02: Nico Williams (adductor) and Yeremy Pino (AC joint sprain) both ruled out for R32 vs Austria; Alex Baena and Lamine Yamal expected to carry the width.",
         "2026-07-02: Victor Munoz (hamstring) a doubt but improved after partial training; Alex Baena, Oyarzabal and fit-again Lamine Yamal expected to start the front three vs Austria.",
-        "2026-07-14 pre-match vs France (SF, Dallas): confirmed XI is Simon; Porro, Cubarsi, Laporte, Cucurella; Pedri, Rodri; Yamal, Olmo, Baena; Oyarzabal. Nico Williams fully fit but starts on the bench; Pino (shoulder) and Munoz (calf) both unavailable."
+        "2026-07-14 pre-match vs France (SF, Dallas): confirmed XI is Simon; Porro, Cubarsi, Laporte, Cucurella; Pedri, Rodri; Yamal, Olmo, Baena; Oyarzabal. Nico Williams fully fit but starts on the bench; Pino (shoulder) and Munoz (calf) both unavailable.",
+        "2026-07-18 pre-match vs Argentina (Final, July 19, East Rutherford): Yamal (thigh) and Porro (muscle tightness) both expected to be fine and start; Pino remains the only tournament-ending absentee."
       ]
     },
     "England": {
@@ -296,8 +304,8 @@
         },
         {
           "player": "Reece James",
-          "status": "doubtful",
-          "note": "Muscle concern ahead of the third-place playoff vs France (July 18); doubtful, Djed Spence the likely deputy at right-back if he's out"
+          "status": "out",
+          "note": "Muscle issue from the SF loss to Argentina rules him out of the third-place playoff vs France (July 18); Djed Spence starts at right-back"
         },
         {
           "player": "Bukayo Saka",
@@ -358,7 +366,8 @@
         "2026-07-01 pre-match vs DR Congo: Reece James (hamstring) and Jarell Quansah (ankle) both out; Djed Spence starts at right-back. Tuchel picks Noni Madueke over Bukayo Saka and Marcus Rashford over Anthony Gordon in the front three behind Kane.",
         "2026-07-03 pre-match vs Mexico (R16, July 5): Declan Rice played through 'terrible pain' late in the DR Congo win but has told Tuchel he can continue; Harry Kane came through unscathed and leads the line again.",
         "2026-07-15 pre-match vs Argentina (semi-final, Atlanta): Henderson out for the tournament (wrist surgery); Rice recovered from stomach bug and fit to start; Saka fitness-managed, likely second-half option again; Quansah serves final suspension match.",
-        "2026-07-17 pre-match vs France (third-place playoff, July 18, Miami): Quansah's suspension is served, back available; Reece James (muscle) doubtful, Spence the deputy option; Tuchel expected to make widespread changes to manage fatigue and give fringe players minutes."
+        "2026-07-17 pre-match vs France (third-place playoff, July 18, Miami): Quansah's suspension is served, back available; Reece James (muscle) doubtful, Spence the deputy option; Tuchel expected to make widespread changes to manage fatigue and give fringe players minutes.",
+        "2026-07-18 matchday (third-place playoff vs France, Miami): Reece James confirmed OUT, Djed Spence starts at right-back; predicted XI: Pickford; Spence, Konsa, Guehi, O'Reilly; Rice, Anderson; Rogers, Bellingham, Gordon; Kane."
       ]
     },
     "Brazil": {

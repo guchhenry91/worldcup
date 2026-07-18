@@ -978,15 +978,15 @@
   "home": "Spain",
   "away": "Argentina",
   "score": "2-1",
-  "locked_at": "2026-07-18T09:23:28+00:00"
+  "locked_at": "2026-07-18T09:29:08+00:00"
  },
  "103": {
   "pick": "France",
-  "p_home": 0.574,
-  "p_away": 0.426,
+  "p_home": 0.578,
+  "p_away": 0.422,
   "home": "France",
   "away": "England",
   "score": "2-1",
-  "locked_at": "2026-07-18T09:23:28+00:00"
+  "locked_at": "2026-07-18T09:29:08+00:00"
  }
 }
