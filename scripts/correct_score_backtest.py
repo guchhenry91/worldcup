@@ -83,15 +83,47 @@ def run(league="PL", xi=0.003, xg_weight=0.75, min_train=760, step_days=7):
     r = pd.DataFrame(rows)
     if r.empty:
         raise SystemExit("no matches scored")
+
+    # Exact-hit rate is a SATURATED, noise-dominated metric: at ~12% on ~1.1k
+    # matches one standard error is ~1pp, so the 0.5pp gap to the always-1-1
+    # baseline is not distinguishable from noise, and no model change can be
+    # detected through it. Log-loss over the FULL flattened grid is a local
+    # proper scoring rule -- it depends only on the probability assigned to what
+    # actually happened -- so it can see improvements in grid SHAPE that the
+    # argmax never reveals. (RPS is wrong here: it needs a natural ordering and
+    # the scoreline grid is 2-D with none.)
+    eps = 1e-12
+    logloss = float(-np.log(np.clip(r["p_actual"], eps, None)).mean())
+
+    def _paired_ci(a, b, iters=2000, seed=7):
+        """Bootstrap 95% CI on the PAIRED difference in hit rate (a - b)."""
+        rng = np.random.default_rng(seed)
+        d = (a.to_numpy().astype(float) - b.to_numpy().astype(float))
+        idx = rng.integers(0, len(d), size=(iters, len(d)))
+        boot = d[idx].mean(axis=1)
+        return (round(100 * float(np.percentile(boot, 2.5)), 2),
+                round(100 * float(np.percentile(boot, 97.5)), 2))
+
+    hit_mode = r["grid_mode"] == r["actual"]
+    hit_11 = r["always_11"] == r["actual"]
+    lo, hi = _paired_ci(hit_mode, hit_11)
+
     out = {
         "league": league,
         "n": int(len(r)),
-        "grid_mode_pct": round(100 * (r["grid_mode"] == r["actual"]).mean(), 2),
-        "pick_conditional_pct": round(100 * (r["pick_cond"] == r["actual"]).mean(), 2),
-        "always_1_1_pct": round(100 * (r["always_11"] == r["actual"]).mean(), 2),
-        "most_common_pct": round(100 * (r["most_common"] == r["actual"]).mean(), 2),
-        "top3_hit_pct": round(100 * r["top3_hit"].mean(), 2),
+        # --- the honest headline: a proper scoring rule over the whole grid ---
+        "grid_logloss_nats": round(logloss, 4),
         "mean_prob_on_true_score": round(float(r["p_actual"].mean()), 4),
+        # --- coverage: what a top-N presentation actually buys ---
+        "top1_pct": round(100 * hit_mode.mean(), 2),
+        "top3_pct": round(100 * r["top3_hit"].mean(), 2),
+        # --- baselines, with an honest uncertainty statement ---
+        "always_1_1_pct": round(100 * hit_11.mean(), 2),
+        "most_common_pct": round(100 * (r["most_common"] == r["actual"]).mean(), 2),
+        "pick_conditional_pct": round(100 * (r["pick_cond"] == r["actual"]).mean(), 2),
+        "mode_minus_baseline_pp": round(100 * (hit_mode.mean() - hit_11.mean()), 2),
+        "mode_minus_baseline_95ci_pp": [lo, hi],
+        "edge_is_significant": bool(lo > 0),
         "most_predicted_by_grid_mode": r["grid_mode"].value_counts().head(3).to_dict(),
         "actual_score_frequency": r["actual"].value_counts(normalize=True).head(5).round(4).to_dict(),
     }

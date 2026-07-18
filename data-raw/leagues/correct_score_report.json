@@ -1,12 +1,19 @@
 {
   "league": "PL",
   "n": 1136,
-  "grid_mode_pct": 11.97,
-  "pick_conditional_pct": 9.42,
+  "grid_logloss_nats": 2.971,
+  "mean_prob_on_true_score": 0.0651,
+  "top1_pct": 11.97,
+  "top3_pct": 30.99,
   "always_1_1_pct": 11.44,
   "most_common_pct": 11.0,
-  "top3_hit_pct": 30.99,
-  "mean_prob_on_true_score": 0.0651,
+  "pick_conditional_pct": 9.42,
+  "mode_minus_baseline_pp": 0.53,
+  "mode_minus_baseline_95ci_pp": [
+    -0.88,
+    1.94
+  ],
+  "edge_is_significant": false,
   "most_predicted_by_grid_mode": {
     "1-1": 776,
     "1-0": 100,
