@@ -1,9 +1,9 @@
 {
- "updated": "2026-07-18T15:41:14+00:00",
+ "updated": "2026-07-19T22:09:05+00:00",
  "record": {
-  "correct": 63,
-  "wrong": 25,
-  "total": 88,
+  "correct": 64,
+  "wrong": 26,
+  "total": 90,
   "void": 14,
   "pending": 0,
   "by_confidence": {
@@ -29,8 +29,8 @@
    }
   },
   "knockout": {
-   "correct": 25,
-   "total": 30
+   "correct": 26,
+   "total": 32
   }
  },
  "groups": {
@@ -1389,7 +1389,7 @@
   },
   "Spain": {
    "flag": "🇪🇸",
-   "elo": 2226,
+   "elo": 2254,
    "fifa_rank": 2,
    "form": "DW",
    "form_note": "Drew 0-0 vs Cape Verde (June 15). Won 4-0 vs Saudi Arabia (June 21). Top of Group H, through to R32. Next vs Uruguay June 26.",
@@ -1482,7 +1482,8 @@
     "2026-07-02: Nico Williams (adductor) and Yeremy Pino (AC joint sprain) both ruled out for R32 vs Austria; Alex Baena and Lamine Yamal expected to carry the width.",
     "2026-07-02: Victor Munoz (hamstring) a doubt but improved after partial training; Alex Baena, Oyarzabal and fit-again Lamine Yamal expected to start the front three vs Austria.",
     "2026-07-14 pre-match vs France (SF, Dallas): confirmed XI is Simon; Porro, Cubarsi, Laporte, Cucurella; Pedri, Rodri; Yamal, Olmo, Baena; Oyarzabal. Nico Williams fully fit but starts on the bench; Pino (shoulder) and Munoz (calf) both unavailable.",
-    "2026-07-18 pre-match vs Argentina (Final, July 19, East Rutherford): Yamal (thigh) and Porro (muscle tightness) both expected to be fine and start; Pino remains the only tournament-ending absentee."
+    "2026-07-18 pre-match vs Argentina (Final, July 19, East Rutherford): Yamal (thigh) and Porro (muscle tightness) both expected to be fine and start; Pino remains the only tournament-ending absentee.",
+    "2026-07-19 matchday (Final, East Rutherford): Yamal confirmed in \"perfect physical condition,\" Porro available having overcome the muscle issue; no injuries reported in either camp, confirmed XI expected as Simon; Porro, Cubarsi, Laporte, Cucurella; Rodri, Ruiz; Yamal, Olmo, Baena; Oyarzabal."
    ]
   },
   "Cape Verde": {
@@ -1600,7 +1601,7 @@
   },
   "France": {
    "flag": "🇫🇷",
-   "elo": 2122,
+   "elo": 2070,
    "fifa_rank": 1,
    "form": "WWL",
    "form_note": "Won 3-0 vs Sweden in R32 (June 30). Won R16 vs Paraguay (July 4). Beat Morocco 2-0 in the QF (July 9). Lost 0-2 to Spain in the SF (July 14, Dallas) — Saliba forced off with a back injury. Now face England in the third-place playoff (July 18, Miami).",
@@ -1825,7 +1826,7 @@
   },
   "Argentina": {
    "flag": "🇦🇷",
-   "elo": 2197,
+   "elo": 2170,
    "fifa_rank": 3,
    "form": "WW",
    "form_note": "Won 3-0 vs Algeria (Messi hat-trick, equalled WC all-time goals record). Won 2-0 vs Austria (Messi 38', 90+5') — Messi now holds the WC all-time scoring record with 18 goals. Argentina top Group J and through to R32. Next vs Jordan June 27.",
@@ -1913,7 +1914,9 @@
     "Messi scored twice vs Austria (2-0) to set new all-time WC scoring record (18 goals total). Montiel missed Austria match with quad strain; targeting return vs Jordan June 27.",
     "2026-07-02 pre-match vs Cape Verde (R32, July 3, Miami): Romero back in full training after a knee knock, expected to start. No other fresh concerns.",
     "2026-07-15 pre-match vs England (semi-final, Atlanta): Messi, Romero and Paredes all passed fit; no suspensions for Argentina.",
-    "2026-07-18 pre-match vs Spain (Final, July 19, East Rutherford): no new injury concerns from the semi-final win over England; squad reported fully fit."
+    "2026-07-18 pre-match vs Spain (Final, July 19, East Rutherford): no new injury concerns from the semi-final win over England; squad reported fully fit.",
+    "2026-07-19 matchday (Final, East Rutherford): predicted XI features Gonzalo Montiel challenging Nahuel Molina for the right-back spot after an underwhelming semi-final showing, and Rodrigo De Paul expected back in after dropping to the bench vs England; no injury concerns.",
+    "2026-07-19 CONFIRMED LINEUP (Final vs Spain): three changes from the England semi-final — Rodrigo De Paul, Nico Gonzalez and Gonzalo Montiel all start; Giuliano Simeone, Leandro Paredes and Nahuel Molina drop to the bench. No injury concerns for the starting XI."
    ]
   },
   "Algeria": {
@@ -2205,7 +2208,7 @@
   },
   "England": {
    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-   "elo": 2074,
+   "elo": 2125,
    "fifa_rank": 4,
    "form": "WWL",
    "form_note": "Won R16 vs Mexico (July 5). Beat Norway in the QF (July 9). Lost 1-2 to Argentina in the SF (July 15, Atlanta). Now face France in the third-place playoff (July 18, Miami); Tuchel expected to rotate heavily.",
@@ -3853,7 +3856,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Spain 2184 vs Cape Verde 1606 (+578 incl. venue)",
+     "Rating edge: Spain 2212 vs Cape Verde 1606 (+605 incl. venue)",
      "Spain: Fermin Lopez out (Fifth metatarsal fracture requiring surgery)",
      "Spain: Samu Aghehowa out (ACL tear suffered in February)",
      "Spain: Alejandro Grimaldo out (Injury; ruled out of the Cape Verde opener (June 15))"
@@ -4308,7 +4311,7 @@
     "score": "1-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: France 2094 vs Senegal 1803 (+291 incl. venue)",
+     "Rating edge: France 2042 vs Senegal 1803 (+240 incl. venue)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)",
      "France: Boubacar Kamara out (Knee injury, ruled out for the season)",
      "France: William Saliba out (Back gave out during the SF loss to Spain (July 14), subbed off for Lacroix; ruled OUT of the third-place playoff vs England (July 18) with a back injury)"
@@ -4324,7 +4327,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.497,
+      "anytime": 0.472,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -4337,7 +4340,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.258,
+      "anytime": 0.242,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4350,7 +4353,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.195,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4365,7 +4368,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.074,
+      "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4378,7 +4381,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.074,
+      "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4391,7 +4394,7 @@
       "goals": 10,
       "apps": 26,
       "pens": true,
-      "anytime": 0.06,
+      "anytime": 0.08,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4542,7 +4545,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Argentina 2162 vs Algeria 1740 (+422 incl. venue)",
+     "Rating edge: Argentina 2135 vs Algeria 1740 (+395 incl. venue)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)",
      "Argentina: Juan Foyth out (Required surgery, ruled out of the tournament)",
      "Argentina: Valentin Carboni out (Knee injury)"
@@ -4558,7 +4561,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.418,
+      "anytime": 0.408,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4571,7 +4574,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.376,
+      "anytime": 0.366,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4584,7 +4587,7 @@
       "goals": 20,
       "apps": 49,
       "pens": false,
-      "anytime": 0.295,
+      "anytime": 0.287,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4893,7 +4896,7 @@
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: England 2039 vs Croatia 1882 (+157 incl. venue)",
+     "Rating edge: England 2090 vs Croatia 1882 (+208 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -4909,10 +4912,10 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.326,
+      "anytime": 0.349,
       "shots": "High",
-      "confidence": 2,
-      "conf_label": "Medium",
+      "confidence": 3,
+      "conf_label": "High",
       "doubtful": false
      },
      {
@@ -4922,7 +4925,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.221,
+      "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4935,7 +4938,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.221,
+      "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4950,7 +4953,7 @@
       "goals": 14,
       "apps": 26,
       "pens": false,
-      "anytime": 0.146,
+      "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4963,7 +4966,7 @@
       "goals": 17,
       "apps": 37,
       "pens": false,
-      "anytime": 0.126,
+      "anytime": 0.104,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4976,7 +4979,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.11,
+      "anytime": 0.091,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -6621,7 +6624,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Spain 2184 vs Saudi Arabia 1590 (+595 incl. venue)",
+     "Rating edge: Spain 2212 vs Saudi Arabia 1590 (+622 incl. venue)",
      "Spain: Fermin Lopez out (Fifth metatarsal fracture requiring surgery)",
      "Spain: Samu Aghehowa out (ACL tear suffered in February)",
      "Spain: Alejandro Grimaldo out (Injury; ruled out of the Cape Verde opener (June 15))"
@@ -7076,7 +7079,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Argentina 2162 vs Austria 1806 (+357 incl. venue)",
+     "Rating edge: Argentina 2135 vs Austria 1806 (+329 incl. venue)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)",
      "Argentina: Juan Foyth out (Required surgery, ruled out of the tournament)",
      "Argentina: Valentin Carboni out (Knee injury)"
@@ -7092,7 +7095,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.394,
+      "anytime": 0.383,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7105,7 +7108,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.353,
+      "anytime": 0.343,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7118,7 +7121,7 @@
       "goals": 20,
       "apps": 49,
       "pens": false,
-      "anytime": 0.276,
+      "anytime": 0.268,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7133,7 +7136,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.046,
+      "anytime": 0.062,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7146,7 +7149,7 @@
       "goals": 7,
       "apps": 15,
       "pens": false,
-      "anytime": 0.039,
+      "anytime": 0.053,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7159,7 +7162,7 @@
       "goals": 1,
       "apps": null,
       "pens": false,
-      "anytime": 0.015,
+      "anytime": 0.021,
       "shots": "Medium",
       "confidence": 1,
       "conf_label": "Low",
@@ -7193,7 +7196,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: France 2094 vs Iraq 1557 (+537 incl. venue)",
+     "Rating edge: France 2042 vs Iraq 1557 (+485 incl. venue)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)",
      "France: Boubacar Kamara out (Knee injury, ruled out for the season)",
      "France: William Saliba out (Back gave out during the SF loss to Spain (July 14), subbed off for Lacroix; ruled OUT of the third-place playoff vs England (July 18) with a back injury)"
@@ -7209,7 +7212,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.585,
+      "anytime": 0.582,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -7222,7 +7225,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.317,
+      "anytime": 0.315,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7235,7 +7238,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.243,
+      "anytime": 0.24,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7648,7 +7651,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: England 2039 vs Ghana 1537 (+502 incl. venue)",
+     "Rating edge: England 2090 vs Ghana 1537 (+553 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -9388,7 +9391,7 @@
     "score": "0-2",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Norway 1923 vs France 2094 (-170 incl. venue)",
+     "Rating edge: Norway 1923 vs France 2042 (-119 incl. venue)",
      "Norway: Jorgen Strand Larsen out (Injury; confirmed unavailable for the Iraq opener (June 16))",
      "Norway: Julian Ryerson out (Came off early with injury vs Senegal; Marcus Pedersen (Torino) expected to deputize at right-back vs France)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)"
@@ -9404,7 +9407,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.153,
+      "anytime": 0.18,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9417,7 +9420,7 @@
       "goals": 13,
       "apps": null,
       "pens": false,
-      "anytime": 0.135,
+      "anytime": 0.158,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9430,7 +9433,7 @@
       "goals": 4,
       "apps": null,
       "pens": false,
-      "anytime": 0.1,
+      "anytime": 0.118,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9445,7 +9448,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.437,
+      "anytime": 0.409,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -9458,7 +9461,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.22,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9471,7 +9474,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.166,
+      "anytime": 0.153,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9739,7 +9742,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Uruguay 1793 vs Spain 2184 (-391 incl. venue)",
+     "Rating edge: Uruguay 1793 vs Spain 2212 (-419 incl. venue)",
      "Uruguay: Ronald Araujo out (Minor muscle injury; highly unlikely to play vs Saudi Arabia — targeting return for matchday 2 vs Cape Verde (June 22))",
      "Uruguay: Jose Maria Gimenez out (Severe ankle sprain (Atletico Madrid, May); expected to miss opener vs Saudi Arabia)",
      "Uruguay: Giorgian de Arrascaeta out (Right calf injury; confirmed out for entire group stage — targeting knockout rounds)"
@@ -9796,7 +9799,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.408,
+      "anytime": 0.418,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9809,7 +9812,7 @@
       "goals": 16,
       "apps": null,
       "pens": false,
-      "anytime": 0.366,
+      "anytime": 0.375,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -9822,7 +9825,7 @@
       "goals": 24,
       "apps": null,
       "pens": false,
-      "anytime": 0.282,
+      "anytime": 0.29,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10077,7 +10080,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Panama 1643 vs England 2039 (-396 incl. venue)",
+     "Rating edge: Panama 1643 vs England 2090 (-447 incl. venue)",
      "Panama: Adalberto Carrasquilla out (Groin injury; MISSED the Ghana match; still doubtful for Croatia game — out for almost a month before partial return to training)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)"
@@ -10134,7 +10137,7 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.425,
+      "anytime": 0.445,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -10147,7 +10150,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.296,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10160,7 +10163,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.296,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10648,7 +10651,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Jordan 1597 vs Argentina 2162 (-565 incl. venue)",
+     "Rating edge: Jordan 1597 vs Argentina 2135 (-538 incl. venue)",
      "Jordan: Yazan Al-Naimat out (Injured since December; top scorer in qualifying with 8 goals — ruled out of the entire tournament)",
      "Jordan: Ibrahim Sabra out (Injury; ruled out of the tournament)",
      "Argentina: Leonardo Balerdi out (Soleus muscle injury suffered June 6 in training camp; Marseille captain required late replacement)"
@@ -10958,7 +10961,7 @@
     "exp_pts": 7.0,
     "gd": 5,
     "gf": 5,
-    "elo": 2226
+    "elo": 2254
    },
    {
     "team": "Cape Verde",
@@ -10988,7 +10991,7 @@
     "exp_pts": 9.0,
     "gd": 8,
     "gf": 10,
-    "elo": 2122
+    "elo": 2070
    },
    {
     "team": "Norway",
@@ -11018,7 +11021,7 @@
     "exp_pts": 9.0,
     "gd": 7,
     "gf": 8,
-    "elo": 2197
+    "elo": 2170
    },
    {
     "team": "Austria",
@@ -11078,7 +11081,7 @@
     "exp_pts": 7.0,
     "gd": 4,
     "gf": 6,
-    "elo": 2074
+    "elo": 2125
    },
    {
     "team": "Croatia",
@@ -11114,7 +11117,7 @@
     "qf": 1.0,
     "sf": 1.0,
     "final": 1.0,
-    "champion": 0.535
+    "champion": 1.0
    },
    {
     "team": "Argentina",
@@ -11123,7 +11126,7 @@
     "qf": 1.0,
     "sf": 1.0,
     "final": 1.0,
-    "champion": 0.465
+    "champion": 0.0
    },
    {
     "team": "France",
@@ -11632,8 +11635,8 @@
     "city": "East Rutherford",
     "home": "France",
     "away": "Sweden",
-    "p_home": 0.894,
-    "p_away": 0.106,
+    "p_home": 0.862,
+    "p_away": 0.138,
     "pick": "France",
     "winner": "France",
     "score": "2-0",
@@ -11695,11 +11698,11 @@
     "city": "Atlanta",
     "home": "England",
     "away": "DR Congo",
-    "p_home": 0.878,
-    "p_away": 0.122,
+    "p_home": 0.906,
+    "p_away": 0.094,
     "pick": "England",
     "winner": "England",
-    "score": "2-0",
+    "score": "3-0",
     "status": "final",
     "result": {
      "home": "England",
@@ -12094,8 +12097,8 @@
     "city": "Miami Gardens",
     "home": "Norway",
     "away": "England",
-    "p_home": 0.339,
-    "p_away": 0.661,
+    "p_home": 0.277,
+    "p_away": 0.723,
     "pick": "England",
     "winner": "England",
     "score": "2-1",
@@ -12115,8 +12118,8 @@
     "city": "Kansas City",
     "home": "Argentina",
     "away": "Switzerland",
-    "p_home": 0.809,
-    "p_away": 0.191,
+    "p_home": 0.783,
+    "p_away": 0.217,
     "pick": "Argentina",
     "winner": "Argentina",
     "score": "2-1",
@@ -12181,10 +12184,16 @@
     "p_home": 0.532,
     "p_away": 0.468,
     "pick": "Spain",
-    "winner": null,
+    "winner": "Spain",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home": "Spain",
+     "away": "Argentina",
+     "home_goals": 1,
+     "away_goals": 0,
+     "winner": "Spain"
+    }
    },
    {
     "id": 103,
@@ -12196,10 +12205,16 @@
     "p_home": 0.578,
     "p_away": 0.422,
     "pick": "France",
-    "winner": null,
+    "winner": "England",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home": "France",
+     "away": "England",
+     "home_goals": 4,
+     "away_goals": 6,
+     "winner": "England"
+    }
    }
   ]
  }
