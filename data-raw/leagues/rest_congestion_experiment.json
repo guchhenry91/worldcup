@@ -1,0 +1,25 @@
+{
+  "_note": "Does rest/congestion carry signal the model lacks? Run: python scripts/rest_congestion_experiment.py. NEGATIVE at domestic granularity: residuals flat across rest-advantage buckets, all within noise (n=3539). IMPORTANT LIMITATION -- dataset.build_matches contains DOMESTIC LEAGUE matches only, so a club playing Champions League on Wednesday looks fully rested from its last league game. This test therefore CANNOT see European midweek load, which is the version of congestion most likely to matter. Only 2 buckets outside 'level' had n>=100, confirming domestic rest gaps are rare. To test properly a European fixture calendar must be added to the dataset.",
+  "n": 3539,
+  "buckets": [
+    {
+      "label": "less rested (-2d)",
+      "n": 240,
+      "residual": 0.061,
+      "ci95": 0.149
+    },
+    {
+      "label": "level",
+      "n": 2969,
+      "residual": 0.007,
+      "ci95": 0.044
+    },
+    {
+      "label": "more rested (+2/3d)",
+      "n": 247,
+      "residual": -0.019,
+      "ci95": 0.147
+    }
+  ],
+  "conclusion": "no domestic rest signal; European load untested and still open"
+}
