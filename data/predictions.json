@@ -1,9 +1,9 @@
 {
- "updated": "2026-07-18T21:09:59+00:00",
+ "updated": "2026-07-19T09:25:36+00:00",
  "record": {
   "correct": 63,
-  "wrong": 25,
-  "total": 88,
+  "wrong": 26,
+  "total": 89,
   "void": 14,
   "pending": 0,
   "by_confidence": {
@@ -30,7 +30,7 @@
   },
   "knockout": {
    "correct": 25,
-   "total": 30
+   "total": 31
   }
  },
  "groups": {
@@ -1600,7 +1600,7 @@
   },
   "France": {
    "flag": "🇫🇷",
-   "elo": 2122,
+   "elo": 2070,
    "fifa_rank": 1,
    "form": "WWL",
    "form_note": "Won 3-0 vs Sweden in R32 (June 30). Won R16 vs Paraguay (July 4). Beat Morocco 2-0 in the QF (July 9). Lost 0-2 to Spain in the SF (July 14, Dallas) — Saliba forced off with a back injury. Now face England in the third-place playoff (July 18, Miami).",
@@ -2205,7 +2205,7 @@
   },
   "England": {
    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-   "elo": 2074,
+   "elo": 2125,
    "fifa_rank": 4,
    "form": "WWL",
    "form_note": "Won R16 vs Mexico (July 5). Beat Norway in the QF (July 9). Lost 1-2 to Argentina in the SF (July 15, Atlanta). Now face France in the third-place playoff (July 18, Miami); Tuchel expected to rotate heavily.",
@@ -4308,7 +4308,7 @@
     "score": "1-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: France 2094 vs Senegal 1803 (+291 incl. venue)",
+     "Rating edge: France 2042 vs Senegal 1803 (+240 incl. venue)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)",
      "France: Boubacar Kamara out (Knee injury, ruled out for the season)",
      "France: William Saliba out (Back gave out during the SF loss to Spain (July 14), subbed off for Lacroix; ruled OUT of the third-place playoff vs England (July 18) with a back injury)"
@@ -4324,7 +4324,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.497,
+      "anytime": 0.472,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -4337,7 +4337,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.258,
+      "anytime": 0.242,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4350,7 +4350,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.195,
+      "anytime": 0.183,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4365,7 +4365,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.074,
+      "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4378,7 +4378,7 @@
       "goals": 6,
       "apps": null,
       "pens": false,
-      "anytime": 0.074,
+      "anytime": 0.099,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4391,7 +4391,7 @@
       "goals": 10,
       "apps": 26,
       "pens": true,
-      "anytime": 0.06,
+      "anytime": 0.08,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4893,7 +4893,7 @@
     "score": "1-0",
     "confidence": 3,
     "reasons": [
-     "Rating edge: England 2039 vs Croatia 1882 (+157 incl. venue)",
+     "Rating edge: England 2090 vs Croatia 1882 (+208 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -4909,10 +4909,10 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.326,
+      "anytime": 0.349,
       "shots": "High",
-      "confidence": 2,
-      "conf_label": "Medium",
+      "confidence": 3,
+      "conf_label": "High",
       "doubtful": false
      },
      {
@@ -4922,7 +4922,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.221,
+      "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4935,7 +4935,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.221,
+      "anytime": 0.238,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -4950,7 +4950,7 @@
       "goals": 14,
       "apps": 26,
       "pens": false,
-      "anytime": 0.146,
+      "anytime": 0.121,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4963,7 +4963,7 @@
       "goals": 17,
       "apps": 37,
       "pens": false,
-      "anytime": 0.126,
+      "anytime": 0.104,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -4976,7 +4976,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.11,
+      "anytime": 0.091,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -7193,7 +7193,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: France 2094 vs Iraq 1557 (+537 incl. venue)",
+     "Rating edge: France 2042 vs Iraq 1557 (+485 incl. venue)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)",
      "France: Boubacar Kamara out (Knee injury, ruled out for the season)",
      "France: William Saliba out (Back gave out during the SF loss to Spain (July 14), subbed off for Lacroix; ruled OUT of the third-place playoff vs England (July 18) with a back injury)"
@@ -7209,7 +7209,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.585,
+      "anytime": 0.582,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -7222,7 +7222,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.317,
+      "anytime": 0.315,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7235,7 +7235,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.243,
+      "anytime": 0.24,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -7648,7 +7648,7 @@
     "score": "2-0",
     "confidence": 5,
     "reasons": [
-     "Rating edge: England 2039 vs Ghana 1537 (+502 incl. venue)",
+     "Rating edge: England 2090 vs Ghana 1537 (+553 incl. venue)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)",
      "England: Tino Livramento out (Calf injury sustained in training; ruled out of the tournament, replaced by Trevoh Chalobah (Chelsea))"
@@ -9388,7 +9388,7 @@
     "score": "0-2",
     "confidence": 4,
     "reasons": [
-     "Rating edge: Norway 1923 vs France 2094 (-170 incl. venue)",
+     "Rating edge: Norway 1923 vs France 2042 (-119 incl. venue)",
      "Norway: Jorgen Strand Larsen out (Injury; confirmed unavailable for the Iraq opener (June 16))",
      "Norway: Julian Ryerson out (Came off early with injury vs Senegal; Marcus Pedersen (Torino) expected to deputize at right-back vs France)",
      "France: Hugo Ekitike out (Achilles tendon rupture in April (slipped during Liverpool's UCL exit vs PSG); recovery extends into late 2026)"
@@ -9404,7 +9404,7 @@
       "goals": null,
       "apps": null,
       "pens": true,
-      "anytime": 0.153,
+      "anytime": 0.18,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9417,7 +9417,7 @@
       "goals": 13,
       "apps": null,
       "pens": false,
-      "anytime": 0.135,
+      "anytime": 0.158,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9430,7 +9430,7 @@
       "goals": 4,
       "apps": null,
       "pens": false,
-      "anytime": 0.1,
+      "anytime": 0.118,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -9445,7 +9445,7 @@
       "goals": 43,
       "apps": 39,
       "pens": true,
-      "anytime": 0.437,
+      "anytime": 0.409,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -9458,7 +9458,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.22,
+      "anytime": 0.204,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -9471,7 +9471,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.166,
+      "anytime": 0.153,
       "shots": "High",
       "confidence": 1,
       "conf_label": "Low",
@@ -10077,7 +10077,7 @@
     "score": "0-2",
     "confidence": 5,
     "reasons": [
-     "Rating edge: Panama 1643 vs England 2039 (-396 incl. venue)",
+     "Rating edge: Panama 1643 vs England 2090 (-447 incl. venue)",
      "Panama: Adalberto Carrasquilla out (Groin injury; MISSED the Ghana match; still doubtful for Croatia game — out for almost a month before partial return to training)",
      "England: Jarrad Branthwaite out (Hamstring injury from late-April Merseyside derby)",
      "England: Jack Grealish out (Season-ending foot surgery; missed last four months)"
@@ -10134,7 +10134,7 @@
       "goals": 58,
       "apps": null,
       "pens": true,
-      "anytime": 0.425,
+      "anytime": 0.445,
       "shots": "High",
       "confidence": 3,
       "conf_label": "High",
@@ -10147,7 +10147,7 @@
       "goals": 10,
       "apps": null,
       "pens": false,
-      "anytime": 0.296,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10160,7 +10160,7 @@
       "goals": null,
       "apps": null,
       "pens": false,
-      "anytime": 0.296,
+      "anytime": 0.311,
       "shots": "High",
       "confidence": 2,
       "conf_label": "Medium",
@@ -10988,7 +10988,7 @@
     "exp_pts": 9.0,
     "gd": 8,
     "gf": 10,
-    "elo": 2122
+    "elo": 2070
    },
    {
     "team": "Norway",
@@ -11078,7 +11078,7 @@
     "exp_pts": 7.0,
     "gd": 4,
     "gf": 6,
-    "elo": 2074
+    "elo": 2125
    },
    {
     "team": "Croatia",
@@ -11632,8 +11632,8 @@
     "city": "East Rutherford",
     "home": "France",
     "away": "Sweden",
-    "p_home": 0.894,
-    "p_away": 0.106,
+    "p_home": 0.862,
+    "p_away": 0.138,
     "pick": "France",
     "winner": "France",
     "score": "2-0",
@@ -11695,11 +11695,11 @@
     "city": "Atlanta",
     "home": "England",
     "away": "DR Congo",
-    "p_home": 0.878,
-    "p_away": 0.122,
+    "p_home": 0.906,
+    "p_away": 0.094,
     "pick": "England",
     "winner": "England",
-    "score": "2-0",
+    "score": "3-0",
     "status": "final",
     "result": {
      "home": "England",
@@ -12094,8 +12094,8 @@
     "city": "Miami Gardens",
     "home": "Norway",
     "away": "England",
-    "p_home": 0.339,
-    "p_away": 0.661,
+    "p_home": 0.277,
+    "p_away": 0.723,
     "pick": "England",
     "winner": "England",
     "score": "2-1",
@@ -12196,10 +12196,16 @@
     "p_home": 0.578,
     "p_away": 0.422,
     "pick": "France",
-    "winner": null,
+    "winner": "England",
     "score": "2-1",
-    "status": "projected",
-    "result": null
+    "status": "final",
+    "result": {
+     "home": "France",
+     "away": "England",
+     "home_goals": 4,
+     "away_goals": 6,
+     "winner": "England"
+    }
    }
   ]
  }
