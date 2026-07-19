@@ -45,8 +45,13 @@ def player_rates(logs: pd.DataFrame, ref: pd.Timestamp) -> pd.DataFrame:
     """
     df = logs.copy()
     df["date"] = pd.to_datetime(df["date"])
-    seasons_ago = ((ref - df["date"]).dt.days / 365.25).clip(lower=0)
-    df["w"] = SEASON_DECAY ** seasons_ago
+    # Clipping the age at 0 would give a log dated AFTER ref the weight 0.7**0 = 1,
+    # i.e. the MAXIMUM -- the exact lookahead leak weights.py documents fixing for
+    # the match model. player_rates never got the same treatment. Not reachable
+    # today (publish uses ref=now against season-end rows) but it is a live trap
+    # for any future per-match player feed, so close it here.
+    age_years = (ref - df["date"]).dt.days / 365.25
+    df["w"] = np.where(age_years >= 0, SEASON_DECAY ** age_years.clip(lower=0), 0.0)
     df["w90"] = df["w"] * df["minutes"] / 90.0
 
     out = []
@@ -78,7 +83,12 @@ def player_rates(logs: pd.DataFrame, ref: pd.Timestamp) -> pd.DataFrame:
         out.append({"team": team, "player": player, "pos": pos, "nineties": n90,
                     "rate90": rate90, "shots90": shots90, "sot_ratio": sot_ratio})
 
-    return pd.DataFrame(out)
+    # An empty logs frame otherwise yields a 0x0 frame with NO columns, so the
+    # caller's rates["player"] raises a bare KeyError that reads like a schema
+    # change. Return the real shape instead and let it degrade like every other
+    # feed here.
+    return pd.DataFrame(out, columns=["team", "player", "pos", "nineties",
+                                      "rate90", "shots90", "sot_ratio"])
 
 
 def match_props(rates: pd.DataFrame, home: str, away: str,
@@ -185,7 +195,10 @@ def thin_squads(rates: pd.DataFrame, teams, min_players: int) -> list:
     the board. Returned sorted so the caller can report them.
     """
     if rates.empty:
-        return sorted(teams)
+        # No player data at all for ANY team. That is the missing_squads case, not
+        # the thin case -- returning every team here inverted the function's own
+        # rule (0 < count < min) and would have flagged a full league as thin.
+        return []
     counts = rates.groupby("team").size()
     return sorted(t for t in teams if 0 < int(counts.get(t, 0)) < min_players)
 

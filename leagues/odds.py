@@ -31,14 +31,23 @@ def parse_fixture_odds(buf, league: str) -> pd.DataFrame:
     rows = []
     for _, r in raw.iterrows():
         h, d, a = r.get("AvgH"), r.get("AvgD"), r.get("AvgA")
-        if pd.isna(h) or pd.isna(d) or pd.isna(a):
+        # Skip anything that is not a usable decimal price. NaN was already handled;
+        # ZERO was not, and 1.0/0 raised inside this loop, escaped to the blanket
+        # handler in fetch_fixture_odds, and silently dropped the WHOLE league's
+        # market lines while blaming the network. One bad cell must cost one
+        # fixture its line, never the league its feed.
+        try:
+            h, d, a = float(h), float(d), float(a)
+        except (TypeError, ValueError):
+            continue
+        if not (h > 1.0 and d > 1.0 and a > 1.0):
             continue                          # not priced yet -> no line, not an error
         try:
             home = canonical(r["HomeTeam"], league)
             away = canonical(r["AwayTeam"], league)
         except UnknownTeam:
             continue                          # unmapped spelling -> skip, never crash a publish
-        ph, pdw, pa = devig(float(h), float(d), float(a))
+        ph, pdw, pa = devig(h, d, a)
         rows.append({"date": r.get("Date"), "home": home, "away": away,
                      "m_home": ph, "m_draw": pdw, "m_away": pa})
     return pd.DataFrame(rows, columns=COLS)

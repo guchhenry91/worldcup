@@ -1,8 +1,9 @@
 import leagues.publish as publish
 
-_EMPTY_BEST = {"record": {"correct": 0, "wrong": 0}, "upcoming": [], "settled": []}
+_EMPTY_BEST = {"record": {"correct": 0, "wrong": 0}, "upcoming": [], "settled": [],
+               "_incomplete": []}
 _EMPTY_PLAYERS = {"record": {"correct": 0, "wrong": 0}, "upcoming": [], "settled": [],
-                  "record_by_market": {}, "min_probability": {}}
+                  "record_by_market": {}, "min_probability": {}, "_incomplete": []}
 
 _STUB = lambda lg: {"league": lg, "matches": [], "table": [],
                     "missing_squads": [], "data_warnings": []}
@@ -32,10 +33,16 @@ def test_one_league_failing_does_not_block_the_others(tmp_path, monkeypatch):
     monkeypatch.setattr(publish, "build", flaky)
     monkeypatch.setattr(publish, "build_best_picks", lambda: _EMPTY_BEST)
     monkeypatch.setattr(publish, "build_player_picks", lambda: _EMPTY_PLAYERS)
+    # Seed a PRE-EXISTING laliga.json. Asserting against an empty directory could
+    # not tell "correctly skipped" from "silently left stale", which is the actual
+    # hazard -- an aborted league leaving last week's file for the gate to pass.
+    (tmp_path / "laliga.json").write_text('{"league": "STALE"}', encoding="utf-8")
     publish.main([])                       # must not raise
     written = sorted(p.stem for p in tmp_path.glob("*.json"))
-    assert "laliga" not in written         # the failing one is skipped
     assert "pl" in written and "bundesliga" in written and "ligue1" in written
+    # the failing league's file is untouched, NOT overwritten with partial data
+    import json as _json
+    assert _json.loads((tmp_path / "laliga.json").read_text())["league"] == "STALE"
 
 
 def test_single_league_arg_writes_only_that_file(tmp_path, monkeypatch):

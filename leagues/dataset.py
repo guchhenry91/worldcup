@@ -29,6 +29,14 @@ def build_matches(league: str) -> pd.DataFrame:
 
     hist = hist.copy()
     hist["day"] = pd.to_datetime(hist["date"]).dt.normalize()
+    # Same guard the shifted merges below already carry, and for the same reason:
+    # a left merge on a duplicated key returns MORE rows than the left side, which
+    # would silently duplicate a match in the training set and double its weight.
+    # There are no duplicate keys in any of the four feeds today, so this is
+    # insurance rather than a fix -- but it is the primary join, and it was the
+    # only one without it.
+    home_x = home_x.drop_duplicates(subset=["day", "home"])
+    away_x = away_x.drop_duplicates(subset=["day", "away"])
     out = hist.merge(home_x, on=["day", "home"], how="left")
     out = out.merge(away_x, on=["day", "away"], how="left")
 

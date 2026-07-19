@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T14:33:02.377904+00:00",
+  "updated": "2026-07-19T15:31:05.248201+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -45,6 +45,7 @@
     }
   },
   "ungradeable_leagues": [],
+  "_incomplete": [],
   "upcoming": [
     {
       "market": "shots",

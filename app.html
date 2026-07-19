@@ -116,7 +116,7 @@ function renderLeague(app, data, clubs, label) {
     const rel = i >= data.table.length - 3 ? 'rel' : '', ucl = i < 4 ? 'ucl' : '';
     return `<tr class="${rel} ${ucl}">
       <td class="num">${i + 1}</td>
-      <td><span class="dot" style="background:${colour(t.team)}"></span>${esc(t.team)}</td>
+      <td><span class="dot" style="background:${esc(colour(t.team))}"></span>${esc(t.team)}</td>
       <td class="num">${num(t.proj_points)}</td>
       <td class="barcell"><span class="bar" style="--pct:${Math.min(t.title_pct, 100)}%"></span><span>${num(t.title_pct)}%</span></td>
       <td class="num">${num(t.top4_pct)}%</td>
@@ -412,7 +412,7 @@ function renderWC(app, data) {
     const champOdds = (ko.odds || []).find(o => o.team === ko.projected_champion);
     const champ = el('div', 'champ glass');
     champ.innerHTML = `<span class="crown">🏆</span><div>
-      <b>${ko.projected_champion}</b> <span class="cs">projected champion${champOdds ? ` · ${pct(100 * champOdds.champion)} title odds (${(ko.sims || 0).toLocaleString()} sims)` : ''}</span>
+      <b>${esc(ko.projected_champion)}</b> <span class="cs">projected champion${champOdds ? ` · ${pct(100 * champOdds.champion)} title odds (${(ko.sims || 0).toLocaleString()} sims)` : ''}</span>
     </div>`;
     app.append(champ);
   }
@@ -527,7 +527,14 @@ async function route() {
   // not be silently disguised as a "Could not load" network message.
   if (comp.kind === 'best') renderBest(app, data);
   else if (comp.kind === 'players') renderPlayers(app, data);
-  else if (comp.kind === 'grades') renderGrades(app, await gradesData(data));
+  else if (comp.kind === 'grades') {
+    // gradesData awaits four more fetches. The guard above already fired, so it
+    // must be re-checked here or a slow Grades load lands on top of whatever view
+    // the user switched to meanwhile. This is the only branch that awaits twice.
+    const g = await gradesData(data);
+    if (activeKey() !== comp.key) return;
+    renderGrades(app, g);
+  }
   else if (comp.kind === 'cup') renderWC(app, data);
   else renderLeague(app, data, clubs, comp.label);
 }

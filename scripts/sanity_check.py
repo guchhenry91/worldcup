@@ -170,6 +170,62 @@ def check_league(fn, key, n_teams, releg):
             fail(L, f"mojibake {bad!r} in payload (encoding bug)")
 
 
+def check_freshness():
+    """Refuse to pass a file that was not actually rewritten by this publish.
+
+    This closes the real incident that started all of this: a missing import made
+    load_news raise, _publish_one caught it and aborted that league, and the gate
+    then passed against the PREVIOUS file. Every assertion in this script was true
+    -- of week-old data. "0 failures" means nothing if the publish never ran.
+
+    Worse, best.json and player_picks.json are assembled by reading the league
+    payloads back OFF DISK, so a stale league file is laundered onto the boards and
+    republished with a fresh timestamp. Catching staleness here catches all three.
+    """
+    import datetime as dt
+    now = dt.datetime.now(dt.timezone.utc)
+    for fn in ("pl.json", "laliga.json", "bundesliga.json", "ligue1.json",
+               "best.json", "player_picks.json"):
+        p = ROOT / "data" / "leagues" / fn
+        if not p.exists():
+            continue
+        d = json.loads(p.read_text(encoding="utf-8"))
+        tag = f"fresh:{fn}"
+
+        upd = d.get("updated")
+        if not upd:
+            fail(tag, "no `updated` timestamp -- cannot tell if this is stale")
+        else:
+            try:
+                t = dt.datetime.fromisoformat(str(upd))
+                if t.tzinfo is None:
+                    t = t.replace(tzinfo=dt.timezone.utc)
+                age_h = (now - t).total_seconds() / 3600.0
+                if age_h > 24:
+                    fail(tag, f"last written {age_h:.0f}h ago -- this publish did "
+                              f"not rewrite it (aborted league?)")
+            except ValueError:
+                fail(tag, f"unparseable `updated` {upd!r}")
+
+        # An aborted league leaves last week's fixtures behind, all now in the past.
+        # An empty list is fine (end of season); a list where NOTHING is still to
+        # come is not, because these are supposed to be upcoming fixtures.
+        ms = d.get("matches") or []
+        if ms:
+            future = 0
+            for m in ms:
+                try:
+                    k = dt.datetime.fromisoformat(str(m.get("date")))
+                    if k.tzinfo is None:
+                        k = k.replace(tzinfo=dt.timezone.utc)
+                    future += (k > now)
+                except Exception:
+                    continue
+            if future == 0:
+                fail(tag, f"all {len(ms)} published fixtures are in the past -- "
+                          f"stale file being presented as 'next up'")
+
+
 def check_best_picks():
     """The high-confidence board must be honest: every entry above the stated bar,
     ranked, and its record consistent."""
@@ -391,6 +447,7 @@ def main():
         except FileNotFoundError:
             warn(key, "payload not published yet")
     check_squad_freshness()
+    check_freshness()
     check_best_picks()
     check_player_picks()
     check_wc()

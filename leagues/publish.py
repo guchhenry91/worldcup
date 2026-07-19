@@ -423,7 +423,8 @@ def build_best_picks() -> dict:
     Graded SEPARATELY from the all-picks record, so this tier can be judged on its
     own and shown to be earning its billing (or not).
     """
-    upcoming, settled = [], []
+    upcoming, settled, incomplete = [], [], []
+    seen_upcoming = set()          # (league_key, match id) already on the board
     for league, fname in FILE_FOR.items():
         lg = config.get(league)
         season_tag = lg.fixture_slug.rsplit("-", 1)[-1]
@@ -442,6 +443,7 @@ def build_best_picks() -> dict:
             p = m.get("prediction", {})
             if not p.get("best_pick"):
                 continue
+            seen_upcoming.add((league, int(m["id"])))
             upcoming.append({
                 "league": lg.name, "league_key": league,
                 "id": m["id"], "matchweek": m["matchweek"], "date": m["date"],
@@ -452,10 +454,19 @@ def build_best_picks() -> dict:
             })
 
         # SETTLED comes only from the frozen log -- graded honestly.
+        #
+        # A failure here must NOT be swallowed. `settled` and `record` are rebuilt
+        # from scratch every run, so skipping a league silently deletes its entire
+        # graded history from the published record -- and the deletion always
+        # removes losses as readily as wins, i.e. it flatters the model on a five
+        # second timeout. The board is refused entirely instead (see `incomplete`),
+        # leaving the last good file in place.
         try:
             fx = fixtures.fetch_fixtures(league)
         except Exception as exc:
-            print(f"  best-picks: skipping settled for {league} ({exc})")
+            print(f"  best-picks: CANNOT grade {league} ({exc}) -- refusing to "
+                  f"publish a board that would drop its record")
+            incomplete.append(lg.name)
             continue
         by_id = {int(r["match_id"]): r for _, r in fx.iterrows()}
 
@@ -485,13 +496,18 @@ def build_best_picks() -> dict:
                 item["graded"] = g["graded"]
                 item["void"] = g["void"]
                 settled.append(item)
-            else:
+            elif (league, mid) not in seen_upcoming:
+                # Inside the lock window BOTH sources describe the same fixture --
+                # the payload copy (with scoreline and provisional flag) and this
+                # one. Publishing both put a duplicate card, blank-scored, on the
+                # board for every locked pick on matchday.
                 upcoming.append(item)
 
     upcoming.sort(key=lambda x: (-(x["p_pick"] or 0), x["date"]))
     settled.sort(key=lambda x: x["date"], reverse=True)
     return {
         "updated": datetime.now(timezone.utc).isoformat(),
+        "_incomplete": incomplete,     # non-empty -> caller must NOT publish
         "min_probability": BEST_PICK_MIN_PROB,
         "record": picks.record(settled),
         "upcoming": upcoming,
@@ -517,7 +533,7 @@ def build_player_picks() -> dict:
     confidence" for their market, and pooling them would produce a headline number
     that describes neither.
     """
-    upcoming, settled, ungradeable = [], [], []
+    upcoming, settled, ungradeable, incomplete = [], [], [], []
     for league, fname in FILE_FOR.items():
         lg = config.get(league)
         season_tag = lg.fixture_slug.rsplit("-", 1)[-1]
@@ -538,7 +554,9 @@ def build_player_picks() -> dict:
         try:
             fx = fixtures.fetch_fixtures(league)
         except Exception as exc:
-            print(f"  player-picks: skipping settled for {league} ({exc})")
+            print(f"  player-picks: CANNOT grade {league} ({exc}) -- refusing to "
+                  f"publish a board that would drop its record")
+            incomplete.append(lg.name)
             continue
         by_id = {int(r["match_id"]): r for _, r in fx.iterrows()}
 
@@ -552,12 +570,22 @@ def build_player_picks() -> dict:
             actuals = pd.DataFrame()
         have_actuals = not actuals.empty
         if not have_actuals:
-            # No per-match feed for this league. Its picks are still shown as
-            # upcoming predictions, but they are NOT parked in `settled` as
-            # perpetual "pending" -- an unresolvable pending pile reads like a
-            # backlog the model is about to be judged on, when in fact it can
-            # never be judged at all. Name the league instead.
-            ungradeable.append(lg.name)
+            # Distinguish a PERMANENT missing feed from a transient one. Bundesliga
+            # genuinely has no shot events (upstream crash) and its picks can never
+            # be graded -- that is worth stating on the page. A one-off timeout on a
+            # league that normally grades fine is a different thing entirely, and
+            # treating it as permanent would silently delete that league's record
+            # AND print a flatly false claim that it has no shot feed.
+            try:
+                permanent = not players.shot_events_available(league)
+            except Exception:
+                permanent = False
+            if permanent:
+                ungradeable.append(lg.name)
+            else:
+                print(f"  player-picks: {league} actuals unavailable but its feed "
+                      f"normally works -- refusing to publish a partial record")
+                incomplete.append(lg.name)
             continue
         if have_actuals:
             actuals = actuals.assign(day=pd.to_datetime(actuals["date"]).dt.date)
@@ -593,6 +621,7 @@ def build_player_picks() -> dict:
         "record": picks.record(settled),
         "record_by_market": by_market,
         "ungradeable_leagues": sorted(set(ungradeable)),
+        "_incomplete": incomplete,     # non-empty -> caller must NOT publish
         "upcoming": upcoming,
         "settled": settled[:120],
     }
@@ -617,23 +646,35 @@ def main(argv=None):
     if ok:
         best = build_best_picks()
         bp = OUT / "best.json"
-        tmp = bp.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(best, indent=2, default=str), encoding="utf-8")
-        tmp.replace(bp)
-        r = best["record"]
-        print(f"wrote {bp} - {len(best['upcoming'])} upcoming high-confidence picks, "
-              f"record {r['correct']}-{r['wrong']}")
+        if best["_incomplete"]:
+            # Refuse rather than publish a record with a league's graded history
+            # missing. The previous file stays -- stale by a run, but TRUE, which
+            # is the right way round for a scoreboard.
+            print(f"  SKIPPED best.json: could not grade {best['_incomplete']}; "
+                  f"keeping the last complete board")
+            bp = None
+        if bp is not None:
+            tmp = bp.with_suffix(".json.tmp")
+            tmp.write_text(json.dumps(best, indent=2, default=str), encoding="utf-8")
+            tmp.replace(bp)
+            r = best["record"]
+            print(f"wrote {bp} - {len(best['upcoming'])} upcoming high-confidence "
+                  f"picks, record {r['correct']}-{r['wrong']}")
 
         pp = build_player_picks()
         ppath = OUT / "player_picks.json"
-        tmp = ppath.with_suffix(".json.tmp")
-        tmp.write_text(json.dumps(pp, indent=2, default=str), encoding="utf-8")
-        tmp.replace(ppath)
-        pr = pp["record"]
-        counts = {mk: sum(1 for u in pp["upcoming"] if u["market"] == mk)
-                  for mk in picks.PROP_MARKETS}
-        print(f"wrote {ppath} - {len(pp['upcoming'])} upcoming player picks "
-              f"{counts}, record {pr['correct']}-{pr['wrong']}")
+        if pp["_incomplete"]:
+            print(f"  SKIPPED player_picks.json: could not grade "
+                  f"{pp['_incomplete']}; keeping the last complete board")
+        else:
+            tmp = ppath.with_suffix(".json.tmp")
+            tmp.write_text(json.dumps(pp, indent=2, default=str), encoding="utf-8")
+            tmp.replace(ppath)
+            pr = pp["record"]
+            counts = {mk: sum(1 for u in pp["upcoming"] if u["market"] == mk)
+                      for mk in picks.PROP_MARKETS}
+            print(f"wrote {ppath} - {len(pp['upcoming'])} upcoming player picks "
+                  f"{counts}, record {pr['correct']}-{pr['wrong']}")
 
     # If EVERY league failed, raise so the ops jobs abort the deploy rather than
     # shipping stale files (their try/except catches this).

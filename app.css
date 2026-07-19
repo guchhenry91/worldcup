@@ -152,8 +152,8 @@ tr.ucl td:first-child{box-shadow:inset 3px 0 0 var(--win)}
 .fx-p .pk{margin-right:6px;display:inline-block;max-width:11ch;overflow:hidden;
   text-overflow:ellipsis;white-space:nowrap;vertical-align:bottom}
 .fx-p .tick{font-weight:700}
-.fx-p .tick.correct{color:var(--win)} .fx-p .tick.wrong{color:var(--loss)}
-.fx-p .tick.void{color:var(--txt3)}
+.tick.correct{color:var(--win)} .tick.wrong{color:var(--loss)}
+.tick.void{color:var(--txt3)}
 @media (max-width:560px){ .fx-p .pk{max-width:7ch} .fx-t{width:32%} }
 
 /* correct-score spread: the committed call plus the honest alternatives */
