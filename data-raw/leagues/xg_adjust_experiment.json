@@ -1,0 +1,15 @@
+{
+  "league": "PL",
+  "raw_xg_attack_sd": 0.253,
+  "adjusted_xg_attack_sd": 0.25,
+  "fitted_model_attack_sd": 0.196,
+  "target_real_epl": "0.30-0.35",
+  "mean_abs_team_shift": 0.116,
+  "biggest_shifts": {
+    "Norwich": 0.16,
+    "Burnley": 0.145,
+    "Sunderland": 0.135,
+    "Leeds": 0.126,
+    "West Ham": 0.123
+  }
+}
