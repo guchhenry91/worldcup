@@ -65,6 +65,40 @@ def outcome_probs(grid: np.ndarray) -> tuple[float, float, float]:
             float(np.triu(grid, 1).sum()))
 
 
+def goals_markets(grid: np.ndarray) -> dict:
+    """Over/Under 2.5 goals and Both-Teams-To-Score, summed off the same grid.
+
+    NOT SHIPPED AS PREDICTIONS -- measured and rejected. Kept because the maths is
+    correct and tested, and the probabilities are useful context, but no pick from
+    this is displayed. See scripts/goals_market_benchmark.py.
+
+    The idea was that collapsing the scoreline grid onto an easier two-way question
+    would turn flavour into a real prediction. It does not. Walk-forward on 1,136
+    PL matches:
+
+                        base rate   our model   base log-loss   our log-loss
+        Over/Under 2.5    58.8%       57.7%        0.6777          0.6771
+        Both teams score  58.5%       57.6%        0.6788          0.6815
+
+    Both are BELOW the base rate on accuracy -- always saying "over"/"yes" beats
+    the model -- and BTTS is worse than a constant on log-loss too. The seductive
+    "57.9% vs a 50% coin flip" is a false comparison: O/U 2.5 is not a coin flip,
+    it is a 59/41 split, so the honest baseline is the base rate, not 50%. Against
+    the de-vigged market (log-loss 0.6706) we are clearly worse.
+    """
+    rows, cols = np.indices(grid.shape)
+    p_over = float(grid[(rows + cols) > 2.5].sum())
+    p_btts = float(grid[(rows > 0) & (cols > 0)].sum())
+    return {
+        "p_over25": round(p_over, 3),
+        "p_under25": round(1.0 - p_over, 3),
+        "over_under_pick": "over" if p_over > 0.5 else "under",
+        "p_btts": round(p_btts, 3),
+        "p_btts_no": round(1.0 - p_btts, 3),
+        "btts_pick": "yes" if p_btts > 0.5 else "no",
+    }
+
+
 def top_scorelines(grid: np.ndarray, n: int = 3) -> list[dict]:
     """The n most likely exact scorelines with their probabilities.
 

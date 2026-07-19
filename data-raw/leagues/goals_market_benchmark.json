@@ -1,0 +1,19 @@
+{
+  "league": "PL",
+  "n_all": 1136,
+  "n_with_market": 1136,
+  "over_base_rate_pct": 58.8,
+  "model": {
+    "acc": 57.7,
+    "logloss": 0.6771,
+    "brier": 0.2421
+  },
+  "market": {
+    "acc": 58.7,
+    "logloss": 0.6706,
+    "brier": 0.239
+  },
+  "always_majority": {
+    "acc": 58.8
+  }
+}

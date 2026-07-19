@@ -117,3 +117,32 @@ def test_top_scorelines_probabilities_match_the_grid():
     for t in top:
         h, a = (int(x) for x in t["score"].split("-"))
         assert abs(t["pct"] - 100 * grid[h, a]) < 0.05
+
+
+def test_goals_markets_derive_from_the_grid():
+    """O/U 2.5 and BTTS are exact sums over the same scoreline grid, so they must
+    be consistent with it and with each other."""
+    import numpy as np
+    from leagues.model import scoreline_grid, goals_markets
+    g = scoreline_grid(1.7, 1.3, rho=-0.05)
+    mk = goals_markets(g)
+    # probabilities are complementary pairs
+    assert abs(mk["p_over25"] + mk["p_under25"] - 1) < 1e-9
+    assert abs(mk["p_btts"] + mk["p_btts_no"] - 1) < 1e-9
+    assert all(0 < mk[k] < 1 for k in ("p_over25", "p_under25", "p_btts", "p_btts_no"))
+    # cross-check against a direct sum over the grid. goals_markets rounds to 3dp
+    # for the payload, so the tolerance is that rounding, not machine epsilon.
+    I, J = np.indices(g.shape)
+    assert abs(mk["p_over25"] - float(g[(I + J) > 2.5].sum())) < 5e-4
+    assert abs(mk["p_btts"] - float(g[(I > 0) & (J > 0)].sum())) < 5e-4
+
+
+def test_high_scoring_fixture_favours_over_and_btts():
+    from leagues.model import scoreline_grid, goals_markets
+    high = goals_markets(scoreline_grid(2.3, 1.9, rho=-0.05))
+    low = goals_markets(scoreline_grid(0.7, 0.6, rho=-0.05))
+    assert high["p_over25"] > 0.5 > low["p_over25"]
+    assert high["p_btts"] > low["p_btts"]
+    # the stated pick must follow the probability
+    assert high["over_under_pick"] == "over" and low["over_under_pick"] == "under"
+    assert high["btts_pick"] == "yes" and low["btts_pick"] == "no"
