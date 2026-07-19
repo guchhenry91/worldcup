@@ -9,3 +9,7 @@ data-raw/leagues/cache/
 _repro.py
 _scratch*.py
 _tmp*.py
+_scratch_out/
+_scratch_picks/
+_audit*.py
+*.pkl
