@@ -39,6 +39,26 @@ LOCK_WINDOW_HOURS = 6
 # probability at lock time -- never recomputed after a result, or winners could be
 # selected in hindsight.
 BEST_PICK_MIN_PROB = 0.65
+# A team needs at least this many players in the rates table before it gets props
+# at all. The sigma-lambda rescale makes a team's players sum to the match model's
+# lambda, so with a near-empty squad it hands ONE man the entire team's expected
+# goals: promoted Schalke had a single player with top-flight history and came out
+# at a 72.8% anytime scorer, when the next-best number in all four leagues was
+# 50.8%. A team with one player is more dangerous than a team with none, because
+# none is visibly a hole and one looks like a great pick. Teams below this get no
+# props, exactly like teams with no data at all.
+MIN_SQUAD_FOR_PROPS = 6
+# The bar for the cross-league player board, PER MARKET -- the markets have very
+# different ceilings and a single number cannot serve all three.
+#   shots/sot at 0.70 is the requested bar and is comfortably reachable.
+#   goal CANNOT be: anytime scorer tops out around 50% for an elite striker in a
+#   great matchup (the best in all four leagues today is 50.8%), because a team
+#   only scores ~1.5 goals and one man takes a fraction of them. A 0.70 bar would
+#   leave the goalscorer section permanently EMPTY, so it is set at the level that
+#   selects a comparable top slice. Every card publishes its own probability, so
+#   nothing here is presented as more certain than it is.
+PLAYER_PICK_MIN_PROB = {"goal": 0.40, "shots": 0.70, "sot": 0.70}
+PROP_FIELD = {"goal": "anytime_pct", "shots": "p_shots_2plus", "sot": "p_sot_1plus"}
 
 
 def _confidence(p_pick: float) -> int:
@@ -131,6 +151,16 @@ def build(league: str = "PL") -> dict:
     rates = rates[rates["player"].isin(squad)]
     takers = players.penalty_takers(logs[logs["player"].isin(squad)])
     news = players.load_news(league)   # injuries/suspensions, Best Picks fixtures
+    # Shot events are the ONLY per-match player feed, so without them a league can
+    # neither offer a real shots-on-target number (the ratio would be a league
+    # average, i.e. an assumption dressed as a measurement) nor grade any player
+    # pick afterwards. Both consequences are surfaced rather than hidden.
+    shots_ok = players.shot_events_available(league)
+    if not shots_ok:
+        warnings.append(
+            f"{lg.name} has no shot-level feed, so player picks here cannot be "
+            f"graded against actual match lines and the shots-on-target market is "
+            f"withheld entirely.")
     concede = ctx["concede_factor"]
     pens_rate = ctx["pens_per_team_match"]
 
@@ -143,6 +173,10 @@ def build(league: str = "PL") -> dict:
     # season's fixture #1 inheriting (and being graded against) this season's pick.
     season_tag = lg.fixture_slug.rsplit("-", 1)[-1]
     log_key = lambda mid: f"{season_tag}:{mid}"
+
+    # Player picks get their OWN frozen log, graded separately from the match picks.
+    pl_log_path = PICKS_DIR / lg.key.lower() / "player_picks_log.json"
+    pl_log = picks.load_log(pl_log_path)
 
     # Live bookmaker lines for upcoming fixtures (empty off-season -> every
     # match gets market: None; the card renders fine either way).
@@ -157,6 +191,12 @@ def build(league: str = "PL") -> dict:
         next_round = int(remaining.sort_values("date").iloc[0]["round"])
         upcoming = remaining[remaining["round"] < next_round + MATCHWEEKS_AHEAD]
 
+    # A squad too thin to share out the team's goals sensibly is dropped entirely
+    # (see MIN_SQUAD_FOR_PROPS) rather than allowed to concentrate the whole team
+    # lambda on one or two names.
+    thin_squads = props.thin_squads(rates, squad_teams, MIN_SQUAD_FOR_PROPS)
+    if thin_squads:
+        rates = rates[~rates["team"].isin(thin_squads)]
     missing_squads = sorted({t for t in squad_teams
                              if rates[rates["team"] == t].empty})
 
@@ -209,6 +249,45 @@ def build(league: str = "PL") -> dict:
             exp_pens={home: pens_rate, away: pens_rate},
             unavailable=unavailable, doubtful=doubtful)
 
+        # Player picks clearing their market's bar, frozen on the SAME schedule as
+        # the match pick so both boards are graded under one discipline. A doubtful
+        # player is deliberately still eligible: his halved expected minutes have
+        # already pushed his probability down, so if he still clears the bar the
+        # model is saying the pick survives the doubt.
+        player_picks = []
+        for market, field in PROP_FIELD.items():
+            if market == "sot" and not shots_ok:
+                continue          # synthetic ratio, not a measurement -- see above
+            bar = PLAYER_PICK_MIN_PROB[market] * 100.0
+            for p in squad_props:
+                if p[field] < bar:
+                    continue
+                pkey = f"{log_key(m['match_id'])}:{market}:{p['player']}"
+                prob = p[field] / 100.0
+                if hours_out <= LOCK_WINDOW_HOURS:
+                    pe = picks.lock_prop(pl_log, pkey, market=market,
+                                         player=p["player"], team=p["team"],
+                                         p_pick=prob, confidence=_confidence(prob),
+                                         kickoff=m["date"], now=now)
+                    pprov = False
+                else:
+                    pe = {"p_pick": round(prob, 4), "confidence": _confidence(prob)}
+                    pprov = True
+                player_picks.append({
+                    "market": market,
+                    "line": picks.PROP_MARKETS[market][2],
+                    "player": p["player"],
+                    "team": p["team"],
+                    "position": p["position"],
+                    "p_pick": pe["p_pick"],
+                    "confidence": pe["confidence"],
+                    "provisional": pprov,
+                    "doubt": p.get("doubt", False),
+                    "penalty_taker": p.get("penalty_taker", False),
+                    "gradeable": shots_ok,
+                })
+        player_picks.sort(key=lambda x: -x["p_pick"])
+
         out_matches.append({
             "id": int(m["match_id"]),
             "matchweek": int(m["round"]),
@@ -236,6 +315,7 @@ def build(league: str = "PL") -> dict:
             },
             "props": (props.top_props(squad_props, home)
                       + props.top_props(squad_props, away)),
+            "player_picks": player_picks,
             "market": _market_block(odds.market_for(market_odds, home, away),
                                     pred, pick_type),
             "result": None,
@@ -257,6 +337,7 @@ def build(league: str = "PL") -> dict:
         graded.append(log[k])
 
     picks.save_log(log, log_path)
+    picks.save_log(pl_log, pl_log_path)
 
     # Whole-season fixture list: every match, played or not, with its frozen pick
     # and grade. Deliberately WITHOUT props — 380 fixtures of scorer data would
@@ -298,6 +379,7 @@ def build(league: str = "PL") -> dict:
         "backtest": _read("backtest_report.json").get(league, {}),
         "props_backtest": _read(props_file),
         "missing_squads": missing_squads,
+        "thin_squads": thin_squads,
         "data_warnings": warnings,
     }
 
@@ -319,7 +401,12 @@ def _publish_one(league: str, fname: str) -> bool:
     tmp.replace(path)                     # atomic: never publish a half-written file
     print(f"wrote {path} - {len(payload['matches'])} fixtures, "
           f"{len(payload['table'])} teams")
-    if payload["missing_squads"]:
+    if payload.get("thin_squads"):
+        print(f"  WARNING {league}: squad too thin for props "
+              f"{payload['thin_squads']} (<{MIN_SQUAD_FOR_PROPS} players with "
+              f"top-flight history) - no props, to stop one man absorbing the "
+              f"whole team lambda")
+    if payload.get("missing_squads"):
         print(f"  WARNING {league}: no player data for {payload['missing_squads']} "
               f"(promoted clubs have no top-flight history) - they get no props")
     return True
@@ -417,6 +504,100 @@ def build_best_picks() -> dict:
     }
 
 
+def build_player_picks() -> dict:
+    """The cross-league player board: goalscorer, shot attempts, shots on target.
+
+    Same discipline as build_best_picks -- upcoming is read from the freshly
+    published payloads (so the board is populated outside the lock window, flagged
+    provisional), settled comes ONLY from the frozen log and is graded against the
+    player's actual match line.
+
+    Graded per market as well as overall, because the three markets are not
+    comparable: a 45% goalscorer pick and a 78% shots pick are both "high
+    confidence" for their market, and pooling them would produce a headline number
+    that describes neither.
+    """
+    upcoming, settled, ungradeable = [], [], []
+    for league, fname in FILE_FOR.items():
+        lg = config.get(league)
+        season_tag = lg.fixture_slug.rsplit("-", 1)[-1]
+        log = picks.load_log(PICKS_DIR / lg.key.lower() / "player_picks_log.json")
+
+        try:
+            payload = json.loads((OUT / fname).read_text(encoding="utf-8"))
+        except Exception:
+            payload = {"matches": []}
+        for m in payload.get("matches", []):
+            for pp in m.get("player_picks", []) or []:
+                upcoming.append({**pp, "league": lg.name, "league_key": league,
+                                 "id": m["id"], "date": m["date"],
+                                 "home": m["home"], "away": m["away"]})
+
+        if not log:
+            continue
+        try:
+            fx = fixtures.fetch_fixtures(league)
+        except Exception as exc:
+            print(f"  player-picks: skipping settled for {league} ({exc})")
+            continue
+        by_id = {int(r["match_id"]): r for _, r in fx.iterrows()}
+
+        # Actual per-match player lines. Empty when shot events are unreadable
+        # (upstream Bundesliga crash) -- then every pick in that league stays
+        # PENDING rather than being graded wrong against missing data.
+        try:
+            actuals = players.match_player_stats(league)
+        except Exception as exc:
+            print(f"  player-picks: no actuals for {league} ({exc})")
+            actuals = pd.DataFrame()
+        have_actuals = not actuals.empty
+        if not have_actuals:
+            # No per-match feed for this league. Its picks are still shown as
+            # upcoming predictions, but they are NOT parked in `settled` as
+            # perpetual "pending" -- an unresolvable pending pile reads like a
+            # backlog the model is about to be judged on, when in fact it can
+            # never be judged at all. Name the league instead.
+            ungradeable.append(lg.name)
+            continue
+        if have_actuals:
+            actuals = actuals.assign(day=pd.to_datetime(actuals["date"]).dt.date)
+            idx = {(r["player"], r["day"]): r for _, r in actuals.iterrows()}
+
+        for key, entry in log.items():
+            parts = str(key).split(":")
+            if len(parts) < 4 or parts[0] != season_tag:
+                continue
+            mid = int(parts[1])
+            row = by_id.get(mid)
+            if row is None:
+                continue
+            item = {**entry, "league": lg.name, "league_key": league, "id": mid,
+                    "line": picks.PROP_MARKETS[entry["market"]][2],
+                    "date": pd.Timestamp(row["date"]).isoformat(),
+                    "home": row["home"], "away": row["away"]}
+            if not bool(row["played"]):
+                continue                  # already covered by the payload read above
+            day = pd.Timestamp(row["date"]).date()
+            actual = idx.get((entry["player"], day))
+            settled.append(picks.grade_prop(entry, None if actual is None
+                                            else dict(actual)) | item)
+
+    upcoming.sort(key=lambda x: (-(x["p_pick"] or 0), x["date"]))
+    settled.sort(key=lambda x: x["date"], reverse=True)
+    by_market = {mk: picks.record([s for s in settled if s.get("market") == mk])
+                 for mk in picks.PROP_MARKETS}
+    return {
+        "updated": datetime.now(timezone.utc).isoformat(),
+        "min_probability": PLAYER_PICK_MIN_PROB,
+        "markets": {k: v[2] for k, v in picks.PROP_MARKETS.items()},
+        "record": picks.record(settled),
+        "record_by_market": by_market,
+        "ungradeable_leagues": sorted(set(ungradeable)),
+        "upcoming": upcoming,
+        "settled": settled[:120],
+    }
+
+
 def main(argv=None):
     """Publish all four leagues, or just the ones named on the command line
     (e.g. `python -m leagues.publish PL` for quick iteration)."""
@@ -442,6 +623,17 @@ def main(argv=None):
         r = best["record"]
         print(f"wrote {bp} - {len(best['upcoming'])} upcoming high-confidence picks, "
               f"record {r['correct']}-{r['wrong']}")
+
+        pp = build_player_picks()
+        ppath = OUT / "player_picks.json"
+        tmp = ppath.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(pp, indent=2, default=str), encoding="utf-8")
+        tmp.replace(ppath)
+        pr = pp["record"]
+        counts = {mk: sum(1 for u in pp["upcoming"] if u["market"] == mk)
+                  for mk in picks.PROP_MARKETS}
+        print(f"wrote {ppath} - {len(pp['upcoming'])} upcoming player picks "
+              f"{counts}, record {pr['correct']}-{pr['wrong']}")
 
     # If EVERY league failed, raise so the ops jobs abort the deploy rather than
     # shipping stale files (their try/except catches this).

@@ -65,6 +65,38 @@ engine stays pure-stdlib, the league engine needs pandas/scipy/penaltyblog.
   `team_shot_context` guard it and degrade (SOT via league-average ratio, neutral
   opponent factors) rather than sink the league.
 
+## The three published boards
+- `data/leagues/best.json` — cross-league **match-winner** picks at p>=0.65.
+- `data/leagues/player_picks.json` — cross-league **player** picks in three markets:
+  anytime goalscorer, 2+ shot attempts, 1+ shot on target. Bars are PER MARKET
+  (`PLAYER_PICK_MIN_PROB`): shots/SOT 0.70, goalscorer **0.40**. The goalscorer bar
+  is lower because it must be — a team scores ~1.5 goals and one man takes a share,
+  so the best anytime price in any of these leagues is ~50%. A 0.70 bar there would
+  publish an empty section forever, not a stricter one.
+- Both are graded **separately**, and player picks are also graded per market: a 45%
+  goalscorer and an 80% shots pick are both near their market's ceiling, so pooling
+  them yields a headline number describing neither. The `grades` tab shows all tiers.
+
+**Player picks are graded from shot events**, not from `fetch_player_logs` (which is
+one row per player-SEASON and cannot say whether a man scored in a given fixture).
+`players.match_player_stats()` counts goals/shots/SOT per player per game, INCLUDING
+penalties (an anytime pick wins on a penalty; `np_goals` would grade that a miss) and
+EXCLUDING own goals. A player with no shot row grades **wrong, not void** — the feed
+cannot separate "didn't play" from "played, never shot", so we take the harsher
+reading deliberately: it can only understate the record, never inflate it.
+
+**Bundesliga cannot be graded** (its shot events crash upstream), so its player picks
+publish with `gradeable: false`, are excluded from the record rather than parked as
+permanent "pending", and the SOT market is withheld there entirely — without a shot
+feed the on-target ratio is a league average, i.e. an assumption, not a measurement.
+
+**`MIN_SQUAD_FOR_PROPS = 6`** — a team with fewer players in the rates table gets NO
+props. The sigma-lambda rescale forces a team's players to sum to the match lambda,
+so a near-empty squad hands one man the whole team's goals: promoted Schalke had a
+single player with top-flight history and published as a **72.8% anytime scorer**
+when nothing else in four leagues beat 50.8%. One player is more dangerous than
+none — none is visibly a hole, one looks like the best pick on the board.
+
 ## Scheduled jobs — NOT YET REGISTERED
 `ops/leagues_weekly.py` and `ops/leagues_matchday.py` are written and working but
 deliberately unregistered: the 2026-27 seasons start **2026-08-21** (PL MW1: Arsenal

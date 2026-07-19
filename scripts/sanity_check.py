@@ -228,6 +228,77 @@ def check_best_picks():
                          f"team news is {age:.0f}h old")
 
 
+def check_player_picks():
+    """The player board, held to the same standard as the match board: every entry
+    above its market's stated bar, ranked, graded consistently, and -- the one that
+    actually bit -- never sourced from a squad too thin to share out the goals."""
+    p = ROOT / "data" / "leagues" / "player_picks.json"
+    if not p.exists():
+        warn("players", "player_picks.json not published yet")
+        return
+    d = json.loads(p.read_text(encoding="utf-8"))
+    bars = d.get("min_probability") or {}
+    if not bars:
+        fail("players", "no min_probability stated")
+        return
+    up = d.get("upcoming", [])
+    for x in up:
+        mk = x.get("market")
+        if mk not in bars:
+            fail("players", f"{x.get('player')} in unknown market {mk!r}")
+            continue
+        if (x.get("p_pick") or 0) < bars[mk]:
+            fail("players", f"{x['player']} ({mk}) at {x.get('p_pick')} is below the "
+                            f"stated {bars[mk]} bar")
+        if x.get("team") not in (x.get("home"), x.get("away")):
+            fail("players", f"{x['player']} plays for {x.get('team')}, not in "
+                            f"{x.get('home')} v {x.get('away')}")
+    probs = [x.get("p_pick") or 0 for x in up]
+    if probs != sorted(probs, reverse=True):
+        fail("players", "upcoming player picks are not ranked by confidence")
+
+    # A shots-on-target pick may only come from a league with a real shot feed --
+    # without one the on-target ratio is a league average, i.e. an assumption, and
+    # publishing it as a 70%+ pick would dress a guess as a measurement.
+    for x in up:
+        if x.get("market") == "sot" and x.get("gradeable") is False:
+            fail("players", f"SOT pick for {x['player']} in {x.get('league')}, which "
+                            f"has no shot-level feed")
+
+    # Every published prop must come from a squad the model could actually share
+    # goals across. This is the Schalke guard: one player with top-flight history
+    # absorbed his whole team's lambda and surfaced as a 72.8% scorer.
+    for fn in ("pl.json", "laliga.json", "bundesliga.json", "ligue1.json"):
+        f = ROOT / "data" / "leagues" / fn
+        if not f.exists():
+            continue
+        lg = json.loads(f.read_text(encoding="utf-8"))
+        thin = set(lg.get("thin_squads") or [])
+        for m in lg.get("matches", []):
+            for pr in (m.get("props") or []):
+                if pr["team"] in thin:
+                    fail("players", f"{fn}: prop published for {pr['team']}, whose "
+                                    f"squad was flagged too thin")
+            for pk in (m.get("player_picks") or []):
+                if pk["team"] in thin:
+                    fail("players", f"{fn}: player pick for {pk['team']}, whose "
+                                    f"squad was flagged too thin")
+
+    for x in d.get("settled", []):
+        mk = x.get("market")
+        if mk in bars and (x.get("p_pick") or 0) < bars[mk]:
+            fail("players", f"settled entry {x.get('player')} below the bar -- "
+                            f"selection must be frozen, not recomputed")
+    rec = d.get("record", {})
+    if rec.get("total") and rec["correct"] + rec["wrong"] != rec["total"]:
+        fail("players", "record correct+wrong != total")
+    tot = sum((d.get("record_by_market", {}).get(mk, {}) or {}).get("total", 0)
+              for mk in bars)
+    if tot != rec.get("total", 0):
+        fail("players", f"per-market totals ({tot}) do not sum to the overall "
+                        f"record ({rec.get('total', 0)})")
+
+
 def check_squad_freshness():
     """Player-club attribution is only as fresh as data-raw/leagues/transfers.json.
 
@@ -321,6 +392,7 @@ def main():
             warn(key, "payload not published yet")
     check_squad_freshness()
     check_best_picks()
+    check_player_picks()
     check_wc()
 
     for w in warns:

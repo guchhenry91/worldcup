@@ -73,6 +73,67 @@ def grade(entry: dict, result: dict) -> dict:
     return out
 
 
+def lock_prop(log: dict, key, market: str, player: str, team: str,
+              p_pick: float, confidence: int, kickoff, now=None) -> dict:
+    """Freeze one player pick. Same discipline as lock_pick: write once, never
+    rewrite, and store the probability AT LOCK TIME so board membership cannot be
+    decided in hindsight."""
+    key = str(key)
+    if key in log:
+        return log[key]
+
+    now = _utc(now if now is not None else pd.Timestamp.now("UTC"))
+    kickoff = _utc(kickoff)
+    log[key] = {
+        "market": market,
+        "player": player,
+        "team": team,
+        "p_pick": round(float(p_pick), 4),
+        "confidence": int(confidence),
+        "locked_at": now.isoformat(),
+        "kickoff": kickoff.isoformat(),
+        "tainted": bool((now - kickoff).total_seconds() / 3600.0 > LATE_LOCK_HOURS),
+    }
+    return log[key]
+
+
+# What each player market needs to hit. Keep the LINE here, next to the grader,
+# so the published card and the grade can never drift apart.
+PROP_MARKETS = {
+    "goal":  ("goals", 1, "Anytime goalscorer"),
+    "shots": ("shots", 2, "2+ shot attempts"),
+    "sot":   ("sot",   1, "1+ shot on target"),
+}
+
+
+def grade_prop(entry: dict, actual: dict | None) -> dict:
+    """Grade a FROZEN player pick against that player's actual match line.
+
+    `actual` is his row from players.match_player_stats, or None when he has no
+    shot events in the fixture.
+
+    None is graded WRONG, not void. It means one of two things -- he did not play,
+    or he played and never had a shot -- and the shot feed cannot tell them apart.
+    A bookmaker voids the first and settles the second as a loss. Given we cannot
+    distinguish them, we take the HARSHER reading on purpose: expected minutes are
+    part of what the model claims, so a man the model expected to play and start
+    shooting who did neither is a miss. This can only ever understate the record,
+    never inflate it, which is the direction an honest scoreboard should err in.
+    """
+    out = dict(entry)
+    if entry.get("tainted"):
+        out["void"] = True
+        out["graded"] = "void"
+        return out
+
+    field, line, _ = PROP_MARKETS[entry["market"]]
+    got = int((actual or {}).get(field, 0))
+    out["void"] = False
+    out["actual"] = None if actual is None else int(got)
+    out["graded"] = "correct" if got >= line else "wrong"
+    return out
+
+
 def record(entries: list[dict]) -> dict:
     """Aggregate a record in the same shape the WC app publishes."""
     rec = {"correct": 0, "wrong": 0, "total": 0, "void": 0, "pending": 0,

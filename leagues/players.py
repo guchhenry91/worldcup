@@ -156,6 +156,47 @@ def fetch_player_logs(league: str, apply_transfers: bool = True) -> pd.DataFrame
     return build_player_logs(stats, shots, league, transfers=tr)
 
 
+def match_player_stats(league: str, seasons=None) -> pd.DataFrame:
+    """Per-player, per-MATCH actuals -- the feed player picks are graded against.
+
+    fetch_player_logs is one row per player-SEASON: right for rates, useless for
+    grading, because a season total cannot say whether a man scored in a given
+    fixture. Shot events are the only per-match player data available here, so
+    goals/shots/SOT are counted from them directly.
+
+    Goals count PENALTIES: an anytime-scorer pick wins on a penalty, and grading
+    on np_goals would mark a penalty-only scorer wrong when the pick actually won.
+    Own goals are excluded from every column -- they are credited to the scorer but
+    are not a shot for his own team, and they never settle a scorer bet.
+
+    Returns date, game_id, team, player, goals, shots, sot. Returns an EMPTY frame
+    if shot events cannot be read (the known upstream Bundesliga crash), so callers
+    leave those picks PENDING rather than grading them all wrong.
+    """
+    lg = config.get(league)
+    seasons = list(seasons) if seasons else list(lg.history_seasons)
+    try:
+        us = sd.Understat(leagues=lg.understat, seasons=seasons)
+        ev = us.read_shot_events().reset_index()
+    except Exception as exc:
+        print(f"WARNING: no per-match player data for {league} "
+              f"({type(exc).__name__}: {exc}); player picks stay PENDING")
+        return pd.DataFrame(columns=["date", "game_id", "team", "player",
+                                     "goals", "shots", "sot"])
+
+    ev = ev[ev["result"] != "Own Goal"].copy()
+    ev["team"] = [canonical(t, league) for t in ev["team"]]
+    ev["date"] = pd.to_datetime(ev["date"]).dt.tz_localize(None)
+    ev["is_goal"] = ev["result"] == "Goal"
+    ev["is_sot"] = ev["result"].isin(ON_TARGET)
+    out = (ev.groupby(["game_id", "date", "team", "player"], as_index=False)
+             .agg(goals=("is_goal", "sum"), shots=("result", "size"),
+                  sot=("is_sot", "sum")))
+    for c in ("goals", "shots", "sot"):
+        out[c] = out[c].astype(int)
+    return out
+
+
 def load_news(league: str) -> dict:
     """Team news for one league: club -> {"out": [...], "doubt": [...], ...}.
 

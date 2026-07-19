@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T11:25:42.936689+00:00",
+  "updated": "2026-07-19T14:33:02.370947+00:00",
   "min_probability": 0.65,
   "record": {
     "correct": 0,
@@ -62,7 +62,7 @@
       "away": "Hamburg",
       "pick": "Dortmund",
       "confidence": 4,
-      "p_pick": 0.6911,
+      "p_pick": 0.691,
       "score": "2-0",
       "provisional": true
     },
@@ -90,7 +90,7 @@
       "away": "Stuttgart",
       "pick": "Bayern Munich",
       "confidence": 4,
-      "p_pick": 0.6706,
+      "p_pick": 0.6705,
       "score": "2-1",
       "provisional": true
     },

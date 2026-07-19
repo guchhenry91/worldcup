@@ -171,6 +171,25 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
     return out
 
 
+def thin_squads(rates: pd.DataFrame, teams, min_players: int) -> list:
+    """Teams with SOME player data but too little to share out a team's goals.
+
+    The rescale in match_props forces a team's players to sum to the match model's
+    lambda. With a handful of players that is arithmetically fine and factually
+    absurd: a promoted club with one player of top-flight history had the whole
+    team's 1.30 expected goals land on him, publishing a 72.8% anytime scorer when
+    nothing else in four leagues exceeded 50.8%.
+
+    Teams with NO data are excluded elsewhere and are not the danger -- an empty
+    card is visibly missing, whereas one inflated name looks like the best pick on
+    the board. Returned sorted so the caller can report them.
+    """
+    if rates.empty:
+        return sorted(teams)
+    counts = rates.groupby("team").size()
+    return sorted(t for t in teams if 0 < int(counts.get(t, 0)) < min_players)
+
+
 def top_props(props: list[dict], team: str, n: int = 3) -> list[dict]:
     """Top-n players for a team by anytime probability."""
     squad = [p for p in props if p["team"] == team]

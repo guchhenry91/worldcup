@@ -23,6 +23,8 @@
 // Each competition is described here; the switcher and router are generic.
 const COMPETITIONS = [
   {key: "best",       label: "★ Best Picks",    data: "data/leagues/best.json",       kind: "best"},
+  {key: "players",    label: "★ Player Picks",  data: "data/leagues/player_picks.json", kind: "players"},
+  {key: "grades",     label: "Grades",          data: "data/leagues/best.json",       kind: "grades"},
   {key: "wc",         label: "World Cup 2026",  data: "data/predictions.json",        kind: "cup"},
   {key: "pl",         label: "Premier League",  data: "data/leagues/pl.json",         clubs: "data/leagues/clubs.json",            kind: "league"},
   {key: "laliga",     label: "La Liga",         data: "data/leagues/laliga.json",     clubs: "data/leagues/clubs_laliga.json",     kind: "league"},
@@ -279,6 +281,127 @@ function renderBest(app, data) {
   }
 }
 
+// ---------------- shared: player picks ----------------
+const MARKET_ORDER = ['goal', 'shots', 'sot'];
+
+function playerCards(rows) {
+  const grid = el('section', 'fixtures');
+  for (const p of rows) {
+    const card = el('article', 'card glass best');
+    const when = new Date(p.date).toLocaleDateString('en-GB',
+      { weekday: 'short', day: 'numeric', month: 'short' });
+    const flags = [
+      p.provisional ? 'provisional' : '',
+      p.doubt ? 'fitness doubt' : '',
+      p.penalty_taker ? 'penalties' : '',
+      p.gradeable === false ? 'not gradeable' : '',
+    ].filter(Boolean).join(' · ');
+    card.innerHTML = `
+      <div class="mw">${esc(p.league)} · ${when}${flags ? ' · ' + esc(flags) : ''}</div>
+      <header><span class="team">${esc(p.player)}</span></header>
+      <div class="sub">${esc(p.team)} · ${esc(p.home)} v ${esc(p.away)}</div>
+      <div class="pick">${esc(p.line)} <span class="conf">${'★'.repeat(p.confidence || 0)}</span></div>
+      <div class="bp-prob"><span class="bar" style="--pct:${Math.round(100 * (p.p_pick || 0))}%"></span>
+        <span>${pct(100 * (p.p_pick || 0))} likely</span></div>`;
+    grid.append(card);
+  }
+  return grid;
+}
+
+function renderPlayers(app, data) {
+  app.append(el('h1', 'dsp', 'Player Picks <span>all leagues</span>'));
+
+  const rec = data.record || {};
+  const chip = el('div', 'record-chip');
+  chip.innerHTML = rec.total
+    ? `<b>${rec.correct}–${rec.wrong}</b> · ${pct(100 * rec.correct / rec.total)} on ${rec.total} settled player picks`
+    : 'No settled player picks yet — the season starts in August';
+  app.append(chip);
+
+  const bars = data.min_probability || {};
+  // Say out loud why the goalscorer bar is lower. A reader comparing a 45%
+  // goalscorer pick with a 78% shots pick should know the first is near the
+  // ceiling of its market, not a weaker pick.
+  app.append(el('div', 'best-note',
+    `Shot markets need <b>${pct(100 * (bars.shots || 0))}</b> to make this board. ` +
+    `Anytime goalscorer needs <b>${pct(100 * (bars.goal || 0))}</b> — deliberately lower, because ` +
+    `no player reaches 70% to score: a team scores about 1.5 goals and one man takes a share of them, ` +
+    `so the best goalscorer chance in any of these leagues sits near 50%. ` +
+    `Each card shows its own number, and the three markets are graded separately.` +
+    ((data.ungradeable_leagues || []).length
+      ? ` <b>${esc(data.ungradeable_leagues.join(', '))}</b> has no shot-level feed, so its player picks are shown but cannot be graded.`
+      : '')));
+
+  const up = data.upcoming || [];
+  for (const mk of MARKET_ORDER) {
+    const rows = up.filter(p => p.market === mk);
+    if (!rows.length) continue;
+    app.append(el('h2', 'dsp', esc((data.markets || {})[mk] || mk)));
+    app.append(playerCards(rows));
+  }
+  if (!up.length) app.append(el('h2', 'dsp', 'Nothing above the bar right now'));
+}
+
+// ---------------- grades: every graded pick, by tier ----------------
+function gradeTable(rows, kind) {
+  const wrap = el('div', 'table-wrap glass');
+  const head = kind === 'player'
+    ? '<th></th><th>League</th><th>Player</th><th>Market</th><th>Conf</th><th>Actual</th>'
+    : '<th></th><th>League</th><th>Match</th><th>Pick</th><th>Conf</th><th>Result</th>';
+  wrap.innerHTML = `<table class="league-table">
+    <thead><tr>${head}</tr></thead>
+    <tbody>${rows.map(s => {
+      const mark = s.void ? '<span class="tick void">✓✗*</span>'
+        : s.graded === 'correct' ? '<span class="tick correct">✓</span>'
+        : '<span class="tick wrong">✗</span>';
+      const last = kind === 'player'
+        ? (s.actual === null || s.actual === undefined ? 'did not shoot' : esc(String(s.actual)))
+        : (s.result ? `${s.result.home_goals}–${s.result.away_goals}` : '');
+      const mid = kind === 'player'
+        ? `<td>${esc(s.player)}</td><td>${esc(s.line)}</td>`
+        : `<td>${esc(s.home)} v ${esc(s.away)}</td><td>${esc(s.pick)}</td>`;
+      return `<tr><td>${mark}</td><td class="num">${esc(s.league)}</td>${mid}
+        <td class="num">${pct(100 * (s.p_pick || 0))}</td>
+        <td class="num">${last}</td></tr>`; }).join('')}</tbody></table>`;
+  return wrap;
+}
+
+function tierRow(label, rec, note) {
+  const hit = rec && rec.total ? pct(100 * rec.correct / rec.total) : '—';
+  return `<div class="metric"><b>${hit}</b>${esc(label)}${
+    rec && rec.total ? ` (${rec.correct}–${rec.wrong})` : ' · none graded yet'}${
+    note ? `<br><small>${esc(note)}</small>` : ''}</div>`;
+}
+
+function renderGrades(app, d) {
+  const best = d.best || {}, pl = d.players || {};
+  app.append(el('h1', 'dsp', 'Grades <span>how every tier is doing</span>'));
+  app.append(el('div', 'best-note',
+    `Every pick here was frozen before kickoff and graded against the result — never re-picked ` +
+    `afterwards. The tiers are scored <b>separately</b> on purpose: pooling a high-confidence ` +
+    `board with every routine pick would hide which one is actually earning its billing.`));
+
+  const tiers = el('section', 'performance glass');
+  tiers.innerHTML = `<div class="metrics">
+    ${tierRow('Best Picks (match winner)', best.record)}
+    ${tierRow('Player picks (all markets)', pl.record)}
+    ${MARKET_ORDER.map(mk => tierRow(
+        (pl.markets || {})[mk] || mk, (pl.record_by_market || {})[mk])).join('')}
+    ${(d.leagues || []).map(l => tierRow(l.label + ' — every pick', l.record)).join('')}
+  </div>`;
+  app.append(tiers);
+
+  const bs = best.settled || [];
+  app.append(el('h2', 'dsp', 'Best Picks — settled'));
+  app.append(bs.length ? gradeTable(bs, 'match')
+    : el('p', 'sub', 'Nothing settled yet — the season starts in August.'));
+
+  const ps = (pl.settled || []).filter(s => s.graded === 'correct' || s.graded === 'wrong' || s.void);
+  app.append(el('h2', 'dsp', 'Player picks — settled'));
+  app.append(ps.length ? gradeTable(ps, 'player')
+    : el('p', 'sub', 'Nothing settled yet — the season starts in August.'));
+}
+
 // ---------------- adapter: World Cup (cup) view ----------------
 function renderWC(app, data) {
   app.append(el('h1', 'dsp', 'World Cup <span>2026</span>'));
@@ -366,6 +489,23 @@ function renderSwitcher() {
   }
 }
 
+// The Grades tab is the one view that spans every file: the two boards plus each
+// league's all-picks record. A single missing file must degrade that one tier to
+// "none graded yet" rather than empty the whole page, so each fetch is caught.
+const getJSON = url => fetch(url).then(r => r.json()).catch(() => ({}));
+
+async function gradesData(best) {
+  const leagueComps = COMPETITIONS.filter(c => c.kind === 'league');
+  const [players, ...leagues] = await Promise.all([
+    getJSON('data/leagues/player_picks.json'),
+    ...leagueComps.map(c => getJSON(c.data)),
+  ]);
+  return {
+    best, players,
+    leagues: leagueComps.map((c, i) => ({ label: c.label, record: leagues[i].record })),
+  };
+}
+
 async function route() {
   renderSwitcher();
   const comp = COMPETITIONS.find(c => c.key === activeKey());
@@ -386,6 +526,8 @@ async function route() {
   // Render errors are NOT caught here: a code bug should surface in the console,
   // not be silently disguised as a "Could not load" network message.
   if (comp.kind === 'best') renderBest(app, data);
+  else if (comp.kind === 'players') renderPlayers(app, data);
+  else if (comp.kind === 'grades') renderGrades(app, await gradesData(data));
   else if (comp.kind === 'cup') renderWC(app, data);
   else renderLeague(app, data, clubs, comp.label);
 }
