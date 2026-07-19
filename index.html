@@ -244,10 +244,15 @@ function renderBest(app, data) {
   // State plainly what this tier is worth, from the backtest, so the badge is not
   // mistaken for certainty.
   app.append(el('div', 'best-note',
-    `Only picks the model rates at <b>${pct(100 * (data.min_probability || 0))}</b> or higher make this board. ` +
-    `Walk-forward across all four leagues these landed <b>${num(data.backtested_hit_rate_pct)}%</b> of the time, ` +
-    `against <b>${num(data.backtested_all_picks_pct)}%</b> for every pick the model makes. ` +
-    `Graded separately from the main record, so this tier can be judged on its own.`));
+    `The fixtures the model is most sure about — <b>${pct(100 * (data.min_probability || 0))}</b> or higher. ` +
+    `Walk-forward across all four leagues, picks at this level landed ` +
+    `<b>${num(data.backtested_hit_rate_pct)}%</b> of the time, against ` +
+    `<b>${num(data.backtested_all_picks_pct)}%</b> for every pick it makes. ` +
+    // Say what this tier is and is not. Tested against de-vigged closing odds, the
+    // model's pick here is the SAME pick the market makes, every time. The hit rate
+    // is real; the implication that we spotted something others missed would not be.
+    `These are clear favourites, not bets the bookmakers have got wrong — they rate ` +
+    `these matches much as we do. Graded separately so this tier can be judged on its own.`));
 
   const up = data.upcoming || [];
   app.append(el('h2', 'dsp', up.length ? 'Next up' : 'Nothing above the bar right now'));
