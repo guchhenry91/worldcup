@@ -4,3 +4,8 @@
 __pycache__/
 .deploy.lock
 data-raw/leagues/cache/
+
+# subagent scratch files
+_repro.py
+_scratch*.py
+_tmp*.py
