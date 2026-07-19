@@ -1,0 +1,34 @@
+{
+  "_note": "Does the high-confidence tier beat the market on the SAME fixtures? Run: python -m scripts.tier_benchmark. DECISIVE NEGATIVE RESULT -- at every threshold the model's pick is IDENTICAL to the de-vigged market's pick 100% of the time. The 77% hit rate on the p>=0.65 tier is therefore pure selection (strong favourites win often), not model skill. Do not re-run expecting a different answer, and do not bill this tier as an edge over the market.",
+  "pooled_n": 3958,
+  "tiers": [
+    {
+      "threshold": 0.55,
+      "n": 1207,
+      "model_hit_pct": 69.1,
+      "market_hit_pct": 69.2,
+      "agreement_pct": 100
+    },
+    {
+      "threshold": 0.6,
+      "n": 793,
+      "model_hit_pct": 73.9,
+      "market_hit_pct": 74.0,
+      "agreement_pct": 100
+    },
+    {
+      "threshold": 0.65,
+      "n": 467,
+      "model_hit_pct": 76.9,
+      "market_hit_pct": 76.9,
+      "agreement_pct": 100
+    },
+    {
+      "threshold": 0.7,
+      "n": 265,
+      "model_hit_pct": 83.0,
+      "market_hit_pct": 83.0,
+      "agreement_pct": 100
+    }
+  ]
+}
