@@ -165,8 +165,18 @@ def player_candidates(league: str, team: str,
 
 
 def classify(title: str, players: list[str]) -> tuple[str, str] | None:
-    folded = title.casefold()
-    player = next((name for name in players if name.casefold() in folded), None)
+    """Match a candidate's full name as a whole word/phrase, not a bare substring.
+
+    A surname can itself be a common English-word fragment: Son Heung-min's
+    surname is inside "season"/"reason". `"son" in title.casefold()` matched
+    both, misclassifying unrelated headlines (a manager's suspension, a generic
+    pundit-doubt line) as Son being out/doubtful. `\\b...\\b` still finds the name
+    anywhere in the title, it just requires it to start and end on a word
+    boundary, so it can no longer match mid-word.
+    """
+    player = next(
+        (name for name in players if re.search(rf"\b{re.escape(name)}\b", title, re.I)),
+        None)
     if not player:
         return None
     if OUT_WORDS.search(title):
@@ -176,23 +186,50 @@ def classify(title: str, players: list[str]) -> tuple[str, str] | None:
     return None
 
 
-def _publisher_key(evidence: dict) -> str:
+_GENERIC_PUBLISHER_TOKENS = {"the", "on", "msn", "news", "co", "com", "uk"}
+
+
+def _publisher_tokens(evidence: dict) -> frozenset[str]:
+    """Tokens identifying a publisher, with generic boilerplate words stripped.
+
+    Kept as a TOKEN SET rather than one concatenated string so a regional-prefix
+    syndication byline can still be recognised as the same outlet (see
+    `_same_publisher`): exact-string keys treated "Evening Standard" and "London
+    Evening Standard on MSN" as two different sources, when the second is the
+    first republished under an aggregator's local-paper byline.
+    """
     value = evidence.get("publisher") or evidence.get("url") or ""
     host = urllib.parse.urlparse(value).netloc or value
-    key = host.casefold().removeprefix("www.")
-    key = re.sub(r"\s+on\s+msn$", "", key)
-    key = re.sub(r"^the\s+", "", key)
-    return re.sub(r"[^a-z0-9.]+", "", key)
+    text = re.sub(r"[^a-z0-9]+", " ", host.casefold().removeprefix("www."))
+    tokens = {t for t in text.split() if t and t not in _GENERIC_PUBLISHER_TOKENS}
+    return frozenset(tokens) or frozenset({text})
+
+
+def _same_publisher(a: frozenset[str], b: frozenset[str]) -> bool:
+    """Same real-world outlet if the smaller name's tokens are fully contained in
+    the larger name's -- catching a regional prefix added by syndication -- but
+    ONLY when that overlap is at least two words. A single generic word ("Times",
+    "Sport") is shared by too many unrelated real outlets (Times of India, NY
+    Times, Sunday Times...) for a bare one-token subset match to prove identity;
+    requiring two lets "Evening Standard" match its longer variant while still
+    keeping "Times" and "Sunday Times" apart.
+    """
+    if a == b:
+        return True
+    small, big = (a, b) if len(a) <= len(b) else (b, a)
+    return len(small) >= 2 and small <= big
 
 
 def corroborated(evidence: list[dict], status: str) -> set[str]:
-    by_player: dict[str, set[str]] = {}
+    by_player: dict[str, list[frozenset[str]]] = {}
     for item in evidence:
         if item.get("status") != status:
             continue
-        by_player.setdefault(item["player"], set()).add(_publisher_key(item))
-    return {player for player, publishers in by_player.items()
-            if len(publishers) >= 2}
+        clusters = by_player.setdefault(item["player"], [])
+        tokens = _publisher_tokens(item)
+        if not any(_same_publisher(tokens, c) for c in clusters):
+            clusters.append(tokens)
+    return {player for player, clusters in by_player.items() if len(clusters) >= 2}
 
 
 def collect_team(team: str, opponent: str, players: list[str], fetcher=fetch_rss,

@@ -45,6 +45,47 @@ def test_same_publisher_in_two_search_indexes_is_only_one_source():
     assert team_news.corroborated(evidence, "out") == set()
 
 
+def test_syndicated_regional_byline_is_not_a_second_source():
+    """A local paper republished under an aggregator's regional byline
+    ("Evening Standard" -> "London Evening Standard on MSN") is the same real
+    outlet, not independent corroboration. Fixed by comparing publisher TOKEN
+    SETS (subset match, 2+ overlapping words) rather than exact string keys."""
+    evidence = [
+        {"player": "Ada Striker", "status": "out", "publisher": "Evening Standard"},
+        {"player": "Ada Striker", "status": "out",
+         "publisher": "London Evening Standard on MSN"},
+    ]
+    assert team_news.corroborated(evidence, "out") == set()
+
+
+def test_a_single_shared_generic_word_is_not_enough_to_merge_publishers():
+    """The subset-match fix must not over-merge: "Times" alone is shared by many
+    unrelated real outlets (Sunday Times, NY Times, Times of India). Requiring
+    at least two overlapping tokens keeps these genuinely apart."""
+    evidence = [
+        {"player": "Ada Striker", "status": "out", "publisher": "Times"},
+        {"player": "Ada Striker", "status": "out", "publisher": "Sunday Times"},
+    ]
+    assert team_news.corroborated(evidence, "out") == {"Ada Striker"}
+
+
+def test_short_surname_inside_an_unrelated_word_does_not_classify():
+    """A player's surname can itself be a common English-word fragment (Son
+    Heung-min's surname sits inside "season"/"reason"). Unanchored substring
+    matching misclassified headlines about a manager's suspension or a generic
+    pundit-doubt comment as Son being out/doubtful. Word-boundary matching finds
+    the name only as a whole word."""
+    assert team_news.classify(
+        "Reason Postecoglou may be suspended by the board after latest defeat",
+        ["Son"]) is None
+    assert team_news.classify(
+        "Arsenal boss doubtful pundits will ever rate this Spurs season",
+        ["Son"]) is None
+    assert team_news.classify(
+        "Son ruled out of Spurs clash with hamstring injury",
+        ["Son"]) == ("Son", "out")
+
+
 def test_vague_injury_headline_does_not_change_model_input():
     assert team_news.classify(
         "Ada Striker injury update before City match", ["Ada Striker"]) is None
