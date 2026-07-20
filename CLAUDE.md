@@ -1,6 +1,14 @@
-# World Cup 2026 Predictor
+# Henry's Match Engine
 
-Static site (index.html + data/predictions.json) deployed on Render, predicting every WC26 group-stage match. Owner: John (guchhenry91).
+Static site deployed on Render. The live product (index.html) is a four-league
+football predictor -- Premier League, La Liga, Bundesliga, Ligue 1 -- plus two
+cross-league boards (Best Picks, Player Picks) and a Grades tab. Owner: John
+(guchhenry91).
+
+Repo also holds `worldcup.html`, the completed World Cup 2026 tournament
+(daily picks, group projections, title odds, full graded knockout bracket).
+It is an ARCHIVE, kept exactly as it finished -- final record 64-26 of 90
+(71%), champion Spain -- and should not need to change again.
 
 ## Layout
 - `index.html` — the SITE ENTRY POINT: the unified predictor (Best Picks, Player
@@ -37,10 +45,10 @@ Rules: never invent scores or injuries — only verified info. Team names must e
 
 ---
 
-# Leagues engine (Premier League — Phase 2a)
+# Leagues engine (the live product: PL, La Liga, Bundesliga, Ligue 1)
 
-A second, independent predictor living in `leagues/`. It shares the repo and
-`deploy.py` with the World Cup app but **touches none of its files**: the WC
+The predictor living in `leagues/`. It shares the repo and `deploy.py` with
+the archived World Cup app but **touches none of its files**: the WC
 engine stays pure-stdlib, the league engine needs pandas/scipy/penaltyblog.
 
 - `index.html` + `app.css` — the unified UI for all four leagues plus the two

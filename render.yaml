@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: worldcup-predictor
+    name: henrys-match-engine
     runtime: static
     staticPublishPath: .
     buildCommand: ""
