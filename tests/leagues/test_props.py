@@ -134,3 +134,53 @@ def test_removing_every_player_does_not_crash_or_invent_goals():
                         unavailable={"Haaland", "Foden", "Dias"})
     assert [p for p in props if p["team"] == "Manchester City"] == []
     assert [p for p in props if p["team"] == "Brentford"]        # other side intact
+
+
+def test_appearance_probability_is_a_zero_inflated_event_model():
+    """50% of 80 minutes is not the same distribution as certain for 40 minutes.
+
+    The former must explicitly carry the chance the player never enters the game,
+    especially for multi-event markets such as 2+ shots.
+    """
+    uncertain = match_props(
+        _rates(), "Manchester City", "Brentford", 2.1, 0.9,
+        playing_time={"Haaland": {
+            "appearance_prob": 0.5, "minutes_if_playing": 80,
+            "expected_minutes": 40}})
+    certain = match_props(
+        _rates(), "Manchester City", "Brentford", 2.1, 0.9,
+        playing_time={"Haaland": {
+            "appearance_prob": 1.0, "minutes_if_playing": 40,
+            "expected_minutes": 40}})
+    u = next(p for p in uncertain if p["player"] == "Haaland")
+    c = next(p for p in certain if p["player"] == "Haaland")
+    assert u["appearance_pct"] == 50.0
+    assert u["expected_minutes"] == c["expected_minutes"] == 40.0
+    assert u["p_shots_2plus"] != c["p_shots_2plus"]
+
+
+def test_confirmed_lineup_overrides_historical_availability():
+    pt = {"Haaland": {"appearance_prob": 0.25, "minutes_if_playing": 60,
+                       "expected_minutes": 15}}
+    provisional = match_props(_rates(), "Manchester City", "Brentford", 2.1, 0.9,
+                              playing_time=pt)
+    confirmed = match_props(_rates(), "Manchester City", "Brentford", 2.1, 0.9,
+                            playing_time=pt, confirmed_starters={"Haaland"})
+    p = next(x for x in provisional if x["player"] == "Haaland")
+    c = next(x for x in confirmed if x["player"] == "Haaland")
+    assert p["appearance_pct"] == 25.0
+    assert c["appearance_pct"] == 100.0
+    assert c["expected_minutes"] >= 70.0
+    assert c["p_shots_2plus"] > p["p_shots_2plus"]
+
+
+def test_confirmed_bench_caps_minutes_and_appearance_chance():
+    bench = match_props(
+        _rates(), "Manchester City", "Brentford", 2.1, 0.9,
+        playing_time={"Haaland": {"appearance_prob": 0.95,
+                                  "minutes_if_playing": 85,
+                                  "expected_minutes": 80.75}},
+        confirmed_bench={"Haaland"})
+    h = next(x for x in bench if x["player"] == "Haaland")
+    assert h["appearance_pct"] == 35.0
+    assert h["expected_minutes"] <= 8.8

@@ -4,8 +4,9 @@ The scheduled tasks gather data (edit data-raw/*.json), then call THIS script
 to finish deterministically: re-run the model, commit, push, trigger the
 Render deploy. It self-heals a stale publish and refuses to half-complete.
 
-Usage:  python deploy.py "commit message"        # stages data/ + data-raw/ only
-        python deploy.py "commit message" --all  # stage everything (manual dev use)
+Usage:  python deploy.py "commit message"                # World Cup data pipeline
+        python deploy.py "commit message" --league-data  # league data only
+        python deploy.py "commit message" --all          # stage everything
 """
 import json
 import os
@@ -32,6 +33,10 @@ def git(*args, fatal=True):
 def main():
     msg = sys.argv[1] if len(sys.argv) > 1 else "auto update: results + news"
     stage_all = "--all" in sys.argv[2:]
+    league_data = "--league-data" in sys.argv[2:]
+    if stage_all and league_data:
+        print("ABORT: --all and --league-data are mutually exclusive.")
+        sys.exit(2)
 
     # concurrency guard: two scheduled tasks must not race the repo
     try:
@@ -50,7 +55,9 @@ def main():
             sys.exit(1)
 
         # 2. regenerate predictions (grades locked picks, re-rates Elo, re-sims KO)
-        pred = subprocess.run([sys.executable, os.path.join(ROOT, "predict.py")],
+        pred_cmd = ([sys.executable, os.path.join(ROOT, "predict.py")]
+                    if not league_data else [sys.executable, "-c", "pass"])
+        pred = subprocess.run(pred_cmd,
                               capture_output=True, text=True)
         print(pred.stdout.strip() or pred.stderr.strip())
         if pred.returncode != 0:
@@ -58,11 +65,16 @@ def main():
             sys.exit(1)
 
         # 3. commit iff something changed (scoped: the pipeline owns data only)
-        paths = ["-A"] if stage_all else ["data", "data-raw"]
+        if stage_all:
+            paths = ["-A"]
+        elif league_data:
+            paths = ["data/leagues", "data-raw/leagues"]
+        else:
+            paths = ["data", "data-raw"]
         git("add", *paths)
         if git("diff", "--cached", "--quiet", fatal=False).returncode != 0:
             git("commit", "-m", msg)
-            git("push", "origin", "main")
+            git("push", "origin", "HEAD")
             print("Pushed:", msg)
         else:
             print("No data changes since last run.")

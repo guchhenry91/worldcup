@@ -31,6 +31,8 @@ PEN_CONVERSION = 0.76
 # and be withdrawn, or come off the bench. Deliberately blunt -- we have a status
 # word, not a minutes forecast, so pretending to more precision would be false.
 DOUBT_MINUTES_FACTOR = 0.5
+CONFIRMED_BENCH_APPEARANCE = 0.35
+CONFIRMED_BENCH_MINUTES = 25.0
 
 
 def _prior(pos: str, table: dict, default_key: str = "MF") -> float:
@@ -98,7 +100,10 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
                 opp_shot_factor: dict | None = None,
                 exp_pens: dict | None = None,
                 unavailable: set | None = None,
-                doubtful: set | None = None) -> list[dict]:
+                doubtful: set | None = None,
+                playing_time: dict | None = None,
+                confirmed_starters: set | None = None,
+                confirmed_bench: set | None = None) -> list[dict]:
     """Per-player props for ONE fixture.
 
     lam_home/lam_away are the match model's fitted team goal expectations
@@ -118,6 +123,9 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
 
     unavailable = unavailable or set()
     doubtful = doubtful or set()
+    playing_time = playing_time or {}
+    confirmed_starters = confirmed_starters or set()
+    confirmed_bench = confirmed_bench or set()
 
     out = []
     for team, lam_team in ((home, lam_home), (away, lam_away)):
@@ -133,9 +141,26 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
 
         # A doubtful player still features, but at reduced expected minutes -- the
         # rescale then hands the difference to the rest of the squad.
-        squad["exp_min"] = [
-            float(minutes.get(p, 90.0)) * (DOUBT_MINUTES_FACTOR if p in doubtful else 1.0)
-            for p in squad["player"]]
+        appearance, conditional = [], []
+        for player in squad["player"]:
+            pt = playing_time.get(player) or {}
+            expected = float(minutes.get(player, 90.0))
+            p_app = float(pt.get("appearance_prob", 1.0))
+            mins_if = float(pt.get("minutes_if_playing",
+                                   expected / p_app if p_app > 0 else 0.0))
+            if player in confirmed_starters:
+                p_app = 1.0
+                mins_if = max(mins_if, 70.0)
+            elif player in confirmed_bench:
+                p_app = CONFIRMED_BENCH_APPEARANCE
+                mins_if = min(mins_if, CONFIRMED_BENCH_MINUTES)
+            if player in doubtful and player not in confirmed_starters:
+                p_app *= DOUBT_MINUTES_FACTOR
+            appearance.append(float(np.clip(p_app, 0.0, 1.0)))
+            conditional.append(float(np.clip(mins_if, 0.0, 90.0)))
+        squad["appearance_prob"] = appearance
+        squad["minutes_if_playing"] = conditional
+        squad["exp_min"] = squad["appearance_prob"] * squad["minutes_if_playing"]
         squad["raw"] = squad["rate90"] * squad["exp_min"] / 90.0
 
         # Penalties are a TEAM property: take them out of the open-play budget
@@ -146,7 +171,13 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
         # lam_team and every scorer would be understated.
         taker = pen_taker.get(team)
         has_taker = bool((squad["player"] == taker).any()) if taker else False
-        lam_pen = float(exp_pens.get(team, 0.0)) * PEN_CONVERSION if has_taker else 0.0
+        taker_p = (float(squad.loc[squad["player"] == taker, "appearance_prob"].iloc[0])
+                   if has_taker else 0.0)
+        # Reserve only the penalty mass attributable to the primary taker actually
+        # appearing. If he misses out, an unknown deputy takes it; that residual
+        # stays in the open team budget instead of being falsely assigned.
+        lam_pen = (float(exp_pens.get(team, 0.0)) * PEN_CONVERSION * taker_p
+                   if has_taker else 0.0)
         lam_pen = min(lam_pen, max(lam_team - 1e-6, 0.0))
         lam_open = max(lam_team - lam_pen, 0.0)
 
@@ -162,19 +193,29 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
             if is_taker:
                 lam_goals += lam_pen
 
-            s = float(r["shots90"]) * float(r["exp_min"]) / 90.0 * factor
-            sot = s * float(r["sot_ratio"])
+            p_app = float(r["appearance_prob"])
+            mins_if = float(r["minutes_if_playing"])
+            lam_goals_if_playing = lam_goals / p_app if p_app > 0 else 0.0
+            anytime = p_app * (1.0 - np.exp(-lam_goals_if_playing))
+            s_if_playing = float(r["shots90"]) * mins_if / 90.0 * factor
+            sot_if_playing = s_if_playing * float(r["sot_ratio"])
+            exp_shots = p_app * s_if_playing
+            exp_sot = p_app * sot_if_playing
+            p_shots = p_app * (1.0 - np.exp(-s_if_playing) * (1.0 + s_if_playing))
+            p_sot = p_app * (1.0 - np.exp(-sot_if_playing))
 
             out.append({
                 "team": team,
                 "player": r["player"],
                 "position": r["pos"],
                 "lambda_goals": lam_goals,
-                "anytime_pct": round(100.0 * (1.0 - np.exp(-lam_goals)), 1),
-                "exp_shots": round(s, 2),
-                "p_shots_2plus": round(100.0 * (1.0 - np.exp(-s) * (1.0 + s)), 1),
-                "exp_sot": round(sot, 2),
-                "p_sot_1plus": round(100.0 * (1.0 - np.exp(-sot)), 1),
+                "anytime_pct": round(100.0 * anytime, 1),
+                "exp_shots": round(exp_shots, 2),
+                "p_shots_2plus": round(100.0 * p_shots, 1),
+                "exp_sot": round(exp_sot, 2),
+                "p_sot_1plus": round(100.0 * p_sot, 1),
+                "appearance_pct": round(100.0 * p_app, 1),
+                "expected_minutes": round(p_app * mins_if, 1),
                 "penalty_taker": is_taker,
                 "doubt": bool(r["player"] in doubtful),
             })

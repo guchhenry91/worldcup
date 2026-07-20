@@ -1,0 +1,7085 @@
+{
+  "_verified_at": "2026-07-20T11:02:43.408881+00:00",
+  "_source": "ESPN 2026-27 league and team roster feeds",
+  "_provisional": "The summer registration window is open. This is a dated snapshot, not a final registered-squad list.",
+  "PL": {
+    "Bournemouth": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/349/roster",
+      "players": [
+        {
+          "id": "122268",
+          "name": "Adam Smith",
+          "position": "D"
+        },
+        {
+          "id": "305684",
+          "name": "Adrien Truffert",
+          "position": "D"
+        },
+        {
+          "id": "297800",
+          "name": "Alex Paulsen",
+          "position": "G"
+        },
+        {
+          "id": "314790",
+          "name": "Alex Scott",
+          "position": "M"
+        },
+        {
+          "id": "360149",
+          "name": "Alex Tóth",
+          "position": "M"
+        },
+        {
+          "id": "291613",
+          "name": "Amine Adli",
+          "position": "F"
+        },
+        {
+          "id": "282675",
+          "name": "Bafodé Diakité",
+          "position": "D"
+        },
+        {
+          "id": "332948",
+          "name": "Ben Gannon-Doak",
+          "position": "F"
+        },
+        {
+          "id": "397213",
+          "name": "Ben Winterburn",
+          "position": "M"
+        },
+        {
+          "id": "312182",
+          "name": "Daniel Jebbison",
+          "position": "F"
+        },
+        {
+          "id": "72487",
+          "name": "David Brooks",
+          "position": "M"
+        },
+        {
+          "id": "289824",
+          "name": "Djordje Petrovic",
+          "position": "G"
+        },
+        {
+          "id": "218122",
+          "name": "Enes Ünal",
+          "position": "F"
+        },
+        {
+          "id": "102368",
+          "name": "Evanilson",
+          "position": "F"
+        },
+        {
+          "id": "93193",
+          "name": "Fraser Forster",
+          "position": "G"
+        },
+        {
+          "id": "279155",
+          "name": "James Hill",
+          "position": "D"
+        },
+        {
+          "id": "339797",
+          "name": "Julio Soler",
+          "position": "D"
+        },
+        {
+          "id": "280764",
+          "name": "Julián Araujo",
+          "position": "D"
+        },
+        {
+          "id": "361809",
+          "name": "Junior Kroupi",
+          "position": "F"
+        },
+        {
+          "id": "245916",
+          "name": "Justin Kluivert",
+          "position": "F"
+        },
+        {
+          "id": "223452",
+          "name": "Lewis Cook",
+          "position": "M"
+        },
+        {
+          "id": "243364",
+          "name": "Marcus Tavernier",
+          "position": "M"
+        },
+        {
+          "id": "337023",
+          "name": "Matai Akinmboni",
+          "position": "D"
+        },
+        {
+          "id": "243725",
+          "name": "Max Aarons",
+          "position": "D"
+        },
+        {
+          "id": "348298",
+          "name": "Owen Bevan",
+          "position": "D"
+        },
+        {
+          "id": "357719",
+          "name": "Rayan",
+          "position": "F"
+        },
+        {
+          "id": "398123",
+          "name": "Remy Rees-Dottin",
+          "position": "F"
+        },
+        {
+          "id": "268591",
+          "name": "Romain Faivre",
+          "position": "M"
+        },
+        {
+          "id": "93435",
+          "name": "Ryan Christie",
+          "position": "M"
+        },
+        {
+          "id": "222776",
+          "name": "Tyler Adams",
+          "position": "M"
+        },
+        {
+          "id": "377736",
+          "name": "Veljko Milosavljevic",
+          "position": "D"
+        },
+        {
+          "id": "291269",
+          "name": "William Dennis",
+          "position": "G"
+        },
+        {
+          "id": "367861",
+          "name": "Álex Jiménez",
+          "position": "D"
+        }
+      ]
+    },
+    "Arsenal": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/359/roster",
+      "players": [
+        {
+          "id": "341729",
+          "name": "Alexei Rojas",
+          "position": "G"
+        },
+        {
+          "id": "390975",
+          "name": "Andre Annous",
+          "position": "F"
+        },
+        {
+          "id": "241077",
+          "name": "Ben White",
+          "position": "D"
+        },
+        {
+          "id": "280555",
+          "name": "Bukayo Saka",
+          "position": "F"
+        },
+        {
+          "id": "178077",
+          "name": "Christian Nørgaard",
+          "position": "M"
+        },
+        {
+          "id": "328497",
+          "name": "Cristhian Mosquera",
+          "position": "D"
+        },
+        {
+          "id": "196176",
+          "name": "David Raya",
+          "position": "G"
+        },
+        {
+          "id": "238262",
+          "name": "Declan Rice",
+          "position": "M"
+        },
+        {
+          "id": "251400",
+          "name": "Eberechi Eze",
+          "position": "M"
+        },
+        {
+          "id": "349733",
+          "name": "Ethan Nwaneri",
+          "position": "M"
+        },
+        {
+          "id": "88865",
+          "name": "Fabio Vieira",
+          "position": "M"
+        },
+        {
+          "id": "217289",
+          "name": "Gabriel Jesus",
+          "position": "F"
+        },
+        {
+          "id": "236322",
+          "name": "Gabriel Magalhães",
+          "position": "D"
+        },
+        {
+          "id": "269844",
+          "name": "Gabriel Martinelli",
+          "position": "F"
+        },
+        {
+          "id": "378457",
+          "name": "Ismeal Kabia",
+          "position": "F"
+        },
+        {
+          "id": "282716",
+          "name": "Jurriën Timber",
+          "position": "D"
+        },
+        {
+          "id": "231182",
+          "name": "Kai Havertz",
+          "position": "F"
+        },
+        {
+          "id": "169532",
+          "name": "Kepa Arrizabalaga",
+          "position": "G"
+        },
+        {
+          "id": "174980",
+          "name": "Leandro Trossard",
+          "position": "F"
+        },
+        {
+          "id": "203669",
+          "name": "Martin Ødegaard",
+          "position": "M"
+        },
+        {
+          "id": "287266",
+          "name": "Martín Zubimendi",
+          "position": "M"
+        },
+        {
+          "id": "209581",
+          "name": "Mikel Merino",
+          "position": "M"
+        },
+        {
+          "id": "352758",
+          "name": "Myles Lewis-Skelly",
+          "position": "D"
+        },
+        {
+          "id": "293236",
+          "name": "Noni Madueke",
+          "position": "F"
+        },
+        {
+          "id": "292062",
+          "name": "Piero Hincapié",
+          "position": "D"
+        },
+        {
+          "id": "227794",
+          "name": "Reiss Nelson",
+          "position": "F"
+        },
+        {
+          "id": "298329",
+          "name": "Riccardo Calafiori",
+          "position": "D"
+        },
+        {
+          "id": "343573",
+          "name": "Tommy Setford",
+          "position": "G"
+        },
+        {
+          "id": "258906",
+          "name": "Viktor Gyökeres",
+          "position": "F"
+        },
+        {
+          "id": "277385",
+          "name": "William Saliba",
+          "position": "D"
+        }
+      ]
+    },
+    "Aston Villa": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/362/roster",
+      "players": [
+        {
+          "id": "382839",
+          "name": "Alysson",
+          "position": "F"
+        },
+        {
+          "id": "304799",
+          "name": "Amadou Onana",
+          "position": "M"
+        },
+        {
+          "id": "356080",
+          "name": "Andrés García",
+          "position": "D"
+        },
+        {
+          "id": "250936",
+          "name": "Boubacar Kamara",
+          "position": "M"
+        },
+        {
+          "id": "401451",
+          "name": "Brian Madjo",
+          "position": "F"
+        },
+        {
+          "id": "214375",
+          "name": "Emiliano Buendía",
+          "position": "M"
+        },
+        {
+          "id": "158626",
+          "name": "Emiliano Martínez",
+          "position": "G"
+        },
+        {
+          "id": "231859",
+          "name": "Ezri Konsa",
+          "position": "D"
+        },
+        {
+          "id": "281125",
+          "name": "Ian Maatsen",
+          "position": "D"
+        },
+        {
+          "id": "162843",
+          "name": "John McGinn",
+          "position": "M"
+        },
+        {
+          "id": "310607",
+          "name": "Lamare Bogarde",
+          "position": "M"
+        },
+        {
+          "id": "224809",
+          "name": "Leon Bailey",
+          "position": "M"
+        },
+        {
+          "id": "160115",
+          "name": "Lucas Digne",
+          "position": "D"
+        },
+        {
+          "id": "132233",
+          "name": "Marco Bizot",
+          "position": "G"
+        },
+        {
+          "id": "234698",
+          "name": "Matty Cash",
+          "position": "D"
+        },
+        {
+          "id": "392682",
+          "name": "Modou Cissé",
+          "position": "M"
+        },
+        {
+          "id": "265653",
+          "name": "Morgan Rogers",
+          "position": "F"
+        },
+        {
+          "id": "198825",
+          "name": "Ollie Watkins",
+          "position": "F"
+        },
+        {
+          "id": "251100",
+          "name": "Pau Torres",
+          "position": "D"
+        },
+        {
+          "id": "370724",
+          "name": "Ronnie Hollingshead",
+          "position": "G"
+        },
+        {
+          "id": "152469",
+          "name": "Ross Barkley",
+          "position": "M"
+        },
+        {
+          "id": "236209",
+          "name": "Tammy Abraham",
+          "position": "F"
+        },
+        {
+          "id": "181312",
+          "name": "Tyrone Mings",
+          "position": "D"
+        },
+        {
+          "id": "204679",
+          "name": "Victor Lindelöf",
+          "position": "D"
+        },
+        {
+          "id": "193297",
+          "name": "Youri Tielemans",
+          "position": "M"
+        }
+      ]
+    },
+    "Brentford": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/337/roster",
+      "players": [
+        {
+          "id": "283940",
+          "name": "Aaron Hickey",
+          "position": "D"
+        },
+        {
+          "id": "321081",
+          "name": "Antoni Milambo",
+          "position": "M"
+        },
+        {
+          "id": "367447",
+          "name": "Benjamin Arthur",
+          "position": "D"
+        },
+        {
+          "id": "362266",
+          "name": "Benjamin Fredrick",
+          "position": "D"
+        },
+        {
+          "id": "275599",
+          "name": "Caoimhín Kelleher",
+          "position": "G"
+        },
+        {
+          "id": "221694",
+          "name": "Conor McManus",
+          "position": "M"
+        },
+        {
+          "id": "315530",
+          "name": "Dango Ouattara",
+          "position": "M"
+        },
+        {
+          "id": "249527",
+          "name": "Ellery Balcombe",
+          "position": "G"
+        },
+        {
+          "id": "241093",
+          "name": "Ethan Pinnock",
+          "position": "D"
+        },
+        {
+          "id": "231049",
+          "name": "Fábio Carvalho",
+          "position": "M"
+        },
+        {
+          "id": "366004",
+          "name": "Gustavo Nunes",
+          "position": "F"
+        },
+        {
+          "id": "311527",
+          "name": "Hákon Valdimarsson",
+          "position": "G"
+        },
+        {
+          "id": "301894",
+          "name": "Igor Thiago",
+          "position": "F"
+        },
+        {
+          "id": "376683",
+          "name": "Jannik Schuster",
+          "position": "D"
+        },
+        {
+          "id": "352820",
+          "name": "Jayden Meghoma",
+          "position": "D"
+        },
+        {
+          "id": "127262",
+          "name": "Jordan Henderson",
+          "position": "M"
+        },
+        {
+          "id": "246309",
+          "name": "Josh Dasilva",
+          "position": "M"
+        },
+        {
+          "id": "408469",
+          "name": "Joshua Stephenson",
+          "position": "D"
+        },
+        {
+          "id": "368826",
+          "name": "Julian Eyestone",
+          "position": "G"
+        },
+        {
+          "id": "394418",
+          "name": "Kaye Furo",
+          "position": "F"
+        },
+        {
+          "id": "284490",
+          "name": "Keane Lewis-Potter",
+          "position": "D"
+        },
+        {
+          "id": "310958",
+          "name": "Kevin Schade",
+          "position": "M"
+        },
+        {
+          "id": "362203",
+          "name": "Kim Ji-Soo",
+          "position": "D"
+        },
+        {
+          "id": "206173",
+          "name": "Kristoffer Ajer",
+          "position": "D"
+        },
+        {
+          "id": "418500",
+          "name": "Luka Bentt",
+          "position": "M"
+        },
+        {
+          "id": "227472",
+          "name": "Mathias Jensen",
+          "position": "M"
+        },
+        {
+          "id": "307281",
+          "name": "Matthew Cox",
+          "position": "G"
+        },
+        {
+          "id": "356640",
+          "name": "Michael Kayode",
+          "position": "D"
+        },
+        {
+          "id": "308932",
+          "name": "Mikkel Damsgaard",
+          "position": "M"
+        },
+        {
+          "id": "279780",
+          "name": "Nathan Collins",
+          "position": "D"
+        },
+        {
+          "id": "419118",
+          "name": "Ollie Shield",
+          "position": "D"
+        },
+        {
+          "id": "206761",
+          "name": "Rico Henry",
+          "position": "D"
+        },
+        {
+          "id": "357477",
+          "name": "Romelle Donovan",
+          "position": "M"
+        },
+        {
+          "id": "270507",
+          "name": "Sepp van den Berg",
+          "position": "D"
+        },
+        {
+          "id": "225564",
+          "name": "Vitaly Janelt",
+          "position": "M"
+        },
+        {
+          "id": "342029",
+          "name": "Yehor Yarmoliuk",
+          "position": "M"
+        },
+        {
+          "id": "366990",
+          "name": "Yunus Konak",
+          "position": "M"
+        }
+      ]
+    },
+    "Brighton": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/331/roster",
+      "players": [
+        {
+          "id": "327170",
+          "name": "Amario Cozier-Duberry",
+          "position": "M"
+        },
+        {
+          "id": "291609",
+          "name": "Bart Verbruggen",
+          "position": "G"
+        },
+        {
+          "id": "357683",
+          "name": "Brajan Gruda",
+          "position": "F"
+        },
+        {
+          "id": "307069",
+          "name": "Carl Rushworth",
+          "position": "G"
+        },
+        {
+          "id": "338814",
+          "name": "Carlos Baleba",
+          "position": "M"
+        },
+        {
+          "id": "387655",
+          "name": "Charalambos Kostoulas",
+          "position": "F"
+        },
+        {
+          "id": "274285",
+          "name": "Costinha",
+          "position": "D"
+        },
+        {
+          "id": "115271",
+          "name": "Danny Welbeck",
+          "position": "F"
+        },
+        {
+          "id": "332549",
+          "name": "Diego Coppola",
+          "position": "D"
+        },
+        {
+          "id": "192278",
+          "name": "Diego Gómez",
+          "position": "M"
+        },
+        {
+          "id": "318359",
+          "name": "Eiran Cashin",
+          "position": "D"
+        },
+        {
+          "id": "289645",
+          "name": "Evan Ferguson",
+          "position": "F"
+        },
+        {
+          "id": "318284",
+          "name": "Facundo Buonanotte",
+          "position": "M"
+        },
+        {
+          "id": "238318",
+          "name": "Ferdi Kadioglu",
+          "position": "D"
+        },
+        {
+          "id": "278061",
+          "name": "Georginio Rutter",
+          "position": "F"
+        },
+        {
+          "id": "359400",
+          "name": "Ibrahim Osman",
+          "position": "F"
+        },
+        {
+          "id": "234143",
+          "name": "Igor Julio",
+          "position": "D"
+        },
+        {
+          "id": "328011",
+          "name": "Jack Hinshelwood",
+          "position": "M"
+        },
+        {
+          "id": "111114",
+          "name": "Jason Steele",
+          "position": "G"
+        },
+        {
+          "id": "274278",
+          "name": "Kaoru Mitoma",
+          "position": "M"
+        },
+        {
+          "id": "147106",
+          "name": "Lewis Dunk",
+          "position": "D"
+        },
+        {
+          "id": "359097",
+          "name": "Malick Yalcouyé",
+          "position": "M"
+        },
+        {
+          "id": "358407",
+          "name": "Mark O’Mahony",
+          "position": "F"
+        },
+        {
+          "id": "282186",
+          "name": "Mats Wieffer",
+          "position": "M"
+        },
+        {
+          "id": "261087",
+          "name": "Matt O'Riley",
+          "position": "M"
+        },
+        {
+          "id": "301327",
+          "name": "Maxim De Cuyper",
+          "position": "D"
+        },
+        {
+          "id": "289942",
+          "name": "Michael Svoboda",
+          "position": "D"
+        },
+        {
+          "id": "216017",
+          "name": "Olivier Boscagli",
+          "position": "D"
+        },
+        {
+          "id": "132659",
+          "name": "Pascal Gross",
+          "position": "M"
+        },
+        {
+          "id": "246771",
+          "name": "Pascal Struijk",
+          "position": "D"
+        },
+        {
+          "id": "415025",
+          "name": "Rodrigo Rêgo",
+          "position": "F"
+        },
+        {
+          "id": "357165",
+          "name": "Stefanos Tzimas",
+          "position": "F"
+        },
+        {
+          "id": "248761",
+          "name": "Tom McGill",
+          "position": "G"
+        },
+        {
+          "id": "403702",
+          "name": "Tom Watson",
+          "position": "F"
+        },
+        {
+          "id": "348787",
+          "name": "Yankuba Minteh",
+          "position": "F"
+        },
+        {
+          "id": "304242",
+          "name": "Yasin Ayari",
+          "position": "M"
+        },
+        {
+          "id": "371574",
+          "name": "Yoon Do-Yong",
+          "position": "F"
+        },
+        {
+          "id": "407059",
+          "name": "Zadok Yohanna",
+          "position": "M"
+        }
+      ]
+    },
+    "Chelsea": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/363/roster",
+      "players": [
+        {
+          "id": "363218",
+          "name": "Aaron Anselmino",
+          "position": "D"
+        },
+        {
+          "id": "325555",
+          "name": "Alejandro Garnacho",
+          "position": "F"
+        },
+        {
+          "id": "314858",
+          "name": "Andrey Santos",
+          "position": "M"
+        },
+        {
+          "id": "231718",
+          "name": "Axel Disasi",
+          "position": "D"
+        },
+        {
+          "id": "282585",
+          "name": "Benoît Badiashile",
+          "position": "D"
+        },
+        {
+          "id": "296395",
+          "name": "Cole Palmer",
+          "position": "M"
+        },
+        {
+          "id": "301047",
+          "name": "David Datro Fofana",
+          "position": "F"
+        },
+        {
+          "id": "316560",
+          "name": "Dário Essugo",
+          "position": "M"
+        },
+        {
+          "id": "304871",
+          "name": "Emmanuel Emegha",
+          "position": "F"
+        },
+        {
+          "id": "285450",
+          "name": "Enzo Fernández",
+          "position": "M"
+        },
+        {
+          "id": "376481",
+          "name": "Estêvão",
+          "position": "F"
+        },
+        {
+          "id": "304256",
+          "name": "Filip Jørgensen",
+          "position": "G"
+        },
+        {
+          "id": "286774",
+          "name": "Gaga Slonina",
+          "position": "G"
+        },
+        {
+          "id": "376274",
+          "name": "Geovany Quenda",
+          "position": "M"
+        },
+        {
+          "id": "349102",
+          "name": "Ishé Samuels-Smith",
+          "position": "D"
+        },
+        {
+          "id": "339879",
+          "name": "Jamie Gittens",
+          "position": "F"
+        },
+        {
+          "id": "353951",
+          "name": "Jorrel Hato",
+          "position": "D"
+        },
+        {
+          "id": "368317",
+          "name": "Josh Acheampong",
+          "position": "D"
+        },
+        {
+          "id": "284960",
+          "name": "João Pedro",
+          "position": "F"
+        },
+        {
+          "id": "296410",
+          "name": "Levi Colwill",
+          "position": "D"
+        },
+        {
+          "id": "307114",
+          "name": "Liam Delap",
+          "position": "F"
+        },
+        {
+          "id": "308947",
+          "name": "Malo Gusto",
+          "position": "D"
+        },
+        {
+          "id": "355433",
+          "name": "Mamadou Sarr",
+          "position": "D"
+        },
+        {
+          "id": "363038",
+          "name": "Marc Guiu",
+          "position": "F"
+        },
+        {
+          "id": "362486",
+          "name": "Marco Palestra",
+          "position": "D"
+        },
+        {
+          "id": "332343",
+          "name": "Mike Penders",
+          "position": "G"
+        },
+        {
+          "id": "289877",
+          "name": "Moisés Caicedo",
+          "position": "M"
+        },
+        {
+          "id": "299911",
+          "name": "Mykhailo Mudryk",
+          "position": "M"
+        },
+        {
+          "id": "308524",
+          "name": "Nicolas Jackson",
+          "position": "F"
+        },
+        {
+          "id": "256115",
+          "name": "Pedro Neto",
+          "position": "F"
+        },
+        {
+          "id": "189007",
+          "name": "Reece James",
+          "position": "D"
+        },
+        {
+          "id": "108662",
+          "name": "Robert Sánchez",
+          "position": "G"
+        },
+        {
+          "id": "308217",
+          "name": "Romeo Lavia",
+          "position": "M"
+        },
+        {
+          "id": "300049",
+          "name": "Teddy Sharman-Lowe",
+          "position": "G"
+        },
+        {
+          "id": "231198",
+          "name": "Tosin Adarabioyo",
+          "position": "D"
+        },
+        {
+          "id": "227784",
+          "name": "Trevoh Chalobah",
+          "position": "D"
+        },
+        {
+          "id": "270190",
+          "name": "Wesley Fofana",
+          "position": "D"
+        }
+      ]
+    },
+    "Coventry": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/388/roster",
+      "players": [
+        {
+          "id": "384110",
+          "name": "Aidan Dausch",
+          "position": "F"
+        },
+        {
+          "id": "169619",
+          "name": "Ben Wilson",
+          "position": "F"
+        },
+        {
+          "id": "303931",
+          "name": "Bobby Thomas",
+          "position": "D"
+        },
+        {
+          "id": "240495",
+          "name": "Brandon Thomas-Asante",
+          "position": "F"
+        },
+        {
+          "id": "282647",
+          "name": "Ellis Simms",
+          "position": "F"
+        },
+        {
+          "id": "246954",
+          "name": "Ephron Mason-Clark",
+          "position": "F"
+        },
+        {
+          "id": "258491",
+          "name": "Frank Onyeka",
+          "position": "M"
+        },
+        {
+          "id": "220474",
+          "name": "Haji Wright",
+          "position": "F"
+        },
+        {
+          "id": "392340",
+          "name": "Harvey Broad",
+          "position": "D"
+        },
+        {
+          "id": "286967",
+          "name": "Jack Rudoni",
+          "position": "M"
+        },
+        {
+          "id": "328043",
+          "name": "Jahnoah Markelo",
+          "position": "F"
+        },
+        {
+          "id": "143533",
+          "name": "Jake Bidwell",
+          "position": "D"
+        },
+        {
+          "id": "206172",
+          "name": "Jay Da Silva",
+          "position": "D"
+        },
+        {
+          "id": "260168",
+          "name": "Joel Latibeaudiere",
+          "position": "D"
+        },
+        {
+          "id": "277614",
+          "name": "Josh Eccles",
+          "position": "M"
+        },
+        {
+          "id": "367694",
+          "name": "Kai Andrews",
+          "position": "M"
+        },
+        {
+          "id": "294308",
+          "name": "Kaine Kesler Hayden",
+          "position": "D"
+        },
+        {
+          "id": "269341",
+          "name": "Liam Kitching",
+          "position": "D"
+        },
+        {
+          "id": "261083",
+          "name": "Luke Woolfenden",
+          "position": "D"
+        },
+        {
+          "id": "191337",
+          "name": "Matt Grimes",
+          "position": "M"
+        },
+        {
+          "id": "340205",
+          "name": "Miguel Ángel Brau",
+          "position": "D"
+        },
+        {
+          "id": "281139",
+          "name": "Milan van Ewijk",
+          "position": "D"
+        },
+        {
+          "id": "325949",
+          "name": "Norman Bassette",
+          "position": "F"
+        },
+        {
+          "id": "291945",
+          "name": "Oliver Dovin",
+          "position": "G"
+        },
+        {
+          "id": "295544",
+          "name": "Raphael Borges Rodrigues",
+          "position": "F"
+        },
+        {
+          "id": "302002",
+          "name": "Tatsuhiro Sakamoto",
+          "position": "M"
+        },
+        {
+          "id": "256015",
+          "name": "Victor Torp",
+          "position": "M"
+        }
+      ]
+    },
+    "Crystal Palace": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/384/roster",
+      "players": [
+        {
+          "id": "333419",
+          "name": "Adam Wharton",
+          "position": "M"
+        },
+        {
+          "id": "228319",
+          "name": "Borna Sosa",
+          "position": "D"
+        },
+        {
+          "id": "291307",
+          "name": "Brennan Johnson",
+          "position": "F"
+        },
+        {
+          "id": "272585",
+          "name": "Chris Richards",
+          "position": "D"
+        },
+        {
+          "id": "219362",
+          "name": "Daichi Kamada",
+          "position": "M"
+        },
+        {
+          "id": "146679",
+          "name": "Daniel Muñoz",
+          "position": "D"
+        },
+        {
+          "id": "326250",
+          "name": "Danny Imray",
+          "position": "D"
+        },
+        {
+          "id": "345407",
+          "name": "David Ozoh",
+          "position": "M"
+        },
+        {
+          "id": "234172",
+          "name": "Dean Henderson",
+          "position": "G"
+        },
+        {
+          "id": "259486",
+          "name": "Eddie Nketiah",
+          "position": "F"
+        },
+        {
+          "id": "241012",
+          "name": "Ismaïla Sarr",
+          "position": "F"
+        },
+        {
+          "id": "386252",
+          "name": "Jaydee Canvot",
+          "position": "D"
+        },
+        {
+          "id": "241187",
+          "name": "Jean-Philippe Mateta",
+          "position": "F"
+        },
+        {
+          "id": "197399",
+          "name": "Jefferson Lerma",
+          "position": "M"
+        },
+        {
+          "id": "317718",
+          "name": "Jesurun Rak-Sakyi",
+          "position": "M"
+        },
+        {
+          "id": "326249",
+          "name": "Joseph Whitworth",
+          "position": "G"
+        },
+        {
+          "id": "291468",
+          "name": "Justin Devenny",
+          "position": "M"
+        },
+        {
+          "id": "252747",
+          "name": "Jørgen Strand Larsen",
+          "position": "F"
+        },
+        {
+          "id": "318087",
+          "name": "Matheus França",
+          "position": "F"
+        },
+        {
+          "id": "265918",
+          "name": "Maxence Lacroix",
+          "position": "D"
+        },
+        {
+          "id": "127865",
+          "name": "Nathaniel Clyne",
+          "position": "D"
+        },
+        {
+          "id": "330618",
+          "name": "Owen Goodman",
+          "position": "G"
+        },
+        {
+          "id": "205981",
+          "name": "Remi Matthews",
+          "position": "G"
+        },
+        {
+          "id": "356208",
+          "name": "Romain Esse",
+          "position": "M"
+        },
+        {
+          "id": "330230",
+          "name": "Tayo Adaramola",
+          "position": "D"
+        },
+        {
+          "id": "300853",
+          "name": "Tyrick Mitchell",
+          "position": "D"
+        },
+        {
+          "id": "195738",
+          "name": "Walter Benítez",
+          "position": "G"
+        },
+        {
+          "id": "168421",
+          "name": "Will Hughes",
+          "position": "M"
+        },
+        {
+          "id": "297370",
+          "name": "Yéremy Pino",
+          "position": "M"
+        }
+      ]
+    },
+    "Everton": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/368/roster",
+      "players": [
+        {
+          "id": "379032",
+          "name": "Adam Aznou",
+          "position": "D"
+        },
+        {
+          "id": "289511",
+          "name": "Beto",
+          "position": "F"
+        },
+        {
+          "id": "302162",
+          "name": "Carlos Alcaraz",
+          "position": "M"
+        },
+        {
+          "id": "273495",
+          "name": "Dwight McNeil",
+          "position": "F"
+        },
+        {
+          "id": "378458",
+          "name": "Harrison Armstrong",
+          "position": "M"
+        },
+        {
+          "id": "282978",
+          "name": "Hayden Hackney",
+          "position": "M"
+        },
+        {
+          "id": "144517",
+          "name": "Idrissa Gueye",
+          "position": "M"
+        },
+        {
+          "id": "268641",
+          "name": "Iliman Ndiaye",
+          "position": "M"
+        },
+        {
+          "id": "283586",
+          "name": "Jake O'Brien",
+          "position": "D"
+        },
+        {
+          "id": "276220",
+          "name": "James Garner",
+          "position": "M"
+        },
+        {
+          "id": "155226",
+          "name": "James Tarkowski",
+          "position": "D"
+        },
+        {
+          "id": "286965",
+          "name": "Jarrad Branthwaite",
+          "position": "D"
+        },
+        {
+          "id": "159443",
+          "name": "Jordan Pickford",
+          "position": "G"
+        },
+        {
+          "id": "252389",
+          "name": "Kiernan Dewsbury-Hall",
+          "position": "M"
+        },
+        {
+          "id": "7441",
+          "name": "Mark Travers",
+          "position": "G"
+        },
+        {
+          "id": "356074",
+          "name": "Martin Sherif",
+          "position": "F"
+        },
+        {
+          "id": "311963",
+          "name": "Merlin Röhl",
+          "position": "M"
+        },
+        {
+          "id": "4946",
+          "name": "Michael Keane",
+          "position": "D"
+        },
+        {
+          "id": "271191",
+          "name": "Nathan Patterson",
+          "position": "D"
+        },
+        {
+          "id": "301166",
+          "name": "Thierno Barry",
+          "position": "F"
+        },
+        {
+          "id": "310599",
+          "name": "Tim Iroegbunam",
+          "position": "M"
+        },
+        {
+          "id": "148515",
+          "name": "Tom King",
+          "position": "G"
+        },
+        {
+          "id": "340640",
+          "name": "Tyler Dibling",
+          "position": "M"
+        },
+        {
+          "id": "368864",
+          "name": "Tyrique George",
+          "position": "F"
+        },
+        {
+          "id": "262594",
+          "name": "Vitaliy Mykolenko",
+          "position": "D"
+        }
+      ]
+    },
+    "Fulham": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/370/roster",
+      "players": [
+        {
+          "id": "175063",
+          "name": "Alex Iwobi",
+          "position": "M"
+        },
+        {
+          "id": "222396",
+          "name": "Antonee Robinson",
+          "position": "D"
+        },
+        {
+          "id": "149517",
+          "name": "Benjamin Lecomte",
+          "position": "G"
+        },
+        {
+          "id": "153765",
+          "name": "Bernd Leno",
+          "position": "G"
+        },
+        {
+          "id": "263110",
+          "name": "Calvin Bassey",
+          "position": "D"
+        },
+        {
+          "id": "266697",
+          "name": "Emile Smith Rowe",
+          "position": "M"
+        },
+        {
+          "id": "193246",
+          "name": "Harrison Reed",
+          "position": "M"
+        },
+        {
+          "id": "194801",
+          "name": "Harry Wilson",
+          "position": "F"
+        },
+        {
+          "id": "230963",
+          "name": "Issa Diop",
+          "position": "D"
+        },
+        {
+          "id": "196081",
+          "name": "Joachim Andersen",
+          "position": "D"
+        },
+        {
+          "id": "369363",
+          "name": "Jonah Kusi-Asare",
+          "position": "F"
+        },
+        {
+          "id": "252031",
+          "name": "Jorge Cuenca",
+          "position": "D"
+        },
+        {
+          "id": "409541",
+          "name": "Josh King",
+          "position": "M"
+        },
+        {
+          "id": "190974",
+          "name": "Kenny Tete",
+          "position": "D"
+        },
+        {
+          "id": "330764",
+          "name": "Kevin",
+          "position": "M"
+        },
+        {
+          "id": "28761",
+          "name": "Luke Harris",
+          "position": "M"
+        },
+        {
+          "id": "307111",
+          "name": "Oscar Bobb",
+          "position": "M"
+        },
+        {
+          "id": "301525",
+          "name": "Rodrigo Muniz",
+          "position": "F"
+        },
+        {
+          "id": "241328",
+          "name": "Ryan Sessegnon",
+          "position": "M"
+        },
+        {
+          "id": "218998",
+          "name": "Sander Berge",
+          "position": "M"
+        },
+        {
+          "id": "222300",
+          "name": "Sasa Lukic",
+          "position": "M"
+        },
+        {
+          "id": "197163",
+          "name": "Timothy Castagne",
+          "position": "D"
+        },
+        {
+          "id": "140033",
+          "name": "Tom Cairney",
+          "position": "M"
+        }
+      ]
+    },
+    "Hull": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/306/roster",
+      "players": [
+        {
+          "id": "239750",
+          "name": "Abdülkadir Ömür",
+          "position": "M"
+        },
+        {
+          "id": "275674",
+          "name": "Abu Kamara",
+          "position": "F"
+        },
+        {
+          "id": "222608",
+          "name": "Babajide David",
+          "position": "F"
+        },
+        {
+          "id": "326187",
+          "name": "Charlie Hughes",
+          "position": "F"
+        },
+        {
+          "id": "279786",
+          "name": "Cody Drameh",
+          "position": "D"
+        },
+        {
+          "id": "308216",
+          "name": "Darko Gyabi",
+          "position": "M"
+        },
+        {
+          "id": "191603",
+          "name": "Dillon Phillips",
+          "position": "G"
+        },
+        {
+          "id": "306055",
+          "name": "Eliot Matazo",
+          "position": "M"
+        },
+        {
+          "id": "317076",
+          "name": "Enis Destan",
+          "position": "F"
+        },
+        {
+          "id": "306773",
+          "name": "Harvey Cartwright",
+          "position": "G"
+        },
+        {
+          "id": "415481",
+          "name": "Hugh Parker",
+          "position": "F"
+        },
+        {
+          "id": "157933",
+          "name": "Jack Butland",
+          "position": "G"
+        },
+        {
+          "id": "168424",
+          "name": "John Egan",
+          "position": "D"
+        },
+        {
+          "id": "235695",
+          "name": "Kasey Palmer",
+          "position": "M"
+        },
+        {
+          "id": "194114",
+          "name": "Kieran Dowell",
+          "position": "M"
+        },
+        {
+          "id": "306812",
+          "name": "Kyle Joseph",
+          "position": "F"
+        },
+        {
+          "id": "231826",
+          "name": "Lewie Coyle",
+          "position": "D"
+        },
+        {
+          "id": "271879",
+          "name": "Liam Millar",
+          "position": "F"
+        },
+        {
+          "id": "326201",
+          "name": "Mason Burstow",
+          "position": "F"
+        },
+        {
+          "id": "153613",
+          "name": "Matt Crooks",
+          "position": "M"
+        },
+        {
+          "id": "291172",
+          "name": "Matty Jacob",
+          "position": "D"
+        },
+        {
+          "id": "320417",
+          "name": "Mohamed Belloumi",
+          "position": "F"
+        },
+        {
+          "id": "193010",
+          "name": "Oliver McBurnie",
+          "position": "F"
+        },
+        {
+          "id": "210139",
+          "name": "Paddy McNair",
+          "position": "D"
+        },
+        {
+          "id": "249851",
+          "name": "Regan Slater",
+          "position": "M"
+        },
+        {
+          "id": "243576",
+          "name": "Ryan Giles",
+          "position": "D"
+        },
+        {
+          "id": "178051",
+          "name": "Semi Ajayi",
+          "position": "D"
+        },
+        {
+          "id": "328465",
+          "name": "Thimothee Lo-Tutala",
+          "position": "G"
+        }
+      ]
+    },
+    "Ipswich": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/373/roster",
+      "players": [
+        {
+          "id": "219390",
+          "name": "Alex Palmer",
+          "position": "G"
+        },
+        {
+          "id": "330579",
+          "name": "Ali Al-Hamadi",
+          "position": "F"
+        },
+        {
+          "id": "308891",
+          "name": "Anis Mehmeti",
+          "position": "M"
+        },
+        {
+          "id": "246825",
+          "name": "Azor Matusiwa",
+          "position": "M"
+        },
+        {
+          "id": "9426",
+          "name": "Ben Johnson",
+          "position": "D"
+        },
+        {
+          "id": "183326",
+          "name": "Cameron Humphreys",
+          "position": "D"
+        },
+        {
+          "id": "243648",
+          "name": "Cedric Kipre",
+          "position": "D"
+        },
+        {
+          "id": "238192",
+          "name": "Chiedozie Ogbene",
+          "position": "F"
+        },
+        {
+          "id": "168746",
+          "name": "Christian Walton",
+          "position": "G"
+        },
+        {
+          "id": "181092",
+          "name": "Chuba Akpom",
+          "position": "F"
+        },
+        {
+          "id": "298520",
+          "name": "Cieran Slicker",
+          "position": "G"
+        },
+        {
+          "id": "243440",
+          "name": "Dara O'Shea",
+          "position": "D"
+        },
+        {
+          "id": "215075",
+          "name": "Darnell Furlong",
+          "position": "D"
+        },
+        {
+          "id": "111337",
+          "name": "David Button",
+          "position": "G"
+        },
+        {
+          "id": "308555",
+          "name": "Elkan Baggott",
+          "position": "D"
+        },
+        {
+          "id": "389686",
+          "name": "Finley Barbrook",
+          "position": "M"
+        },
+        {
+          "id": "241325",
+          "name": "George Hirst",
+          "position": "F"
+        },
+        {
+          "id": "293337",
+          "name": "Harrison Clarke",
+          "position": "D"
+        },
+        {
+          "id": "269343",
+          "name": "Jack Clarke",
+          "position": "F"
+        },
+        {
+          "id": "139744",
+          "name": "Jack Taylor",
+          "position": "D"
+        },
+        {
+          "id": "291174",
+          "name": "Jacob Greaves",
+          "position": "D"
+        },
+        {
+          "id": "295370",
+          "name": "Jaden Philogene",
+          "position": "F"
+        },
+        {
+          "id": "307073",
+          "name": "Kasey McAteer",
+          "position": "M"
+        },
+        {
+          "id": "283086",
+          "name": "Leif Davis",
+          "position": "D"
+        },
+        {
+          "id": "301554",
+          "name": "Marcelino Núñez",
+          "position": "M"
+        },
+        {
+          "id": "223547",
+          "name": "Sammie Szmodics",
+          "position": "F"
+        },
+        {
+          "id": "330045",
+          "name": "Sindre Walle Egeli",
+          "position": "F"
+        },
+        {
+          "id": "181516",
+          "name": "Wes Burns",
+          "position": "F"
+        }
+      ]
+    },
+    "Leeds": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/357/roster",
+      "players": [
+        {
+          "id": "304802",
+          "name": "Anton Stach",
+          "position": "M"
+        },
+        {
+          "id": "253173",
+          "name": "Ao Tanaka",
+          "position": "M"
+        },
+        {
+          "id": "259653",
+          "name": "Brenden Aaronson",
+          "position": "M"
+        },
+        {
+          "id": "203072",
+          "name": "Daniel James",
+          "position": "M"
+        },
+        {
+          "id": "197717",
+          "name": "Dominic Calvert-Lewin",
+          "position": "F"
+        },
+        {
+          "id": "241317",
+          "name": "Ethan Ampadu",
+          "position": "M"
+        },
+        {
+          "id": "250166",
+          "name": "Gabriel Gudmundsson",
+          "position": "D"
+        },
+        {
+          "id": "30116",
+          "name": "Ilia Gruev",
+          "position": "M"
+        },
+        {
+          "id": "307242",
+          "name": "Isaac Schmidt",
+          "position": "D"
+        },
+        {
+          "id": "199850",
+          "name": "Jack Harrison",
+          "position": "F"
+        },
+        {
+          "id": "274649",
+          "name": "Jaka Bijol",
+          "position": "D"
+        },
+        {
+          "id": "231863",
+          "name": "James Justin",
+          "position": "D"
+        },
+        {
+          "id": "243408",
+          "name": "Jayden Bogle",
+          "position": "D"
+        },
+        {
+          "id": "277531",
+          "name": "Joe Gelhardt",
+          "position": "F"
+        },
+        {
+          "id": "232325",
+          "name": "Joe Rodon",
+          "position": "D"
+        },
+        {
+          "id": "245562",
+          "name": "Joël Piroe",
+          "position": "F"
+        },
+        {
+          "id": "130877",
+          "name": "Karl Darlow",
+          "position": "G"
+        },
+        {
+          "id": "291435",
+          "name": "Largie Ramazani",
+          "position": "F"
+        },
+        {
+          "id": "252406",
+          "name": "Lucas Perri",
+          "position": "G"
+        },
+        {
+          "id": "258956",
+          "name": "Lukas Nmecha",
+          "position": "F"
+        },
+        {
+          "id": "346709",
+          "name": "Mateo Joseph",
+          "position": "F"
+        },
+        {
+          "id": "231674",
+          "name": "Maximilian Wöber",
+          "position": "D"
+        },
+        {
+          "id": "270641",
+          "name": "Noah Okafor",
+          "position": "F"
+        },
+        {
+          "id": "223454",
+          "name": "Sam Byram",
+          "position": "D"
+        },
+        {
+          "id": "390040",
+          "name": "Sam Chambers",
+          "position": "M"
+        },
+        {
+          "id": "251658",
+          "name": "Sean Longstaff",
+          "position": "M"
+        },
+        {
+          "id": "271130",
+          "name": "Sebastiaan Bornauw",
+          "position": "D"
+        },
+        {
+          "id": "297784",
+          "name": "Wilfried Gnonto",
+          "position": "F"
+        }
+      ]
+    },
+    "Liverpool": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/364/roster",
+      "players": [
+        {
+          "id": "235662",
+          "name": "Alexander Isak",
+          "position": "F"
+        },
+        {
+          "id": "249299",
+          "name": "Alexis Mac Allister",
+          "position": "M"
+        },
+        {
+          "id": "196876",
+          "name": "Alisson Becker",
+          "position": "G"
+        },
+        {
+          "id": "291353",
+          "name": "Calvin Ramsay",
+          "position": "D"
+        },
+        {
+          "id": "249524",
+          "name": "Cody Gakpo",
+          "position": "F"
+        },
+        {
+          "id": "250183",
+          "name": "Conor Bradley",
+          "position": "D"
+        },
+        {
+          "id": "190257",
+          "name": "Curtis Jones",
+          "position": "M"
+        },
+        {
+          "id": "257206",
+          "name": "Dominik Szoboszlai",
+          "position": "M"
+        },
+        {
+          "id": "234306",
+          "name": "Federico Chiesa",
+          "position": "F"
+        },
+        {
+          "id": "303748",
+          "name": "Florian Wirtz",
+          "position": "M"
+        },
+        {
+          "id": "194121",
+          "name": "Freddie Woodman",
+          "position": "G"
+        },
+        {
+          "id": "274742",
+          "name": "Giorgi Mamardashvili",
+          "position": "G"
+        },
+        {
+          "id": "380082",
+          "name": "Giovanni Leoni",
+          "position": "D"
+        },
+        {
+          "id": "315879",
+          "name": "Harvey Davies",
+          "position": "G"
+        },
+        {
+          "id": "280806",
+          "name": "Harvey Elliott",
+          "position": "M"
+        },
+        {
+          "id": "304901",
+          "name": "Hugo Ekitike",
+          "position": "F"
+        },
+        {
+          "id": "326230",
+          "name": "James McConnell",
+          "position": "M"
+        },
+        {
+          "id": "354737",
+          "name": "Jayden Danns",
+          "position": "F"
+        },
+        {
+          "id": "281119",
+          "name": "Jeremie Frimpong",
+          "position": "D"
+        },
+        {
+          "id": "102053",
+          "name": "Joe Gomez",
+          "position": "D"
+        },
+        {
+          "id": "355980",
+          "name": "Jérémy Jacquet",
+          "position": "D"
+        },
+        {
+          "id": "226177",
+          "name": "Kostas Tsimikas",
+          "position": "D"
+        },
+        {
+          "id": "380624",
+          "name": "Michael Laffey",
+          "position": "M"
+        },
+        {
+          "id": "323110",
+          "name": "Milos Kerkez",
+          "position": "D"
+        },
+        {
+          "id": "379588",
+          "name": "Rio Ngumoha",
+          "position": "F"
+        },
+        {
+          "id": "274632",
+          "name": "Ryan Gravenberch",
+          "position": "M"
+        },
+        {
+          "id": "330605",
+          "name": "Stefan Bajcetic",
+          "position": "M"
+        },
+        {
+          "id": "414255",
+          "name": "Talla Ndiaye",
+          "position": "D"
+        },
+        {
+          "id": "356075",
+          "name": "Trey Nyoni",
+          "position": "M"
+        },
+        {
+          "id": "157892",
+          "name": "Virgil van Dijk",
+          "position": "D"
+        },
+        {
+          "id": "289840",
+          "name": "Vitezslav Jaros",
+          "position": "G"
+        },
+        {
+          "id": "397545",
+          "name": "Víctor Muñoz",
+          "position": "F"
+        },
+        {
+          "id": "152479",
+          "name": "Wataru Endo",
+          "position": "M"
+        },
+        {
+          "id": "345673",
+          "name": "Ármin Pécsi",
+          "position": "G"
+        }
+      ]
+    },
+    "Manchester City": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/382/roster",
+      "players": [
+        {
+          "id": "362211",
+          "name": "Abdukodir Khusanov",
+          "position": "D"
+        },
+        {
+          "id": "273292",
+          "name": "Antoine Semenyo",
+          "position": "F"
+        },
+        {
+          "id": "361355",
+          "name": "Claudio Echeverri",
+          "position": "M"
+        },
+        {
+          "id": "238472",
+          "name": "Elliot Anderson",
+          "position": "M"
+        },
+        {
+          "id": "253989",
+          "name": "Erling Haaland",
+          "position": "F"
+        },
+        {
+          "id": "298519",
+          "name": "Finley Burns",
+          "position": "D"
+        },
+        {
+          "id": "217092",
+          "name": "Gianluigi Donnarumma",
+          "position": "G"
+        },
+        {
+          "id": "294427",
+          "name": "Issa Kaboré",
+          "position": "D"
+        },
+        {
+          "id": "172850",
+          "name": "Jack Grealish",
+          "position": "M"
+        },
+        {
+          "id": "354137",
+          "name": "Jaden Heskey",
+          "position": "F"
+        },
+        {
+          "id": "307118",
+          "name": "James Trafford",
+          "position": "G"
+        },
+        {
+          "id": "307117",
+          "name": "Josh Wilson-Esbrand",
+          "position": "D"
+        },
+        {
+          "id": "299910",
+          "name": "Josko Gvardiol",
+          "position": "D"
+        },
+        {
+          "id": "370703",
+          "name": "Juma Bah",
+          "position": "D"
+        },
+        {
+          "id": "283672",
+          "name": "Jérémy Doku",
+          "position": "F"
+        },
+        {
+          "id": "223453",
+          "name": "Kalvin Phillips",
+          "position": "M"
+        },
+        {
+          "id": "214562",
+          "name": "Manuel Akanji",
+          "position": "D"
+        },
+        {
+          "id": "265907",
+          "name": "Marc Guéhi",
+          "position": "D"
+        },
+        {
+          "id": "177545",
+          "name": "Marcus Bettinelli",
+          "position": "G"
+        },
+        {
+          "id": "154595",
+          "name": "Mateo Kovacic",
+          "position": "M"
+        },
+        {
+          "id": "303785",
+          "name": "Matheus Nunes",
+          "position": "M"
+        },
+        {
+          "id": "347046",
+          "name": "Max Alleyne",
+          "position": "D"
+        },
+        {
+          "id": "323986",
+          "name": "Nico González",
+          "position": "M"
+        },
+        {
+          "id": "328464",
+          "name": "Nico O'Reilly",
+          "position": "D"
+        },
+        {
+          "id": "303745",
+          "name": "Omar Marmoush",
+          "position": "F"
+        },
+        {
+          "id": "250787",
+          "name": "Phil Foden",
+          "position": "M"
+        },
+        {
+          "id": "272512",
+          "name": "Rayan Aït-Nouri",
+          "position": "D"
+        },
+        {
+          "id": "298008",
+          "name": "Rayan Cherki",
+          "position": "M"
+        },
+        {
+          "id": "325564",
+          "name": "Rico Lewis",
+          "position": "D"
+        },
+        {
+          "id": "231828",
+          "name": "Rodri",
+          "position": "M"
+        },
+        {
+          "id": "234878",
+          "name": "Rúben Dias",
+          "position": "D"
+        },
+        {
+          "id": "304470",
+          "name": "Savinho",
+          "position": "F"
+        },
+        {
+          "id": "334109",
+          "name": "Sverre Nypan",
+          "position": "M"
+        },
+        {
+          "id": "261328",
+          "name": "Tijjani Reijnders",
+          "position": "M"
+        },
+        {
+          "id": "361434",
+          "name": "Vitor Reis",
+          "position": "D"
+        }
+      ]
+    },
+    "Manchester United": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/360/roster",
+      "players": [
+        {
+          "id": "274272",
+          "name": "Altay Bayindir",
+          "position": "G"
+        },
+        {
+          "id": "291630",
+          "name": "Amad Diallo",
+          "position": "M"
+        },
+        {
+          "id": "215340",
+          "name": "André Onana",
+          "position": "G"
+        },
+        {
+          "id": "356044",
+          "name": "Ayden Heaven",
+          "position": "D"
+        },
+        {
+          "id": "289155",
+          "name": "Benjamin Sesko",
+          "position": "F"
+        },
+        {
+          "id": "124091",
+          "name": "Bruno Fernandes",
+          "position": "M"
+        },
+        {
+          "id": "271170",
+          "name": "Bryan Mbeumo",
+          "position": "F"
+        },
+        {
+          "id": "375738",
+          "name": "Chido Obi",
+          "position": "F"
+        },
+        {
+          "id": "387634",
+          "name": "Diego León",
+          "position": "D"
+        },
+        {
+          "id": "238902",
+          "name": "Diogo Dalot",
+          "position": "D"
+        },
+        {
+          "id": "398006",
+          "name": "Enzo Kana-Biyik",
+          "position": "F"
+        },
+        {
+          "id": "368547",
+          "name": "Ethan Wheatley",
+          "position": "F"
+        },
+        {
+          "id": "356940",
+          "name": "Harry Amass",
+          "position": "D"
+        },
+        {
+          "id": "157073",
+          "name": "Harry Maguire",
+          "position": "D"
+        },
+        {
+          "id": "205081",
+          "name": "Jack Fletcher",
+          "position": "M"
+        },
+        {
+          "id": "276327",
+          "name": "Joshua Zirkzee",
+          "position": "F"
+        },
+        {
+          "id": "328466",
+          "name": "Kobbie Mainoo",
+          "position": "M"
+        },
+        {
+          "id": "340206",
+          "name": "Leny Yoro",
+          "position": "D"
+        },
+        {
+          "id": "233937",
+          "name": "Lisandro Martínez",
+          "position": "D"
+        },
+        {
+          "id": "167127",
+          "name": "Luke Shaw",
+          "position": "D"
+        },
+        {
+          "id": "241468",
+          "name": "Manuel Ugarte",
+          "position": "M"
+        },
+        {
+          "id": "230945",
+          "name": "Marcus Rashford",
+          "position": "F"
+        },
+        {
+          "id": "231167",
+          "name": "Mason Mount",
+          "position": "M"
+        },
+        {
+          "id": "259902",
+          "name": "Matheus Cunha",
+          "position": "F"
+        },
+        {
+          "id": "239349",
+          "name": "Matthijs de Ligt",
+          "position": "D"
+        },
+        {
+          "id": "239350",
+          "name": "Noussair Mazraoui",
+          "position": "D"
+        },
+        {
+          "id": "366781",
+          "name": "Patrick Dorgu",
+          "position": "D"
+        },
+        {
+          "id": "301425",
+          "name": "Senne Lammens",
+          "position": "G"
+        },
+        {
+          "id": "308778",
+          "name": "Toby Collyer",
+          "position": "M"
+        },
+        {
+          "id": "393138",
+          "name": "Tyler Fletcher",
+          "position": "M"
+        },
+        {
+          "id": "347052",
+          "name": "Tyler Fredricson",
+          "position": "D"
+        }
+      ]
+    },
+    "Newcastle United": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/361/roster",
+      "players": [
+        {
+          "id": "353304",
+          "name": "Aidan Harris",
+          "position": "G"
+        },
+        {
+          "id": "346874",
+          "name": "Alex Murphy",
+          "position": "D"
+        },
+        {
+          "id": "296622",
+          "name": "Anthony Elanga",
+          "position": "F"
+        },
+        {
+          "id": "375875",
+          "name": "Antonio Cordero",
+          "position": "F"
+        },
+        {
+          "id": "218522",
+          "name": "Bruno Guimarães",
+          "position": "M"
+        },
+        {
+          "id": "198138",
+          "name": "Dan Burn",
+          "position": "D"
+        },
+        {
+          "id": "347523",
+          "name": "Ewen Jaouen",
+          "position": "G"
+        },
+        {
+          "id": "179233",
+          "name": "Fabian Schär",
+          "position": "D"
+        },
+        {
+          "id": "294344",
+          "name": "Harrison Ashby",
+          "position": "D"
+        },
+        {
+          "id": "243386",
+          "name": "Harvey Barnes",
+          "position": "M"
+        },
+        {
+          "id": "172836",
+          "name": "Jacob Murphy",
+          "position": "M"
+        },
+        {
+          "id": "286090",
+          "name": "Jacob Ramsey",
+          "position": "M"
+        },
+        {
+          "id": "126027",
+          "name": "Joe White",
+          "position": "M"
+        },
+        {
+          "id": "259517",
+          "name": "Joe Willock",
+          "position": "M"
+        },
+        {
+          "id": "202232",
+          "name": "Joelinton",
+          "position": "M"
+        },
+        {
+          "id": "374219",
+          "name": "Leo Shahar",
+          "position": "D"
+        },
+        {
+          "id": "106139",
+          "name": "Lewis Hall",
+          "position": "M"
+        },
+        {
+          "id": "349078",
+          "name": "Lewis Miley",
+          "position": "M"
+        },
+        {
+          "id": "303444",
+          "name": "Malick Thiaw",
+          "position": "D"
+        },
+        {
+          "id": "141705",
+          "name": "Mark Gillespie",
+          "position": "G"
+        },
+        {
+          "id": "326220",
+          "name": "Max Thompson",
+          "position": "G"
+        },
+        {
+          "id": "161715",
+          "name": "Nick Pope",
+          "position": "G"
+        },
+        {
+          "id": "298349",
+          "name": "Nick Woltemade",
+          "position": "F"
+        },
+        {
+          "id": "159135",
+          "name": "Odisseas Vlachodimos",
+          "position": "G"
+        },
+        {
+          "id": "371584",
+          "name": "Park Seung-Soo",
+          "position": "F"
+        },
+        {
+          "id": "261047",
+          "name": "Sandro Tonali",
+          "position": "M"
+        },
+        {
+          "id": "358245",
+          "name": "Sean Neave",
+          "position": "F"
+        },
+        {
+          "id": "274633",
+          "name": "Sven Botman",
+          "position": "D"
+        },
+        {
+          "id": "299641",
+          "name": "Tino Livramento",
+          "position": "D"
+        },
+        {
+          "id": "362517",
+          "name": "Trevan Sanusi",
+          "position": "F"
+        },
+        {
+          "id": "319431",
+          "name": "William Osula",
+          "position": "F"
+        },
+        {
+          "id": "224077",
+          "name": "Yoane Wissa",
+          "position": "F"
+        }
+      ]
+    },
+    "Nottingham Forest": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/393/roster",
+      "players": [
+        {
+          "id": "296321",
+          "name": "Arnaud Kalimuendo",
+          "position": "F"
+        },
+        {
+          "id": "261419",
+          "name": "Callum Hudson-Odoi",
+          "position": "F"
+        },
+        {
+          "id": "134190",
+          "name": "Chris Wood",
+          "position": "F"
+        },
+        {
+          "id": "275842",
+          "name": "Dan Ndoye",
+          "position": "F"
+        },
+        {
+          "id": "297157",
+          "name": "Dilane Bakwa",
+          "position": "F"
+        },
+        {
+          "id": "372025",
+          "name": "Eric Da Silva Moreira",
+          "position": "F"
+        },
+        {
+          "id": "213718",
+          "name": "Ibrahim Sangaré",
+          "position": "M"
+        },
+        {
+          "id": "287869",
+          "name": "Igor Jesus",
+          "position": "F"
+        },
+        {
+          "id": "338876",
+          "name": "Jair Paula",
+          "position": "D"
+        },
+        {
+          "id": "298518",
+          "name": "James McAtee",
+          "position": "M"
+        },
+        {
+          "id": "233241",
+          "name": "John Victor",
+          "position": "G"
+        },
+        {
+          "id": "344692",
+          "name": "Jota Silva",
+          "position": "F"
+        },
+        {
+          "id": "303765",
+          "name": "Luca Netz",
+          "position": "D"
+        },
+        {
+          "id": "179497",
+          "name": "Matz Sels",
+          "position": "G"
+        },
+        {
+          "id": "201304",
+          "name": "Morato",
+          "position": "D"
+        },
+        {
+          "id": "243396",
+          "name": "Morgan Gibbs-White",
+          "position": "M"
+        },
+        {
+          "id": "338894",
+          "name": "Murillo",
+          "position": "D"
+        },
+        {
+          "id": "291638",
+          "name": "Neco Williams",
+          "position": "D"
+        },
+        {
+          "id": "254118",
+          "name": "Nicolás Domínguez",
+          "position": "M"
+        },
+        {
+          "id": "388024",
+          "name": "Nicolò Savona",
+          "position": "D"
+        },
+        {
+          "id": "238990",
+          "name": "Nikola Milenkovic",
+          "position": "D"
+        },
+        {
+          "id": "206227",
+          "name": "Ola Aina",
+          "position": "D"
+        },
+        {
+          "id": "243754",
+          "name": "Omar Richards",
+          "position": "D"
+        },
+        {
+          "id": "322771",
+          "name": "Omari Hutchinson",
+          "position": "F"
+        },
+        {
+          "id": "241253",
+          "name": "Ryan Yates",
+          "position": "M"
+        },
+        {
+          "id": "194686",
+          "name": "Taiwo Awoniyi",
+          "position": "F"
+        },
+        {
+          "id": "367427",
+          "name": "Tyler Bindon",
+          "position": "D"
+        },
+        {
+          "id": "348303",
+          "name": "Zach Abbott",
+          "position": "D"
+        }
+      ]
+    },
+    "Sunderland": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/366/roster",
+      "players": [
+        {
+          "id": "56820",
+          "name": "Abdoullah Ba",
+          "position": "M"
+        },
+        {
+          "id": "359150",
+          "name": "Ahmed Abdullahi",
+          "position": "F"
+        },
+        {
+          "id": "243545",
+          "name": "Ajibola Alese",
+          "position": "D"
+        },
+        {
+          "id": "197627",
+          "name": "Alan Browne",
+          "position": "M"
+        },
+        {
+          "id": "281705",
+          "name": "Anthony Patterson",
+          "position": "G"
+        },
+        {
+          "id": "165892",
+          "name": "Arthur Masuaku",
+          "position": "D"
+        },
+        {
+          "id": "282229",
+          "name": "Brian Brobbey",
+          "position": "F"
+        },
+        {
+          "id": "360062",
+          "name": "Chemsdine Talbi",
+          "position": "F"
+        },
+        {
+          "id": "356295",
+          "name": "Chris Rigg",
+          "position": "M"
+        },
+        {
+          "id": "282645",
+          "name": "Danny Ballard",
+          "position": "D"
+        },
+        {
+          "id": "332862",
+          "name": "Eliezer Mayenda",
+          "position": "F"
+        },
+        {
+          "id": "288340",
+          "name": "Enzo Le Fée",
+          "position": "M"
+        },
+        {
+          "id": "149981",
+          "name": "Granit Xhaka",
+          "position": "M"
+        },
+        {
+          "id": "324991",
+          "name": "Habib Diarra",
+          "position": "M"
+        },
+        {
+          "id": "310132",
+          "name": "Jenson Seelt",
+          "position": "D"
+        },
+        {
+          "id": "417825",
+          "name": "Jocelin Ta Bi",
+          "position": "F"
+        },
+        {
+          "id": "312592",
+          "name": "Leo Hjelde",
+          "position": "D"
+        },
+        {
+          "id": "191574",
+          "name": "Luke O'Nien",
+          "position": "M"
+        },
+        {
+          "id": "364591",
+          "name": "Luís Semedo",
+          "position": "F"
+        },
+        {
+          "id": "307800",
+          "name": "Melker Ellborg",
+          "position": "G"
+        },
+        {
+          "id": "318090",
+          "name": "Nilson Angulo",
+          "position": "M"
+        },
+        {
+          "id": "340240",
+          "name": "Noah Sadiki",
+          "position": "M"
+        },
+        {
+          "id": "214188",
+          "name": "Nordi Mukiele",
+          "position": "D"
+        },
+        {
+          "id": "215401",
+          "name": "Omar Alderete",
+          "position": "D"
+        },
+        {
+          "id": "230081",
+          "name": "Reinildo Mandava",
+          "position": "D"
+        },
+        {
+          "id": "301449",
+          "name": "Robin Roefs",
+          "position": "G"
+        },
+        {
+          "id": "323084",
+          "name": "Romaine Mundle",
+          "position": "F"
+        },
+        {
+          "id": "317404",
+          "name": "Simon Adingra",
+          "position": "F"
+        },
+        {
+          "id": "138481",
+          "name": "Simon Moore",
+          "position": "G"
+        },
+        {
+          "id": "297167",
+          "name": "Timothee Pembélé",
+          "position": "D"
+        },
+        {
+          "id": "290207",
+          "name": "Trai Hume",
+          "position": "D"
+        },
+        {
+          "id": "392107",
+          "name": "Trey Ogunsuyi",
+          "position": "F"
+        },
+        {
+          "id": "387460",
+          "name": "Tymur Tutierov",
+          "position": "M"
+        },
+        {
+          "id": "265915",
+          "name": "Wilson Isidor",
+          "position": "F"
+        }
+      ]
+    },
+    "Tottenham": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/367/roster",
+      "players": [
+        {
+          "id": "306013",
+          "name": "Alfie Devine",
+          "position": "M"
+        },
+        {
+          "id": "104943",
+          "name": "Andy Robertson",
+          "position": "D"
+        },
+        {
+          "id": "324393",
+          "name": "Antonín Kinsky",
+          "position": "G"
+        },
+        {
+          "id": "328050",
+          "name": "Archie Gray",
+          "position": "M"
+        },
+        {
+          "id": "273628",
+          "name": "Ashley Phillips",
+          "position": "D"
+        },
+        {
+          "id": "6327",
+          "name": "Ben Davies",
+          "position": "D"
+        },
+        {
+          "id": "259942",
+          "name": "Brandon Austin",
+          "position": "G"
+        },
+        {
+          "id": "266696",
+          "name": "Conor Gallagher",
+          "position": "M"
+        },
+        {
+          "id": "96970",
+          "name": "Cristian Romero",
+          "position": "D"
+        },
+        {
+          "id": "306012",
+          "name": "Dane Scarlett",
+          "position": "F"
+        },
+        {
+          "id": "272695",
+          "name": "Dejan Kulusevski",
+          "position": "M"
+        },
+        {
+          "id": "290076",
+          "name": "Destiny Udogie",
+          "position": "D"
+        },
+        {
+          "id": "267711",
+          "name": "Djed Spence",
+          "position": "D"
+        },
+        {
+          "id": "194115",
+          "name": "Dominic Solanke",
+          "position": "F"
+        },
+        {
+          "id": "348265",
+          "name": "George Abbott",
+          "position": "D"
+        },
+        {
+          "id": "204082",
+          "name": "Guglielmo Vicario",
+          "position": "G"
+        },
+        {
+          "id": "194450",
+          "name": "James Maddison",
+          "position": "M"
+        },
+        {
+          "id": "347313",
+          "name": "Jamie Donley",
+          "position": "M"
+        },
+        {
+          "id": "282583",
+          "name": "Jan Paul van Hecke",
+          "position": "D"
+        },
+        {
+          "id": "250543",
+          "name": "Kevin Danso",
+          "position": "D"
+        },
+        {
+          "id": "328492",
+          "name": "Kota Takai",
+          "position": "D"
+        },
+        {
+          "id": "356379",
+          "name": "Lucas Bergvall",
+          "position": "M"
+        },
+        {
+          "id": "364962",
+          "name": "Luka Vuskovic",
+          "position": "D"
+        },
+        {
+          "id": "257256",
+          "name": "Manor Solomon",
+          "position": "F"
+        },
+        {
+          "id": "233945",
+          "name": "Marcos Senesi",
+          "position": "D"
+        },
+        {
+          "id": "126703",
+          "name": "Martin Dúbravka",
+          "position": "G"
+        },
+        {
+          "id": "346820",
+          "name": "Mateus Fernandes",
+          "position": "M"
+        },
+        {
+          "id": "325042",
+          "name": "Mathys Tel",
+          "position": "F"
+        },
+        {
+          "id": "296512",
+          "name": "Micky van de Ven",
+          "position": "D"
+        },
+        {
+          "id": "365332",
+          "name": "Mikey Moore",
+          "position": "F"
+        },
+        {
+          "id": "266599",
+          "name": "Mohammed Kudus",
+          "position": "M"
+        },
+        {
+          "id": "297337",
+          "name": "Pape Matar Sarr",
+          "position": "M"
+        },
+        {
+          "id": "268533",
+          "name": "Pedro Porro",
+          "position": "D"
+        },
+        {
+          "id": "310216",
+          "name": "Radu Dragusin",
+          "position": "D"
+        },
+        {
+          "id": "156799",
+          "name": "Richarlison",
+          "position": "F"
+        },
+        {
+          "id": "215772",
+          "name": "Rodrigo Bentancur",
+          "position": "M"
+        },
+        {
+          "id": "371532",
+          "name": "Souza",
+          "position": "D"
+        },
+        {
+          "id": "349181",
+          "name": "Will Lankshear",
+          "position": "F"
+        },
+        {
+          "id": "345687",
+          "name": "Wilson Odobert",
+          "position": "F"
+        },
+        {
+          "id": "332962",
+          "name": "Xavi Simons",
+          "position": "M"
+        },
+        {
+          "id": "371578",
+          "name": "Yang Min-Hyeok",
+          "position": "F"
+        }
+      ]
+    }
+  },
+  "LALIGA": {
+    "Alaves": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/96/roster",
+      "players": [
+        {
+          "id": "345991",
+          "name": "Abde Rebbach",
+          "position": "F"
+        },
+        {
+          "id": "311927",
+          "name": "Adrián",
+          "position": "D"
+        },
+        {
+          "id": "150374",
+          "name": "Adrián Rodríguez",
+          "position": "G"
+        },
+        {
+          "id": "379231",
+          "name": "Aitor Mañas",
+          "position": "F"
+        },
+        {
+          "id": "260256",
+          "name": "Ander Guevara",
+          "position": "M"
+        },
+        {
+          "id": "265997",
+          "name": "Antonio Blanco",
+          "position": "M"
+        },
+        {
+          "id": "200910",
+          "name": "Antonio Sivera",
+          "position": "G"
+        },
+        {
+          "id": "233802",
+          "name": "Carles Aleñá",
+          "position": "M"
+        },
+        {
+          "id": "376070",
+          "name": "Carlos Ballestero",
+          "position": "D"
+        },
+        {
+          "id": "253754",
+          "name": "Carlos Protesoni",
+          "position": "M"
+        },
+        {
+          "id": "163068",
+          "name": "Denis Suárez",
+          "position": "M"
+        },
+        {
+          "id": "255931",
+          "name": "Facundo Garcés",
+          "position": "D"
+        },
+        {
+          "id": "346534",
+          "name": "Grégoire Swiderski",
+          "position": "G"
+        },
+        {
+          "id": "305608",
+          "name": "Hugo Novoa",
+          "position": "F"
+        },
+        {
+          "id": "415206",
+          "name": "Izei Hernandez",
+          "position": "F"
+        },
+        {
+          "id": "287165",
+          "name": "Jesús Owono",
+          "position": "G"
+        },
+        {
+          "id": "176312",
+          "name": "Jonny",
+          "position": "D"
+        },
+        {
+          "id": "403705",
+          "name": "Lander Pinillos",
+          "position": "M"
+        },
+        {
+          "id": "207236",
+          "name": "Lucas Boyé",
+          "position": "F"
+        },
+        {
+          "id": "198832",
+          "name": "Mariano",
+          "position": "F"
+        },
+        {
+          "id": "213535",
+          "name": "Moussa Diarra",
+          "position": "D"
+        },
+        {
+          "id": "262491",
+          "name": "Nahuel Tenaglia",
+          "position": "D"
+        },
+        {
+          "id": "235307",
+          "name": "Nikola Maras",
+          "position": "D"
+        },
+        {
+          "id": "106326",
+          "name": "Pablo Ibáñez",
+          "position": "M"
+        },
+        {
+          "id": "373789",
+          "name": "Paco Sanz",
+          "position": "D"
+        },
+        {
+          "id": "373796",
+          "name": "Rúben Montero",
+          "position": "G"
+        },
+        {
+          "id": "367996",
+          "name": "Selu Diallo",
+          "position": "M"
+        },
+        {
+          "id": "332008",
+          "name": "Tomás Mendes",
+          "position": "M"
+        },
+        {
+          "id": "181757",
+          "name": "Toni Martínez",
+          "position": "F"
+        },
+        {
+          "id": "341334",
+          "name": "Unai Ropero",
+          "position": "F"
+        },
+        {
+          "id": "354373",
+          "name": "Victor Parada",
+          "position": "D"
+        },
+        {
+          "id": "149306",
+          "name": "Ville Koski",
+          "position": "D"
+        },
+        {
+          "id": "415276",
+          "name": "Xanet Oláiz",
+          "position": "D"
+        },
+        {
+          "id": "382532",
+          "name": "Youssef Lekhedim",
+          "position": "D"
+        },
+        {
+          "id": "384145",
+          "name": "Álvaro García",
+          "position": "D"
+        },
+        {
+          "id": "374621",
+          "name": "Ángel Pérez",
+          "position": "D"
+        }
+      ]
+    },
+    "Ath Bilbao": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/93/roster",
+      "players": [
+        {
+          "id": "379707",
+          "name": "Adama Boiro",
+          "position": "D"
+        },
+        {
+          "id": "411759",
+          "name": "Adrián Pérez",
+          "position": "F"
+        },
+        {
+          "id": "388802",
+          "name": "Aimar Duñabeitia",
+          "position": "D"
+        },
+        {
+          "id": "308254",
+          "name": "Aitor Paredes",
+          "position": "D"
+        },
+        {
+          "id": "403371",
+          "name": "Alejandro Rego",
+          "position": "M"
+        },
+        {
+          "id": "401735",
+          "name": "Ander Izagirre",
+          "position": "D"
+        },
+        {
+          "id": "245839",
+          "name": "Andoni Gorosabel",
+          "position": "D"
+        },
+        {
+          "id": "414464",
+          "name": "Asier Hierro",
+          "position": "F"
+        },
+        {
+          "id": "159317",
+          "name": "Aymeric Laporte",
+          "position": "D"
+        },
+        {
+          "id": "318785",
+          "name": "Beñat Prados",
+          "position": "M"
+        },
+        {
+          "id": "274016",
+          "name": "Dani Vivian",
+          "position": "D"
+        },
+        {
+          "id": "415364",
+          "name": "Eder García",
+          "position": "M"
+        },
+        {
+          "id": "418212",
+          "name": "Elijah Gift",
+          "position": "F"
+        },
+        {
+          "id": "374635",
+          "name": "Endika Bujan",
+          "position": "F"
+        },
+        {
+          "id": "231905",
+          "name": "Gorka Guruzeta",
+          "position": "F"
+        },
+        {
+          "id": "362572",
+          "name": "Hugo Rincón",
+          "position": "D"
+        },
+        {
+          "id": "411758",
+          "name": "Ibon Sánchez",
+          "position": "M"
+        },
+        {
+          "id": "411235",
+          "name": "Iker Monreal",
+          "position": "D"
+        },
+        {
+          "id": "214412",
+          "name": "Iñaki Williams",
+          "position": "F"
+        },
+        {
+          "id": "157708",
+          "name": "Iñigo Ruiz de Galarreta",
+          "position": "M"
+        },
+        {
+          "id": "300876",
+          "name": "Jesús Areso",
+          "position": "D"
+        },
+        {
+          "id": "408483",
+          "name": "Jon De Luis",
+          "position": "D"
+        },
+        {
+          "id": "323970",
+          "name": "Julen Agirrezabala",
+          "position": "G"
+        },
+        {
+          "id": "393762",
+          "name": "Maroan Sannadi",
+          "position": "F"
+        },
+        {
+          "id": "377792",
+          "name": "Mikel Jauregizar",
+          "position": "M"
+        },
+        {
+          "id": "287410",
+          "name": "Mikel Santos",
+          "position": "G"
+        },
+        {
+          "id": "222373",
+          "name": "Mikel Vesga",
+          "position": "M"
+        },
+        {
+          "id": "323971",
+          "name": "Nico Serrano",
+          "position": "F"
+        },
+        {
+          "id": "312146",
+          "name": "Nico Williams",
+          "position": "F"
+        },
+        {
+          "id": "291616",
+          "name": "Oihan Sancet",
+          "position": "M"
+        },
+        {
+          "id": "388805",
+          "name": "Peio Canales",
+          "position": "M"
+        },
+        {
+          "id": "276996",
+          "name": "Robert Navarro",
+          "position": "M"
+        },
+        {
+          "id": "414350",
+          "name": "Selton Sánchez",
+          "position": "M"
+        },
+        {
+          "id": "368331",
+          "name": "Unai Egiluz",
+          "position": "D"
+        },
+        {
+          "id": "362376",
+          "name": "Unai Gómez",
+          "position": "M"
+        },
+        {
+          "id": "222375",
+          "name": "Unai Simón",
+          "position": "G"
+        },
+        {
+          "id": "302945",
+          "name": "Unai Vencedor",
+          "position": "M"
+        },
+        {
+          "id": "354205",
+          "name": "Urko Izeta",
+          "position": "F"
+        },
+        {
+          "id": "217225",
+          "name": "Yeray",
+          "position": "D"
+        },
+        {
+          "id": "133768",
+          "name": "Yuri Berchiche",
+          "position": "D"
+        },
+        {
+          "id": "209579",
+          "name": "Álex Berenguer",
+          "position": "F"
+        },
+        {
+          "id": "347411",
+          "name": "Álex Padilla",
+          "position": "G"
+        },
+        {
+          "id": "347033",
+          "name": "Álvaro Djaló",
+          "position": "F"
+        }
+      ]
+    },
+    "Ath Madrid": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/1068/roster",
+      "players": [
+        {
+          "id": "193917",
+          "name": "Clément Lenglet",
+          "position": "D"
+        }
+      ]
+    },
+    "Barcelona": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/83/roster",
+      "players": []
+    },
+    "Celta": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/85/roster",
+      "players": [
+        {
+          "id": "240235",
+          "name": "Aleix Febas",
+          "position": "M"
+        },
+        {
+          "id": "144720",
+          "name": "Andrei Radu",
+          "position": "G"
+        },
+        {
+          "id": "414292",
+          "name": "Andrés Antañón",
+          "position": "M"
+        },
+        {
+          "id": "214995",
+          "name": "Borja Iglesias",
+          "position": "F"
+        },
+        {
+          "id": "195790",
+          "name": "Carl Starfelt",
+          "position": "D"
+        },
+        {
+          "id": "261468",
+          "name": "Carles Pérez",
+          "position": "F"
+        },
+        {
+          "id": "312376",
+          "name": "Carlos Domínguez",
+          "position": "D"
+        },
+        {
+          "id": "324098",
+          "name": "Carlos Dotor",
+          "position": "M"
+        },
+        {
+          "id": "341269",
+          "name": "Damián Rodríguez",
+          "position": "M"
+        },
+        {
+          "id": "279904",
+          "name": "Ferran Jutglà",
+          "position": "F"
+        },
+        {
+          "id": "414293",
+          "name": "Hugo Burcio",
+          "position": "M"
+        },
+        {
+          "id": "324811",
+          "name": "Hugo Gonzalez",
+          "position": "F"
+        },
+        {
+          "id": "319114",
+          "name": "Hugo Sotelo",
+          "position": "M"
+        },
+        {
+          "id": "188391",
+          "name": "Hugo Álvarez",
+          "position": "M"
+        },
+        {
+          "id": "92800",
+          "name": "Iago Aspas",
+          "position": "F"
+        },
+        {
+          "id": "297829",
+          "name": "Ilaix Moriba",
+          "position": "M"
+        },
+        {
+          "id": "242580",
+          "name": "Iván Villar",
+          "position": "G"
+        },
+        {
+          "id": "231838",
+          "name": "Javi Galán",
+          "position": "D"
+        },
+        {
+          "id": "376147",
+          "name": "Javi Rodríguez",
+          "position": "D"
+        },
+        {
+          "id": "331586",
+          "name": "Javi Rueda",
+          "position": "D"
+        },
+        {
+          "id": "334111",
+          "name": "Jones El-Abdellaoui",
+          "position": "F"
+        },
+        {
+          "id": "300985",
+          "name": "Manu Sánchez",
+          "position": "D"
+        },
+        {
+          "id": "409477",
+          "name": "Manuel Fernández",
+          "position": "D"
+        },
+        {
+          "id": "146127",
+          "name": "Marcos Alonso",
+          "position": "D"
+        },
+        {
+          "id": "376424",
+          "name": "Marcos González",
+          "position": "G"
+        },
+        {
+          "id": "145600",
+          "name": "Matías Vecino",
+          "position": "M"
+        },
+        {
+          "id": "353736",
+          "name": "Miguel Román",
+          "position": "M"
+        },
+        {
+          "id": "138448",
+          "name": "Pablo Durán",
+          "position": "F"
+        },
+        {
+          "id": "414291",
+          "name": "Pablo Meixús",
+          "position": "D"
+        },
+        {
+          "id": "298343",
+          "name": "Sergio Carreira",
+          "position": "D"
+        },
+        {
+          "id": "260902",
+          "name": "Unai Núñez",
+          "position": "D"
+        },
+        {
+          "id": "322652",
+          "name": "Williot Swedberg",
+          "position": "M"
+        },
+        {
+          "id": "384643",
+          "name": "Yoel Lago",
+          "position": "D"
+        },
+        {
+          "id": "367430",
+          "name": "Álvaro Núñez",
+          "position": "D"
+        },
+        {
+          "id": "415036",
+          "name": "Ángel Arcos",
+          "position": "F"
+        },
+        {
+          "id": "405521",
+          "name": "Óscar Marcos",
+          "position": "F"
+        }
+      ]
+    },
+    "La Coruna": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/90/roster",
+      "players": [
+        {
+          "id": "308006",
+          "name": "Adrià Altimira",
+          "position": "D"
+        },
+        {
+          "id": "274405",
+          "name": "Adrián Guerrero",
+          "position": "D"
+        },
+        {
+          "id": "320874",
+          "name": "Alex Petxarromán",
+          "position": "D"
+        },
+        {
+          "id": "409861",
+          "name": "Alioune Mané",
+          "position": "F"
+        },
+        {
+          "id": "300333",
+          "name": "Arnau Comas",
+          "position": "D"
+        },
+        {
+          "id": "414299",
+          "name": "Bil Nsongo",
+          "position": "F"
+        },
+        {
+          "id": "327167",
+          "name": "Charlie Patino",
+          "position": "M"
+        },
+        {
+          "id": "413920",
+          "name": "Damián Canedo",
+          "position": "D"
+        },
+        {
+          "id": "354646",
+          "name": "Dani Barcia",
+          "position": "D"
+        },
+        {
+          "id": "375390",
+          "name": "David Mella",
+          "position": "F"
+        },
+        {
+          "id": "375567",
+          "name": "Diego Gómez",
+          "position": "M"
+        },
+        {
+          "id": "331742",
+          "name": "Diego Villares",
+          "position": "M"
+        },
+        {
+          "id": "353337",
+          "name": "Enrique Fernández",
+          "position": "M"
+        },
+        {
+          "id": "402403",
+          "name": "Enrique Teijo",
+          "position": "D"
+        },
+        {
+          "id": "375190",
+          "name": "Eric Puerto",
+          "position": "G"
+        },
+        {
+          "id": "375441",
+          "name": "Fabián Urzain",
+          "position": "F"
+        },
+        {
+          "id": "181288",
+          "name": "Germán Parreño",
+          "position": "G"
+        },
+        {
+          "id": "275924",
+          "name": "Giacomo Quagliata",
+          "position": "D"
+        },
+        {
+          "id": "412310",
+          "name": "Hugo Ríos",
+          "position": "G"
+        },
+        {
+          "id": "384164",
+          "name": "Iker Vidal",
+          "position": "D"
+        },
+        {
+          "id": "375391",
+          "name": "Jairo Noriega",
+          "position": "M"
+        },
+        {
+          "id": "158250",
+          "name": "José Ángel",
+          "position": "M"
+        },
+        {
+          "id": "331530",
+          "name": "Kevin Sánchez",
+          "position": "M"
+        },
+        {
+          "id": "321112",
+          "name": "Lucas Noubi",
+          "position": "D"
+        },
+        {
+          "id": "324166",
+          "name": "Luis Cruz",
+          "position": "F"
+        },
+        {
+          "id": "331411",
+          "name": "Luis Rodriguez",
+          "position": "F"
+        },
+        {
+          "id": "402351",
+          "name": "Mardones",
+          "position": "D"
+        },
+        {
+          "id": "297353",
+          "name": "Mario Soriano Carreno",
+          "position": "M"
+        },
+        {
+          "id": "375392",
+          "name": "Martín Ochoa",
+          "position": "F"
+        },
+        {
+          "id": "259915",
+          "name": "Miguel Loureiro",
+          "position": "D"
+        },
+        {
+          "id": "323030",
+          "name": "Mohamed Bouldini",
+          "position": "F"
+        },
+        {
+          "id": "415735",
+          "name": "Noé Carrillo",
+          "position": "M"
+        },
+        {
+          "id": "388563",
+          "name": "Pablo García",
+          "position": "D"
+        },
+        {
+          "id": "279609",
+          "name": "Riki Rodríguez",
+          "position": "M"
+        },
+        {
+          "id": "375566",
+          "name": "Rubén",
+          "position": "M"
+        },
+        {
+          "id": "396037",
+          "name": "Samu Fernández",
+          "position": "D"
+        },
+        {
+          "id": "362123",
+          "name": "Teun Gijselhart",
+          "position": "M"
+        },
+        {
+          "id": "157568",
+          "name": "Ximo Navarro",
+          "position": "D"
+        },
+        {
+          "id": "312392",
+          "name": "Yeremay Hernández",
+          "position": "F"
+        },
+        {
+          "id": "286769",
+          "name": "Zakaria Eddahchouri",
+          "position": "F"
+        },
+        {
+          "id": "96060",
+          "name": "Álvaro Fernández",
+          "position": "M"
+        }
+      ]
+    },
+    "Elche": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/3751/roster",
+      "players": [
+        {
+          "id": "231780",
+          "name": "Léo Pétrot",
+          "position": "D"
+        }
+      ]
+    },
+    "Espanol": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/88/roster",
+      "players": [
+        {
+          "id": "82074",
+          "name": "Hugo Pérez",
+          "position": "D"
+        }
+      ]
+    },
+    "Getafe": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/2922/roster",
+      "players": [
+        {
+          "id": "277876",
+          "name": "Abdel Abqar",
+          "position": "D"
+        },
+        {
+          "id": "417541",
+          "name": "Adrián Riquelme",
+          "position": "M"
+        },
+        {
+          "id": "383912",
+          "name": "Alberto Risco",
+          "position": "M"
+        },
+        {
+          "id": "416642",
+          "name": "Alejandro Mestanza",
+          "position": "M"
+        },
+        {
+          "id": "218793",
+          "name": "Borja Mayoral",
+          "position": "F"
+        },
+        {
+          "id": "386256",
+          "name": "Christantus Uche",
+          "position": "M"
+        },
+        {
+          "id": "390696",
+          "name": "Coba da Costa",
+          "position": "F"
+        },
+        {
+          "id": "196339",
+          "name": "David Soria",
+          "position": "G"
+        },
+        {
+          "id": "406832",
+          "name": "Davinchi",
+          "position": "D"
+        },
+        {
+          "id": "388898",
+          "name": "Diego Ferrer",
+          "position": "G"
+        },
+        {
+          "id": "181355",
+          "name": "Djené",
+          "position": "D"
+        },
+        {
+          "id": "398720",
+          "name": "Ismael Bekhoucha",
+          "position": "D"
+        },
+        {
+          "id": "214275",
+          "name": "Javi Muñoz",
+          "position": "M"
+        },
+        {
+          "id": "344245",
+          "name": "Jirí Letácek",
+          "position": "G"
+        },
+        {
+          "id": "367961",
+          "name": "Jorge Benito",
+          "position": "G"
+        },
+        {
+          "id": "415194",
+          "name": "Jorge Montes",
+          "position": "D"
+        },
+        {
+          "id": "376208",
+          "name": "Joselu Pérez",
+          "position": "F"
+        },
+        {
+          "id": "262061",
+          "name": "Juan Berrocal",
+          "position": "D"
+        },
+        {
+          "id": "143643",
+          "name": "Juanmi",
+          "position": "F"
+        },
+        {
+          "id": "125749",
+          "name": "Kiko Femenía",
+          "position": "D"
+        },
+        {
+          "id": "324947",
+          "name": "Lucas Laso",
+          "position": "D"
+        },
+        {
+          "id": "312919",
+          "name": "Marc Vilaplana",
+          "position": "D"
+        },
+        {
+          "id": "357147",
+          "name": "Mario Martín",
+          "position": "M"
+        },
+        {
+          "id": "284854",
+          "name": "Martín Satriano",
+          "position": "F"
+        },
+        {
+          "id": "199775",
+          "name": "Mauro Arambarri",
+          "position": "M"
+        },
+        {
+          "id": "411279",
+          "name": "Mykyta Aleksandrov",
+          "position": "F"
+        },
+        {
+          "id": "332892",
+          "name": "Peter Federico",
+          "position": "F"
+        },
+        {
+          "id": "359826",
+          "name": "Sebastián Boselli",
+          "position": "D"
+        },
+        {
+          "id": "415284",
+          "name": "Tito",
+          "position": "D"
+        },
+        {
+          "id": "384057",
+          "name": "Yassin Tallal",
+          "position": "F"
+        },
+        {
+          "id": "252477",
+          "name": "Yvan Neyou",
+          "position": "M"
+        },
+        {
+          "id": "300111",
+          "name": "Zaid Romero",
+          "position": "D"
+        },
+        {
+          "id": "354342",
+          "name": "Álex Sancris",
+          "position": "F"
+        }
+      ]
+    },
+    "Levante": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/1538/roster",
+      "players": [
+        {
+          "id": "276841",
+          "name": "Adrián de la Fuente",
+          "position": "D"
+        },
+        {
+          "id": "340744",
+          "name": "Alejandro Primo",
+          "position": "G"
+        },
+        {
+          "id": "380286",
+          "name": "Carlos Espí",
+          "position": "F"
+        },
+        {
+          "id": "3731",
+          "name": "Carlos Álvarez",
+          "position": "M"
+        },
+        {
+          "id": "409381",
+          "name": "Cayetano",
+          "position": "G"
+        },
+        {
+          "id": "375758",
+          "name": "Dani Cervera",
+          "position": "M"
+        },
+        {
+          "id": "388809",
+          "name": "Daniel Martín",
+          "position": "G"
+        },
+        {
+          "id": "346676",
+          "name": "Etta Eyong",
+          "position": "F"
+        },
+        {
+          "id": "414295",
+          "name": "Huseini Nakoha",
+          "position": "D"
+        },
+        {
+          "id": "311054",
+          "name": "Iván Romero",
+          "position": "F"
+        },
+        {
+          "id": "186024",
+          "name": "Jeremy Toljan",
+          "position": "D"
+        },
+        {
+          "id": "409382",
+          "name": "Joan Ruiz Agustina",
+          "position": "M"
+        },
+        {
+          "id": "317784",
+          "name": "Jon Ander Olasagasti",
+          "position": "M"
+        },
+        {
+          "id": "415819",
+          "name": "Kareem Tunde",
+          "position": "F"
+        },
+        {
+          "id": "260554",
+          "name": "Kervin Arriaga",
+          "position": "M"
+        },
+        {
+          "id": "372110",
+          "name": "Martín Krug",
+          "position": "D"
+        },
+        {
+          "id": "409383",
+          "name": "Nacho Pérez",
+          "position": "D"
+        },
+        {
+          "id": "269339",
+          "name": "Orio Rey",
+          "position": "M"
+        },
+        {
+          "id": "316040",
+          "name": "Pablo Cuñat",
+          "position": "G"
+        },
+        {
+          "id": "414294",
+          "name": "Pablo Rosón",
+          "position": "M"
+        },
+        {
+          "id": "384985",
+          "name": "Paco Cortés",
+          "position": "F"
+        },
+        {
+          "id": "267591",
+          "name": "Roger Brugué",
+          "position": "M"
+        },
+        {
+          "id": "324954",
+          "name": "Tai Abed",
+          "position": "M"
+        },
+        {
+          "id": "231214",
+          "name": "Unai Elgezabel",
+          "position": "D"
+        },
+        {
+          "id": "367679",
+          "name": "Víctor Fernández",
+          "position": "M"
+        },
+        {
+          "id": "203680",
+          "name": "Víctor García",
+          "position": "D"
+        },
+        {
+          "id": "367655",
+          "name": "Xavi Grande",
+          "position": "D"
+        }
+      ]
+    },
+    "Malaga": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/99/roster",
+      "players": []
+    },
+    "Osasuna": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/97/roster",
+      "players": []
+    },
+    "Racing Santander": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/87/roster",
+      "players": [
+        {
+          "id": "393944",
+          "name": "Aitor Crespo",
+          "position": "D"
+        },
+        {
+          "id": "300471",
+          "name": "Alvaro Mantilla",
+          "position": "D"
+        },
+        {
+          "id": "3141",
+          "name": "Andrés Martín",
+          "position": "F"
+        },
+        {
+          "id": "414075",
+          "name": "Andrés Vallecillo",
+          "position": "M"
+        },
+        {
+          "id": "320768",
+          "name": "Aritz Aldasoro",
+          "position": "M"
+        },
+        {
+          "id": "421199",
+          "name": "Carlos Sánchez",
+          "position": "D"
+        },
+        {
+          "id": "396027",
+          "name": "Diego Diaz",
+          "position": "M"
+        },
+        {
+          "id": "150191",
+          "name": "Diego Fuentes",
+          "position": "D"
+        },
+        {
+          "id": "367499",
+          "name": "Facundo González",
+          "position": "D"
+        },
+        {
+          "id": "289439",
+          "name": "Giorgi Guliashvili",
+          "position": "F"
+        },
+        {
+          "id": "341736",
+          "name": "Gustavo Puerta",
+          "position": "M"
+        },
+        {
+          "id": "284699",
+          "name": "Iñigo Vicente",
+          "position": "F"
+        },
+        {
+          "id": "128374",
+          "name": "Javier Castro",
+          "position": "D"
+        },
+        {
+          "id": "209578",
+          "name": "Jokin Ezkieta",
+          "position": "G"
+        },
+        {
+          "id": "178237",
+          "name": "Jorge Salinas",
+          "position": "D"
+        },
+        {
+          "id": "334268",
+          "name": "Juan Carlos Arana",
+          "position": "F"
+        },
+        {
+          "id": "394309",
+          "name": "Laro Gómez",
+          "position": "G"
+        },
+        {
+          "id": "342654",
+          "name": "Maguette Gueye",
+          "position": "M"
+        },
+        {
+          "id": "259839",
+          "name": "Manu",
+          "position": "D"
+        },
+        {
+          "id": "358285",
+          "name": "Mario García",
+          "position": "D"
+        },
+        {
+          "id": "409317",
+          "name": "Santi Franco",
+          "position": "F"
+        },
+        {
+          "id": "125383",
+          "name": "Sergio Canales",
+          "position": "M"
+        },
+        {
+          "id": "409318",
+          "name": "Sergio Martínez",
+          "position": "M"
+        },
+        {
+          "id": "400222",
+          "name": "Simon Eriksson",
+          "position": "G"
+        },
+        {
+          "id": "310419",
+          "name": "Suleiman Camara",
+          "position": "F"
+        },
+        {
+          "id": "353477",
+          "name": "Yeray Cabanzón",
+          "position": "F"
+        },
+        {
+          "id": "417252",
+          "name": "Álvaro Jiménez",
+          "position": "G"
+        },
+        {
+          "id": "279699",
+          "name": "Íñigo Sainz",
+          "position": "M"
+        }
+      ]
+    },
+    "Vallecano": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/101/roster",
+      "players": [
+        {
+          "id": "241139",
+          "name": "Abdul Mumin",
+          "position": "D"
+        },
+        {
+          "id": "300878",
+          "name": "Adrián Molina",
+          "position": "G"
+        },
+        {
+          "id": "313024",
+          "name": "Alexandre Alemão",
+          "position": "F"
+        },
+        {
+          "id": "287224",
+          "name": "Andrei Ratiu",
+          "position": "D"
+        },
+        {
+          "id": "195032",
+          "name": "Augusto Batalla",
+          "position": "G"
+        },
+        {
+          "id": "192893",
+          "name": "Daniel Cárdenas",
+          "position": "G"
+        },
+        {
+          "id": "129879",
+          "name": "Diego Méndez",
+          "position": "G"
+        },
+        {
+          "id": "389446",
+          "name": "Etienne Eto'O Pineda",
+          "position": "F"
+        },
+        {
+          "id": "140754",
+          "name": "Florian Lejeune",
+          "position": "D"
+        },
+        {
+          "id": "324505",
+          "name": "Fran Pérez",
+          "position": "M"
+        },
+        {
+          "id": "264197",
+          "name": "Isi Palazón",
+          "position": "M"
+        },
+        {
+          "id": "158151",
+          "name": "Iván Balliu",
+          "position": "D"
+        },
+        {
+          "id": "260740",
+          "name": "Jorge de Frutos",
+          "position": "F"
+        },
+        {
+          "id": "319231",
+          "name": "Jozhua Vertrouwd",
+          "position": "D"
+        },
+        {
+          "id": "332013",
+          "name": "Juanpe",
+          "position": "G"
+        },
+        {
+          "id": "225637",
+          "name": "Luiz Felipe",
+          "position": "D"
+        },
+        {
+          "id": "415410",
+          "name": "Marco Román",
+          "position": "M"
+        },
+        {
+          "id": "389447",
+          "name": "Marco de las Sias",
+          "position": "D"
+        },
+        {
+          "id": "277615",
+          "name": "Miguel Ángel Morro",
+          "position": "G"
+        },
+        {
+          "id": "356212",
+          "name": "Nobel Mendy",
+          "position": "D"
+        },
+        {
+          "id": "294228",
+          "name": "Pathé Ciss",
+          "position": "M"
+        },
+        {
+          "id": "264078",
+          "name": "Pedro Díaz",
+          "position": "M"
+        },
+        {
+          "id": "386579",
+          "name": "Pelayo Fernández",
+          "position": "D"
+        },
+        {
+          "id": "300331",
+          "name": "Pep Chavarría",
+          "position": "D"
+        },
+        {
+          "id": "276847",
+          "name": "Randy Nteka",
+          "position": "M"
+        },
+        {
+          "id": "174971",
+          "name": "Raúl de Tomás",
+          "position": "F"
+        },
+        {
+          "id": "409289",
+          "name": "Samu Becerra",
+          "position": "M"
+        },
+        {
+          "id": "276652",
+          "name": "Sergio Camello",
+          "position": "F"
+        },
+        {
+          "id": "268751",
+          "name": "Sergio Lozano",
+          "position": "D"
+        },
+        {
+          "id": "203711",
+          "name": "Unai López",
+          "position": "M"
+        },
+        {
+          "id": "125200",
+          "name": "Álvaro García",
+          "position": "M"
+        },
+        {
+          "id": "264217",
+          "name": "Óscar Valentín",
+          "position": "M"
+        }
+      ]
+    },
+    "Betis": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/244/roster",
+      "players": [
+        {
+          "id": "353854",
+          "name": "Daniel Pérez",
+          "position": "M"
+        }
+      ]
+    },
+    "Real Madrid": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/86/roster",
+      "players": []
+    },
+    "Sociedad": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/89/roster",
+      "players": [
+        {
+          "id": "262729",
+          "name": "Brais Méndez",
+          "position": "M"
+        }
+      ]
+    },
+    "Sevilla": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/243/roster",
+      "players": [
+        {
+          "id": "186432",
+          "name": "Adnan Januzaj",
+          "position": "M"
+        },
+        {
+          "id": "277292",
+          "name": "Adrià Pedrosa",
+          "position": "D"
+        },
+        {
+          "id": "288472",
+          "name": "Akor Adams",
+          "position": "F"
+        },
+        {
+          "id": "185100",
+          "name": "Alberto Flores",
+          "position": "G"
+        },
+        {
+          "id": "92055",
+          "name": "Alexis Sánchez",
+          "position": "F"
+        },
+        {
+          "id": "271635",
+          "name": "Alfonso González",
+          "position": "F"
+        },
+        {
+          "id": "332246",
+          "name": "Andrés Castrín",
+          "position": "D"
+        },
+        {
+          "id": "304213",
+          "name": "Arouna Sangante",
+          "position": "D"
+        },
+        {
+          "id": "254270",
+          "name": "Chidera Ejuke",
+          "position": "F"
+        },
+        {
+          "id": "222446",
+          "name": "Djibril Sow",
+          "position": "M"
+        },
+        {
+          "id": "409486",
+          "name": "Edu Altozano",
+          "position": "M"
+        },
+        {
+          "id": "334163",
+          "name": "Enrique Salas",
+          "position": "D"
+        },
+        {
+          "id": "276026",
+          "name": "Federico Gattoni",
+          "position": "D"
+        },
+        {
+          "id": "215386",
+          "name": "Fábio Cardoso",
+          "position": "D"
+        },
+        {
+          "id": "222037",
+          "name": "Gabriel Suazo",
+          "position": "D"
+        },
+        {
+          "id": "415742",
+          "name": "Iker Ortín",
+          "position": "D"
+        },
+        {
+          "id": "365821",
+          "name": "Isaac Romero",
+          "position": "F"
+        },
+        {
+          "id": "208850",
+          "name": "Joan Jordán",
+          "position": "M"
+        },
+        {
+          "id": "254320",
+          "name": "Jon Guridi",
+          "position": "M"
+        },
+        {
+          "id": "250508",
+          "name": "José Ángel Carmona",
+          "position": "D"
+        },
+        {
+          "id": "279738",
+          "name": "Juan Iglesias",
+          "position": "D"
+        },
+        {
+          "id": "303804",
+          "name": "Juanlu Sanchez",
+          "position": "M"
+        },
+        {
+          "id": "371521",
+          "name": "Lorenzo Luchino",
+          "position": "G"
+        },
+        {
+          "id": "282289",
+          "name": "Lucien Agoumé",
+          "position": "M"
+        },
+        {
+          "id": "356228",
+          "name": "Manu Bueno",
+          "position": "M"
+        },
+        {
+          "id": "203112",
+          "name": "Marcão",
+          "position": "D"
+        },
+        {
+          "id": "375514",
+          "name": "Miguel Sierra",
+          "position": "F"
+        },
+        {
+          "id": "422137",
+          "name": "Nico Guillén",
+          "position": "M"
+        },
+        {
+          "id": "377782",
+          "name": "Oso",
+          "position": "D"
+        },
+        {
+          "id": "347359",
+          "name": "Peque",
+          "position": "F"
+        },
+        {
+          "id": "230974",
+          "name": "Rafa Mir",
+          "position": "F"
+        },
+        {
+          "id": "119332",
+          "name": "Rafael Romero",
+          "position": "G"
+        },
+        {
+          "id": "259513",
+          "name": "Rubén Vargas",
+          "position": "M"
+        },
+        {
+          "id": "290165",
+          "name": "Tanguy Nianzou",
+          "position": "D"
+        },
+        {
+          "id": "393776",
+          "name": "Álex Costa",
+          "position": "F"
+        }
+      ]
+    },
+    "Valencia": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/94/roster",
+      "players": [
+        {
+          "id": "275983",
+          "name": "Thierry Correia",
+          "position": "D"
+        }
+      ]
+    },
+    "Villarreal": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/teams/102/roster",
+      "players": [
+        {
+          "id": "396751",
+          "name": "Alassane Diatta",
+          "position": "M"
+        },
+        {
+          "id": "307390",
+          "name": "Alberto Moleiro",
+          "position": "M"
+        },
+        {
+          "id": "343629",
+          "name": "Alex Fores",
+          "position": "F"
+        },
+        {
+          "id": "248276",
+          "name": "Alex Freeman",
+          "position": "D"
+        },
+        {
+          "id": "290043",
+          "name": "Arnau Tenas",
+          "position": "G"
+        },
+        {
+          "id": "192133",
+          "name": "Ayoze Pérez",
+          "position": "F"
+        },
+        {
+          "id": "415438",
+          "name": "Carlos Macià",
+          "position": "M"
+        },
+        {
+          "id": "271904",
+          "name": "Carlos Romero",
+          "position": "F"
+        },
+        {
+          "id": "381110",
+          "name": "Daniel Budesca",
+          "position": "D"
+        },
+        {
+          "id": "279660",
+          "name": "Diego Conde",
+          "position": "G"
+        },
+        {
+          "id": "300002",
+          "name": "Georges Mikautadze",
+          "position": "F"
+        },
+        {
+          "id": "156172",
+          "name": "Gerard Moreno",
+          "position": "F"
+        },
+        {
+          "id": "194253",
+          "name": "Hugo López",
+          "position": "F"
+        },
+        {
+          "id": "331047",
+          "name": "Ilias Akhomach",
+          "position": "F"
+        },
+        {
+          "id": "375393",
+          "name": "Isma Sierra",
+          "position": "D"
+        },
+        {
+          "id": "395479",
+          "name": "Jean Ives Valou",
+          "position": "D"
+        },
+        {
+          "id": "371619",
+          "name": "Joselillo",
+          "position": "F"
+        },
+        {
+          "id": "242710",
+          "name": "Juan Foyth",
+          "position": "D"
+        },
+        {
+          "id": "271129",
+          "name": "Logan Costa",
+          "position": "D"
+        },
+        {
+          "id": "307648",
+          "name": "Luiz Júnior",
+          "position": "G"
+        },
+        {
+          "id": "372072",
+          "name": "Mahamoud Barry",
+          "position": "F"
+        },
+        {
+          "id": "210397",
+          "name": "Nicolas Pépé",
+          "position": "F"
+        },
+        {
+          "id": "255889",
+          "name": "Pape Gueye",
+          "position": "M"
+        },
+        {
+          "id": "384544",
+          "name": "Pau Cabanes",
+          "position": "F"
+        },
+        {
+          "id": "368878",
+          "name": "Pau Navarro",
+          "position": "D"
+        },
+        {
+          "id": "309838",
+          "name": "Ramón Terrats",
+          "position": "M"
+        },
+        {
+          "id": "337011",
+          "name": "Renato Veiga",
+          "position": "D"
+        },
+        {
+          "id": "343640",
+          "name": "Rubén Gómez",
+          "position": "G"
+        },
+        {
+          "id": "240623",
+          "name": "Santi Comesaña",
+          "position": "M"
+        },
+        {
+          "id": "318098",
+          "name": "Santiago Mouriño",
+          "position": "D"
+        },
+        {
+          "id": "289072",
+          "name": "Sergi Cardona",
+          "position": "D"
+        },
+        {
+          "id": "284769",
+          "name": "Tajon Buchanan",
+          "position": "F"
+        },
+        {
+          "id": "294039",
+          "name": "Tani Oluwaseyi",
+          "position": "F"
+        },
+        {
+          "id": "339195",
+          "name": "Thiago Fernández",
+          "position": "F"
+        },
+        {
+          "id": "189972",
+          "name": "Thomas Partey",
+          "position": "M"
+        },
+        {
+          "id": "325553",
+          "name": "Willy Kambwala",
+          "position": "D"
+        }
+      ]
+    }
+  },
+  "BUNDESLIGA": {
+    "Union Berlin": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/598/roster",
+      "players": [
+        {
+          "id": "386438",
+          "name": "David Preu",
+          "position": "F"
+        }
+      ]
+    },
+    "Leverkusen": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/131/roster",
+      "players": []
+    },
+    "Bayern Munich": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/132/roster",
+      "players": [
+        {
+          "id": "359370",
+          "name": "Aleksandar Pavlovic",
+          "position": "M"
+        },
+        {
+          "id": "205750",
+          "name": "Alexander Nübel",
+          "position": "G"
+        },
+        {
+          "id": "236721",
+          "name": "Alphonso Davies",
+          "position": "D"
+        },
+        {
+          "id": "333400",
+          "name": "Arijon Ibrahimovic",
+          "position": "M"
+        },
+        {
+          "id": "308843",
+          "name": "Armindo Sieb",
+          "position": "F"
+        },
+        {
+          "id": "422013",
+          "name": "Bastian Assomo",
+          "position": "F"
+        },
+        {
+          "id": "311571",
+          "name": "Bryan Zaragoza",
+          "position": "F"
+        },
+        {
+          "id": "405586",
+          "name": "Cassiano Kiala",
+          "position": "D"
+        },
+        {
+          "id": "405585",
+          "name": "David Daiber",
+          "position": "M"
+        },
+        {
+          "id": "222793",
+          "name": "Dayot Upamecano",
+          "position": "D"
+        },
+        {
+          "id": "416461",
+          "name": "Deniz Ofli",
+          "position": "D"
+        },
+        {
+          "id": "420899",
+          "name": "Erblin Osmani",
+          "position": "M"
+        },
+        {
+          "id": "420811",
+          "name": "Filip Pavic",
+          "position": "D"
+        },
+        {
+          "id": "379223",
+          "name": "Guido Rovere",
+          "position": "M"
+        },
+        {
+          "id": "142200",
+          "name": "Harry Kane",
+          "position": "F"
+        },
+        {
+          "id": "97111",
+          "name": "Hiroki Ito",
+          "position": "D"
+        },
+        {
+          "id": "304572",
+          "name": "Ismael Saibari",
+          "position": "M"
+        },
+        {
+          "id": "303821",
+          "name": "Jamal Musiala",
+          "position": "M"
+        },
+        {
+          "id": "409827",
+          "name": "Jannis Bärtl",
+          "position": "G"
+        },
+        {
+          "id": "323790",
+          "name": "Jonas Urbig",
+          "position": "G"
+        },
+        {
+          "id": "188052",
+          "name": "Jonathan Tah",
+          "position": "D"
+        },
+        {
+          "id": "190161",
+          "name": "Joshua Kimmich",
+          "position": "M"
+        },
+        {
+          "id": "276329",
+          "name": "Josip Stanisic",
+          "position": "D"
+        },
+        {
+          "id": "224144",
+          "name": "João Palhinha",
+          "position": "M"
+        },
+        {
+          "id": "157688",
+          "name": "Kim Min-Jae",
+          "position": "D"
+        },
+        {
+          "id": "169189",
+          "name": "Konrad Laimer",
+          "position": "M"
+        },
+        {
+          "id": "402841",
+          "name": "Lennart Karl",
+          "position": "M"
+        },
+        {
+          "id": "388141",
+          "name": "Leon Klanac",
+          "position": "G"
+        },
+        {
+          "id": "410636",
+          "name": "Leonard Prescott",
+          "position": "G"
+        },
+        {
+          "id": "346760",
+          "name": "Lovro Zvonarek",
+          "position": "M"
+        },
+        {
+          "id": "257390",
+          "name": "Luis Díaz",
+          "position": "F"
+        },
+        {
+          "id": "84774",
+          "name": "Manuel Neuer",
+          "position": "G"
+        },
+        {
+          "id": "417373",
+          "name": "Maycon Cardozo",
+          "position": "M"
+        },
+        {
+          "id": "286831",
+          "name": "Michael Olise",
+          "position": "M"
+        },
+        {
+          "id": "352179",
+          "name": "Noël Aséko",
+          "position": "M"
+        },
+        {
+          "id": "287225",
+          "name": "Sacha Boey",
+          "position": "D"
+        },
+        {
+          "id": "178980",
+          "name": "Serge Gnabry",
+          "position": "F"
+        },
+        {
+          "id": "113733",
+          "name": "Sven Ulreich",
+          "position": "G"
+        },
+        {
+          "id": "357221",
+          "name": "Tarek Buchmann",
+          "position": "D"
+        },
+        {
+          "id": "324660",
+          "name": "Tom Bischof",
+          "position": "M"
+        },
+        {
+          "id": "388224",
+          "name": "Vincent Manuba",
+          "position": "D"
+        },
+        {
+          "id": "399864",
+          "name": "Wisdom Mike",
+          "position": "F"
+        }
+      ]
+    },
+    "Dortmund": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/124/roster",
+      "players": [
+        {
+          "id": "178380",
+          "name": "Alexander Meyer",
+          "position": "G"
+        },
+        {
+          "id": "372034",
+          "name": "Almugera Kabar",
+          "position": "D"
+        },
+        {
+          "id": "294317",
+          "name": "Carney Chukwuemeka",
+          "position": "M"
+        },
+        {
+          "id": "379024",
+          "name": "Cole Campbell",
+          "position": "F"
+        },
+        {
+          "id": "310709",
+          "name": "Daniel Svensson",
+          "position": "D"
+        },
+        {
+          "id": "387500",
+          "name": "Danylo Krevsun",
+          "position": "M"
+        },
+        {
+          "id": "287713",
+          "name": "Diant Ramaj",
+          "position": "G"
+        },
+        {
+          "id": "387529",
+          "name": "Elias Benkara",
+          "position": "D"
+        },
+        {
+          "id": "159142",
+          "name": "Emre Can",
+          "position": "M"
+        },
+        {
+          "id": "281122",
+          "name": "Felix Nmecha",
+          "position": "M"
+        },
+        {
+          "id": "387437",
+          "name": "Filippo Mané",
+          "position": "D"
+        },
+        {
+          "id": "291629",
+          "name": "Fábio Silva",
+          "position": "F"
+        },
+        {
+          "id": "238544",
+          "name": "Gregor Kobel",
+          "position": "G"
+        },
+        {
+          "id": "324820",
+          "name": "Jobe Bellingham",
+          "position": "M"
+        },
+        {
+          "id": "222991",
+          "name": "Julian Ryerson",
+          "position": "D"
+        },
+        {
+          "id": "383070",
+          "name": "Justin Lerma",
+          "position": "M"
+        },
+        {
+          "id": "274913",
+          "name": "Karim Adeyemi",
+          "position": "F"
+        },
+        {
+          "id": "399455",
+          "name": "Kauã Prates",
+          "position": "D"
+        },
+        {
+          "id": "365788",
+          "name": "Kjell-Arik Wätjen",
+          "position": "M"
+        },
+        {
+          "id": "371500",
+          "name": "Kouakou Gadou",
+          "position": "D"
+        },
+        {
+          "id": "413817",
+          "name": "Luca Reggiani",
+          "position": "D"
+        },
+        {
+          "id": "173907",
+          "name": "Marcel Sabitzer",
+          "position": "M"
+        },
+        {
+          "id": "403781",
+          "name": "Mathis Albert",
+          "position": "F"
+        },
+        {
+          "id": "290639",
+          "name": "Maximilian Beier",
+          "position": "F"
+        },
+        {
+          "id": "403933",
+          "name": "Mussa Kaba",
+          "position": "M"
+        },
+        {
+          "id": "286828",
+          "name": "Nico Schlotterbeck",
+          "position": "D"
+        },
+        {
+          "id": "174521",
+          "name": "Patrick Drewes",
+          "position": "G"
+        },
+        {
+          "id": "220703",
+          "name": "Ramy Bensebaini",
+          "position": "D"
+        },
+        {
+          "id": "403833",
+          "name": "Samuele Inácio",
+          "position": "F"
+        },
+        {
+          "id": "186381",
+          "name": "Serhou Guirassy",
+          "position": "F"
+        },
+        {
+          "id": "331297",
+          "name": "Silas Ostrzinski",
+          "position": "G"
+        },
+        {
+          "id": "220714",
+          "name": "Waldemar Anton",
+          "position": "D"
+        },
+        {
+          "id": "297084",
+          "name": "Yan Couto",
+          "position": "D"
+        }
+      ]
+    },
+    "M'gladbach": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/268/roster",
+      "players": [
+        {
+          "id": "149297",
+          "name": "Daniel Batz",
+          "position": "G"
+        },
+        {
+          "id": "345873",
+          "name": "David Herold",
+          "position": "D"
+        },
+        {
+          "id": "343990",
+          "name": "Enzo Leopold",
+          "position": "M"
+        },
+        {
+          "id": "323061",
+          "name": "Fabio Chiarodia",
+          "position": "D"
+        },
+        {
+          "id": "238527",
+          "name": "Florian Neuhaus",
+          "position": "M"
+        },
+        {
+          "id": "196029",
+          "name": "Franck Honorat",
+          "position": "M"
+        },
+        {
+          "id": "415726",
+          "name": "Fritz Fleck",
+          "position": "M"
+        },
+        {
+          "id": "290230",
+          "name": "Giovanni Reyna",
+          "position": "M"
+        },
+        {
+          "id": "323935",
+          "name": "Grant-Leon Ranos",
+          "position": "F"
+        },
+        {
+          "id": "330239",
+          "name": "Hugo Bolin",
+          "position": "M"
+        },
+        {
+          "id": "221690",
+          "name": "Isac Lidberg",
+          "position": "F"
+        },
+        {
+          "id": "384410",
+          "name": "Jan Leszczynski",
+          "position": "D"
+        },
+        {
+          "id": "304631",
+          "name": "Jan Olschowsky",
+          "position": "G"
+        },
+        {
+          "id": "304793",
+          "name": "Jens Castrop",
+          "position": "M"
+        },
+        {
+          "id": "272135",
+          "name": "Joe Scally",
+          "position": "D"
+        },
+        {
+          "id": "206863",
+          "name": "Kevin Diks",
+          "position": "D"
+        },
+        {
+          "id": "175006",
+          "name": "Kevin Stöger",
+          "position": "M"
+        },
+        {
+          "id": "346617",
+          "name": "Lukas Ullrich",
+          "position": "D"
+        },
+        {
+          "id": "238536",
+          "name": "Moritz Nicolas",
+          "position": "G"
+        },
+        {
+          "id": "282676",
+          "name": "Nathan N'Goumou",
+          "position": "M"
+        },
+        {
+          "id": "212237",
+          "name": "Nico Elvedi",
+          "position": "D"
+        },
+        {
+          "id": "275805",
+          "name": "Philipp Sander",
+          "position": "M"
+        },
+        {
+          "id": "258876",
+          "name": "Robin Hack",
+          "position": "M"
+        },
+        {
+          "id": "271352",
+          "name": "Shuto Machino",
+          "position": "F"
+        },
+        {
+          "id": "185906",
+          "name": "Tim Kleindienst",
+          "position": "F"
+        },
+        {
+          "id": "122273",
+          "name": "Tobias Sippel",
+          "position": "G"
+        },
+        {
+          "id": "307755",
+          "name": "Tomas Cvancara",
+          "position": "F"
+        },
+        {
+          "id": "408539",
+          "name": "Wael Mohya",
+          "position": "M"
+        },
+        {
+          "id": "276082",
+          "name": "Yukhym Konoplia",
+          "position": "D"
+        },
+        {
+          "id": "341707",
+          "name": "Zento Uno",
+          "position": "M"
+        }
+      ]
+    },
+    "Ein Frankfurt": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/125/roster",
+      "players": [
+        {
+          "id": "120829",
+          "name": "Nathaniel Brown",
+          "position": "D"
+        }
+      ]
+    },
+    "Augsburg": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/3841/roster",
+      "players": [
+        {
+          "id": "306613",
+          "name": "David Colina",
+          "position": "D"
+        }
+      ]
+    },
+    "FC Koln": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/122/roster",
+      "players": [
+        {
+          "id": "236136",
+          "name": "Alessio Castro-Montes",
+          "position": "M"
+        },
+        {
+          "id": "415733",
+          "name": "Cenny Neumann",
+          "position": "D"
+        },
+        {
+          "id": "418989",
+          "name": "David Fürst",
+          "position": "D"
+        },
+        {
+          "id": "357685",
+          "name": "Elias-Geoffrey Bakatukanda",
+          "position": "D"
+        },
+        {
+          "id": "370710",
+          "name": "Emin Kujovic",
+          "position": "M"
+        },
+        {
+          "id": "372029",
+          "name": "Fayssal Harchaoui",
+          "position": "M"
+        },
+        {
+          "id": "416417",
+          "name": "Fynn Schenten",
+          "position": "F"
+        },
+        {
+          "id": "306653",
+          "name": "Imad Rondic",
+          "position": "F"
+        },
+        {
+          "id": "357337",
+          "name": "Jahmai Simpson-Pusey",
+          "position": "D"
+        },
+        {
+          "id": "304933",
+          "name": "Jakub Kaminski",
+          "position": "M"
+        },
+        {
+          "id": "300444",
+          "name": "Jan Thielmann",
+          "position": "M"
+        },
+        {
+          "id": "306378",
+          "name": "Joel Schmied",
+          "position": "D"
+        },
+        {
+          "id": "387975",
+          "name": "Julian Pauli",
+          "position": "D"
+        },
+        {
+          "id": "308249",
+          "name": "Jusuf Gazibegovic",
+          "position": "D"
+        },
+        {
+          "id": "231173",
+          "name": "Linton Maina",
+          "position": "M"
+        },
+        {
+          "id": "191352",
+          "name": "Luca Waldschmidt",
+          "position": "F"
+        },
+        {
+          "id": "222477",
+          "name": "Luka Lochoshvili",
+          "position": "D"
+        },
+        {
+          "id": "384155",
+          "name": "Malek El Mala",
+          "position": "F"
+        },
+        {
+          "id": "275797",
+          "name": "Marius Bulter",
+          "position": "F"
+        },
+        {
+          "id": "205751",
+          "name": "Marvin Schwäbe",
+          "position": "G"
+        },
+        {
+          "id": "258973",
+          "name": "Matthias Köbbing",
+          "position": "G"
+        },
+        {
+          "id": "255355",
+          "name": "Ragnar Ache",
+          "position": "F"
+        },
+        {
+          "id": "290035",
+          "name": "Rasmus Carstensen",
+          "position": "D"
+        },
+        {
+          "id": "306161",
+          "name": "Rav van den Berg",
+          "position": "D"
+        },
+        {
+          "id": "121007",
+          "name": "Ron-Robert Zieler",
+          "position": "G"
+        },
+        {
+          "id": "380795",
+          "name": "Said El Mala",
+          "position": "M"
+        },
+        {
+          "id": "302981",
+          "name": "Sebastian Sebulonsen",
+          "position": "D"
+        },
+        {
+          "id": "238520",
+          "name": "Timo Hübers",
+          "position": "D"
+        },
+        {
+          "id": "283683",
+          "name": "Tom Krauss",
+          "position": "M"
+        },
+        {
+          "id": "417605",
+          "name": "Youssoupha Niang",
+          "position": "F"
+        },
+        {
+          "id": "286815",
+          "name": "Ísak Jóhannesson",
+          "position": "M"
+        }
+      ]
+    },
+    "Hamburg": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/127/roster",
+      "players": []
+    },
+    "Mainz": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/2950/roster",
+      "players": []
+    },
+    "RB Leipzig": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/11420/roster",
+      "players": [
+        {
+          "id": "345396",
+          "name": "Timo Schlieck",
+          "position": "G"
+        }
+      ]
+    },
+    "Freiburg": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/126/roster",
+      "players": []
+    },
+    "Paderborn": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/3307/roster",
+      "players": [
+        {
+          "id": "384501",
+          "name": "Bennit Bröger",
+          "position": "M"
+        }
+      ]
+    },
+    "Elversberg": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/10388/roster",
+      "players": []
+    },
+    "Schalke 04": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/133/roster",
+      "players": []
+    },
+    "Hoffenheim": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/7911/roster",
+      "players": [
+        {
+          "id": "359108",
+          "name": "Bazoumana Touré",
+          "position": "F"
+        }
+      ]
+    },
+    "Stuttgart": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/134/roster",
+      "players": []
+    },
+    "Werder Bremen": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/teams/137/roster",
+      "players": []
+    }
+  },
+  "LIGUE1": {
+    "Auxerre": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/172/roster",
+      "players": [
+        {
+          "id": "392126",
+          "name": "Aristide Zossou",
+          "position": "M"
+        },
+        {
+          "id": "359360",
+          "name": "Arthur Piedfort",
+          "position": "M"
+        },
+        {
+          "id": "214305",
+          "name": "Assane Dioussé",
+          "position": "M"
+        },
+        {
+          "id": "321097",
+          "name": "Bryan Okoh",
+          "position": "D"
+        },
+        {
+          "id": "344520",
+          "name": "Clément Akpa",
+          "position": "D"
+        },
+        {
+          "id": "243748",
+          "name": "Danny Namaso",
+          "position": "M"
+        },
+        {
+          "id": "164165",
+          "name": "Donovan Léon",
+          "position": "G"
+        },
+        {
+          "id": "404532",
+          "name": "Elikya Legros",
+          "position": "D"
+        },
+        {
+          "id": "266057",
+          "name": "Elisha Owusu",
+          "position": "M"
+        },
+        {
+          "id": "280466",
+          "name": "Eros Maddy",
+          "position": "F"
+        },
+        {
+          "id": "218620",
+          "name": "Francisco Sierralta",
+          "position": "D"
+        },
+        {
+          "id": "310134",
+          "name": "Fredrik Oppegard",
+          "position": "D"
+        },
+        {
+          "id": "264484",
+          "name": "Gideon Mensah",
+          "position": "D"
+        },
+        {
+          "id": "304212",
+          "name": "Josué Casimir",
+          "position": "F"
+        },
+        {
+          "id": "323722",
+          "name": "Kévin Danois",
+          "position": "M"
+        },
+        {
+          "id": "335320",
+          "name": "Lamine Sy",
+          "position": "D"
+        },
+        {
+          "id": "271137",
+          "name": "Lassine Sinayoko",
+          "position": "F"
+        },
+        {
+          "id": "323175",
+          "name": "Lasso Coulibaly",
+          "position": "M"
+        },
+        {
+          "id": "409261",
+          "name": "Louis Mezerette",
+          "position": "G"
+        },
+        {
+          "id": "345926",
+          "name": "Mamadou Diop",
+          "position": "G"
+        },
+        {
+          "id": "309638",
+          "name": "Marvin Senaya",
+          "position": "D"
+        },
+        {
+          "id": "297775",
+          "name": "Naouirou Ahamada",
+          "position": "M"
+        },
+        {
+          "id": "379070",
+          "name": "Rayan Mandengue",
+          "position": "F"
+        },
+        {
+          "id": "409263",
+          "name": "Ryan Rodin",
+          "position": "F"
+        },
+        {
+          "id": "299908",
+          "name": "Saad Agouzoul",
+          "position": "D"
+        },
+        {
+          "id": "302862",
+          "name": "Sinaly Diomande",
+          "position": "D"
+        },
+        {
+          "id": "403125",
+          "name": "Telli Siwe",
+          "position": "D"
+        },
+        {
+          "id": "255625",
+          "name": "Thelonius Bair",
+          "position": "F"
+        },
+        {
+          "id": "312151",
+          "name": "Théo De Percin",
+          "position": "G"
+        },
+        {
+          "id": "409262",
+          "name": "Tidiane Devernois",
+          "position": "M"
+        }
+      ]
+    },
+    "Monaco": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/174/roster",
+      "players": [
+        {
+          "id": "345243",
+          "name": "Kassoum Ouattara",
+          "position": "D"
+        }
+      ]
+    },
+    "Angers": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/7868/roster",
+      "players": [
+        {
+          "id": "314388",
+          "name": "Amine Sbaï",
+          "position": "F"
+        },
+        {
+          "id": "379227",
+          "name": "Anthony Bermont",
+          "position": "M"
+        },
+        {
+          "id": "131743",
+          "name": "Anthony Lopes",
+          "position": "G"
+        },
+        {
+          "id": "218703",
+          "name": "Carlens Arcus",
+          "position": "D"
+        },
+        {
+          "id": "371474",
+          "name": "Dan Sinaté",
+          "position": "M"
+        },
+        {
+          "id": "356211",
+          "name": "Emmanuel Biumla",
+          "position": "M"
+        },
+        {
+          "id": "206993",
+          "name": "Haris Belkebla",
+          "position": "M"
+        },
+        {
+          "id": "412871",
+          "name": "Harouna Djibirin",
+          "position": "F"
+        },
+        {
+          "id": "333218",
+          "name": "Jacques Ekomie",
+          "position": "D"
+        },
+        {
+          "id": "284333",
+          "name": "Jim Allevinah",
+          "position": "F"
+        },
+        {
+          "id": "191712",
+          "name": "Jordan Lefort",
+          "position": "D"
+        },
+        {
+          "id": "403320",
+          "name": "Lanroy Machine",
+          "position": "F"
+        },
+        {
+          "id": "357154",
+          "name": "Lilian Raolisoa",
+          "position": "D"
+        },
+        {
+          "id": "333845",
+          "name": "Louis Mouton",
+          "position": "M"
+        },
+        {
+          "id": "312399",
+          "name": "Mamadou Simbakoli",
+          "position": "F"
+        },
+        {
+          "id": "364683",
+          "name": "Marius Courcoul",
+          "position": "D"
+        },
+        {
+          "id": "394476",
+          "name": "Marius Louãr",
+          "position": "D"
+        },
+        {
+          "id": "297161",
+          "name": "Melvin Zinga",
+          "position": "G"
+        },
+        {
+          "id": "378976",
+          "name": "Oumar Pona",
+          "position": "G"
+        },
+        {
+          "id": "412232",
+          "name": "Ousmane Camara",
+          "position": "D"
+        },
+        {
+          "id": "403232",
+          "name": "Prosper Peter",
+          "position": "F"
+        },
+        {
+          "id": "362128",
+          "name": "Yacine Gaya",
+          "position": "D"
+        },
+        {
+          "id": "338006",
+          "name": "Yassin Belkhdim",
+          "position": "M"
+        }
+      ]
+    },
+    "Brest": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/6997/roster",
+      "players": [
+        {
+          "id": "325330",
+          "name": "Axel Camblan",
+          "position": "M"
+        },
+        {
+          "id": "324572",
+          "name": "Bradley Locko",
+          "position": "D"
+        },
+        {
+          "id": "186408",
+          "name": "Brendan Chardonnet",
+          "position": "D"
+        },
+        {
+          "id": "260239",
+          "name": "Grégoire Coudert",
+          "position": "G"
+        },
+        {
+          "id": "376352",
+          "name": "Hamidou Makalou",
+          "position": "M"
+        },
+        {
+          "id": "250377",
+          "name": "Hugo Magnetti",
+          "position": "M"
+        },
+        {
+          "id": "388421",
+          "name": "Ibrahim Kanté",
+          "position": "F"
+        },
+        {
+          "id": "291850",
+          "name": "Joris Chotard",
+          "position": "M"
+        },
+        {
+          "id": "399248",
+          "name": "Justin Bourgault",
+          "position": "D"
+        },
+        {
+          "id": "330412",
+          "name": "Kamory Doumbia",
+          "position": "M"
+        },
+        {
+          "id": "164187",
+          "name": "Kenny Lala",
+          "position": "D"
+        },
+        {
+          "id": "363150",
+          "name": "Luc Zogbe",
+          "position": "D"
+        },
+        {
+          "id": "215574",
+          "name": "Lucas Tousart",
+          "position": "M"
+        },
+        {
+          "id": "192015",
+          "name": "Ludovic Ajorque",
+          "position": "F"
+        },
+        {
+          "id": "259960",
+          "name": "Mama Baldé",
+          "position": "F"
+        },
+        {
+          "id": "388886",
+          "name": "Noah Jauny",
+          "position": "G"
+        },
+        {
+          "id": "3100741",
+          "name": "Noé Poillion",
+          "position": "G"
+        },
+        {
+          "id": "365783",
+          "name": "Pathé Mboup",
+          "position": "F"
+        },
+        {
+          "id": "397594",
+          "name": "Raphaël Le Guen",
+          "position": "D"
+        },
+        {
+          "id": "230896",
+          "name": "Romain Del Castillo",
+          "position": "M"
+        }
+      ]
+    },
+    "Le Havre": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/3236/roster",
+      "players": [
+        {
+          "id": "297168",
+          "name": "Etienne Youte Kinkoue",
+          "position": "D"
+        }
+      ]
+    },
+    "Le Mans": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/2697/roster",
+      "players": [
+        {
+          "id": "407439",
+          "name": "Izhak Hammoudi",
+          "position": "D"
+        }
+      ]
+    },
+    "Lens": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/175/roster",
+      "players": [
+        {
+          "id": "358915",
+          "name": "Fode Sylla",
+          "position": "M"
+        }
+      ]
+    },
+    "Lille": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/166/roster",
+      "players": [
+        {
+          "id": "393322",
+          "name": "Younes Lachaab",
+          "position": "F"
+        }
+      ]
+    },
+    "Lorient": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/273/roster",
+      "players": []
+    },
+    "Lyon": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/167/roster",
+      "players": [
+        {
+          "id": "285088",
+          "name": "Abner",
+          "position": "D"
+        },
+        {
+          "id": "214402",
+          "name": "Ainsley Maitland-Niles",
+          "position": "M"
+        },
+        {
+          "id": "402949",
+          "name": "Alejandro Rodríguez",
+          "position": "F"
+        },
+        {
+          "id": "214649",
+          "name": "Clinton Mata",
+          "position": "D"
+        },
+        {
+          "id": "192060",
+          "name": "Corentin Tolisso",
+          "position": "M"
+        },
+        {
+          "id": "221278",
+          "name": "Dominik Greif",
+          "position": "G"
+        },
+        {
+          "id": "194766",
+          "name": "Duje Caleta-Car",
+          "position": "D"
+        },
+        {
+          "id": "388571",
+          "name": "Enzo Molébé",
+          "position": "F"
+        },
+        {
+          "id": "333310",
+          "name": "Ernest Nuamah",
+          "position": "F"
+        },
+        {
+          "id": "341375",
+          "name": "Julien Duranville",
+          "position": "F"
+        },
+        {
+          "id": "362971",
+          "name": "Justin Bengui Joao",
+          "position": "G"
+        },
+        {
+          "id": "379066",
+          "name": "Kail Boudache",
+          "position": "F"
+        },
+        {
+          "id": "408345",
+          "name": "Khalis Merah",
+          "position": "M"
+        },
+        {
+          "id": "142743",
+          "name": "Lassine Diarra",
+          "position": "G"
+        },
+        {
+          "id": "290401",
+          "name": "Mads Bidstrup",
+          "position": "M"
+        },
+        {
+          "id": "133319",
+          "name": "Mahamadou Diawara",
+          "position": "M"
+        },
+        {
+          "id": "340645",
+          "name": "Malick Fofana",
+          "position": "D"
+        },
+        {
+          "id": "402948",
+          "name": "Mathys De Carvalho",
+          "position": "M"
+        },
+        {
+          "id": "303794",
+          "name": "Matt Turner",
+          "position": "G"
+        },
+        {
+          "id": "213181",
+          "name": "Moussa Niakhaté",
+          "position": "D"
+        },
+        {
+          "id": "145190",
+          "name": "Nicolás Tagliafico",
+          "position": "D"
+        },
+        {
+          "id": "365562",
+          "name": "Noah Nartey",
+          "position": "M"
+        },
+        {
+          "id": "403110",
+          "name": "Noham Kamara",
+          "position": "D"
+        },
+        {
+          "id": "228424",
+          "name": "Orel Mangala",
+          "position": "M"
+        },
+        {
+          "id": "284942",
+          "name": "Paul Akouokou",
+          "position": "M"
+        },
+        {
+          "id": "305545",
+          "name": "Pavel Sulc",
+          "position": "M"
+        },
+        {
+          "id": "301354",
+          "name": "Ruben Kluivert",
+          "position": "D"
+        },
+        {
+          "id": "403842",
+          "name": "Rémi Himbert",
+          "position": "F"
+        },
+        {
+          "id": "222175",
+          "name": "Rémy Descamps",
+          "position": "G"
+        },
+        {
+          "id": "303308",
+          "name": "Tanner Tessmann",
+          "position": "M"
+        },
+        {
+          "id": "298522",
+          "name": "Tyler Morton",
+          "position": "M"
+        }
+      ]
+    },
+    "Marseille": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/176/roster",
+      "players": [
+        {
+          "id": "421851",
+          "name": "Nouhoum Kamissoko",
+          "position": "M"
+        }
+      ]
+    },
+    "Nice": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/2502/roster",
+      "players": [
+        {
+          "id": "265234",
+          "name": "Ali Abdi",
+          "position": "D"
+        },
+        {
+          "id": "319161",
+          "name": "Antoine Mendy",
+          "position": "D"
+        },
+        {
+          "id": "368014",
+          "name": "Bartosz Zelazowski",
+          "position": "G"
+        },
+        {
+          "id": "357425",
+          "name": "Djibril Coulibaly",
+          "position": "M"
+        },
+        {
+          "id": "397392",
+          "name": "Gabin Bernardeau",
+          "position": "M"
+        },
+        {
+          "id": "376344",
+          "name": "Hamza Koutoune",
+          "position": "D"
+        },
+        {
+          "id": "287078",
+          "name": "Hicham Boudaoui",
+          "position": "M"
+        },
+        {
+          "id": "282597",
+          "name": "Isak Jansson",
+          "position": "F"
+        },
+        {
+          "id": "232670",
+          "name": "Issiaga Camara",
+          "position": "M"
+        },
+        {
+          "id": "232089",
+          "name": "Jonathan Clauss",
+          "position": "D"
+        },
+        {
+          "id": "304151",
+          "name": "Kevin Carlos",
+          "position": "F"
+        },
+        {
+          "id": "357205",
+          "name": "Kojo Peprah Oppong",
+          "position": "D"
+        },
+        {
+          "id": "181133",
+          "name": "Laurent Abergel",
+          "position": "M"
+        },
+        {
+          "id": "299990",
+          "name": "Mattia Viti",
+          "position": "D"
+        },
+        {
+          "id": "265923",
+          "name": "Melvin Bard",
+          "position": "D"
+        },
+        {
+          "id": "236957",
+          "name": "Mohamed Abdelmoneim",
+          "position": "D"
+        },
+        {
+          "id": "306557",
+          "name": "Mohamed-Ali Cho",
+          "position": "F"
+        },
+        {
+          "id": "176816",
+          "name": "Morgan Sanson",
+          "position": "M"
+        },
+        {
+          "id": "358975",
+          "name": "Moïse Bombito",
+          "position": "D"
+        },
+        {
+          "id": "322795",
+          "name": "Rares Ilie",
+          "position": "M"
+        },
+        {
+          "id": "292769",
+          "name": "Salis Abdul Samed",
+          "position": "M"
+        },
+        {
+          "id": "276995",
+          "name": "Sofiane Diop",
+          "position": "M"
+        },
+        {
+          "id": "240672",
+          "name": "Tanguy Ndombele",
+          "position": "M"
+        },
+        {
+          "id": "289769",
+          "name": "Terem Moffi",
+          "position": "F"
+        },
+        {
+          "id": "362061",
+          "name": "Tom Louchet",
+          "position": "M"
+        },
+        {
+          "id": "388090",
+          "name": "Victor Orakpo",
+          "position": "F"
+        },
+        {
+          "id": "241029",
+          "name": "Yehvann Diouf",
+          "position": "G"
+        },
+        {
+          "id": "255192",
+          "name": "Youssouf Ndayishimiye",
+          "position": "M"
+        }
+      ]
+    },
+    "Paris FC": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/6851/roster",
+      "players": [
+        {
+          "id": "364746",
+          "name": "Adama Camara",
+          "position": "M"
+        },
+        {
+          "id": "238392",
+          "name": "Alimani Gory",
+          "position": "F"
+        },
+        {
+          "id": "130123",
+          "name": "Ciro Immobile",
+          "position": "F"
+        },
+        {
+          "id": "351291",
+          "name": "Gabriel Oualengbe",
+          "position": "M"
+        },
+        {
+          "id": "196729",
+          "name": "Hamari Traoré",
+          "position": "D"
+        },
+        {
+          "id": "304918",
+          "name": "Ilan Kebbal",
+          "position": "M"
+        },
+        {
+          "id": "257126",
+          "name": "Jean-Phillipe Krasso",
+          "position": "F"
+        },
+        {
+          "id": "225559",
+          "name": "Jonathan Ikoné",
+          "position": "F"
+        },
+        {
+          "id": "122280",
+          "name": "Kevin Trapp",
+          "position": "G"
+        },
+        {
+          "id": "333208",
+          "name": "Lohann Doucet",
+          "position": "M"
+        },
+        {
+          "id": "227720",
+          "name": "Mathieu Cafaro",
+          "position": "M"
+        },
+        {
+          "id": "358732",
+          "name": "Mathys Tourraine",
+          "position": "D"
+        },
+        {
+          "id": "223122",
+          "name": "Maxime López",
+          "position": "M"
+        },
+        {
+          "id": "187647",
+          "name": "Moses Simon",
+          "position": "F"
+        },
+        {
+          "id": "287474",
+          "name": "Moustapha Mbow",
+          "position": "D"
+        },
+        {
+          "id": "371471",
+          "name": "Nhoa Sangui",
+          "position": "D"
+        },
+        {
+          "id": "301770",
+          "name": "Obed Nkambadio",
+          "position": "G"
+        },
+        {
+          "id": "368334",
+          "name": "Omar Sissoko",
+          "position": "F"
+        },
+        {
+          "id": "308195",
+          "name": "Otavio",
+          "position": "D"
+        },
+        {
+          "id": "221527",
+          "name": "Pierre Lees-Melou",
+          "position": "M"
+        },
+        {
+          "id": "402888",
+          "name": "Rudy Matondo",
+          "position": "M"
+        },
+        {
+          "id": "287572",
+          "name": "Samir Chergui",
+          "position": "D"
+        },
+        {
+          "id": "246805",
+          "name": "Thibault De Smet",
+          "position": "D"
+        },
+        {
+          "id": "354865",
+          "name": "Tuomas Ollila",
+          "position": "D"
+        },
+        {
+          "id": "219153",
+          "name": "Vincent Marchetti",
+          "position": "M"
+        },
+        {
+          "id": "259744",
+          "name": "Willem Geubbels",
+          "position": "F"
+        },
+        {
+          "id": "324325",
+          "name": "Yoan Koré",
+          "position": "D"
+        },
+        {
+          "id": "398780",
+          "name": "Zabi Gueu",
+          "position": "M"
+        }
+      ]
+    },
+    "Paris SG": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/160/roster",
+      "players": [
+        {
+          "id": "415149",
+          "name": "Martin James",
+          "position": "G"
+        }
+      ]
+    },
+    "Rennes": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/169/roster",
+      "players": [
+        {
+          "id": "409659",
+          "name": "Mathys Silistre",
+          "position": "G"
+        }
+      ]
+    },
+    "Strasbourg": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/180/roster",
+      "players": [
+        {
+          "id": "336794",
+          "name": "Abdoul Ouattara",
+          "position": "M"
+        },
+        {
+          "id": "290101",
+          "name": "Andrew Omobamidele",
+          "position": "D"
+        },
+        {
+          "id": "225426",
+          "name": "Ben Chilwell",
+          "position": "D"
+        },
+        {
+          "id": "340678",
+          "name": "Diego Moreira",
+          "position": "F"
+        },
+        {
+          "id": "304871",
+          "name": "Emmanuel Emegha",
+          "position": "F"
+        },
+        {
+          "id": "379012",
+          "name": "Gessime Yassine",
+          "position": "F"
+        },
+        {
+          "id": "346636",
+          "name": "Guela Doué",
+          "position": "D"
+        },
+        {
+          "id": "305935",
+          "name": "Ismael Doukoure",
+          "position": "D"
+        },
+        {
+          "id": "350961",
+          "name": "Joaquín Panichelli",
+          "position": "F"
+        },
+        {
+          "id": "20975",
+          "name": "Julio Enciso",
+          "position": "M"
+        },
+        {
+          "id": "340583",
+          "name": "Junior Mwanga",
+          "position": "M"
+        },
+        {
+          "id": "183562",
+          "name": "Karl-Johan Johnsson",
+          "position": "G"
+        },
+        {
+          "id": "359934",
+          "name": "Lucas Høgsberg",
+          "position": "D"
+        },
+        {
+          "id": "348301",
+          "name": "Martial Godo",
+          "position": "F"
+        },
+        {
+          "id": "364764",
+          "name": "Mathis Amougou",
+          "position": "M"
+        },
+        {
+          "id": "347919",
+          "name": "Maximillian Oyedele",
+          "position": "M"
+        },
+        {
+          "id": "378491",
+          "name": "Samir El Mourabet",
+          "position": "M"
+        },
+        {
+          "id": "350501",
+          "name": "Samuel Amo-Ameyaw",
+          "position": "F"
+        },
+        {
+          "id": "303787",
+          "name": "Sebastian Nanasi",
+          "position": "M"
+        },
+        {
+          "id": "260545",
+          "name": "Stefan Bajic",
+          "position": "G"
+        },
+        {
+          "id": "418506",
+          "name": "Tyrese Noubissie",
+          "position": "M"
+        },
+        {
+          "id": "320760",
+          "name": "Valentín Barco",
+          "position": "M"
+        }
+      ]
+    },
+    "Toulouse": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/179/roster",
+      "players": [
+        {
+          "id": "290030",
+          "name": "Abu Francis",
+          "position": "M"
+        },
+        {
+          "id": "408251",
+          "name": "Alexis Vossah",
+          "position": "M"
+        },
+        {
+          "id": "252740",
+          "name": "Aron Donnum",
+          "position": "M"
+        },
+        {
+          "id": "307713",
+          "name": "Charlie Cresswell",
+          "position": "D"
+        },
+        {
+          "id": "271244",
+          "name": "Cristian Cásseres Jr.",
+          "position": "M"
+        },
+        {
+          "id": "409214",
+          "name": "Darris Zema",
+          "position": "M"
+        },
+        {
+          "id": "388070",
+          "name": "Dayann Methalie",
+          "position": "D"
+        },
+        {
+          "id": "30302",
+          "name": "Djibril Sidibé",
+          "position": "D"
+        },
+        {
+          "id": "322654",
+          "name": "Emersonn",
+          "position": "F"
+        },
+        {
+          "id": "408253",
+          "name": "Enzo Faty",
+          "position": "F"
+        },
+        {
+          "id": "408254",
+          "name": "Frédéric Efuele Ngoyala",
+          "position": "D"
+        },
+        {
+          "id": "408255",
+          "name": "Gaetan Bakhouche",
+          "position": "D"
+        },
+        {
+          "id": "324289",
+          "name": "Guillaume Restes",
+          "position": "G"
+        },
+        {
+          "id": "297340",
+          "name": "Ibrahim Cissoko",
+          "position": "F"
+        },
+        {
+          "id": "403310",
+          "name": "Ilyas Azizi",
+          "position": "F"
+        },
+        {
+          "id": "397384",
+          "name": "Ismail Diallo",
+          "position": "D"
+        },
+        {
+          "id": "297121",
+          "name": "Jacen Russell-Rowe",
+          "position": "F"
+        },
+        {
+          "id": "380400",
+          "name": "Julián Vignolo",
+          "position": "F"
+        },
+        {
+          "id": "322205",
+          "name": "Mario Sauer",
+          "position": "M"
+        },
+        {
+          "id": "77072",
+          "name": "Mark McKenzie",
+          "position": "D"
+        },
+        {
+          "id": "386251",
+          "name": "Mathis Saka",
+          "position": "M"
+        },
+        {
+          "id": "371559",
+          "name": "Mathys Niflore",
+          "position": "G"
+        },
+        {
+          "id": "396620",
+          "name": "Naime Said Mchindra",
+          "position": "G"
+        },
+        {
+          "id": "344521",
+          "name": "Nicolas Wasbauer",
+          "position": "D"
+        },
+        {
+          "id": "225565",
+          "name": "Niklas Schmidt",
+          "position": "M"
+        },
+        {
+          "id": "355975",
+          "name": "Noah Lahmadi",
+          "position": "M"
+        },
+        {
+          "id": "384162",
+          "name": "Rafik Messali",
+          "position": "M"
+        },
+        {
+          "id": "238213",
+          "name": "Rasmus Nicolaisen",
+          "position": "D"
+        },
+        {
+          "id": "338873",
+          "name": "Santiago Hidalgo",
+          "position": "F"
+        },
+        {
+          "id": "408252",
+          "name": "Seny Koumbassa",
+          "position": "D"
+        },
+        {
+          "id": "277383",
+          "name": "Yann Gboho",
+          "position": "F"
+        },
+        {
+          "id": "355979",
+          "name": "Ylies Aradj",
+          "position": "D"
+        }
+      ]
+    },
+    "Troyes": {
+      "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/teams/170/roster",
+      "players": [
+        {
+          "id": "397994",
+          "name": "Mathys Detourbet",
+          "position": "F"
+        }
+      ]
+    }
+  }
+}

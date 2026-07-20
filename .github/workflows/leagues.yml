@@ -12,7 +12,7 @@ on:
   schedule:
     # Tuesday 06:00 UTC -- the weekly refit, after Monday-night football settles.
     - cron: "0 6 * * 2"
-    # MATCHDAYS, every 2 hours. Two jobs at once: it records results as they land,
+    # MATCHDAYS, every 30 minutes. Two jobs at once: it records results as they land,
     # and -- more importantly -- it is what FREEZES each pick. A pick only locks on
     # a run that happens inside LOCK_WINDOW_HOURS of kickoff, so the publish cadence
     # must be at least as tight as that window or a fixture can slip through the gap
@@ -63,6 +63,14 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      # Free public roster evidence. This is deliberately before the model: a
+      # missing/thin club roster makes that club's player markets disappear
+      # instead of allowing last season's departed players to survive silently.
+      - name: Refresh and audit current rosters
+        run: |
+          python -m scripts.sync_rosters
+          python -m scripts.roster_integrity_check
 
       - name: Publish all four leagues
         run: python -m leagues.publish

@@ -104,13 +104,22 @@ single player with top-flight history and published as a **72.8% anytime scorer*
 when nothing else in four leagues beat 50.8%. One player is more dangerous than
 none — none is visibly a hole, one looks like the best pick on the board.
 
-## Scheduled jobs — NOT YET REGISTERED
-`ops/leagues_weekly.py` and `ops/leagues_matchday.py` are written and working but
-deliberately unregistered: the 2026-27 seasons start **2026-08-21** (PL MW1: Arsenal
-v Coventry; the other three the same weekend), and before then they would republish
-unchanged files every week. Both call `publish.main()`, which loops **all four
-leagues** (PL, La Liga, Bundesliga, Ligue 1), aborting per-league on failure, then
-`deploy.py`.
+## Roster verification
+`python -m scripts.sync_rosters` snapshots every current 2026-27 club and player
+from the ESPN league/team roster feeds into `data-raw/leagues/rosters.json`.
+`python -m scripts.roster_integrity_check` verifies league membership, duplicate
+player IDs and visibly reports thin/incomplete source rosters. The snapshot is
+dated and provisional while the summer registration window remains open. It is
+an identity/eligibility source only; Understat remains the performance-rate
+source, so a player with no usable history is never assigned invented scoring or
+shot rates. Clubs with fewer than 18 listed players, snapshots older than 72
+hours, ambiguous identities and unmatched historical players all fail closed:
+their affected player markets are withheld. The match model remains available.
+
+## Scheduled jobs
+`ops/leagues_weekly.py` and `ops/leagues_matchday.py` are manual wrappers around
+the four-league publish path. They pass `--league-data` to `deploy.py`, so a league
+refresh never regenerates or stages World Cup files.
 
 **DO NOT REGISTER THEM.** This instruction is superseded and following it would
 cause an incident. `.github/workflows/leagues.yml` already runs the same job on the

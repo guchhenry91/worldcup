@@ -2,7 +2,8 @@ import pandas as pd
 import pytest
 
 from leagues.names import UnknownTeam
-from leagues.players import build_player_logs, season_end, understat_position
+from leagues.players import (build_player_logs, reconcile_rates_to_roster,
+                             season_end, understat_position)
 
 
 def _season_stats():
@@ -98,6 +99,44 @@ def test_expected_minutes_are_per_match_not_per_season():
     assert 55 < em["Mover"] < 65
 
 
+def test_playing_time_separates_appearance_from_conditional_minutes():
+    from leagues.players import playing_time
+    df = build_player_logs(_season_stats(), _shots(), "PL")
+    pt = playing_time(df)
+    mover = pt["Mover"]
+    assert 0 < mover["appearance_prob"] < 1
+    assert mover["minutes_if_playing"] > mover["expected_minutes"]
+    assert abs(mover["appearance_prob"] * mover["minutes_if_playing"]
+               - mover["expected_minutes"]) < 1e-9
+
+
+def test_playing_time_respects_shorter_league_seasons():
+    from leagues.players import playing_time
+    df = pd.DataFrame([{
+        "season": "2526", "player": "Regular", "minutes": 2700,
+        "appearances": 34,
+    }])
+    pt = playing_time(df, matches_per_season=34)["Regular"]
+    assert pt["appearance_prob"] > 0.95
+    assert 78 < pt["minutes_if_playing"] < 81
+
+
+def test_only_explicit_complete_lineups_are_confirmed():
+    from leagues.players import lineup_players, lineups_confirmed
+    news = {
+        "A": {"lineup_confirmed": True,
+              "starters": [f"A{i}" for i in range(11)], "bench": ["A12"]},
+        "B": {"lineup_confirmed": False,
+              "starters": [f"B{i}" for i in range(11)]},
+    }
+    starters, bench = lineup_players(news, ("A", "B"))
+    assert "A0" in starters and "A12" in bench
+    assert "B0" not in starters
+    assert lineups_confirmed(news, ("A", "B")) is False
+    news["B"]["lineup_confirmed"] = True
+    assert lineups_confirmed(news, ("A", "B")) is True
+
+
 def test_current_squad_excludes_players_who_did_not_appear_last_season():
     """Five seasons of departed players would otherwise share out the team's
     expected goals and crush the real strikers to a few percent."""
@@ -141,3 +180,59 @@ def test_transfer_override_moves_and_removes_players():
     assert set(df[df["player"] == "Mover"]["team"]) == {"Arsenal"}   # reattributed
     assert "Leaver" not in set(df["player"])                          # removed
     assert "Keeper" in set(df["player"])                             # untouched
+
+
+def test_roster_reconciliation_reassigns_known_players_and_fails_closed(
+        monkeypatch):
+    rates = pd.DataFrame([
+        {"team": "Old Club", "player": "Álex One", "rate90": 0.4},
+        {"team": "Old Club", "player": "Departed", "rate90": 0.3},
+        {"team": "Thin Club", "player": "Thin Player", "rate90": 0.2},
+    ])
+    complete = [{"id": str(i), "name": f"Squad {i}"} for i in range(17)]
+    complete.append({"id": "99", "name": "Alex One"})
+    snapshot = {
+        "New Club": {"players": complete},
+        "Thin Club": {"players": [{"id": "1", "name": "Thin Player"}]},
+    }
+    monkeypatch.setattr("leagues.players.load_roster_snapshot",
+                        lambda league: snapshot)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 1.0)
+
+    safe, incomplete, unmatched = reconcile_rates_to_roster(rates, "PL")
+
+    assert safe[["team", "player"]].to_dict("records") == [
+        {"team": "New Club", "player": "Álex One"}]
+    assert incomplete == ["Thin Club"]
+    assert unmatched == ["Old Club/Departed", "Thin Club/Thin Player"]
+
+
+def test_missing_roster_snapshot_withholds_all_player_rates(monkeypatch):
+    rates = pd.DataFrame([
+        {"team": "Arsenal", "player": "Player", "rate90": 0.4},
+    ])
+    monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: {})
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: None)
+    safe, incomplete, unmatched = reconcile_rates_to_roster(rates, "PL")
+    assert safe.empty
+    assert incomplete == ["Arsenal"]
+    assert unmatched == []
+
+
+def test_stale_roster_snapshot_withholds_all_player_rates(monkeypatch):
+    rates = pd.DataFrame([
+        {"team": "Arsenal", "player": "Player", "rate90": 0.4},
+    ])
+    snapshot = {
+        "Arsenal": {"players": [
+            {"id": str(i), "name": "Player" if i == 0 else f"Squad {i}"}
+            for i in range(18)
+        ]}
+    }
+    monkeypatch.setattr("leagues.players.load_roster_snapshot",
+                        lambda league: snapshot)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours",
+                        lambda: 72.01)
+    safe, incomplete, _ = reconcile_rates_to_roster(rates, "PL")
+    assert safe.empty
+    assert incomplete == ["Arsenal"]

@@ -77,6 +77,11 @@ def _confidence(p_pick: float) -> int:
     return 1
 
 
+def _player_pick_publishable(hours_out: float, lineup_ready: bool) -> bool:
+    """Provisional props may be explored early; locked props require both XIs."""
+    return hours_out > LOCK_WINDOW_HOURS or lineup_ready
+
+
 def _why(model, home: str, away: str) -> dict | None:
     """The drivers behind a pick, in plain multipliers.
 
@@ -188,9 +193,23 @@ def build(league: str = "PL") -> dict:
     # Otherwise five seasons of departed players share out the team's expected
     # goals and every real striker is crushed to a few percent.
     squad = players.current_squad(logs)
-    exp_minutes = players.expected_minutes(logs)
+    league_matches = 2 * (lg.n_teams - 1)
+    exp_minutes = players.expected_minutes(logs, matches_per_season=league_matches)
+    playing_time = players.playing_time(logs, matches_per_season=league_matches)
     rates = props.player_rates(logs, ref=ref)
     rates = rates[rates["player"].isin(squad)]
+    rates, roster_incomplete, roster_unmatched = players.reconcile_rates_to_roster(
+        rates, league)
+    roster_age = players.roster_snapshot_age_hours()
+    if roster_incomplete:
+        warnings.append(
+            f"Player markets are withheld for {', '.join(roster_incomplete)} because "
+            f"the free current-roster source is incomplete (<"
+            f"{players.MIN_COMPLETE_ROSTER} listed players).")
+    if roster_unmatched:
+        warnings.append(
+            f"{len(roster_unmatched)} historical players could not be matched "
+            f"strictly to the current roster and were excluded from player markets.")
     takers = players.penalty_takers(logs[logs["player"].isin(squad)])
     news = players.load_news(league)   # injuries/suspensions, Best Picks fixtures
     # Shot events are the ONLY per-match player feed, so without them a league can
@@ -286,11 +305,17 @@ def build(league: str = "PL") -> dict:
         # concedes relative to the league average
         opp_factor = {home: concede.get(away, 1.0), away: concede.get(home, 1.0)}
         unavailable, doubtful = players.news_unavailable(news, (home, away))
+        confirmed_starters, confirmed_bench = players.lineup_players(
+            news, (home, away))
+        lineup_ready = players.lineups_confirmed(news, (home, away))
         squad_props = props.match_props(
             rates, home, away, pred["lambda_home"], pred["lambda_away"],
             minutes=exp_minutes, pen_taker=takers, opp_shot_factor=opp_factor,
             exp_pens={home: pens_rate, away: pens_rate},
-            unavailable=unavailable, doubtful=doubtful)
+            unavailable=unavailable, doubtful=doubtful,
+            playing_time=playing_time,
+            confirmed_starters=confirmed_starters,
+            confirmed_bench=confirmed_bench)
 
         # Player picks clearing their market's bar, frozen on the SAME schedule as
         # the match pick so both boards are graded under one discipline. A doubtful
@@ -304,6 +329,11 @@ def build(league: str = "PL") -> dict:
             bar = PLAYER_PICK_MIN_PROB[market] * 100.0
             for p in squad_props:
                 if p[field] < bar:
+                    continue
+                # Locked player picks require both confirmed XIs. A predicted XI
+                # may be useful for a provisional board, but it is not evidence
+                # strong enough to freeze a graded player proposition.
+                if not _player_pick_publishable(hours_out, lineup_ready):
                     continue
                 pkey = f"{log_key(m['match_id'])}:{market}:{p['player']}"
                 prob = p[field] / 100.0
@@ -328,6 +358,9 @@ def build(league: str = "PL") -> dict:
                     "provisional": pprov,
                     "doubt": p.get("doubt", False),
                     "penalty_taker": p.get("penalty_taker", False),
+                    "appearance_pct": p.get("appearance_pct"),
+                    "expected_minutes": p.get("expected_minutes"),
+                    "lineup_confirmed": lineup_ready,
                     "gradeable": shots_ok,
                 })
         player_picks.sort(key=lambda x: -x["p_pick"])
@@ -425,6 +458,10 @@ def build(league: str = "PL") -> dict:
         "props_backtest": _read(props_file),
         "missing_squads": missing_squads,
         "thin_squads": thin_squads,
+        "roster_incomplete": roster_incomplete,
+        "roster_snapshot_age_hours": (
+            None if roster_age is None else round(roster_age, 1)),
+        "roster_unmatched_count": len(roster_unmatched),
         "data_warnings": warnings,
     }
 
@@ -739,7 +776,12 @@ def main(argv=None):
         ok += _publish_one(league, FILE_FOR[league])
     # Cross-league high-confidence board, built from the frozen picks of every
     # league that just published.
-    if ok:
+    # Cross-league boards must represent one complete four-league refresh. If a
+    # league failed, reading its previous output here would give stale picks a new
+    # board timestamp and defeat the browser's staleness warning.
+    full_refresh = set(leagues) == set(FILE_FOR) and attempted == len(FILE_FOR)
+    boards_safe = full_refresh and ok == attempted
+    if boards_safe:
         best = build_best_picks()
         bp = OUT / "best.json"
         if best["_incomplete"]:
@@ -783,10 +825,16 @@ def main(argv=None):
             tmp.replace(hpath)
             print(f"wrote {hpath} - {len(hist)} snapshots")
 
-    # If EVERY league failed, raise so the ops jobs abort the deploy rather than
-    # shipping stale files (their try/except catches this).
-    if attempted and ok == 0:
-        raise RuntimeError(f"all {attempted} league publish(es) failed; nothing written")
+    elif ok:
+        print("SKIPPED cross-league boards: they require a complete successful "
+              "four-league refresh")
+
+    # A scheduled full refresh is atomic at the deployment boundary: individual
+    # files may have been written locally, but callers must not commit or deploy
+    # them unless all four builds succeeded.
+    if attempted and (ok == 0 or (full_refresh and ok != attempted)):
+        raise RuntimeError(
+            f"only {ok}/{attempted} league publish(es) succeeded; refusing deployment")
 
 
 if __name__ == "__main__":

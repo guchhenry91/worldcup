@@ -20,6 +20,7 @@ props gate works around (see props_backtest.py).
 """
 import json
 from pathlib import Path
+import unicodedata
 
 import pandas as pd
 import soccerdata as sd
@@ -31,6 +32,90 @@ from leagues.names import canonical, UnknownTeam
 # NOT on target, and an own goal is not the shooter's shot at all.
 ON_TARGET = {"Goal", "Saved Shot"}
 POSITION_MAP = {"F": "FW", "M": "MF", "D": "DF", "GK": "GK", "AM": "AM"}
+MIN_COMPLETE_ROSTER = 18
+MAX_ROSTER_AGE_HOURS = 72
+
+
+def _player_key(name: str) -> str:
+    """Accent/case/punctuation-insensitive player identity key.
+
+    This is deliberately stricter than fuzzy matching: a false match can assign a
+    departed player to the wrong club and produce a confident-looking prop.
+    """
+    text = unicodedata.normalize("NFKD", str(name))
+    text = "".join(c for c in text if not unicodedata.combining(c)).casefold()
+    return "".join(c for c in text if c.isalnum())
+
+
+def load_roster_snapshot(league: str) -> dict:
+    """Load the dated free-source roster snapshot for one league."""
+    path = Path(__file__).resolve().parent.parent / "data-raw" / "leagues" / "rosters.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8")).get(league, {})
+
+
+def roster_snapshot_age_hours() -> float | None:
+    """Age of the roster evidence, or None when absent/malformed."""
+    path = Path(__file__).resolve().parent.parent / "data-raw" / "leagues" / "rosters.json"
+    if not path.exists():
+        return None
+    try:
+        stamp = json.loads(path.read_text(encoding="utf-8"))["_verified_at"]
+        checked = pd.Timestamp(stamp)
+        checked = (checked.tz_localize("UTC") if checked.tzinfo is None
+                   else checked.tz_convert("UTC"))
+        return float((pd.Timestamp.now("UTC") - checked).total_seconds() / 3600)
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
+                              min_players: int = MIN_COMPLETE_ROSTER):
+    """Return (safe rates, incomplete clubs, unmatched historical players).
+
+    Clubs with a thin source roster are removed entirely: publishing no player
+    market is safer than treating a partial list as the squad. For complete clubs,
+    only exact normalized roster members survive and their current club assignment
+    comes from the snapshot rather than their last historical Understat season.
+    """
+    snapshot = load_roster_snapshot(league)
+    age = roster_snapshot_age_hours()
+    if not snapshot or age is None or age > MAX_ROSTER_AGE_HOURS:
+        teams = sorted(snapshot) if snapshot else (
+            sorted(set(rates["team"])) if not rates.empty else [])
+        return rates.iloc[0:0].copy(), teams, []
+
+    incomplete = sorted(
+        club for club, entry in snapshot.items()
+        if len(entry.get("players", [])) < min_players
+    )
+    current = {}
+    duplicate_keys = set()
+    for club, entry in snapshot.items():
+        if club in incomplete:
+            continue
+        for player in entry.get("players", []):
+            key = _player_key(player.get("name", ""))
+            if not key:
+                continue
+            if key in current and current[key] != club:
+                duplicate_keys.add(key)
+            current[key] = club
+    for key in duplicate_keys:
+        current.pop(key, None)  # ambiguous identity -> withhold, never guess
+
+    kept, unmatched = [], []
+    for _, row in rates.iterrows():
+        club = current.get(_player_key(row["player"]))
+        if club is None:
+            unmatched.append(f"{row['team']}/{row['player']}")
+            continue
+        item = row.copy()
+        item["team"] = club
+        kept.append(item)
+    safe = pd.DataFrame(kept, columns=rates.columns)
+    return safe.reset_index(drop=True), incomplete, sorted(unmatched)
 
 
 def understat_position(pos: str) -> str:
@@ -73,6 +158,15 @@ def build_player_logs(season_stats: pd.DataFrame, shots: pd.DataFrame,
     df["pos"] = [understat_position(p) for p in df["position"]]
     for c in ("minutes", "np_goals", "np_xg", "shots"):
         df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0)
+    # Understat exposes appearances as `matches`. Keep them: event probability
+    # needs to distinguish "50% chance of 80 minutes" from "certain to play 40".
+    # They have the same expected minutes but very different chances of 2+ shots.
+    if "matches" in df:
+        df["appearances"] = pd.to_numeric(df["matches"], errors="coerce").fillna(0)
+    else:
+        # Compatibility with older cached frames. This conservative estimate
+        # never claims more appearances than full-match equivalents observed.
+        df["appearances"] = (df["minutes"] / 90.0).clip(lower=0)
     df = df.rename(columns={"np_xg": "npxg"})
 
     if shots is None or len(shots) == 0:
@@ -86,7 +180,7 @@ def build_player_logs(season_stats: pd.DataFrame, shots: pd.DataFrame,
         df["pens_att"] = 0
         df = _assign_current_club(df, transfers)
         df["date"] = [season_end(s) for s in df["season"]]
-        return df[["date", "season", "team", "player", "pos", "minutes", "np_goals",
+        return df[["date", "season", "team", "player", "pos", "minutes", "appearances", "np_goals",
                    "shots", "sot", "npxg", "pens_att"]].reset_index(drop=True)
 
     # shots on target + penalty attempts, per player-season, from the shot events
@@ -115,7 +209,7 @@ def build_player_logs(season_stats: pd.DataFrame, shots: pd.DataFrame,
     df = _assign_current_club(df, transfers)
 
     df["date"] = [season_end(s) for s in df["season"]]
-    return df[["date", "season", "team", "player", "pos", "minutes", "np_goals",
+    return df[["date", "season", "team", "player", "pos", "minutes", "appearances", "np_goals",
                "shots", "sot", "npxg", "pens_att"]].reset_index(drop=True)
 
 
@@ -228,6 +322,33 @@ def news_unavailable(news: dict, teams) -> tuple[set, set]:
         out.update(e.get("out") or [])
         doubt.update(e.get("doubt") or [])
     return out, doubt
+
+
+def lineup_players(news: dict, teams) -> tuple[set, set]:
+    """Confirmed starters and bench players across the requested clubs.
+
+    A lineup is only trusted when `lineup_confirmed` is true. Predicted XIs may
+    still live in the file for display/research, but they must never turn a
+    provisional player pick into a locked one.
+    """
+    starters, bench = set(), set()
+    for team in teams:
+        entry = news.get(team) or {}
+        if entry.get("lineup_confirmed") is not True:
+            continue
+        starters.update(entry.get("starters") or [])
+        bench.update(entry.get("bench") or [])
+    return starters, bench
+
+
+def lineups_confirmed(news: dict, teams) -> bool:
+    """True only when every club has an explicitly confirmed XI."""
+    teams = tuple(teams)
+    return bool(teams) and all(
+        (news.get(team) or {}).get("lineup_confirmed") is True
+        and len((news.get(team) or {}).get("starters") or []) == 11
+        for team in teams
+    )
 
 
 def news_checked_age_hours(news: dict, teams) -> float | None:
@@ -384,6 +505,37 @@ def expected_minutes(logs: pd.DataFrame, matches_per_season: int = 38) -> dict:
     latest = logs.sort_values("season").groupby("player").last()
     mins = (latest["minutes"] / matches_per_season).clip(upper=90.0)
     return {p: float(m) for p, m in mins.items()}
+
+
+def playing_time(logs: pd.DataFrame, matches_per_season: int = 38) -> dict:
+    """Player availability and workload as separate quantities.
+
+    Returns player -> {appearance_prob, minutes_if_playing, expected_minutes}.
+    Using the latest season keeps tactical role current. A small beta prior stops
+    one appearance from becoming 100% availability and keeps probabilities away
+    from brittle zero/one extremes until a confirmed lineup overrides them.
+    """
+    if logs.empty:
+        return {}
+    latest = logs.sort_values("season").groupby("player").last()
+    if "appearances" in latest:
+        apps = pd.to_numeric(latest["appearances"], errors="coerce").fillna(0)
+    else:
+        apps = (latest["minutes"] / 90.0).clip(lower=0)
+    apps = apps.clip(lower=0, upper=matches_per_season)
+    # Beta(1, 1) smoothing: transparent and deliberately mild.
+    p_app = ((apps + 1.0) / (matches_per_season + 2.0)).clip(0.05, 0.98)
+    conditional = (latest["minutes"] / apps.replace(0, pd.NA)).fillna(0).clip(0, 90)
+    out = {}
+    for player in latest.index:
+        p = float(p_app.loc[player])
+        mins = float(conditional.loc[player])
+        out[player] = {
+            "appearance_prob": p,
+            "minutes_if_playing": mins,
+            "expected_minutes": p * mins,
+        }
+    return out
 
 
 def current_squad(logs: pd.DataFrame) -> set:

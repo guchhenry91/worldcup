@@ -27,7 +27,8 @@ def main():
         return 1
 
     return subprocess.call(
-        [sys.executable, str(ROOT / "deploy.py"), "auto update: leagues match-day results"],
+        [sys.executable, str(ROOT / "deploy.py"), "auto update: leagues match-day results",
+         "--league-data"],
         cwd=ROOT,
     )
 

@@ -11,6 +11,7 @@ import pandas as pd
 import pytest
 
 from leagues import picks, players, props
+from leagues.publish import _player_pick_publishable
 
 
 # ---------------------------------------------------------------- thin squads
@@ -88,6 +89,12 @@ def test_a_player_with_no_shot_row_is_graded_wrong_not_void():
     e = {"market": "goal", "player": "X", "team": "T", "tainted": False}
     g = picks.grade_prop(e, None)
     assert g["graded"] == "wrong" and g["void"] is False and g["actual"] is None
+
+
+def test_locked_player_pick_requires_both_confirmed_lineups():
+    assert _player_pick_publishable(3.0, lineup_ready=False) is True
+    assert _player_pick_publishable(0.5, lineup_ready=True) is True
+    assert _player_pick_publishable(0.5, lineup_ready=False) is False
 
 
 # ------------------------------------------------- per-match actuals (grading)

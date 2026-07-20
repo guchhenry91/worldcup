@@ -179,6 +179,51 @@ def confidence(p):
     return 1
 
 
+def knockout_kickoff(match):
+    """Best available knockout kickoff.
+
+    The bracket data currently carries dates but not times. Noon Eastern is a
+    conservative fallback: it prevents an in-play model run from rewriting a pick.
+    Adding ``time_et`` to bracket.json automatically makes this exact.
+    """
+    try:
+        return datetime.strptime(
+            f"{match['date']} {match.get('time_et') or '12:00'}",
+            "%Y-%m-%d %H:%M",
+        ).replace(tzinfo=ET)
+    except (KeyError, TypeError, ValueError):
+        return None
+
+
+def freeze_knockout_pick(log, match, now=None):
+    """Return the immutable pick for a knockout tie and store it when necessary."""
+    now = now or datetime.now(ET)
+    key = str(match["id"])
+    existing = log.get(key)
+    same_tie = (existing and existing.get("home") == match.get("home")
+                and existing.get("away") == match.get("away"))
+    kickoff = knockout_kickoff(match)
+    started = kickoff is not None and now >= kickoff
+
+    if same_tie:
+        entry = existing
+    else:
+        entry = {
+            "pick": match["pick"], "p_home": match["p_home"],
+            "p_away": match["p_away"], "home": match["home"],
+            "away": match["away"], "score": match["score"],
+            "locked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "tainted": bool(started),
+        }
+        log[key] = entry
+
+    match["pick"] = entry["pick"]
+    match["p_home"], match["p_away"] = entry["p_home"], entry["p_away"]
+    match["score"] = entry.get("score", match["score"])
+    match["void"] = bool(entry.get("tainted"))
+    return entry
+
+
 # --- player scorer model -------------------------------------------------
 POS_RATE = {"FW": 0.55, "W": 0.40, "AM": 0.32, "MF": 0.18, "DF": 0.07}
 BENCH_RESERVE = 1.45   # notional scoring weight of all non-listed players
@@ -498,36 +543,27 @@ def main():
             ko_elo, schedule["groups"], gmatches, standings, bracket_json, results,
             match_country, HOME_ADV, ELO_PER_GOAL, TOTAL_GOALS, MAX_SUP, sims=sims)
 
-        # lock knockout picks pre-match (same no-hindsight rule as the groups)
+        # Lock knockout picks once and never rewrite them in play. A missing or
+        # changed-team lock first seen after kickoff is retained for display but
+        # marked void, because it cannot be proven to pre-date the match.
         for b in knockout_out["bracket"]:
             if not (b.get("home") and b.get("away")):
                 continue
-            kid = str(b["id"])
-            if b["status"] != "final":
-                picks_log[kid] = {
-                    "pick": b["pick"], "p_home": b["p_home"], "p_away": b["p_away"],
-                    "home": b["home"], "away": b["away"],
-                    "score": b["score"], "locked_at": now_iso,
-                }
-            else:
-                locked = picks_log.get(kid)
-                if locked and locked.get("home") == b["home"] and locked.get("away") == b["away"]:
-                    # show and grade the pre-match pick, not a post-result recompute
-                    b["pick"] = locked["pick"]
-                    b["p_home"], b["p_away"] = locked["p_home"], locked["p_away"]
-                    b["score"] = locked.get("score", b["score"])
+            freeze_knockout_pick(picks_log, b)
 
         # fold settled knockout ties into the overall record (pick vs advancer)
-        ko_c = ko_t = 0
+        ko_c = ko_t = ko_v = 0
         for b in knockout_out["bracket"]:
-            if b.get("status") == "final" and b.get("winner"):
+            if b.get("status") == "final" and b.get("winner") and b.get("void"):
+                ko_v += 1
+            elif b.get("status") == "final" and b.get("winner"):
                 ko_t += 1
                 if b["pick"] == b["winner"]:
                     ko_c += 1
         record["correct"] += ko_c
         record["wrong"] += ko_t - ko_c
         record["total"] += ko_t
-        record["knockout"] = {"correct": ko_c, "total": ko_t}
+        record["knockout"] = {"correct": ko_c, "total": ko_t, "void": ko_v}
 
     out = {
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),

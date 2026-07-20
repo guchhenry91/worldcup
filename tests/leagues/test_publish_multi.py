@@ -38,12 +38,16 @@ def test_one_league_failing_does_not_block_the_others(tmp_path, monkeypatch):
     # not tell "correctly skipped" from "silently left stale", which is the actual
     # hazard -- an aborted league leaving last week's file for the gate to pass.
     (tmp_path / "laliga.json").write_text('{"league": "STALE"}', encoding="utf-8")
-    publish.main([])                       # must not raise
+    import pytest
+    with pytest.raises(RuntimeError, match="3/4"):
+        publish.main([])                   # partial files stay local; no deployment
     written = sorted(p.stem for p in tmp_path.glob("*.json"))
     assert "pl" in written and "bundesliga" in written and "ligue1" in written
     # the failing league's file is untouched, NOT overwritten with partial data
     import json as _json
     assert _json.loads((tmp_path / "laliga.json").read_text())["league"] == "STALE"
+    assert not (tmp_path / "best.json").exists()
+    assert not (tmp_path / "player_picks.json").exists()
 
 
 def test_single_league_arg_writes_only_that_file(tmp_path, monkeypatch):
@@ -52,5 +56,4 @@ def test_single_league_arg_writes_only_that_file(tmp_path, monkeypatch):
     monkeypatch.setattr(publish, "build_best_picks", lambda: _EMPTY_BEST)
     monkeypatch.setattr(publish, "build_player_picks", lambda: _EMPTY_PLAYERS)
     publish.main(["PL"])                    # quick-iteration path
-    assert sorted(p.name for p in tmp_path.glob("*.json")) == [
-        "best.json", "pl.json", "player_picks.json", "record_history.json"]
+    assert sorted(p.name for p in tmp_path.glob("*.json")) == ["pl.json"]

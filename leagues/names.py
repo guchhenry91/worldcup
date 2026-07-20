@@ -85,7 +85,7 @@ ALIASES = {
         "Augsburg": {"FC Augsburg"},
         "Heidenheim": {"1. FC Heidenheim", "FC Heidenheim"},
         "St Pauli": {"FC St. Pauli", "St. Pauli"},
-        "Hamburg": {"Hamburger SV"},
+        "Hamburg": {"Hamburger SV", "Hamburg SV"},
         "Elversberg": {"SV Elversberg"},
         "FC Koln": {"1. FC Köln", "1. FC Koln", "Koln", "Köln", "FC Cologne", "Koeln"},
         "Schalke 04": {"FC Schalke 04", "Schalke"},

@@ -28,7 +28,8 @@ def main():
         return 1
 
     return subprocess.call(
-        [sys.executable, str(ROOT / "deploy.py"), "auto update: leagues weekly refresh"],
+        [sys.executable, str(ROOT / "deploy.py"), "auto update: leagues weekly refresh",
+         "--league-data"],
         cwd=ROOT,
     )
 
