@@ -214,15 +214,22 @@ def build(league: str = "PL") -> dict:
     rates, roster_incomplete, roster_unmatched = players.reconcile_rates_to_roster(
         rates, league)
     roster_age = players.roster_snapshot_age_hours()
+    # These two describe DIFFERENT things and must not be conflated. A thin roster
+    # means we could not CHECK the squad; it no longer means the club's markets are
+    # withheld, so saying "withheld" here would be a plain falsehood about data the
+    # reader can see on the page.
     if roster_incomplete:
         warnings.append(
-            f"Player markets are withheld for {', '.join(roster_incomplete)} because "
-            f"the free current-roster source is incomplete (<"
-            f"{players.MIN_COMPLETE_ROSTER} listed players).")
+            f"The free roster source lists fewer than {players.MIN_COMPLETE_ROSTER} "
+            f"players for {', '.join(roster_incomplete)}, so their squads could not be "
+            f"verified against it. Their player numbers still show, based on last "
+            f"season's club plus our transfer overrides, and may include someone who "
+            f"has since left.")
     if roster_unmatched:
         warnings.append(
-            f"{len(roster_unmatched)} historical players could not be matched "
-            f"strictly to the current roster and were excluded from player markets.")
+            f"{len(roster_unmatched)} players were dropped from the player markets: "
+            f"their club's current squad list is complete and they are not on it, so "
+            f"they appear to have left.")
     takers = players.penalty_takers(logs[logs["player"].isin(squad)])
     news = players.load_news(league)   # injuries/suspensions, Best Picks fixtures
     # Shot events are the ONLY per-match player feed, so without them a league can

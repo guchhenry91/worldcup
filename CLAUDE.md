@@ -112,9 +112,19 @@ player IDs and visibly reports thin/incomplete source rosters. The snapshot is
 dated and provisional while the summer registration window remains open. It is
 an identity/eligibility source only; Understat remains the performance-rate
 source, so a player with no usable history is never assigned invented scoring or
-shot rates. Clubs with fewer than 18 listed players, snapshots older than 72
-hours, ambiguous identities and unmatched historical players all fail closed:
-their affected player markets are withheld. The match model remains available.
+shot rates. The snapshot CORROBORATES, it does not convict. Where a club's roster is
+COMPLETE (>=18 listed) it is authoritative: it reassigns a player's club, and a
+player absent from it is dropped as departed. Where a roster is THIN, MISSING or
+STALE we keep the existing attribution and warn on the page, because absence from
+incomplete evidence is not evidence of absence.
+
+That distinction was learned the hard way. Treating thin rosters as proof deleted
+Real Madrid, Barcelona, Atletico, PSG, Marseille and 14 of 18 Bundesliga clubs --
+Mbappe and Raphinha among them, 70% of La Liga and Ligue 1 -- because the free feed
+happened to list fewer than 18 names for them. A surname rescue also runs, but only
+within the club a player is ALREADY at, so it can never invent a transfer; without
+it Understat's "Thiago" vs the feed's "Igor Thiago" deleted a real Brentford player
+over a spelling difference. The match model is unaffected either way.
 
 ## Scheduled jobs
 `ops/leagues_weekly.py` and `ops/leagues_matchday.py` are manual wrappers around
