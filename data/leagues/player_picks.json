@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T13:37:00.477395+00:00",
+  "updated": "2026-07-20T14:17:28.188427+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -203,7 +203,7 @@
       "player": "Harry Kane",
       "team": "Bayern Munich",
       "position": "FW",
-      "p_pick": 0.503,
+      "p_pick": 0.508,
       "confidence": 3,
       "provisional": true,
       "doubt": false,
@@ -218,6 +218,28 @@
       "date": "2026-08-28T18:30:00+00:00",
       "home": "Bayern Munich",
       "away": "Stuttgart"
+    },
+    {
+      "market": "goal",
+      "line": "Anytime goalscorer",
+      "player": "Erling Haaland",
+      "team": "Manchester City",
+      "position": "FW",
+      "p_pick": 0.449,
+      "confidence": 2,
+      "provisional": true,
+      "doubt": false,
+      "penalty_taker": true,
+      "appearance_pct": 90.0,
+      "expected_minutes": 76.6,
+      "lineup_confirmed": false,
+      "gradeable": true,
+      "league": "Premier League",
+      "league_key": "PL",
+      "id": 8,
+      "date": "2026-08-23T13:00:00+00:00",
+      "home": "Manchester City",
+      "away": "Bournemouth"
     },
     {
       "market": "goal",
@@ -262,28 +284,6 @@
       "date": "2026-08-22T16:30:00+00:00",
       "home": "Brentford",
       "away": "Tottenham"
-    },
-    {
-      "market": "goal",
-      "line": "Anytime goalscorer",
-      "player": "Erling Haaland",
-      "team": "Manchester City",
-      "position": "FW",
-      "p_pick": 0.431,
-      "confidence": 2,
-      "provisional": true,
-      "doubt": false,
-      "penalty_taker": true,
-      "appearance_pct": 90.0,
-      "expected_minutes": 76.6,
-      "lineup_confirmed": false,
-      "gradeable": true,
-      "league": "Premier League",
-      "league_key": "PL",
-      "id": 8,
-      "date": "2026-08-23T13:00:00+00:00",
-      "home": "Manchester City",
-      "away": "Bournemouth"
     }
   ],
   "settled": []

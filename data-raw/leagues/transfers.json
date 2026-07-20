@@ -102,5 +102,32 @@
     "Bertug Yildirim": null,
     "Kendry Páez": null,
     "Himad Abdelli": "Marseille"
-  }
+  },
+  "_coverage": {
+    "_why": "A single _verified_on date claims a completeness no sweep has ever achieved. It said 2026-07-18 on the day Mason Greenwood was published at Marseille four days after he signed for Fenerbahce -- the file was fresh and wrong. Coverage is per-sweep and partial; record it that way so the next reader knows what was NOT checked.",
+    "sweeps": [
+      {
+        "date": "2026-07-18",
+        "scope": "initial pass",
+        "clubs": "unrecorded",
+        "players": "unrecorded",
+        "method": "unrecorded",
+        "note": "MISSED Greenwood (14 Jul), Guehi (19 Jan), Adama Traore (28 Jan), Hamed Traore. Treat as unreliable."
+      },
+      {
+        "date": "2026-07-20",
+        "scope": "targeted sweep",
+        "clubs": 45,
+        "players": 265,
+        "method": "top-6 scorers per club, clubs in the 2026-27 fixture lists only",
+        "verified_by": "agent web search, 2 independent sources or official club announcement",
+        "not_checked": "players outside each club's top 6 by goal rate; clubs not in the current fixture lists; the January window before 2026-01-01"
+      }
+    ],
+    "known_gaps": [
+      "Promoted clubs have no Understat history, so no player markets regardless of roster verification. Not a coverage gap that verification can close.",
+      "Squad players below the top 6 by goal rate are unverified. They cannot clear a 40% goalscorer bar, so the exposure is to props display rather than to a published pick."
+    ]
+  },
+  "_verified_on_note": "Date of the most recent sweep, NOT proof every override was re-checked. See _coverage for what each sweep actually covered."
 }

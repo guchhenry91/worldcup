@@ -193,3 +193,38 @@ def test_lineup_knowledge_is_frozen_with_the_pick():
                                 if g.get("lineup_confirmed") is not True])
     assert confirmed["correct"] == 1 and confirmed["wrong"] == 0
     assert unconfirmed["correct"] == 0 and unconfirmed["wrong"] == 1
+
+
+def test_lock_prop_freezes_the_full_audit_trail():
+    """A settled pick must be auditable, not just re-displayable. p_pick and the
+    result alone cannot distinguish a 90%-appearance player who was oddly rested
+    from a 50%-appearance player who simply didn't play -- the two need different
+    follow-up, and only the frozen inputs can tell them apart."""
+    ko = pd.Timestamp("2026-08-22T14:00:00Z")
+    e = picks.lock_prop({}, "k", market="shots", player="Kane", team="Bayern Munich",
+                        p_pick=0.78, confidence=5, kickoff=ko,
+                        now=ko - pd.Timedelta(minutes=30),
+                        appearance_pct=88.9, expected_minutes=68.4,
+                        news_checked_hours_ago=1.5, doubt=False,
+                        unavailable=False, team_attribution="Bayern Munich")
+    assert e["appearance_pct"] == 88.9
+    assert e["expected_minutes"] == 68.4
+    assert e["news_checked_hours_ago"] == 1.5
+    assert e["doubt"] is False
+    assert e["unavailable"] is False
+    assert e["team_attribution"] == "Bayern Munich"
+
+
+def test_lock_prop_audit_fields_are_optional():
+    """A data gap in any of these must never block a pick from locking -- the
+    prediction itself does not depend on being able to explain itself."""
+    ko = pd.Timestamp("2026-08-22T14:00:00Z")
+    e = picks.lock_prop({}, "k", market="goal", player="X", team="T",
+                        p_pick=0.45, confidence=2, kickoff=ko,
+                        now=ko - pd.Timedelta(minutes=30))
+    assert e["appearance_pct"] is None
+    assert e["expected_minutes"] is None
+    assert e["news_checked_hours_ago"] is None
+    assert e["doubt"] is None
+    assert e["unavailable"] is None
+    assert e["team_attribution"] is None

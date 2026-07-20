@@ -70,9 +70,30 @@ def roster_snapshot_age_hours() -> float | None:
         return None
 
 
+def roster_snapshot_status(league: str) -> tuple[str, float | None]:
+    """("missing" | "stale" | "ok", age_hours).
+
+    Split out so callers can word a warning correctly. Before this, "the roster
+    source lists fewer than 18 players for these clubs" was the ONLY message the
+    page could show -- even when the real cause was that no snapshot file existed
+    at all, or that it had aged past the 72h limit. Those are three different
+    problems (a specific club is under-listed vs. we have no current evidence for
+    ANY club) and reporting them identically is the exact conflation a reader
+    cannot act on.
+    """
+    snapshot = load_roster_snapshot(league)
+    age = roster_snapshot_age_hours()
+    if not snapshot:
+        return "missing", None
+    if age is None or age > MAX_ROSTER_AGE_HOURS:
+        return "stale", age
+    return "ok", age
+
+
 def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
                               min_players: int = MIN_COMPLETE_ROSTER):
-    """Return (safe rates, incomplete clubs, unmatched historical players).
+    """Return (safe rates, incomplete clubs, unmatched historical players,
+    ambiguous identities).
 
     The snapshot CORROBORATES; it does not by itself convict. Where a club's roster
     is complete we trust it fully: it reassigns a player's club (catching the
@@ -96,7 +117,7 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
         # missing/stale snapshot punishes the reader for a feed problem.
         teams = sorted(snapshot) if snapshot else (
             sorted(set(rates["team"])) if not rates.empty else [])
-        return rates.reset_index(drop=True), teams, []
+        return rates.reset_index(drop=True), teams, [], []
 
     incomplete = sorted(
         club for club, entry in snapshot.items()
@@ -104,10 +125,13 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
     )
     complete_clubs = {c for c in snapshot if c not in incomplete}
     current = {}
+    key_names = {}         # key -> {club: name}, used to report WHICH clubs collided
     duplicate_keys = set()
     # relaxed index, used ONLY to rescue a player already attributed to this club:
-    # surname-style key -> {club: full_key}. Never used to move a player between
-    # clubs, so it cannot manufacture a transfer.
+    # surname key -> club -> [full names sharing that surname]. Never used to move a
+    # player between clubs, so it cannot manufacture a transfer. The LIST matters:
+    # two team-mates can share a surname, and a rescue on an ambiguous surname would
+    # keep a departed player alive on the strength of a namesake still at the club.
     relaxed = {}
     for club, entry in snapshot.items():
         if club in incomplete:
@@ -117,14 +141,22 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
             key = _player_key(name)
             if not key:
                 continue
+            key_names.setdefault(key, {})[club] = name
             if key in current and current[key] != club:
                 duplicate_keys.add(key)
             current[key] = club
             tokens = [t for t in str(name).split() if t]
             if tokens:
-                relaxed.setdefault(_player_key(tokens[-1]), {}).setdefault(club, key)
+                (relaxed.setdefault(_player_key(tokens[-1]), {})
+                        .setdefault(club, []).append(name))
     for key in duplicate_keys:
         current.pop(key, None)  # ambiguous identity -> withhold, never guess
+    # Reported so an ambiguity is visible rather than silently discarded, e.g.
+    # "Real Madrid/Ath Bilbao: Alex Garcia" -- exactly the two-club identity
+    # collision the withholding logic exists to protect against.
+    ambiguous = sorted(
+        "/".join(sorted(key_names[key])) + ": " + next(iter(key_names[key].values()))
+        for key in duplicate_keys)
 
     kept, unmatched = [], []
     for _, row in rates.iterrows():
@@ -133,11 +165,33 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
             # Rescue pass: Understat's spelling often differs from the roster feed's
             # ("Thiago" vs "Igor Thiago"), which was deleting genuine current
             # players. Accept a surname match ONLY within the club we already have
-            # him at, and only when it is unambiguous there.
+            # him at, and only when it is genuinely unambiguous.
+            #
+            # Two guards, because a surname alone is weak evidence:
+            #  1. exactly ONE player at that club may carry the surname -- otherwise
+            #     we cannot tell which team-mate we matched;
+            #  2. if the rate row has a forename, it must be consistent with the
+            #     roster name. Without this, our departed "Joao Neves" would be kept
+            #     alive by a different "Ruben Neves" still at the club -- a surname
+            #     match that is unique and still wrong.
+            #  3. the candidate's OWN full-name key must not itself be one of the
+            #     globally ambiguous keys just withheld above. Without this guard,
+            #     an exact full-name collision between two clubs ("Alex Garcia" at
+            #     both Real Madrid and Ath Bilbao) would be correctly withheld by
+            #     the primary lookup and then let straight back in here, because the
+            #     rescue only checks the surname within ONE club and an exact match
+            #     always satisfies that. The rescue is for spelling VARIANTS, not
+            #     for re-admitting an identity we already decided we cannot trust.
             tokens = [t for t in str(row["player"]).split() if t]
-            cand = relaxed.get(_player_key(tokens[-1])) if tokens else None
-            if cand and row["team"] in cand:
-                club = row["team"]
+            cand = ((relaxed.get(_player_key(tokens[-1])) or {}).get(row["team"])
+                    if tokens else None)
+            if cand and len(cand) == 1 and _player_key(cand[0]) not in duplicate_keys:
+                ours = {_player_key(t) for t in tokens[:-1]}
+                theirs = {_player_key(t) for t in str(cand[0]).split()[:-1]}
+                # accept when either side gives no forename to compare (initials,
+                # mononyms), or when the forenames actually overlap
+                if not ours or not theirs or (ours & theirs):
+                    club = row["team"]
         if club is None:
             if row["team"] in complete_clubs:
                 # Complete roster for his club and he is nowhere in the league:
@@ -149,7 +203,7 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
         item["team"] = club
         kept.append(item)
     safe = pd.DataFrame(kept, columns=rates.columns)
-    return safe.reset_index(drop=True), incomplete, sorted(unmatched)
+    return safe.reset_index(drop=True), incomplete, sorted(unmatched), ambiguous
 
 
 def understat_position(pos: str) -> str:

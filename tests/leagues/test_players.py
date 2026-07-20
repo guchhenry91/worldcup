@@ -3,6 +3,7 @@ import pytest
 
 from leagues.names import UnknownTeam
 from leagues.players import (build_player_logs, reconcile_rates_to_roster,
+                             roster_snapshot_status,
                              season_end, understat_position)
 
 
@@ -205,7 +206,7 @@ def test_roster_reconciliation_reassigns_known_players_and_fails_closed(
                         lambda league: snapshot)
     monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 1.0)
 
-    safe, incomplete, unmatched = reconcile_rates_to_roster(rates, "PL")
+    safe, incomplete, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
 
     # A COMPLETE roster convicts: "Álex One" is reassigned to his real club, and
     # "Departed" -- absent from a league whose rosters are complete -- is dropped.
@@ -234,7 +235,7 @@ def test_missing_roster_snapshot_keeps_existing_attribution(monkeypatch):
     ])
     monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: {})
     monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: None)
-    safe, incomplete, unmatched = reconcile_rates_to_roster(rates, "PL")
+    safe, incomplete, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
     assert list(safe["player"]) == ["Player"]      # kept, not deleted
     assert incomplete == ["Arsenal"]               # but flagged as unverified
     assert unmatched == []
@@ -255,6 +256,94 @@ def test_stale_roster_snapshot_keeps_existing_attribution(monkeypatch):
                         lambda league: snapshot)
     monkeypatch.setattr("leagues.players.roster_snapshot_age_hours",
                         lambda: 72.01)
-    safe, incomplete, _ = reconcile_rates_to_roster(rates, "PL")
+    safe, incomplete, _, _ = reconcile_rates_to_roster(rates, "PL")
     assert list(safe["player"]) == ["Player"]
     assert incomplete == ["Arsenal"]
+
+
+def _snap(monkeypatch, clubs, age=1.0):
+    monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: clubs)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: age)
+
+
+def _pad(n=18, prefix="Squad"):
+    return [{"id": str(i), "name": f"{prefix} {i}"} for i in range(n)]
+
+
+def test_surname_rescue_refuses_an_ambiguous_surname(monkeypatch):
+    """Two team-mates share a surname -> we cannot tell which one we matched, so
+    the rescue must decline rather than keep a departed player alive."""
+    rates = pd.DataFrame([{"team": "Brentford", "player": "Neves", "rate90": 0.4}])
+    _snap(monkeypatch, {"Brentford": {"players": _pad() + [
+        {"id": "a", "name": "Joao Neves"}, {"id": "b", "name": "Ruben Neves"}]}})
+    safe, _, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
+    assert safe.empty
+    assert unmatched == ["Brentford/Neves"]
+
+
+def test_surname_rescue_refuses_a_different_player_with_the_same_surname(monkeypatch):
+    """The unique-surname guard alone is not enough: one "Neves" at the club can
+    still be a DIFFERENT Neves from ours. Forenames must not contradict."""
+    rates = pd.DataFrame([{"team": "Brentford", "player": "Joao Neves", "rate90": 0.4}])
+    _snap(monkeypatch, {"Brentford": {"players": _pad() + [
+        {"id": "b", "name": "Ruben Neves"}]}})
+    safe, _, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
+    assert safe.empty, "a different Neves was accepted as ours"
+    assert unmatched == ["Brentford/Joao Neves"]
+
+
+def test_surname_rescue_accepts_a_genuine_variant(monkeypatch):
+    """The case it exists for: same man, fuller name in the feed."""
+    rates = pd.DataFrame([{"team": "Brentford", "player": "Thiago", "rate90": 0.4}])
+    _snap(monkeypatch, {"Brentford": {"players": _pad() + [
+        {"id": "t", "name": "Igor Thiago"}]}})
+    safe, _, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
+    assert list(safe["player"]) == ["Thiago"]
+    assert unmatched == []
+
+
+# ------------------------------------------------- roster status classification
+def test_roster_status_distinguishes_missing_stale_and_ok(monkeypatch):
+    """Before this split, a missing snapshot, a stale one, and a specific club
+    being under-listed all produced the identical page warning: "the roster
+    source lists fewer than 18 players for these clubs". A reader cannot act
+    differently on three different problems that read the same."""
+    monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: {})
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: None)
+    assert roster_snapshot_status("PL") == ("missing", None)
+
+    monkeypatch.setattr("leagues.players.load_roster_snapshot",
+                        lambda league: {"Arsenal": {"players": []}})
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 100.0)
+    assert roster_snapshot_status("PL") == ("stale", 100.0)
+
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 1.0)
+    assert roster_snapshot_status("PL") == ("ok", 1.0)
+
+
+# ------------------------------------------------------- ambiguous identities
+def test_ambiguous_surname_across_two_clubs_is_reported_not_swallowed(monkeypatch):
+    """The same normalized name at two different clubs in the roster source was
+    being withheld correctly (never guessed) but the fact of the collision was
+    computed and then discarded -- no caller could ever see it happened."""
+    rates = pd.DataFrame([
+        {"team": "Real Madrid", "player": "Alex Garcia", "rate90": 0.3},
+    ])
+    snapshot = {
+        "Real Madrid": {"players": _pad(prefix="RM") + [{"id": "1", "name": "Alex Garcia"}]},
+        "Ath Bilbao": {"players": _pad(prefix="Bilbao") + [{"id": "2", "name": "Alex Garcia"}]},
+    }
+    _snap(monkeypatch, snapshot)
+    safe, incomplete, unmatched, ambiguous = reconcile_rates_to_roster(rates, "PL")
+    assert safe.empty                       # withheld, not guessed
+    assert len(ambiguous) == 1
+    assert "Alex Garcia" in ambiguous[0]
+    assert "Real Madrid" in ambiguous[0] and "Ath Bilbao" in ambiguous[0]
+
+
+def test_no_ambiguity_reported_when_names_are_actually_distinct(monkeypatch):
+    rates = pd.DataFrame([{"team": "Brentford", "player": "Thiago", "rate90": 0.4}])
+    _snap(monkeypatch, {"Brentford": {"players": _pad() + [
+        {"id": "t", "name": "Igor Thiago"}]}})
+    _, _, _, ambiguous = reconcile_rates_to_roster(rates, "PL")
+    assert ambiguous == []

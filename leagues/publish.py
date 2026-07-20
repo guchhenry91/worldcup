@@ -211,25 +211,47 @@ def build(league: str = "PL") -> dict:
     playing_time = players.playing_time(logs, matches_per_season=league_matches)
     rates = props.player_rates(logs, ref=ref)
     rates = rates[rates["player"].isin(squad)]
-    rates, roster_incomplete, roster_unmatched = players.reconcile_rates_to_roster(
-        rates, league)
-    roster_age = players.roster_snapshot_age_hours()
-    # These two describe DIFFERENT things and must not be conflated. A thin roster
-    # means we could not CHECK the squad; it no longer means the club's markets are
-    # withheld, so saying "withheld" here would be a plain falsehood about data the
-    # reader can see on the page.
-    if roster_incomplete:
+    rates, roster_incomplete, roster_unmatched, roster_ambiguous = \
+        players.reconcile_rates_to_roster(rates, league)
+    roster_status, roster_age = players.roster_snapshot_status(league)
+    # Three DIFFERENT conditions, worded differently on purpose. Before this split
+    # the page said "the roster source lists fewer than 18 players for these clubs"
+    # for every one of them -- even when the real cause was that no snapshot file
+    # existed at all, or the one we have had aged past the 72h limit. Those are not
+    # the same problem and a reader cannot act on them if they read identically. In
+    # no case are player markets withheld because of this: the squad just could not
+    # be checked, and last season's attribution plus transfer overrides still show.
+    if roster_status == "missing":
         warnings.append(
-            f"The free roster source lists fewer than {players.MIN_COMPLETE_ROSTER} "
-            f"players for {', '.join(roster_incomplete)}, so their squads could not be "
-            f"verified against it. Their player numbers still show, based on last "
-            f"season's club plus our transfer overrides, and may include someone who "
-            f"has since left.")
+            "No current-roster evidence is available for this league at all, so no "
+            "squad could be checked against it. Player numbers are based on last "
+            "season's club plus our transfer overrides, and may include someone who "
+            "has since left.")
+    elif roster_status == "stale":
+        age_desc = "of unknown age" if roster_age is None else f"{roster_age:.0f} hours old"
+        warnings.append(
+            f"The current-roster evidence is {age_desc}, past the "
+            f"{players.MAX_ROSTER_AGE_HOURS:.0f}h limit, so no squad could be checked "
+            f"against it this run. Player numbers are based on last season's club "
+            f"plus our transfer overrides, and may include someone who has since left.")
+    elif roster_incomplete:
+        warnings.append(
+            f"The current-roster source lists fewer than {players.MIN_COMPLETE_ROSTER} "
+            f"players for {', '.join(roster_incomplete)}, so their squads specifically "
+            f"could not be verified against it. Their player numbers still show, based "
+            f"on last season's club plus our transfer overrides, and may include "
+            f"someone who has since left.")
     if roster_unmatched:
         warnings.append(
             f"{len(roster_unmatched)} players were dropped from the player markets: "
             f"their club's current squad list is complete and they are not on it, so "
             f"they appear to have left.")
+    if roster_ambiguous:
+        warnings.append(
+            f"{len(roster_ambiguous)} player identities could not be resolved because "
+            f"the same name appears at two different clubs in the roster source: "
+            f"{'; '.join(roster_ambiguous)}. Neither club's number for that name is "
+            f"trusted, rather than guessing which one is current.")
     takers = players.penalty_takers(logs[logs["player"].isin(squad)])
     news = players.load_news(league)   # injuries/suspensions, Best Picks fixtures
     # Shot events are the ONLY per-match player feed, so without them a league can
@@ -371,9 +393,10 @@ def build(league: str = "PL") -> dict:
             for p in squad_props:
                 if p[field] < bar:
                     continue
-                # Locked player picks require both confirmed XIs. A predicted XI
-                # may be useful for a provisional board, but it is not evidence
-                # strong enough to freeze a graded player proposition.
+                # A confirmed XI is a strong SIGNAL, not a precondition -- see
+                # _player_pick_publishable. It always returns True; requiring both
+                # confirmed XIs before a pick could lock made the record
+                # permanently empty whenever nobody updated news.json in time.
                 if not _player_pick_publishable(hours_out, lineup_ready):
                     continue
                 pkey = f"{log_key(m['match_id'])}:{market}:{p['player']}"
@@ -384,7 +407,14 @@ def build(league: str = "PL") -> dict:
                                          p_pick=prob, confidence=_confidence(prob),
                                          kickoff=m["date"], now=now,
                                          bar=PLAYER_PICK_MIN_PROB[market],
-                                         lineup_confirmed=lineup_ready)
+                                         lineup_confirmed=lineup_ready,
+                                         appearance_pct=p.get("appearance_pct"),
+                                         expected_minutes=p.get("expected_minutes"),
+                                         news_checked_hours_ago=players.news_checked_age_hours(
+                                             news, (home, away)),
+                                         doubt=p.get("doubt", False),
+                                         unavailable=p["player"] in unavailable,
+                                         team_attribution=p["team"])
                     pprov = False
                 else:
                     pe = {"p_pick": round(prob, 4), "confidence": _confidence(prob)}

@@ -87,10 +87,26 @@ def grade(entry: dict, result: dict) -> dict:
 def lock_prop(log: dict, key, market: str, player: str, team: str,
               p_pick: float, confidence: int, kickoff, now=None,
               bar: float | None = None,
-              lineup_confirmed: bool | None = None) -> dict:
+              lineup_confirmed: bool | None = None,
+              appearance_pct: float | None = None,
+              expected_minutes: float | None = None,
+              news_checked_hours_ago: float | None = None,
+              doubt: bool | None = None,
+              unavailable: bool | None = None,
+              team_attribution: str | None = None) -> dict:
     """Freeze one player pick. Same discipline as lock_pick: write once, never
     rewrite, and store the probability AT LOCK TIME so board membership cannot be
-    decided in hindsight."""
+    decided in hindsight.
+
+    The extra fields exist so a settled pick can be AUDITED later, not just
+    re-displayed. `p_pick` alone answers "was he graded right", never "was the
+    prediction he was graded on reasonable given what we knew at the time". A
+    50%-appearance player who then didn't play looks, from p_pick and the result
+    alone, identical to a 90%-appearance player who was oddly rested -- the two
+    cases call for very different follow-up. Everything here was already computed
+    upstream by props.match_props/players.news_checked_age_hours; this only
+    freezes it alongside the pick instead of letting it live only in a log line.
+    """
     key = str(key)
     if key in log:
         return log[key]
@@ -112,6 +128,17 @@ def lock_prop(log: dict, key, market: str, player: str, team: str,
         # props" from "half these picks were made without knowing who was playing".
         # Those need opposite responses and are indistinguishable once pooled.
         "lineup_confirmed": None if lineup_confirmed is None else bool(lineup_confirmed),
+        # The rest of the audit trail. All optional and all None-safe: a data gap
+        # in any one of these must never block a pick from locking.
+        "appearance_pct": None if appearance_pct is None else round(float(appearance_pct), 1),
+        "expected_minutes": None if expected_minutes is None else round(float(expected_minutes), 1),
+        "news_checked_hours_ago": (None if news_checked_hours_ago is None
+                                   else round(float(news_checked_hours_ago), 1)),
+        "doubt": None if doubt is None else bool(doubt),
+        "unavailable": None if unavailable is None else bool(unavailable),
+        # The club he was attributed to AT LOCK TIME. If a transfer override
+        # changes later, this is what proves what the pick actually believed.
+        "team_attribution": team_attribution,
         "locked_at": now.isoformat(),
         "kickoff": kickoff.isoformat(),
         "tainted": bool((now - kickoff).total_seconds() / 3600.0 > LATE_LOCK_HOURS),
