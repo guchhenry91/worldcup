@@ -313,14 +313,18 @@ def build(league: str = "PL") -> dict:
         # only the player props: the model would still rate a side at full strength
         # with its main striker ruled out, which is precisely when the opponent
         # gains an edge. The penalty is measured (see props.ABSENCE_GOAL_COST), and
-        # applied deliberately conservatively.
-        news_out, _news_doubt = players.news_unavailable(news, (home, away))
-        pen_h = props.absence_penalty(rates, home, news_out)
-        pen_a = props.absence_penalty(rates, away, news_out)
+        # applied deliberately conservatively. Doubtful players are now weighted
+        # too (props.DOUBTFUL_ABSENCE_WEIGHT) instead of being silently dropped --
+        # the props board already gave them a ~50% chance of featuring, so the
+        # match model was inconsistent with itself for the exact same fact.
+        news_out, news_doubt = players.news_unavailable(news, (home, away))
+        pen_h = props.absence_penalty(rates, home, news_out, news_doubt)
+        pen_a = props.absence_penalty(rates, away, news_out, news_doubt)
         if pen_h or pen_a:
             # Floor at a quarter of a goal: a team missing its whole attack is
             # weakened, not incapable, and letting lambda collapse would produce
-            # absurd scorelines.
+            # absurd scorelines. This also bounds how far ANY combination of
+            # simultaneous confirmed absences can push lambda down.
             lh = max(pred["lambda_home"] - pen_h, 0.25)
             la = max(pred["lambda_away"] - pen_a, 0.25)
             grid = scoreline_grid(lh, la, model.rho)
@@ -329,6 +333,14 @@ def build(league: str = "PL") -> dict:
                     "lambda_home": lh, "lambda_away": la, "grid": grid,
                     "absence_penalty": {"home": round(pen_h, 3),
                                         "away": round(pen_a, 3)}}
+        # Confirmed-out defenders/keepers are invisible to absence_penalty's
+        # shot-share proxy (see UNMODELED_ABSENCE_POSITIONS) -- surface them
+        # rather than let a defensive absence look accounted for when it isn't.
+        unmodeled_h = props.unmodeled_absentee_positions(rates, home, news_out)
+        unmodeled_a = props.unmodeled_absentee_positions(rates, away, news_out)
+        if unmodeled_h or unmodeled_a:
+            pred = {**pred, "unmodeled_absences": {"home": unmodeled_h,
+                                                    "away": unmodeled_a}}
         probs = {home: pred["p_home"], "Draw": pred["p_draw"], away: pred["p_away"]}
         pick = max(probs, key=probs.get)
 
@@ -463,6 +475,11 @@ def build(league: str = "PL") -> dict:
                     f"/ {away} {pred['p_away']:.0%}",
                     f"Expected goals: {pred['lambda_home']:.2f} - {pred['lambda_away']:.2f}",
                 ],
+                # Confirmed-out defenders/keepers absence_penalty cannot price in
+                # (see props.UNMODELED_ABSENCE_POSITIONS) -- empty unless relevant,
+                # so a reader/consumer can tell a genuine limitation from silence.
+                "unmodeled_absences": pred.get("unmodeled_absences",
+                                               {"home": [], "away": []}),
             },
             "props": (props.top_props(squad_props, home)
                       + props.top_props(squad_props, away)),

@@ -238,26 +238,77 @@ def match_props(rates: pd.DataFrame, home: str, away: str,
 # probability by ten points on one absence and make us worse than the market we
 # already trail. When the direction of the error is asymmetric, take the cautious
 # side.
+#
+# NOT SPLIT BY POSITION. scripts/absence_impact.run_by_position() tested FW/AM/MF
+# as separate coefficients across PL, La Liga and Ligue 1 (see
+# data-raw/leagues/absence_impact_by_position.json). Results did not replicate:
+# each bucket was statistically distinguishable from zero in at most one of the
+# three leagues, with confidence intervals that cross zero and change sign
+# between leagues, and the AM bucket had essentially no identifiable data at all
+# (Understat rarely tags a player "AM", so missing_AM is ~0 for almost every
+# team-match and the coefficient is unidentified, not zero). Splitting one modest
+# pooled sample three ways produced noise, not three real numbers -- same
+# rejection logic as weibull_experiment.json. Kept as ONE pooled constant.
+#
+# NOT EXTENDED TO DEFENSIVE/GK ABSENCES, for a different reason: it can't be
+# measured at all with this data. The proxy this whole mechanism rests on --
+# "took no shot" -- is structurally uninformative for a position that takes ~0
+# shots in a normal match anyway. A missing center-back or keeper is invisible to
+# this method, not just imprecisely measured, and there is no historical lineup
+# archive to fall back on (news.json is live-only; see scripts/sync_lineups.py).
+# unmodeled_absentee_positions() below surfaces this explicitly rather than
+# letting a confirmed defensive absence silently move nothing.
 ABSENCE_GOAL_COST = 0.45
+
+# A player flagged doubtful (not confirmed out) is weighted the same way the
+# props pipeline already treats him (see DOUBT_MINUTES_FACTOR): about a 50%
+# chance of featuring, rather than either the full penalty (treating "doubtful"
+# as "out") or none at all (treating him as fully fit). Before this, a doubtful
+# key attacker moved his own player-prop numbers but left the match-outcome
+# model rating his team at full strength -- an inconsistency between the two
+# boards' handling of the exact same team-news fact, not a new measured effect.
+DOUBTFUL_ABSENCE_WEIGHT = DOUBT_MINUTES_FACTOR
+
+# Positions absence_penalty's shot-share proxy cannot see, per the note above.
+UNMODELED_ABSENCE_POSITIONS = {"DF", "GK"}
 
 
 def absence_penalty(rates: pd.DataFrame, team: str, unavailable,
-                    cost: float = ABSENCE_GOAL_COST) -> float:
-    """Goals to subtract from a team's lambda for confirmed absences.
+                    doubtful=None, cost: float = ABSENCE_GOAL_COST,
+                    doubt_weight: float = DOUBTFUL_ABSENCE_WEIGHT) -> float:
+    """Goals to subtract from a team's lambda for confirmed and doubtful absences.
 
     Scaled by the absent players' share of the team's SHOTS, not by their goals:
     shot share is the more stable quantity and is what the measurement above was
-    fitted on. Returns 0.0 whenever we cannot compute it, so a data gap never
-    silently moves a published prediction.
+    fitted on. Confirmed-out players count fully; doubtful players count at
+    `doubt_weight`, matching how the props pipeline already treats the same fact.
+    Returns 0.0 whenever we cannot compute it, so a data gap never silently moves
+    a published prediction.
     """
-    if rates.empty or not unavailable:
+    if rates.empty or not (unavailable or doubtful):
         return 0.0
     squad = rates[rates["team"] == team]
     total = float(squad["shots90"].sum())
     if total <= 0:
         return 0.0
-    missing = float(squad[squad["player"].isin(set(unavailable))]["shots90"].sum())
-    return cost * (missing / total)
+    out = set(unavailable or set())
+    doubt = set(doubtful or set()) - out       # confirmed-out takes precedence
+    missing_out = float(squad[squad["player"].isin(out)]["shots90"].sum())
+    missing_doubt = float(squad[squad["player"].isin(doubt)]["shots90"].sum())
+    weighted_share = (missing_out + doubt_weight * missing_doubt) / total
+    return cost * weighted_share
+
+
+def unmodeled_absentee_positions(rates: pd.DataFrame, team: str, unavailable) -> list:
+    """Confirmed-out players this team is missing whose position absence_penalty
+    cannot price in (see UNMODELED_ABSENCE_POSITIONS above). Purely informational
+    -- callers can surface it as a warning rather than let a defensive or
+    goalkeeper absence look accounted for when it silently isn't."""
+    if rates.empty or not unavailable:
+        return []
+    squad = rates[(rates["team"] == team) & (rates["player"].isin(set(unavailable)))]
+    hits = squad[squad["pos"].isin(UNMODELED_ABSENCE_POSITIONS)]
+    return sorted(hits["player"].tolist())
 
 
 def thin_squads(rates: pd.DataFrame, teams, min_players: int) -> list:

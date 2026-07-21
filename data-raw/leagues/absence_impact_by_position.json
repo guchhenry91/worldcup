@@ -1,0 +1,77 @@
+[
+  {
+    "league": "PL",
+    "n": 2888,
+    "intercept": 0.10428858521874868,
+    "buckets": {
+      "FW": {
+        "slope": -0.6926087654247604,
+        "ci_low": -1.4247854155570667,
+        "ci_high": 0.04424184136878874,
+        "significant": false
+      },
+      "AM": {
+        "slope": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "significant": false
+      },
+      "MF": {
+        "slope": -1.0903453747152916,
+        "ci_low": -2.3796364146689557,
+        "ci_high": -0.0209944127552634,
+        "significant": true
+      }
+    }
+  },
+  {
+    "league": "LALIGA",
+    "n": 2692,
+    "intercept": 0.019686566915628482,
+    "buckets": {
+      "FW": {
+        "slope": -0.684813709388776,
+        "ci_low": -1.178877973005766,
+        "ci_high": -0.03405628675201717,
+        "significant": true
+      },
+      "AM": {
+        "slope": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "significant": false
+      },
+      "MF": {
+        "slope": -1.11692589343217,
+        "ci_low": -2.6094257527940923,
+        "ci_high": 0.14821195008286886,
+        "significant": false
+      }
+    }
+  },
+  {
+    "league": "LIGUE1",
+    "n": 1355,
+    "intercept": 0.06224339079751566,
+    "buckets": {
+      "FW": {
+        "slope": -0.5821043497514808,
+        "ci_low": -1.8335683958678064,
+        "ci_high": 0.6221381540520049,
+        "significant": false
+      },
+      "AM": {
+        "slope": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0,
+        "significant": false
+      },
+      "MF": {
+        "slope": -1.1043702377577644,
+        "ci_low": -3.7006181700698337,
+        "ci_high": 1.2946820138713697,
+        "significant": false
+      }
+    }
+  }
+]

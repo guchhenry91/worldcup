@@ -223,3 +223,46 @@ def test_absence_penalty_returns_zero_when_it_cannot_be_computed():
     assert props.absence_penalty(r, "A", set()) == 0.0
     assert props.absence_penalty(r, "Unknown Team", {"A0"}) == 0.0
     assert props.absence_penalty(pd.DataFrame(columns=r.columns), "A", {"A0"}) == 0.0
+
+
+def test_doubtful_absence_is_weighted_not_ignored_or_full():
+    """Matches the props board's own treatment of the same fact (DOUBT_MINUTES_
+    FACTOR): a doubtful player counts for a fraction of a confirmed-out one, not
+    zero (the match model used to ignore doubtful players entirely) and not the
+    full penalty (that would be treating "doubtful" as "definitely out")."""
+    r = _abs_rates()
+    out = props.absence_penalty(r, "A", {"A0"})                  # confirmed out
+    doubt = props.absence_penalty(r, "A", set(), {"A0"})          # doubtful only
+    none = props.absence_penalty(r, "A", set(), set())
+    assert none == 0.0
+    assert 0.0 < doubt < out
+    assert doubt == pytest.approx(out * props.DOUBTFUL_ABSENCE_WEIGHT)
+
+
+def test_doubtful_and_confirmed_out_combine_without_double_counting():
+    r = _abs_rates()
+    # A0 confirmed out, A1 doubtful -- if a name is passed as both, confirmed
+    # status must win rather than the doubt weight silently discounting it.
+    combined = props.absence_penalty(r, "A", {"A0"}, {"A0", "A1"})
+    out_and_doubt_a1 = (props.absence_penalty(r, "A", {"A0"}) +
+                        props.absence_penalty(r, "A", set(), {"A1"}))
+    assert combined == pytest.approx(out_and_doubt_a1)
+
+
+def test_unmodeled_absentee_positions_flags_defenders_and_keepers_only():
+    r = pd.DataFrame([
+        {"team": "A", "player": "Striker", "pos": "FW", "nineties": 10.0,
+         "rate90": 0.5, "shots90": 3.0, "sot_ratio": 0.35},
+        {"team": "A", "player": "CenterBack", "pos": "DF", "nineties": 10.0,
+         "rate90": 0.02, "shots90": 0.2, "sot_ratio": 0.1},
+        {"team": "A", "player": "Keeper", "pos": "GK", "nineties": 10.0,
+         "rate90": 0.0, "shots90": 0.0, "sot_ratio": 0.0},
+    ])
+    # An attacker being out is priced in by absence_penalty -- not flagged.
+    assert props.unmodeled_absentee_positions(r, "A", {"Striker"}) == []
+    # Defenders/keepers are invisible to the shot-share mechanism -- flagged.
+    assert props.unmodeled_absentee_positions(r, "A", {"CenterBack"}) == ["CenterBack"]
+    assert props.unmodeled_absentee_positions(r, "A", {"Keeper"}) == ["Keeper"]
+    both = props.unmodeled_absentee_positions(r, "A", {"CenterBack", "Keeper", "Striker"})
+    assert both == ["CenterBack", "Keeper"]
+    assert props.unmodeled_absentee_positions(r, "A", set()) == []

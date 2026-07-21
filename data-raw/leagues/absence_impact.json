@@ -6,5 +6,21 @@
     "ci_low": -1.3324979015677514,
     "ci_high": -0.21838337413777667,
     "significant": true
+  },
+  {
+    "league": "LALIGA",
+    "n": 2692,
+    "slope": -0.7782699750917076,
+    "ci_low": -1.244539191952935,
+    "ci_high": -0.3087805068185095,
+    "significant": true
+  },
+  {
+    "league": "LIGUE1",
+    "n": 1674,
+    "slope": -0.8323864405021318,
+    "ci_low": -1.673503345419838,
+    "ci_high": 0.13087727893426382,
+    "significant": false
   }
 ]
