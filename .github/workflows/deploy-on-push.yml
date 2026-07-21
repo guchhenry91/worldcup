@@ -37,6 +37,19 @@ jobs:
             echo "::error::RENDER_DEPLOY_HOOK secret is not set -- push landed but the site was not redeployed."
             exit 1
           fi
-          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          # TEMPORARY diagnostics: the whitespace strip alone did not fix curl's
+          # exit-3 "malformed URL" on the last run, so something else about the
+          # secret's shape is wrong. None of this prints the secret itself or its
+          # query string -- only its length and a fixed, non-secret prefix every
+          # Render hook shares -- so nothing sensitive reaches the log.
+          echo "hook length after stripping: ${#HOOK}"
+          case "$HOOK" in
+            https://api.render.com/deploy/*) echo "shape: looks like a normal Render deploy hook URL" ;;
+            https://*) echo "shape: has an https scheme but not the expected Render host/path" ;;
+            *) echo "shape: does NOT start with https:// at all" ;;
+          esac
+          # -S (not just -s) so curl prints its OWN diagnostic text for why a URL
+          # is malformed, instead of failing silently with nothing but exit 3.
+          code=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$HOOK")
           echo "deploy hook responded $code"
           [ "$code" = "200" ] || [ "$code" = "201" ]
