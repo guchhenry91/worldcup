@@ -1,0 +1,42 @@
+name: Deploy on push
+
+# The leagues.yml pipeline only runs on a schedule or manual dispatch -- it has
+# no `push` trigger, because its whole job is re-fetching data and refitting the
+# model, which would be wasteful to do on every code/doc push. But that means a
+# plain `git push` to main (a UI tweak, a bug fix, a docs edit) never told Render
+# to redeploy at all. This workflow is the missing piece: it does NOTHING except
+# trigger the existing deploy hook, on every push to main, so neither a human nor
+# an agent ever has to remember to hit it by hand again.
+#
+# Safe to run alongside leagues.yml even when both fire for the same commit (the
+# scheduled pipeline's own "auto: leagues refresh" commits trigger both this AND
+# its own dedicated deploy step) -- Render's static-site "build" is just serving
+# the files as committed, so a redundant redeploy costs a few seconds, not a
+# rebuild, and there is no risk of deploying a half-written state: git pushes are
+# atomic, so main always reflects a fully-formed commit whenever this fires.
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Trigger Render deploy
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          # Same fix as leagues.yml's deploy step, for the same reason: the
+          # secret's actual value ends in a trailing newline (confirmed via the
+          # local hook file used for manual deploys), which curl rejects as a
+          # malformed URL (exit code 3) if not stripped first.
+          HOOK="$(printf '%s' "$HOOK" | tr -d '[:space:]')"
+          if [ -z "$HOOK" ]; then
+            echo "::error::RENDER_DEPLOY_HOOK secret is not set -- push landed but the site was not redeployed."
+            exit 1
+          fi
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          echo "deploy hook responded $code"
+          [ "$code" = "200" ] || [ "$code" = "201" ]
