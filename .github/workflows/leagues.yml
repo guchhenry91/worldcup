@@ -125,9 +125,33 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No league changes to publish."
           else
+            # Captured BEFORE committing: the commit this job actually started
+            # from. A cold-cache publish can take 50+ minutes, comfortably
+            # longer than the gap between scheduled triggers, so by the time we
+            # get here another run may already have finished and pushed FRESHER
+            # data. A bare `git push` failing on that is not really a failure --
+            # it means someone else's more current publish already landed.
+            BASE=$(git rev-parse HEAD)
             git commit -m "auto: leagues refresh $(date -u +%Y-%m-%d)"
-            git push
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git fetch -q origin main
+            REMOTE=$(git rev-parse origin/main)
+            if [ "$REMOTE" != "$BASE" ]; then
+              # Deliberately do NOT rebase/merge and retry: two independent runs
+              # rarely produce byte-identical JSON, so forcing our (now-stale)
+              # commit on top would risk a real conflict on the data files
+              # themselves. The other run's data supersedes ours and its own
+              # push already triggered its own deploy, so standing down here is
+              # correct, not a compromise -- and it lets the job conclude as a
+              # SUCCESS, which is what allows the soccerdata cache below to
+              # actually save. A job that fails at this step, for any reason,
+              # skips that save every time, which is why the cache had never
+              # once warmed up despite several genuinely successful publishes.
+              echo "origin/main advanced from $BASE to $REMOTE while this run was publishing -- a fresher run already landed, standing down instead of forcing stale data over it."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+            else
+              git push
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+            fi
           fi
 
       # Render is connected by public Git URL and does NOT auto-deploy on push,
