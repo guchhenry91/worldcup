@@ -37,19 +37,19 @@ jobs:
             echo "::error::RENDER_DEPLOY_HOOK secret is not set -- push landed but the site was not redeployed."
             exit 1
           fi
-          # TEMPORARY diagnostics: the whitespace strip alone did not fix curl's
-          # exit-3 "malformed URL" on the last run, so something else about the
-          # secret's shape is wrong. None of this prints the secret itself or its
-          # query string -- only its length and a fixed, non-secret prefix every
-          # Render hook shares -- so nothing sensitive reaches the log.
-          echo "hook length after stripping: ${#HOOK}"
+          # Fail fast with a clear message instead of a cryptic curl exit code.
+          # This is exactly the class of bug found today: the secret held the
+          # local FILE PATH used for manual deploys (C:\Users\...\...txt)
+          # instead of the URL that file contains -- the leading "C:" read as a
+          # host with a non-numeric "port", which is why curl's own error was
+          # "Port number was not a decimal number between 0 and 65535".
           case "$HOOK" in
-            https://api.render.com/deploy/*) echo "shape: looks like a normal Render deploy hook URL" ;;
-            https://*) echo "shape: has an https scheme but not the expected Render host/path" ;;
-            *) echo "shape: does NOT start with https:// at all" ;;
+            https://api.render.com/deploy/*) ;;
+            *) echo "::error::RENDER_DEPLOY_HOOK does not look like a Render deploy hook URL -- check the secret holds the hook itself, not a file path or something else pasted by mistake."
+               exit 1 ;;
           esac
-          # -S (not just -s) so curl prints its OWN diagnostic text for why a URL
-          # is malformed, instead of failing silently with nothing but exit 3.
+          # -S (not just -s) so curl explains itself in the log if this ever
+          # fails for a different reason than the shape check above catches.
           code=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$HOOK")
           echo "deploy hook responded $code"
           [ "$code" = "200" ] || [ "$code" = "201" ]

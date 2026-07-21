@@ -137,19 +137,25 @@ jobs:
         env:
           HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: |
-          # Strip ALL whitespace before use. Every real run so far reached this
-          # step and failed with curl exit code 3 ("malformed URL") -- confirmed
-          # by checking the local hook file used for manual deploys all session:
-          # it too ends in a trailing newline byte. Every manual deploy this
-          # session only worked because the PowerShell command doing it called
-          # .Trim() on the file content first; this script never did the
-          # equivalent, so it choked on the exact same secret every single time.
+          # Strip whitespace defensively (cheap, never hurts), but this was NOT
+          # the actual cause of the failures found today -- the real one was
+          # worse: the secret held the local FILE PATH used for manual deploys
+          # (C:\Users\...\...txt) instead of the URL that file contains. The
+          # leading "C:" got parsed as a host with a non-numeric "port", which
+          # is why curl's own error was "Port number was not a decimal number
+          # between 0 and 65535". The shape check below catches that class of
+          # mistake with a clear message instead of a cryptic curl exit code.
           HOOK="$(printf '%s' "$HOOK" | tr -d '[:space:]')"
           if [ -z "$HOOK" ]; then
             echo "::error::RENDER_DEPLOY_HOOK secret is not set -- data was pushed but the site was not redeployed."
             exit 1
           fi
-          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          case "$HOOK" in
+            https://api.render.com/deploy/*) ;;
+            *) echo "::error::RENDER_DEPLOY_HOOK does not look like a Render deploy hook URL -- check the secret holds the hook itself, not a file path or something else pasted by mistake."
+               exit 1 ;;
+          esac
+          code=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$HOOK")
           echo "deploy hook responded $code"
           [ "$code" = "200" ] || [ "$code" = "201" ]
 
