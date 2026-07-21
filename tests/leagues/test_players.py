@@ -204,7 +204,7 @@ def test_roster_reconciliation_reassigns_known_players_and_fails_closed(
     }
     monkeypatch.setattr("leagues.players.load_roster_snapshot",
                         lambda league: snapshot)
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 1.0)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: 1.0)
 
     safe, incomplete, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
 
@@ -234,7 +234,7 @@ def test_missing_roster_snapshot_keeps_existing_attribution(monkeypatch):
         {"team": "Arsenal", "player": "Player", "rate90": 0.4},
     ])
     monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: {})
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: None)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: None)
     safe, incomplete, unmatched, _ = reconcile_rates_to_roster(rates, "PL")
     assert list(safe["player"]) == ["Player"]      # kept, not deleted
     assert incomplete == ["Arsenal"]               # but flagged as unverified
@@ -255,7 +255,7 @@ def test_stale_roster_snapshot_keeps_existing_attribution(monkeypatch):
     monkeypatch.setattr("leagues.players.load_roster_snapshot",
                         lambda league: snapshot)
     monkeypatch.setattr("leagues.players.roster_snapshot_age_hours",
-                        lambda: 72.01)
+                        lambda *_: 72.01)
     safe, incomplete, _, _ = reconcile_rates_to_roster(rates, "PL")
     assert list(safe["player"]) == ["Player"]
     assert incomplete == ["Arsenal"]
@@ -263,7 +263,7 @@ def test_stale_roster_snapshot_keeps_existing_attribution(monkeypatch):
 
 def _snap(monkeypatch, clubs, age=1.0):
     monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: clubs)
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: age)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: age)
 
 
 def _pad(n=18, prefix="Squad"):
@@ -309,15 +309,15 @@ def test_roster_status_distinguishes_missing_stale_and_ok(monkeypatch):
     source lists fewer than 18 players for these clubs". A reader cannot act
     differently on three different problems that read the same."""
     monkeypatch.setattr("leagues.players.load_roster_snapshot", lambda league: {})
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: None)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: None)
     assert roster_snapshot_status("PL") == ("missing", None)
 
     monkeypatch.setattr("leagues.players.load_roster_snapshot",
                         lambda league: {"Arsenal": {"players": []}})
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 100.0)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: 100.0)
     assert roster_snapshot_status("PL") == ("stale", 100.0)
 
-    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda: 1.0)
+    monkeypatch.setattr("leagues.players.roster_snapshot_age_hours", lambda *_: 1.0)
     assert roster_snapshot_status("PL") == ("ok", 1.0)
 
 

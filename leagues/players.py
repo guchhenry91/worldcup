@@ -55,13 +55,15 @@ def load_roster_snapshot(league: str) -> dict:
     return json.loads(path.read_text(encoding="utf-8")).get(league, {})
 
 
-def roster_snapshot_age_hours() -> float | None:
+def roster_snapshot_age_hours(league: str | None = None) -> float | None:
     """Age of the roster evidence, or None when absent/malformed."""
     path = Path(__file__).resolve().parent.parent / "data-raw" / "leagues" / "rosters.json"
     if not path.exists():
         return None
     try:
-        stamp = json.loads(path.read_text(encoding="utf-8"))["_verified_at"]
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        stamp = ((payload.get("_league_verified_at") or {}).get(league)
+                 if league else None) or payload["_verified_at"]
         checked = pd.Timestamp(stamp)
         checked = (checked.tz_localize("UTC") if checked.tzinfo is None
                    else checked.tz_convert("UTC"))
@@ -82,7 +84,7 @@ def roster_snapshot_status(league: str) -> tuple[str, float | None]:
     cannot act on.
     """
     snapshot = load_roster_snapshot(league)
-    age = roster_snapshot_age_hours()
+    age = roster_snapshot_age_hours(league)
     if not snapshot:
         return "missing", None
     if age is None or age > MAX_ROSTER_AGE_HOURS:
@@ -110,7 +112,7 @@ def reconcile_rates_to_roster(rates: pd.DataFrame, league: str,
     feed-quality problem into silent deletion of the best players in Europe.
     """
     snapshot = load_roster_snapshot(league)
-    age = roster_snapshot_age_hours()
+    age = roster_snapshot_age_hours(league)
     if not snapshot or age is None or age > MAX_ROSTER_AGE_HOURS:
         # No usable evidence at all -> keep the existing attribution untouched and
         # report every club as unverified. Withholding the whole player model on a

@@ -33,6 +33,13 @@ SEARCH_FEEDS = {
     ),
     "bing-news": "https://www.bing.com/news/search?q={query}&format=rss",
 }
+# BBC publishes a stable official football RSS feed. Sky Sports remains covered
+# through both search indexes: it does not expose a documented football-news RSS
+# endpoint suitable for this collector. Direct BBC evidence is useful during an
+# index outage and is still de-duplicated by original publisher below.
+DIRECT_FEEDS = {
+    "bbc-sport": "https://feeds.bbci.co.uk/sport/football/rss.xml",
+}
 OUT_WORDS = re.compile(
     r"\b(ruled out|will miss|set to miss|suspended|unavailable|"
     r"out for|out of the|misses? the)\b", re.I)
@@ -261,6 +268,31 @@ def collect_team(team: str, opponent: str, players: list[str], fetcher=fetch_rss
             seen.add(key)
             player, status = finding
             evidence.append({**item, "player": player, "status": status})
+    for feed, url in DIRECT_FEEDS.items():
+        try:
+            items = parse_rss(fetcher(url), feed, now)
+            successful.append(feed)
+        except Exception as exc:
+            print(f"WARNING: {feed} team-news feed failed for {team}: {exc}")
+            continue
+        for item in items:
+            published = dt.datetime.fromisoformat(
+                item["published_at"].replace("Z", "+00:00"))
+            if published < cutoff:
+                continue
+            # A global football feed must mention this club; otherwise a player
+            # with a common name could be attributed to the wrong team.
+            if not re.search(rf"\b{re.escape(team)}\b", item["title"], re.I):
+                continue
+            finding = classify(item["title"], players)
+            if not finding:
+                continue
+            key = (item["url"], finding)
+            if key in seen:
+                continue
+            seen.add(key)
+            player, status = finding
+            evidence.append({**item, "player": player, "status": status})
     return evidence, successful
 
 
@@ -270,6 +302,14 @@ def refresh(news_path: Path = NEWS_PATH, best_path: Path | None = None,
     now = now or utcnow()
     base = (json.loads(news_path.read_text(encoding="utf-8"))
             if news_path.exists() else {})
+    feed_cache: dict[str, bytes] = {}
+
+    def cached_fetch(url: str) -> bytes:
+        # Direct publisher feeds are global and otherwise would be downloaded
+        # once per imminent club. Fetch every identical URL only once per run.
+        if url not in feed_cache:
+            feed_cache[url] = fetcher(url)
+        return feed_cache[url]
     # ``best_path`` remains as an explicit test/backfill seam. Production omits it
     # and researches ALL imminent fixtures, so a newly generated Best Pick can
     # never be absent merely because it was not on the previous board.
@@ -282,7 +322,7 @@ def refresh(news_path: Path = NEWS_PATH, best_path: Path | None = None,
                                (fixture["away"], fixture["home"])):
             candidates = player_candidates(league, team, league_dir)
             evidence, successful = collect_team(
-                team, opponent, candidates, fetcher=fetcher, now=now)
+                team, opponent, candidates, fetcher=cached_fetch, now=now)
             current = section.get(team) or {}
             # Preserve human/official confirmed inputs. Automation owns only the
             # players recorded in its previous metadata block.
@@ -308,7 +348,10 @@ def refresh(news_path: Path = NEWS_PATH, best_path: Path | None = None,
             }
             # A successful check requires both independent indexes. A partial
             # outage remains visible and cannot falsely satisfy the freshness gate.
-            if len(set(successful)) == len(SEARCH_FEEDS):
+            # Both independent search paths are the completeness requirement.
+            # Direct publisher feeds add evidence but do not make a failed index
+            # look healthy.
+            if set(SEARCH_FEEDS).issubset(successful):
                 entry["checked"] = _iso(now)
             section[team] = entry
     base["_verified_on"] = (now.date().isoformat()

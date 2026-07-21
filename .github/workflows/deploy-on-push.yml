@@ -50,6 +50,8 @@ jobs:
           esac
           # -S (not just -s) so curl explains itself in the log if this ever
           # fails for a different reason than the shape check above catches.
-          code=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          code=$(curl --retry 3 --retry-all-errors --retry-delay 2 \
+            --connect-timeout 10 --max-time 30 -sS -o /dev/null \
+            -w "%{http_code}" -X POST "$HOOK")
           echo "deploy hook responded $code"
           [ "$code" = "200" ] || [ "$code" = "201" ]

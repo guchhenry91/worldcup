@@ -5,6 +5,7 @@ plain frames and dicts, which is what makes generalising to four leagues a loop
 rather than a rewrite.
 """
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -856,12 +857,25 @@ def main(argv=None):
     leagues = [a.upper() for a in argv] or list(FILE_FOR)
     OUT.mkdir(parents=True, exist_ok=True)
     attempted = ok = 0
+    known = []
     for league in leagues:
         if league not in FILE_FOR:
             print(f"skip {league!r}: unknown league; known {list(FILE_FOR)}")
             continue
         attempted += 1
-        ok += _publish_one(league, FILE_FOR[league])
+        known.append(league)
+    workers = max(1, min(int(os.environ.get("PUBLISH_WORKERS", "1")), len(known)))
+    if workers > 1 and len(known) > 1:
+        # The four leagues use disjoint source/cache paths and output files. Two
+        # workers substantially reduce a cold-cache run without opening four
+        # simultaneous scrapers against a free upstream service.
+        from concurrent.futures import ThreadPoolExecutor
+        print(f"publishing {len(known)} leagues with {workers} workers")
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = [pool.submit(_publish_one, lg, FILE_FOR[lg]) for lg in known]
+            ok = sum(f.result() for f in futures)
+    else:
+        ok = sum(_publish_one(lg, FILE_FOR[lg]) for lg in known)
     # Cross-league high-confidence board, built from the frozen picks of every
     # league that just published.
     # Cross-league boards must represent one complete four-league refresh. If a

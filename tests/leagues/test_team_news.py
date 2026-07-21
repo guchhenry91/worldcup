@@ -153,7 +153,31 @@ def test_partial_feed_failure_does_not_claim_a_fresh_check(tmp_path):
         news_path=news, best_path=best, league_dir=leagues,
         fetcher=fetcher, now=NOW)
     assert "checked" not in result["PL"]["Alpha"]
-    assert result["PL"]["Alpha"]["automation"]["feeds_ok"] == ["google-news"]
+    assert result["PL"]["Alpha"]["automation"]["feeds_ok"] == [
+        "google-news", "bbc-sport"]
+
+
+def test_direct_bbc_feed_is_downloaded_only_once_per_refresh(tmp_path):
+    best = tmp_path / "best.json"
+    news = tmp_path / "news.json"
+    leagues = tmp_path / "leagues"
+    leagues.mkdir()
+    best.write_text(json.dumps({"upcoming": [{
+        "league_key": "PL", "date": "2026-08-21T19:00:00Z",
+        "home": "Alpha", "away": "Beta",
+    }]}))
+    news.write_text(json.dumps({"PL": {}}))
+    (leagues / "pl.json").write_text(json.dumps({"matches": []}))
+    calls = []
+
+    def fetcher(url):
+        calls.append(url)
+        return b"<rss><channel></channel></rss>"
+
+    team_news.refresh(news_path=news, best_path=best, league_dir=leagues,
+                      fetcher=fetcher, now=NOW)
+    bbc = team_news.DIRECT_FEEDS["bbc-sport"]
+    assert calls.count(bbc) == 1
 
 
 def test_production_discovers_new_fixture_without_previous_best_board(tmp_path):

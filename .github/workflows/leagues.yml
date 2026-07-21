@@ -91,6 +91,8 @@ jobs:
       # missing/thin club roster makes that club's player markets disappear
       # instead of allowing last season's departed players to survive silently.
       - name: Refresh and audit current rosters
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python -m scripts.sync_rosters
           python -m scripts.roster_integrity_check
@@ -102,8 +104,17 @@ jobs:
       - name: Refresh multi-source team news
         run: python -m scripts.sync_team_news
 
+      - name: Refresh confirmed pre-match lineups
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: python -m scripts.sync_lineups
+
       - name: Publish all four leagues
         run: python -m leagues.publish
+        env:
+          # Two independent leagues at once roughly halves a cold Understat build
+          # without aggressively fanning out against a free public service.
+          PUBLISH_WORKERS: "2"
 
       # The gate: refuses to ship output that contradicts itself (a pick against
       # its own scoreline, a table that doesn't add up, an eliminated team still
@@ -179,7 +190,9 @@ jobs:
             *) echo "::error::RENDER_DEPLOY_HOOK does not look like a Render deploy hook URL -- check the secret holds the hook itself, not a file path or something else pasted by mistake."
                exit 1 ;;
           esac
-          code=$(curl -sS -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          code=$(curl --retry 3 --retry-all-errors --retry-delay 2 \
+            --connect-timeout 10 --max-time 30 -sS -o /dev/null \
+            -w "%{http_code}" -X POST "$HOOK")
           echo "deploy hook responded $code"
           [ "$code" = "200" ] || [ "$code" = "201" ]
 
@@ -201,8 +214,8 @@ jobs:
             echo "No Telegram secrets set; skipping alert."
             exit 0
           fi
-          TEXT="Leagues publish FAILED ($(date -u +%Y-%m-%d\ %H:%M) UTC).
-          Nothing was deployed, so the live site is unchanged but now ageing.
+          TEXT="Leagues pipeline FAILED ($(date -u +%Y-%m-%d\ %H:%M) UTC).
+          Check the named failed step in Actions. A failure after the commit step may mean data was pushed but Render was not refreshed.
           Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           curl -s -X POST "https://api.telegram.org/bot${TOKEN}/sendMessage" \
             --data-urlencode "chat_id=${CHAT}" \
