@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T17:37:04.086633+00:00",
+  "updated": "2026-07-21T17:55:05.266542+00:00",
   "_incomplete": [],
   "min_probability": 0.65,
   "record": {
@@ -49,7 +49,7 @@
       "away": "Rennes",
       "pick": "Paris SG",
       "confidence": 4,
-      "p_pick": 0.6942,
+      "p_pick": 0.6941,
       "score": "2-0",
       "provisional": true
     },
