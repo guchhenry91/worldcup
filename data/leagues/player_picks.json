@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T12:29:32.986191+00:00",
+  "updated": "2026-07-21T17:37:04.091123+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -181,7 +181,7 @@
       "player": "Serhou Guirassy",
       "team": "Dortmund",
       "position": "FW",
-      "p_pick": 0.53,
+      "p_pick": 0.531,
       "confidence": 3,
       "provisional": true,
       "doubt": false,
