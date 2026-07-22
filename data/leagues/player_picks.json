@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T14:35:59.534760+00:00",
+  "updated": "2026-07-22T16:21:26.454962+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -181,7 +181,7 @@
       "player": "Serhou Guirassy",
       "team": "Dortmund",
       "position": "FW",
-      "p_pick": 0.531,
+      "p_pick": 0.53,
       "confidence": 3,
       "provisional": true,
       "doubt": false,
@@ -203,7 +203,7 @@
       "player": "Harry Kane",
       "team": "Bayern Munich",
       "position": "FW",
-      "p_pick": 0.508,
+      "p_pick": 0.507,
       "confidence": 3,
       "provisional": true,
       "doubt": false,
