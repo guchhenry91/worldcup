@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T22:18:14.150375+00:00",
+  "updated": "2026-07-22T23:31:27.886169+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -203,7 +203,7 @@
       "player": "Harry Kane",
       "team": "Bayern Munich",
       "position": "FW",
-      "p_pick": 0.507,
+      "p_pick": 0.508,
       "confidence": 3,
       "provisional": true,
       "doubt": false,
