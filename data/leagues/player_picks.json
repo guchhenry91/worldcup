@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T03:47:14.728818+00:00",
+  "updated": "2026-07-23T08:46:52.323939+00:00",
   "min_probability": {
     "goal": 0.4,
     "shots": 0.7,
@@ -269,7 +269,7 @@
       "player": "Thiago",
       "team": "Brentford",
       "position": "FW",
-      "p_pick": 0.441,
+      "p_pick": 0.44,
       "confidence": 2,
       "provisional": true,
       "doubt": false,

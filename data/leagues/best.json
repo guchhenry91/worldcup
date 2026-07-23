@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T03:47:14.724163+00:00",
+  "updated": "2026-07-23T08:46:52.319298+00:00",
   "_incomplete": [],
   "min_probability": 0.65,
   "record": {
@@ -21,7 +21,7 @@
       "away": "Coventry",
       "pick": "Arsenal",
       "confidence": 5,
-      "p_pick": 0.7754,
+      "p_pick": 0.7753,
       "score": "2-0",
       "provisional": true
     },
@@ -63,7 +63,7 @@
       "away": "Hamburg",
       "pick": "Dortmund",
       "confidence": 4,
-      "p_pick": 0.691,
+      "p_pick": 0.6909,
       "score": "2-0",
       "provisional": true
     },
