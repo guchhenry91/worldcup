@@ -1,9 +1,9 @@
 {
- "updated": "2026-07-20T07:07:15+00:00",
+ "updated": "2026-07-24T16:36:52+00:00",
  "record": {
-  "correct": 64,
-  "wrong": 26,
-  "total": 90,
+  "correct": 54,
+  "wrong": 24,
+  "total": 78,
   "void": 14,
   "pending": 0,
   "by_confidence": {
@@ -29,8 +29,9 @@
    }
   },
   "knockout": {
-   "correct": 26,
-   "total": 32
+   "correct": 16,
+   "total": 20,
+   "void": 12
   }
  },
  "groups": {
@@ -11563,7 +11564,8 @@
      "home_goals": 0,
      "away_goals": 1,
      "winner": "Canada"
-    }
+    },
+    "void": true
    },
    {
     "id": 74,
@@ -11584,7 +11586,8 @@
      "home_goals": 1,
      "away_goals": 1,
      "winner": "Paraguay"
-    }
+    },
+    "void": true
    },
    {
     "id": 75,
@@ -11605,7 +11608,8 @@
      "home_goals": 1,
      "away_goals": 1,
      "winner": "Morocco"
-    }
+    },
+    "void": true
    },
    {
     "id": 76,
@@ -11626,7 +11630,8 @@
      "home_goals": 2,
      "away_goals": 1,
      "winner": "Brazil"
-    }
+    },
+    "void": true
    },
    {
     "id": 77,
@@ -11647,7 +11652,8 @@
      "home_goals": 3,
      "away_goals": 0,
      "winner": "France"
-    }
+    },
+    "void": true
    },
    {
     "id": 78,
@@ -11668,7 +11674,8 @@
      "home_goals": 2,
      "away_goals": 1,
      "winner": "Norway"
-    }
+    },
+    "void": true
    },
    {
     "id": 79,
@@ -11689,7 +11696,8 @@
      "home_goals": 2,
      "away_goals": 0,
      "winner": "Mexico"
-    }
+    },
+    "void": true
    },
    {
     "id": 80,
@@ -11710,7 +11718,8 @@
      "home_goals": 2,
      "away_goals": 1,
      "winner": "England"
-    }
+    },
+    "void": true
    },
    {
     "id": 81,
@@ -11731,7 +11740,8 @@
      "home_goals": 2,
      "away_goals": 0,
      "winner": "United States"
-    }
+    },
+    "void": true
    },
    {
     "id": 82,
@@ -11752,7 +11762,8 @@
      "home_goals": 3,
      "away_goals": 2,
      "winner": "Belgium"
-    }
+    },
+    "void": true
    },
    {
     "id": 83,
@@ -11773,7 +11784,8 @@
      "home_goals": 2,
      "away_goals": 1,
      "winner": "Portugal"
-    }
+    },
+    "void": false
    },
    {
     "id": 84,
@@ -11794,7 +11806,8 @@
      "home_goals": 3,
      "away_goals": 0,
      "winner": "Spain"
-    }
+    },
+    "void": false
    },
    {
     "id": 85,
@@ -11815,7 +11828,8 @@
      "home_goals": 2,
      "away_goals": 0,
      "winner": "Switzerland"
-    }
+    },
+    "void": false
    },
    {
     "id": 86,
@@ -11836,7 +11850,8 @@
      "home_goals": 3,
      "away_goals": 2,
      "winner": "Argentina"
-    }
+    },
+    "void": false
    },
    {
     "id": 87,
@@ -11857,7 +11872,8 @@
      "home_goals": 1,
      "away_goals": 0,
      "winner": "Colombia"
-    }
+    },
+    "void": false
    },
    {
     "id": 88,
@@ -11878,7 +11894,8 @@
      "home_goals": 1,
      "away_goals": 1,
      "winner": "Australia"
-    }
+    },
+    "void": false
    },
    {
     "id": 89,
@@ -11899,7 +11916,8 @@
      "home_goals": 0,
      "away_goals": 1,
      "winner": "France"
-    }
+    },
+    "void": false
    },
    {
     "id": 90,
@@ -11920,7 +11938,8 @@
      "home_goals": 0,
      "away_goals": 3,
      "winner": "Morocco"
-    }
+    },
+    "void": false
    },
    {
     "id": 91,
@@ -11941,7 +11960,8 @@
      "home_goals": 1,
      "away_goals": 2,
      "winner": "Norway"
-    }
+    },
+    "void": false
    },
    {
     "id": 92,
@@ -11962,7 +11982,8 @@
      "home_goals": 2,
      "away_goals": 3,
      "winner": "England"
-    }
+    },
+    "void": false
    },
    {
     "id": 93,
@@ -11983,7 +12004,8 @@
      "home_goals": 0,
      "away_goals": 1,
      "winner": "Spain"
-    }
+    },
+    "void": false
    },
    {
     "id": 94,
@@ -12004,7 +12026,8 @@
      "home_goals": 1,
      "away_goals": 4,
      "winner": "Belgium"
-    }
+    },
+    "void": false
    },
    {
     "id": 95,
@@ -12025,7 +12048,8 @@
      "home_goals": 3,
      "away_goals": 2,
      "winner": "Argentina"
-    }
+    },
+    "void": false
    },
    {
     "id": 96,
@@ -12046,7 +12070,8 @@
      "home_goals": 0,
      "away_goals": 0,
      "winner": "Switzerland"
-    }
+    },
+    "void": false
    },
    {
     "id": 97,
@@ -12067,7 +12092,8 @@
      "home_goals": 2,
      "away_goals": 0,
      "winner": "France"
-    }
+    },
+    "void": false
    },
    {
     "id": 98,
@@ -12088,7 +12114,8 @@
      "home_goals": 2,
      "away_goals": 1,
      "winner": "Spain"
-    }
+    },
+    "void": false
    },
    {
     "id": 99,
@@ -12109,7 +12136,8 @@
      "home_goals": 1,
      "away_goals": 2,
      "winner": "England"
-    }
+    },
+    "void": true
    },
    {
     "id": 100,
@@ -12130,7 +12158,8 @@
      "home_goals": 3,
      "away_goals": 1,
      "winner": "Argentina"
-    }
+    },
+    "void": true
    },
    {
     "id": 101,
@@ -12151,7 +12180,8 @@
      "home_goals": 0,
      "away_goals": 2,
      "winner": "Spain"
-    }
+    },
+    "void": false
    },
    {
     "id": 102,
@@ -12172,7 +12202,8 @@
      "home_goals": 1,
      "away_goals": 2,
      "winner": "Argentina"
-    }
+    },
+    "void": false
    },
    {
     "id": 104,
@@ -12193,7 +12224,8 @@
      "home_goals": 1,
      "away_goals": 0,
      "winner": "Spain"
-    }
+    },
+    "void": false
    },
    {
     "id": 103,
@@ -12214,7 +12246,8 @@
      "home_goals": 4,
      "away_goals": 6,
      "winner": "England"
-    }
+    },
+    "void": false
    }
   ]
  }

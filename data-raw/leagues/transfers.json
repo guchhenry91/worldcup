@@ -122,6 +122,16 @@
         "method": "top-6 scorers per club, clubs in the 2026-27 fixture lists only",
         "verified_by": "agent web search, 2 independent sources or official club announcement",
         "not_checked": "players outside each club's top 6 by goal rate; clubs not in the current fixture lists; the January window before 2026-01-01"
+      },
+      {
+        "date": "2026-07-24",
+        "scope": "matchday-news board check (leagues-matchday-news task)",
+        "clubs": "n/a -- player-by-player check of player_picks.json board only",
+        "players": 6,
+        "method": "web search per distinct player on the live player_picks.json board: Harry Kane, Erling Haaland, Kylian Mbappe-Lottin, Deniz Undav, Serhou Guirassy, Thiago (Igor Thiago)",
+        "verified_by": "agent web search, current reporting as of 2026-07-24",
+        "result": "all 6 confirmed still at the club shown; no transfers.json changes required",
+        "not_checked": "no fixtures were in the 45min-3h Best Picks window this run, so full STEP 2-5 team-news research was not triggered"
       }
     ],
     "known_gaps": [
