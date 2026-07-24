@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T14:15:17.743439+00:00",
+  "updated": "2026-07-24T15:56:56.776625+00:00",
   "_incomplete": [],
   "min_probability": 0.65,
   "record": {
@@ -63,7 +63,7 @@
       "away": "Hamburg",
       "pick": "Dortmund",
       "confidence": 4,
-      "p_pick": 0.6906,
+      "p_pick": 0.6908,
       "score": "2-0",
       "provisional": true
     },
@@ -105,7 +105,7 @@
       "away": "Ath Bilbao",
       "pick": "Barcelona",
       "confidence": 4,
-      "p_pick": 0.6656,
+      "p_pick": 0.6655,
       "score": "2-0",
       "provisional": true
     },
@@ -119,7 +119,7 @@
       "away": "Paderborn",
       "pick": "Mainz",
       "confidence": 4,
-      "p_pick": 0.6544,
+      "p_pick": 0.6545,
       "score": "2-0",
       "provisional": true
     }
